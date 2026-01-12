@@ -1,0 +1,61 @@
+{
+  "kind": "EventList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763992"
+  },
+  "items": [
+    {
+      "kind": "Event",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-k8s-db-prometheus-k8s-1.1799a9bfc640019a",
+        "namespace": "monitoring",
+        "uid": "4ff54050-7e0b-451d-9f1f-b0cc084871ca",
+        "resourceVersion": "763349",
+        "creationTimestamp": "2023-11-21T14:29:36Z",
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:09:35Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "PersistentVolumeClaim",
+        "namespace": "monitoring",
+        "name": "prometheus-k8s-db-prometheus-k8s-1",
+        "uid": "ddc10ddf-6911-416d-91fe-b00c679a8c7d",
+        "apiVersion": "v1",
+        "resourceVersion": "1241"
+      },
+      "reason": "WaitForFirstConsumer",
+      "message": "waiting for first consumer to be created before binding",
+      "source": {
+        "component": "persistentvolume-controller"
+      },
+      "firstTimestamp": "2023-11-21T14:29:35Z",
+      "lastTimestamp": "2023-11-21T16:09:35Z",
+      "count": 401,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    }
+  ]
+}

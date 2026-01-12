@@ -1,0 +1,4 @@
+2023/11/21 14:30:43 Parsing environment variables...
+2023/11/21 14:30:43 Parsed config: {URL:activemq-artemis.knime.svc.cluster.local:61616?reconnectAttempts=-1 Username:knime Password:fg7GWfcUNIK6e7Ev9mY52XpwnYB5nacv Topic:execution-context-operation-events::execution-context-operation-events Namespace:hub-execution ConfigMapNames:[execution-env-variables] ImagePullSecrets:[regcred registry-creds] DeploymentStrategy:Recreate}
+2023/11/21 14:30:43 Dialing "amqp://activemq-artemis.knime.svc.cluster.local:61616?reconnectAttempts=-1"
+2023/11/21 14:30:43 failed to dial AMQP server: dial tcp ***HIDDEN***:61616: connect: connection refused

@@ -1,0 +1,97 @@
+{
+  "kind": "RoleBindingList",
+  "apiVersion": "rbac.authorization.k8s.io/v1",
+  "metadata": {
+    "resourceVersion": "763995"
+  },
+  "items": [
+    {
+      "kind": "RoleBinding",
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "metadata": {
+        "name": "kubeadm:bootstrap-signer-clusterinfo",
+        "namespace": "kube-public",
+        "uid": "ce36de5a-abd6-4d82-9c35-ab452479c5f4",
+        "resourceVersion": "217",
+        "creationTimestamp": "2023-11-10T12:57:35Z",
+        "managedFields": [
+          {
+            "manager": "kubeadm",
+            "operation": "Update",
+            "apiVersion": "rbac.authorization.k8s.io/v1",
+            "time": "2023-11-10T12:57:35Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:roleRef": {},
+              "f:subjects": {}
+            }
+          }
+        ]
+      },
+      "subjects": [
+        {
+          "kind": "User",
+          "apiGroup": "rbac.authorization.k8s.io",
+          "name": "system:anonymous"
+        }
+      ],
+      "roleRef": {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "Role",
+        "name": "kubeadm:bootstrap-signer-clusterinfo"
+      }
+    },
+    {
+      "kind": "RoleBinding",
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "metadata": {
+        "name": "system:controller:bootstrap-signer",
+        "namespace": "kube-public",
+        "uid": "cb6593a2-7b54-4262-ae5d-6718ba540d21",
+        "resourceVersion": "194",
+        "creationTimestamp": "2023-11-10T12:57:34Z",
+        "labels": {
+          "kubernetes.io/bootstrapping": "rbac-defaults"
+        },
+        "annotations": {
+          "rbac.authorization.kubernetes.io/autoupdate": "true"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-apiserver",
+            "operation": "Update",
+            "apiVersion": "rbac.authorization.k8s.io/v1",
+            "time": "2023-11-10T12:57:34Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:rbac.authorization.kubernetes.io/autoupdate": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:kubernetes.io/bootstrapping": {}
+                }
+              },
+              "f:roleRef": {},
+              "f:subjects": {}
+            }
+          }
+        ]
+      },
+      "subjects": [
+        {
+          "kind": "ServiceAccount",
+          "name": "bootstrap-signer",
+          "namespace": "kube-system"
+        }
+      ],
+      "roleRef": {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "Role",
+        "name": "system:controller:bootstrap-signer"
+      }
+    }
+  ]
+}

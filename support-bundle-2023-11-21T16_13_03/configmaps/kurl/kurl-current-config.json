@@ -1,0 +1,18 @@
+{
+  "namespace": "kurl",
+  "name": "kurl-current-config",
+  "key": "",
+  "configMapExists": true,
+  "keyExists": false,
+  "data": {
+    "addons-ekco": "eyJ2ZXJzaW9uIjoiMC4yOC4zIn0K",
+    "addons-flannel": "eyJ2ZXJzaW9uIjoiMC4yMi4wIn0K",
+    "addons-kotsadm": "eyJhcHBsaWNhdGlvblNsdWciOiJrbmltZS1odWIiLCJzM092ZXJyaWRlIjoiaHR0cHM6Ly9zMy5rdXJsLnNoL2V4dGVybmFsL2tvdHNhZG0tMS4xMDEuMi50YXIuZ3oiLCJ2ZXJzaW9uIjoiMS4xMDEuMiJ9Cg==",
+    "addons-minio": "eyJ2ZXJzaW9uIjoiMjAyMy0wNi0yOVQwNS0xMi0yOFoifQo=",
+    "addons-openebs": "eyJpc0xvY2FsUFZFbmFibGVkIjp0cnVlLCJsb2NhbFBWU3RvcmFnZUNsYXNzTmFtZSI6ImRlZmF1bHQiLCJ2ZXJzaW9uIjoiMy43LjAifQo=",
+    "addons-prometheus": "eyJ2ZXJzaW9uIjoiMC42NS4yLTQ2LjguMCJ9Cg==",
+    "addons-registry": "eyJ2ZXJzaW9uIjoiMi44LjIifQo=",
+    "addons-velero": "eyJ2ZXJzaW9uIjoiMS4xMS4wIn0K",
+    "kurl-version": "v2023.11.02-0"
+  }
+}

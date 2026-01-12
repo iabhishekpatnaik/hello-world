@@ -1,0 +1,2037 @@
+{
+  "kind": "ServiceList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763976"
+  },
+  "items": [
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "activemq-artemis",
+        "namespace": "knime",
+        "uid": "68505d5c-2da5-4a3d-842b-be0fe3716502",
+        "resourceVersion": "4591",
+        "creationTimestamp": "2023-11-10T13:19:03Z",
+        "labels": {
+          "app": "activemq-artemis",
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "activemq-artemis",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:03Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":8161,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":61616,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "artemis",
+            "protocol": "TCP",
+            "port": 61616,
+            "targetPort": 61616
+          },
+          {
+            "name": "http",
+            "protocol": "TCP",
+            "port": 8161,
+            "targetPort": 8161
+          }
+        ],
+        "selector": {
+          "app": "activemq-artemis"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "cdds-postgres-cluster",
+        "namespace": "knime",
+        "uid": "0c9a0999-8353-4ddd-8755-559479be99c9",
+        "resourceVersion": "5267",
+        "creationTimestamp": "2023-11-10T13:20:09Z",
+        "labels": {
+          "application": "spilo",
+          "spilo-role": "master",
+          "team": "cdds",
+          "version": "cdds-postgres-cluster"
+        },
+        "managedFields": [
+          {
+            "manager": "postgres-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:09Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:spilo-role": {},
+                  "f:team": {},
+                  "f:version": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":5432,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "postgresql",
+            "protocol": "TCP",
+            "port": 5432,
+            "targetPort": 5432
+          }
+        ],
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "cdds-postgres-cluster-config",
+        "namespace": "knime",
+        "uid": "04f3829f-b0ec-4adb-9f6e-74fc9f4f9d43",
+        "resourceVersion": "5784",
+        "creationTimestamp": "2023-11-10T13:20:52Z",
+        "labels": {
+          "application": "spilo",
+          "version": "cdds-postgres-cluster"
+        },
+        "managedFields": [
+          {
+            "manager": "Patroni",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:52Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:version": {}
+                }
+              },
+              "f:spec": {
+                "f:clusterIP": {},
+                "f:internalTrafficPolicy": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "clusterIP": "None",
+        "clusterIPs": [
+          "None"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4",
+          "IPv6"
+        ],
+        "ipFamilyPolicy": "RequireDualStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "cdds-postgres-cluster-repl",
+        "namespace": "knime",
+        "uid": "ccdfe03e-1d19-4704-a894-1dfc69c0e0b3",
+        "resourceVersion": "5278",
+        "creationTimestamp": "2023-11-10T13:20:10Z",
+        "labels": {
+          "application": "spilo",
+          "spilo-role": "replica",
+          "team": "cdds",
+          "version": "cdds-postgres-cluster"
+        },
+        "managedFields": [
+          {
+            "manager": "postgres-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:10Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:spilo-role": {},
+                  "f:team": {},
+                  "f:version": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":5432,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "postgresql",
+            "protocol": "TCP",
+            "port": 5432,
+            "targetPort": 5432
+          }
+        ],
+        "selector": {
+          "application": "spilo",
+          "spilo-role": "replica",
+          "version": "cdds-postgres-cluster"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "elasticsearch-master",
+        "namespace": "knime",
+        "uid": "1df0c06a-8b5b-43a4-9f4a-884639241807",
+        "resourceVersion": "4638",
+        "creationTimestamp": "2023-11-10T13:19:04Z",
+        "labels": {
+          "app": "elasticsearch-master",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "elasticsearch",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "elasticsearch"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "elasticsearch",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:04Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":9200,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":9300,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "http",
+            "protocol": "TCP",
+            "port": 9200,
+            "targetPort": 9200
+          },
+          {
+            "name": "transport",
+            "protocol": "TCP",
+            "port": 9300,
+            "targetPort": 9300
+          }
+        ],
+        "selector": {
+          "app": "elasticsearch-master",
+          "chart": "elasticsearch",
+          "release": "elasticsearch"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "elasticsearch-master-headless",
+        "namespace": "knime",
+        "uid": "e50a68b7-0e85-4ed5-ab73-9024eaa1fb9f",
+        "resourceVersion": "4632",
+        "creationTimestamp": "2023-11-10T13:19:04Z",
+        "labels": {
+          "app": "elasticsearch-master",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "elasticsearch",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "elasticsearch"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "elasticsearch",
+          "meta.helm.sh/release-namespace": "knime",
+          "service.alpha.kubernetes.io/tolerate-unready-endpoints": "true"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:04Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {},
+                  "f:service.alpha.kubernetes.io/tolerate-unready-endpoints": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:clusterIP": {},
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":9200,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":9300,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:publishNotReadyAddresses": {},
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "http",
+            "protocol": "TCP",
+            "port": 9200,
+            "targetPort": 9200
+          },
+          {
+            "name": "transport",
+            "protocol": "TCP",
+            "port": 9300,
+            "targetPort": 9300
+          }
+        ],
+        "selector": {
+          "app": "elasticsearch-master"
+        },
+        "clusterIP": "None",
+        "clusterIPs": [
+          "None"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "publishNotReadyAddresses": true,
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "hub-webapp-redis-headless",
+        "namespace": "knime",
+        "uid": "2cd82881-ad3c-4ed6-a3db-df25a87f0cf0",
+        "resourceVersion": "5185",
+        "creationTimestamp": "2023-11-10T13:20:07Z",
+        "labels": {
+          "app": "redis",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "redis-10.5.6-5299ee8",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "redis"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "redis",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:07Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:clusterIP": {},
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":6379,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "redis",
+            "protocol": "TCP",
+            "port": 6379,
+            "targetPort": "redis"
+          }
+        ],
+        "selector": {
+          "app": "redis",
+          "release": "redis"
+        },
+        "clusterIP": "None",
+        "clusterIPs": [
+          "None"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "hub-webapp-redis-master",
+        "namespace": "knime",
+        "uid": "cd1ab0af-1d79-4991-8603-59c86f215ca0",
+        "resourceVersion": "5187",
+        "creationTimestamp": "2023-11-10T13:20:07Z",
+        "labels": {
+          "app": "redis",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "redis-10.5.6-5299ee8",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "redis"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "redis",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:07Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":6379,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "redis",
+            "protocol": "TCP",
+            "port": 6379,
+            "targetPort": "redis"
+          }
+        ],
+        "selector": {
+          "app": "redis",
+          "release": "redis",
+          "role": "master"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "ingress-nginx-controller",
+        "namespace": "knime",
+        "uid": "57c5d124-69ea-46df-96e9-c8e8301667ec",
+        "resourceVersion": "4155",
+        "creationTimestamp": "2023-11-10T13:18:22Z",
+        "labels": {
+          "app.kubernetes.io/component": "controller",
+          "app.kubernetes.io/instance": "ingress-nginx",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "ingress-nginx",
+          "app.kubernetes.io/part-of": "ingress-nginx",
+          "app.kubernetes.io/version": "1.3.1",
+          "helm.sh/chart": "ingress-nginx-4.2.5-73033d1",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "ingress-nginx",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:18:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:helm.sh/chart": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:externalTrafficPolicy": {},
+                "f:internalTrafficPolicy": {},
+                "f:ipFamilies": {},
+                "f:ipFamilyPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:appProtocol": {},
+                    "f:name": {},
+                    "f:nodePort": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":443,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:appProtocol": {},
+                    "f:name": {},
+                    "f:nodePort": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "http",
+            "protocol": "TCP",
+            "appProtocol": "http",
+            "port": 80,
+            "targetPort": "http",
+            "nodePort": 80
+          },
+          {
+            "name": "https",
+            "protocol": "TCP",
+            "appProtocol": "https",
+            "port": 443,
+            "targetPort": "https",
+            "nodePort": 443
+          }
+        ],
+        "selector": {
+          "app.kubernetes.io/component": "controller",
+          "app.kubernetes.io/instance": "ingress-nginx",
+          "app.kubernetes.io/name": "ingress-nginx"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "NodePort",
+        "sessionAffinity": "None",
+        "externalTrafficPolicy": "Cluster",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "ingress-nginx-controller-admission",
+        "namespace": "knime",
+        "uid": "118bc929-d6ab-4306-b583-19738e5b934f",
+        "resourceVersion": "4151",
+        "creationTimestamp": "2023-11-10T13:18:22Z",
+        "labels": {
+          "app.kubernetes.io/component": "controller",
+          "app.kubernetes.io/instance": "ingress-nginx",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "ingress-nginx",
+          "app.kubernetes.io/part-of": "ingress-nginx",
+          "app.kubernetes.io/version": "1.3.1",
+          "helm.sh/chart": "ingress-nginx-4.2.5-73033d1",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "ingress-nginx",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:18:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:helm.sh/chart": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":443,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:appProtocol": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "https-webhook",
+            "protocol": "TCP",
+            "appProtocol": "https",
+            "port": 443,
+            "targetPort": "webhook"
+          }
+        ],
+        "selector": {
+          "app.kubernetes.io/component": "controller",
+          "app.kubernetes.io/instance": "ingress-nginx",
+          "app.kubernetes.io/name": "ingress-nginx"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "keycloak",
+        "namespace": "knime",
+        "uid": "8e669a95-8e05-4d69-b1cf-d251d252235b",
+        "resourceVersion": "5475",
+        "creationTimestamp": "2023-11-10T13:20:13Z",
+        "labels": {
+          "app": "keycloak"
+        },
+        "annotations": {
+          "description": "The web server's https port.",
+          "service.alpha.openshift.io/serving-cert-secret-name": "sso-x509-https-secret"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "keycloak.org/v1alpha1",
+            "kind": "Keycloak",
+            "name": "knime-keycloak",
+            "uid": "1c638751-0600-4702-827c-6a507f1dc9e5",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "keycloak-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:13Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:description": {},
+                  "f:service.alpha.openshift.io/serving-cert-secret-name": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"1c638751-0600-4702-827c-6a507f1dc9e5\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":8443,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "keycloak",
+            "protocol": "TCP",
+            "port": 8443,
+            "targetPort": 8443
+          }
+        ],
+        "selector": {
+          "app": "keycloak",
+          "component": "keycloak"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "keycloak-discovery",
+        "namespace": "knime",
+        "uid": "9ea194f0-9734-499b-a979-45ef9c309bf4",
+        "resourceVersion": "5478",
+        "creationTimestamp": "2023-11-10T13:20:13Z",
+        "labels": {
+          "app": "keycloak"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "keycloak.org/v1alpha1",
+            "kind": "Keycloak",
+            "name": "knime-keycloak",
+            "uid": "1c638751-0600-4702-827c-6a507f1dc9e5",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "keycloak-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:13Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"1c638751-0600-4702-827c-6a507f1dc9e5\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:clusterIP": {},
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":8080,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "protocol": "TCP",
+            "port": 8080,
+            "targetPort": 8080
+          }
+        ],
+        "selector": {
+          "app": "keycloak",
+          "component": "keycloak"
+        },
+        "clusterIP": "None",
+        "clusterIPs": [
+          "None"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "keycloak-monitoring",
+        "namespace": "knime",
+        "uid": "3cb3df5b-0858-40ff-8d80-30edd548e532",
+        "resourceVersion": "5482",
+        "creationTimestamp": "2023-11-10T13:20:13Z",
+        "labels": {
+          "app": "keycloak"
+        },
+        "annotations": {
+          "description": "The monitoring service for Prometheus"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "keycloak.org/v1alpha1",
+            "kind": "Keycloak",
+            "name": "knime-keycloak",
+            "uid": "1c638751-0600-4702-827c-6a507f1dc9e5",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "keycloak-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:13Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:description": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"1c638751-0600-4702-827c-6a507f1dc9e5\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":9990,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "keycloak-monitoring",
+            "protocol": "TCP",
+            "port": 9990,
+            "targetPort": 9990
+          }
+        ],
+        "selector": {
+          "app": "keycloak",
+          "component": "keycloak"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "keycloak-operator-metrics",
+        "namespace": "knime",
+        "uid": "d3c83231-00ae-45e0-8ba7-8d418d9c55e0",
+        "resourceVersion": "762496",
+        "creationTimestamp": "2023-11-10T13:18:49Z",
+        "labels": {
+          "monitoring-key": "middleware",
+          "name": "keycloak-operator"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "name": "keycloak-operator",
+            "uid": "5cccb0c1-ac94-4939-80b5-371a09c480e3",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "keycloak-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:04:44Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:monitoring-key": {},
+                  "f:name": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"5cccb0c1-ac94-4939-80b5-371a09c480e3\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":8383,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":8686,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "http-metrics",
+            "protocol": "TCP",
+            "port": 8383,
+            "targetPort": 8383
+          },
+          {
+            "name": "cr-metrics",
+            "protocol": "TCP",
+            "port": 8686,
+            "targetPort": 8686
+          }
+        ],
+        "selector": {
+          "name": "keycloak-operator"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "keycloak-postgresql",
+        "namespace": "knime",
+        "uid": "ef7992d2-401a-4823-996e-689246d55d50",
+        "resourceVersion": "5539",
+        "creationTimestamp": "2023-11-10T13:20:14Z",
+        "labels": {
+          "app": "keycloak"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "keycloak.org/v1alpha1",
+            "kind": "Keycloak",
+            "name": "knime-keycloak",
+            "uid": "1c638751-0600-4702-827c-6a507f1dc9e5",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "keycloak-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:14Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"1c638751-0600-4702-827c-6a507f1dc9e5\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:externalName": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":5432,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "protocol": "TCP",
+            "port": 5432,
+            "targetPort": 5432
+          }
+        ],
+        "type": "ExternalName",
+        "sessionAffinity": "None",
+        "externalName": "knime-postgres-cluster.knime.svc.cluster.local"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "knime-hub-endpoint-status-tracker",
+        "namespace": "knime",
+        "uid": "76cfc5ec-f3c5-41c7-8ac9-6ee395a25f2b",
+        "resourceVersion": "4521",
+        "creationTimestamp": "2023-11-10T13:19:00Z",
+        "labels": {
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-endpoint-status-tracker",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:00Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":8080,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "protocol": "TCP",
+            "port": 8080,
+            "targetPort": 8080
+          }
+        ],
+        "selector": {
+          "app": "knime-hub-endpoint-status-tracker"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "knime-postgres-cluster",
+        "namespace": "knime",
+        "uid": "c09926d9-b3e4-42ec-bc32-27c5fd45d847",
+        "resourceVersion": "5258",
+        "creationTimestamp": "2023-11-10T13:20:08Z",
+        "labels": {
+          "application": "spilo",
+          "spilo-role": "master",
+          "team": "knime",
+          "version": "knime-postgres-cluster"
+        },
+        "managedFields": [
+          {
+            "manager": "postgres-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:08Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:spilo-role": {},
+                  "f:team": {},
+                  "f:version": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":5432,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "postgresql",
+            "protocol": "TCP",
+            "port": 5432,
+            "targetPort": 5432
+          }
+        ],
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "knime-postgres-cluster-config",
+        "namespace": "knime",
+        "uid": "c5c7c3c5-0723-457c-87d0-cf68b4369b98",
+        "resourceVersion": "5779",
+        "creationTimestamp": "2023-11-10T13:20:52Z",
+        "labels": {
+          "application": "spilo",
+          "version": "knime-postgres-cluster"
+        },
+        "managedFields": [
+          {
+            "manager": "Patroni",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:52Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:version": {}
+                }
+              },
+              "f:spec": {
+                "f:clusterIP": {},
+                "f:internalTrafficPolicy": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "clusterIP": "None",
+        "clusterIPs": [
+          "None"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4",
+          "IPv6"
+        ],
+        "ipFamilyPolicy": "RequireDualStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "knime-postgres-cluster-repl",
+        "namespace": "knime",
+        "uid": "e50173a5-0e17-461a-8493-b0434f17ec72",
+        "resourceVersion": "5263",
+        "creationTimestamp": "2023-11-10T13:20:09Z",
+        "labels": {
+          "application": "spilo",
+          "spilo-role": "replica",
+          "team": "knime",
+          "version": "knime-postgres-cluster"
+        },
+        "managedFields": [
+          {
+            "manager": "postgres-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:09Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:spilo-role": {},
+                  "f:team": {},
+                  "f:version": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":5432,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "postgresql",
+            "protocol": "TCP",
+            "port": 5432,
+            "targetPort": 5432
+          }
+        ],
+        "selector": {
+          "application": "spilo",
+          "spilo-role": "replica",
+          "version": "knime-postgres-cluster"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "minio",
+        "namespace": "knime",
+        "uid": "7a2c1269-43b8-453d-98e0-48e5c6ca8a13",
+        "resourceVersion": "4870",
+        "creationTimestamp": "2023-11-10T13:19:22Z",
+        "labels": {
+          "app": "minio",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "minio-3.6.3-597315a",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "monitoring": "true",
+          "release": "minio"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "minio",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:monitoring": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":9000,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "http",
+            "protocol": "TCP",
+            "port": 9000,
+            "targetPort": 9000
+          }
+        ],
+        "selector": {
+          "app": "minio",
+          "release": "minio"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "minio-console",
+        "namespace": "knime",
+        "uid": "aa461cba-684e-4992-a010-ce0775e8e6df",
+        "resourceVersion": "4868",
+        "creationTimestamp": "2023-11-10T13:19:22Z",
+        "labels": {
+          "app": "minio",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "minio-3.6.3-597315a",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "minio"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "minio",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":9001,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "http",
+            "protocol": "TCP",
+            "port": 9001,
+            "targetPort": 9001
+          }
+        ],
+        "selector": {
+          "app": "minio",
+          "release": "minio"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "postgres-operator",
+        "namespace": "knime",
+        "uid": "82a3a092-b2c4-4d4e-8955-8a70c6514d92",
+        "resourceVersion": "4556",
+        "creationTimestamp": "2023-11-10T13:19:02Z",
+        "labels": {
+          "app.kubernetes.io/instance": "postgres-operator",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "postgres-operator",
+          "helm.sh/chart": "postgres-operator-1.10.0-34c4225",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "postgres-operator",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:02Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:helm.sh/chart": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":8080,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "protocol": "TCP",
+            "port": 8080,
+            "targetPort": 8080
+          }
+        ],
+        "selector": {
+          "app.kubernetes.io/instance": "postgres-operator",
+          "app.kubernetes.io/name": "postgres-operator"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    }
+  ]
+}

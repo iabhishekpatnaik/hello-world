@@ -1,0 +1,229 @@
+{
+  "kind": "IngressList",
+  "apiVersion": "networking.k8s.io/v1",
+  "metadata": {
+    "resourceVersion": "763982"
+  },
+  "items": [
+    {
+      "kind": "Ingress",
+      "apiVersion": "networking.k8s.io/v1",
+      "metadata": {
+        "name": "keycloak",
+        "namespace": "knime",
+        "uid": "ce290fcf-d5aa-4c0a-82fa-4a036ffd8bf7",
+        "resourceVersion": "745229",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:20:11Z",
+        "labels": {
+          "app": "keycloak",
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-keycloak",
+          "meta.helm.sh/release-namespace": "knime",
+          "nginx.ingress.kubernetes.io/backend-protocol": "HTTPS",
+          "nginx.ingress.kubernetes.io/configuration-snippet": "more_set_headers \"X-Forwarded-Proto: https\";\nmore_set_headers \"X-Forwarded-Port: 443\";\n",
+          "nginx.ingress.kubernetes.io/proxy-buffer-size": "64k",
+          "nginx.ingress.kubernetes.io/proxy-buffering": "on",
+          "nginx.ingress.kubernetes.io/proxy-buffers-number": "4"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2023-11-10T13:20:11Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {},
+                  "f:nginx.ingress.kubernetes.io/backend-protocol": {},
+                  "f:nginx.ingress.kubernetes.io/configuration-snippet": {},
+                  "f:nginx.ingress.kubernetes.io/proxy-buffer-size": {},
+                  "f:nginx.ingress.kubernetes.io/proxy-buffering": {},
+                  "f:nginx.ingress.kubernetes.io/proxy-buffers-number": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:ingressClassName": {},
+                "f:rules": {}
+              }
+            }
+          },
+          {
+            "manager": "nginx-ingress-controller",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2023-11-21T14:30:26Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:loadBalancer": {
+                  "f:ingress": {}
+                }
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "ingressClassName": "knimehub",
+        "rules": [
+          {
+            "host": "auth.hub.kbh-troubleshooting.com",
+            "http": {
+              "paths": [
+                {
+                  "path": "/",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "keycloak",
+                      "port": {
+                        "number": 8443
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "loadBalancer": {
+          "ingress": [
+            {
+              "ip": "***HIDDEN***"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "kind": "Ingress",
+      "apiVersion": "networking.k8s.io/v1",
+      "metadata": {
+        "name": "minio",
+        "namespace": "knime",
+        "uid": "e656d440-7b9c-426b-a45f-1f433cf254e0",
+        "resourceVersion": "745228",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:18:59Z",
+        "labels": {
+          "app": "minio",
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-infrastructure",
+          "meta.helm.sh/release-namespace": "knime",
+          "nginx.ingress.kubernetes.io/backend-protocol": "HTTP",
+          "nginx.ingress.kubernetes.io/proxy-buffer-size": "64k",
+          "nginx.ingress.kubernetes.io/proxy-buffering": "on",
+          "nginx.ingress.kubernetes.io/proxy-buffers-number": "4"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2023-11-10T13:18:59Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {},
+                  "f:nginx.ingress.kubernetes.io/backend-protocol": {},
+                  "f:nginx.ingress.kubernetes.io/proxy-buffer-size": {},
+                  "f:nginx.ingress.kubernetes.io/proxy-buffering": {},
+                  "f:nginx.ingress.kubernetes.io/proxy-buffers-number": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:ingressClassName": {},
+                "f:rules": {}
+              }
+            }
+          },
+          {
+            "manager": "nginx-ingress-controller",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2023-11-21T14:30:26Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:loadBalancer": {
+                  "f:ingress": {}
+                }
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "ingressClassName": "knimehub",
+        "rules": [
+          {
+            "host": "storage.hub.kbh-troubleshooting.com",
+            "http": {
+              "paths": [
+                {
+                  "path": "/",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "minio",
+                      "port": {
+                        "number": 9000
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "loadBalancer": {
+          "ingress": [
+            {
+              "ip": "***HIDDEN***"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

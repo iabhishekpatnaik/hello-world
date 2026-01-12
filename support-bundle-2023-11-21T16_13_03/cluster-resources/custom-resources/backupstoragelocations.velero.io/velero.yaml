@@ -1,0 +1,66 @@
+- apiVersion: velero.io/v1
+  kind: BackupStorageLocation
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"velero.io/v1","kind":"BackupStorageLocation","metadata":{"annotations":{},"creationTimestamp":null,"labels":{"component":"velero"},"name":"default","namespace":"velero"},"spec":{"config":{"publicUrl":"http://***HIDDEN***","region":"us-east-1","s3ForcePathStyle":"true","s3Url":"http://minio.minio"},"default":true,"objectStorage":{"bucket":"velero"},"provider":"aws"}}
+    creationTimestamp: "2023-11-10T13:00:27Z"
+    generation: 8502
+    labels:
+      component: velero
+    managedFields:
+    - apiVersion: velero.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:labels:
+            .: {}
+            f:component: {}
+        f:spec:
+          .: {}
+          f:config:
+            .: {}
+            f:publicUrl: {}
+            f:region: {}
+            f:s3ForcePathStyle: {}
+            f:s3Url: {}
+          f:default: {}
+          f:objectStorage:
+            .: {}
+            f:bucket: {}
+          f:provider: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2023-11-10T13:00:27Z"
+    - apiVersion: velero.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:lastSyncedTime: {}
+          f:lastValidationTime: {}
+          f:phase: {}
+      manager: velero-server
+      operation: Update
+      time: "2023-11-21T16:13:05Z"
+    name: default
+    namespace: velero
+    resourceVersion: "763982"
+    uid: 892df4a8-4c09-4a02-a5eb-e281122c85d4
+  spec:
+    config:
+      publicUrl: http://***HIDDEN***
+      region: us-east-1
+      s3ForcePathStyle: "true"
+      s3Url: http://minio.minio
+    default: true
+    objectStorage:
+      bucket: velero
+    provider: aws
+  status:
+    lastSyncedTime: "2023-11-21T16:13:05Z"
+    lastValidationTime: "2023-11-21T16:12:46Z"
+    phase: Available

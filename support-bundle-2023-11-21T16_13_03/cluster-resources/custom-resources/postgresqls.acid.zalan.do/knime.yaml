@@ -1,0 +1,345 @@
+- apiVersion: acid.zalan.do/v1
+  kind: postgresql
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-persistence
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:08Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: acid.zalan.do/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:allowedSourceRanges: {}
+          f:databases:
+            .: {}
+            f:cdds: {}
+          f:dockerImage: {}
+          f:enableConnectionPooler: {}
+          f:enableLogicalBackup: {}
+          f:enableMasterLoadBalancer: {}
+          f:enableMasterPoolerLoadBalancer: {}
+          f:enableReplicaConnectionPooler: {}
+          f:enableReplicaLoadBalancer: {}
+          f:enableReplicaPoolerLoadBalancer: {}
+          f:enableShmVolume: {}
+          f:initContainers: {}
+          f:nodeAffinity:
+            .: {}
+            f:preferredDuringSchedulingIgnoredDuringExecution: {}
+          f:numberOfInstances: {}
+          f:postgresql:
+            .: {}
+            f:version: {}
+          f:resources:
+            .: {}
+            f:limits:
+              .: {}
+              f:cpu: {}
+              f:memory: {}
+            f:requests:
+              .: {}
+              f:cpu: {}
+              f:memory: {}
+          f:teamId: {}
+          f:users:
+            .: {}
+            f:cdds: {}
+          f:volume:
+            .: {}
+            f:size: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:08Z"
+    - apiVersion: acid.zalan.do/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:PostgresClusterStatus: {}
+      manager: postgres-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-10T13:20:57Z"
+    name: cdds-postgres-cluster
+    namespace: knime
+    resourceVersion: "5830"
+    uid: 96cfc878-6ffd-44a9-be13-cd259a82db5a
+  spec:
+    allowedSourceRanges:
+    - ***HIDDEN***/32
+    databases:
+      cdds: cdds
+    dockerImage: ghcr.io/zalando/spilo-15:3.0-p1
+    enableConnectionPooler: false
+    enableLogicalBackup: false
+    enableMasterLoadBalancer: false
+    enableMasterPoolerLoadBalancer: false
+    enableReplicaConnectionPooler: false
+    enableReplicaLoadBalancer: false
+    enableReplicaPoolerLoadBalancer: false
+    enableShmVolume: true
+    initContainers:
+    - command:
+      - /bin/date
+      image: busybox:1.35
+      name: date
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: hub.knime.com/role
+            operator: In
+            values:
+            - core
+        weight: 1
+    numberOfInstances: 1
+    postgresql:
+      version: "11"
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 50m
+        memory: 256Mi
+    teamId: cdds
+    users:
+      cdds:
+      - superuser
+      - createdb
+    volume:
+      size: 10Gi
+  status:
+    PostgresClusterStatus: Running
+- apiVersion: acid.zalan.do/v1
+  kind: postgresql
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-persistence
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:08Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: acid.zalan.do/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:allowedSourceRanges: {}
+          f:databases:
+            .: {}
+            f:accounts: {}
+            f:edge: {}
+            f:execution: {}
+            f:keycloak: {}
+            f:knime: {}
+            f:notification: {}
+            f:secret_store: {}
+            f:session: {}
+            f:trigger: {}
+          f:dockerImage: {}
+          f:enableConnectionPooler: {}
+          f:enableLogicalBackup: {}
+          f:enableMasterLoadBalancer: {}
+          f:enableMasterPoolerLoadBalancer: {}
+          f:enableReplicaConnectionPooler: {}
+          f:enableReplicaLoadBalancer: {}
+          f:enableReplicaPoolerLoadBalancer: {}
+          f:enableShmVolume: {}
+          f:initContainers: {}
+          f:nodeAffinity:
+            .: {}
+            f:preferredDuringSchedulingIgnoredDuringExecution: {}
+          f:numberOfInstances: {}
+          f:patroni:
+            .: {}
+            f:initdb:
+              .: {}
+              f:data-checksums: {}
+              f:encoding: {}
+              f:locale: {}
+            f:loop_wait: {}
+            f:maximum_lag_on_failover: {}
+            f:retry_timeout: {}
+            f:synchronous_mode: {}
+            f:synchronous_mode_strict: {}
+            f:synchronous_node_count: {}
+            f:ttl: {}
+          f:postgresql:
+            .: {}
+            f:parameters:
+              .: {}
+              f:archive_timeout: {}
+              f:log_filename: {}
+              f:log_rotation_age: {}
+              f:log_statement: {}
+              f:max_connections: {}
+              f:shared_buffers: {}
+            f:version: {}
+          f:resources:
+            .: {}
+            f:limits:
+              .: {}
+              f:cpu: {}
+              f:memory: {}
+            f:requests:
+              .: {}
+              f:cpu: {}
+              f:memory: {}
+          f:teamId: {}
+          f:users:
+            .: {}
+            f:accounts: {}
+            f:edge: {}
+            f:execution: {}
+            f:keycloak: {}
+            f:knime: {}
+            f:notification: {}
+            f:secret_store: {}
+            f:session: {}
+            f:trigger: {}
+          f:volume:
+            .: {}
+            f:size: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:08Z"
+    - apiVersion: acid.zalan.do/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:PostgresClusterStatus: {}
+      manager: postgres-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-10T13:20:58Z"
+    name: knime-postgres-cluster
+    namespace: knime
+    resourceVersion: "5835"
+    uid: 8cac84b8-0a80-4386-8904-df0c0e0c9eb9
+  spec:
+    allowedSourceRanges:
+    - ***HIDDEN***/32
+    databases:
+      accounts: accounts
+      edge: edge
+      execution: execution
+      keycloak: keycloak
+      knime: knime
+      notification: notification
+      secret_store: secret_store
+      session: session
+      trigger: trigger
+    dockerImage: ghcr.io/zalando/spilo-15:3.0-p1
+    enableConnectionPooler: false
+    enableLogicalBackup: false
+    enableMasterLoadBalancer: false
+    enableMasterPoolerLoadBalancer: false
+    enableReplicaConnectionPooler: false
+    enableReplicaLoadBalancer: false
+    enableReplicaPoolerLoadBalancer: false
+    enableShmVolume: true
+    initContainers:
+    - command:
+      - /bin/date
+      image: busybox:1.35
+      name: date
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: hub.knime.com/role
+            operator: In
+            values:
+            - core
+        weight: 1
+    numberOfInstances: 1
+    patroni:
+      initdb:
+        data-checksums: "true"
+        encoding: UTF8
+        locale: en_US.UTF-8
+      loop_wait: 10
+      maximum_lag_on_failover: 33554432
+      retry_timeout: 10
+      synchronous_mode: false
+      synchronous_mode_strict: false
+      synchronous_node_count: 1
+      ttl: 30
+    postgresql:
+      parameters:
+        archive_timeout: "300"
+        log_filename: postgresql-%I
+        log_rotation_age: "60"
+        log_statement: mod
+        max_connections: "200"
+        shared_buffers: 256MB
+      version: "11"
+    resources:
+      limits:
+        cpu: 1000m
+        memory: 1024Mi
+      requests:
+        cpu: 1000m
+        memory: 1024Mi
+    teamId: knime
+    users:
+      accounts:
+      - createdb
+      edge:
+      - createdb
+      execution:
+      - createdb
+      keycloak:
+      - createdb
+      knime:
+      - superuser
+      - createdb
+      notification:
+      - createdb
+      secret_store:
+      - createdb
+      session:
+      - createdb
+      trigger:
+      - createdb
+    volume:
+      size: 10Gi
+  status:
+    PostgresClusterStatus: Running

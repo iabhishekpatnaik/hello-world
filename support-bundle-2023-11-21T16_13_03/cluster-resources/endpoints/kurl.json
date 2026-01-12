@@ -1,0 +1,135 @@
+{
+  "kind": "EndpointsList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763995"
+  },
+  "items": [
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "ekc-operator",
+        "namespace": "kurl",
+        "uid": "1a151607-8eee-49bb-87f9-e8b599d4aba5",
+        "resourceVersion": "745281",
+        "creationTimestamp": "2023-11-10T12:58:15Z",
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:50Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:29Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "kurl",
+                "name": "ekc-operator-74c4d78958-rvghr",
+                "uid": "1e8cf24c-e834-4922-9db8-92c02eba620e"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "port": 8080,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "registry",
+        "namespace": "kurl",
+        "uid": "3b630093-0311-48bb-88be-de2c332bd367",
+        "resourceVersion": "745405",
+        "creationTimestamp": "2023-11-10T12:57:50Z",
+        "labels": {
+          "app": "registry"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:30:25Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:36Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "kurl",
+                "name": "registry-7c56974bf8-5df4s",
+                "uid": "964d5a91-383f-49b8-b7e8-9d08cedd1374"
+              }
+            },
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "kurl",
+                "name": "registry-7c56974bf8-8cbp7",
+                "uid": "06dafd01-ffe0-4a60-814a-66cac59af775"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "registry",
+              "port": 443,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

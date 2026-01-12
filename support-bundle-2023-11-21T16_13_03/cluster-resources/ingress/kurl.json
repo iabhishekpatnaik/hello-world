@@ -1,0 +1,124 @@
+{
+  "kind": "IngressList",
+  "apiVersion": "networking.k8s.io/v1",
+  "metadata": {
+    "resourceVersion": "763982"
+  },
+  "items": [
+    {
+      "kind": "Ingress",
+      "apiVersion": "networking.k8s.io/v1",
+      "metadata": {
+        "name": "registry",
+        "namespace": "kurl",
+        "uid": "19eb3be9-7566-42d3-9b33-19184a6b338c",
+        "resourceVersion": "745230",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:19:18Z",
+        "labels": {
+          "app.kubernetes.io/instance": "knime-hub-execution-registry",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "knime-hub-execution-registry",
+          "app.kubernetes.io/version": "1.0.1-beta-20230908-153838-000006-b642a0f",
+          "helm.sh/chart": "knime-hub-execution-registry-1.0.1-beta-20230908-153838-000006",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-execution-registry",
+          "meta.helm.sh/release-namespace": "kurl",
+          "nginx.ingress.kubernetes.io/backend-protocol": "HTTPS",
+          "nginx.ingress.kubernetes.io/proxy-buffer-size": "64k",
+          "nginx.ingress.kubernetes.io/proxy-buffering": "on",
+          "nginx.ingress.kubernetes.io/proxy-buffers-number": "4"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2023-11-10T13:19:18Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {},
+                  "f:nginx.ingress.kubernetes.io/backend-protocol": {},
+                  "f:nginx.ingress.kubernetes.io/proxy-buffer-size": {},
+                  "f:nginx.ingress.kubernetes.io/proxy-buffering": {},
+                  "f:nginx.ingress.kubernetes.io/proxy-buffers-number": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:helm.sh/chart": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:ingressClassName": {},
+                "f:rules": {}
+              }
+            }
+          },
+          {
+            "manager": "nginx-ingress-controller",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2023-11-21T14:30:26Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:loadBalancer": {
+                  "f:ingress": {}
+                }
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "ingressClassName": "knimehub",
+        "rules": [
+          {
+            "host": "registry.hub.kbh-troubleshooting.com",
+            "http": {
+              "paths": [
+                {
+                  "path": "/",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "registry",
+                      "port": {
+                        "number": 443
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "loadBalancer": {
+          "ingress": [
+            {
+              "ip": "***HIDDEN***"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

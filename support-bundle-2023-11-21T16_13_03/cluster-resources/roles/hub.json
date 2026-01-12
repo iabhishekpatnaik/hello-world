@@ -1,0 +1,75 @@
+{
+  "kind": "RoleList",
+  "apiVersion": "rbac.authorization.k8s.io/v1",
+  "metadata": {
+    "resourceVersion": "763994"
+  },
+  "items": [
+    {
+      "kind": "Role",
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "metadata": {
+        "name": "knime-keycloak-service-account-mapping-cluster-role",
+        "namespace": "hub",
+        "uid": "5a115c08-a70d-4aef-81b9-d97d4e719085",
+        "resourceVersion": "5324",
+        "creationTimestamp": "2023-11-10T13:20:11Z",
+        "labels": {
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-keycloak",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "rbac.authorization.k8s.io/v1",
+            "time": "2023-11-10T13:20:11Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:rules": {}
+            }
+          }
+        ]
+      },
+      "rules": [
+        {
+          "verbs": [
+            "create",
+            "delete",
+            "get",
+            "list",
+            "patch",
+            "update",
+            "watch"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "configmaps"
+          ]
+        }
+      ]
+    }
+  ]
+}

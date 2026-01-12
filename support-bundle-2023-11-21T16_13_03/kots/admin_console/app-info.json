@@ -1,0 +1,27 @@
+{
+  "instance_id": "2XzB3rKi0QljeDzN32bEXzbyksY",
+  "cluster_id": "pqrsytazjchdlfzjswiwcfqhmqttjqku",
+  "downstream": {
+    "cursor": "40",
+    "channel_id": "25Wg8fHYuNVbV82S6rcMlyRYQGh",
+    "channel_name": "Stable",
+    "sequence": 1,
+    "source": "Config Change",
+    "status": "deployed",
+    "preflight_state": "pass",
+    "skip_preflights": false,
+    "repl_helm_installs": 0,
+    "native_helm_installs": 48
+  },
+  "app_status": "ready",
+  "is_kurl": true,
+  "kurl_node_count_total": 1,
+  "kurl_node_count_ready": 1,
+  "k8s_version": "v1.25.12",
+  "k8s_distribution": "kurl",
+  "kots_version": "v1.101.2",
+  "kots_install_id": "",
+  "kurl_install_id": "2xrbg7cllkg4l7ga",
+  "is_gitops_enabled": false,
+  "gitops_provider": ""
+}

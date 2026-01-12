@@ -1,0 +1,2029 @@
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:attributes:
+              .: {}
+              f:post.logout.redirect.uris: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:redirectUris: {}
+            f:standardFlowEnabled: {}
+            f:webOrigins: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:48Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:50Z"
+    name: analytics-platform
+    namespace: knime
+    resourceVersion: "63243"
+    uid: b3794c60-b8e6-4715-8ee5-1c90acbb493b
+  spec:
+    client:
+      attributes:
+        post.logout.redirect.uris: +
+      clientId: analytics-platform
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Client used for native auth in Analytics Platform.
+      directAccessGrantsEnabled: true
+      id: fb0d2bed-c719-4c0e-a0a3-3d2a7aa30cb8
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: true
+      redirectUris:
+      - http://***HIDDEN***:*
+      standardFlowEnabled: true
+      webOrigins:
+      - ""
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-analytics-platform
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:attributes:
+              .: {}
+              f:post.logout.redirect.uris: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:redirectUris: {}
+            f:standardFlowEnabled: {}
+            f:webOrigins: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:52Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:54Z"
+    name: auth-rely
+    namespace: knime
+    resourceVersion: "63334"
+    uid: 80dd887f-98d4-46da-859c-84ab5513a2f6
+  spec:
+    client:
+      attributes:
+        post.logout.redirect.uris: +
+      clientId: auth-rely
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      - offline_access
+      description: Service Account for auth-rely service.
+      directAccessGrantsEnabled: true
+      id: 8aa91314-2807-4987-8430-cdf03a642dbf
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      redirectUris:
+      - http://hub.kbh-troubleshooting.com/*
+      - http://localhost:*
+      standardFlowEnabled: true
+      webOrigins:
+      - ""
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-auth-rely
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:51Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:54Z"
+    name: catalog-service
+    namespace: knime
+    resourceVersion: "63326"
+    uid: b34a1a1a-b399-4673-83e4-1264ce737e02
+  spec:
+    client:
+      clientId: catalog-service
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Service Account for catalog-service.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: 0aacd1ff-b4d6-47f1-823c-c812d2d7cd04
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-catalog-service
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:48Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:50Z"
+    name: execution-context-manager
+    namespace: knime
+    resourceVersion: "63245"
+    uid: af81211f-98ac-4c43-b987-ea3a64b3f0b2
+  spec:
+    client:
+      clientId: execution-context-manager
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Service Account for execution-context-manager.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: e85d3b49-9e49-41f3-bc7b-e1223ff842a1
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-execution-context-manager
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:52Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:55Z"
+    name: execution-operator
+    namespace: knime
+    resourceVersion: "63343"
+    uid: 41a4b013-231b-4cec-8014-e2bff0908cc7
+  spec:
+    client:
+      clientId: execution-operator
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Service Account for execution-operator.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: 26e01498-83ea-4a68-babf-17432b2a4ecf
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-execution-operator
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:attributes:
+              .: {}
+              f:post.logout.redirect.uris: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:redirectUris: {}
+            f:standardFlowEnabled: {}
+            f:webOrigins: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:52Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:55Z"
+    name: hub-ui
+    namespace: knime
+    resourceVersion: "63337"
+    uid: bb123a6c-ccf2-40e6-8363-3fd8535f18b7
+  spec:
+    client:
+      attributes:
+        post.logout.redirect.uris: +
+      clientId: hub-ui
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Client for Hub frontend to log in with.
+      directAccessGrantsEnabled: true
+      id: 4eeaa7ca-f6e9-4ce9-8bbd-3796c1f86fda
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: true
+      redirectUris:
+      - http://hub.kbh-troubleshooting.com/*
+      - http://localhost:*
+      standardFlowEnabled: true
+      webOrigins:
+      - ""
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-hub-ui
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:49Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:50Z"
+    name: keycloak-proxy
+    namespace: knime
+    resourceVersion: "63253"
+    uid: 355225a0-a231-483e-99f8-52a8c93e1117
+  spec:
+    client:
+      clientId: keycloak-proxy
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Client for naked impersonation used by keycloak-proxy.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: 72367f70-35c2-41d5-95c0-18153ba2161f
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-keycloak-proxy
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:52Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:54Z"
+    name: knime-impersonation
+    namespace: knime
+    resourceVersion: "63332"
+    uid: d7f1f1f4-1d2a-470b-9323-d7e6e9d75361
+  spec:
+    client:
+      clientId: knime-impersonation
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Client for naked impersonation used by lifecycle-handler, post-exec-handler,
+        schedule-handler.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: 03f8a956-1e08-46fb-b492-07d68ac5e692
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-knime-impersonation
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:47Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:49Z"
+    name: kubernetes-event-persistor
+    namespace: knime
+    resourceVersion: "63230"
+    uid: edaec99e-bf92-482e-9ac2-a8292e8319a8
+  spec:
+    client:
+      clientId: kubernetes-event-persistor
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Service Account for kubernetes-event-persistor.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: 41e7daad-64fc-4a87-aedb-f386f9cc1d49
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-kubernetes-event-persistor
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:53Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:55Z"
+    name: lifecycle-handler
+    namespace: knime
+    resourceVersion: "63350"
+    uid: 6cf7c316-daea-4812-a5d7-b8a00ac0e90b
+  spec:
+    client:
+      clientId: lifecycle-handler
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Service Account for lifecycle-handler.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: 3c4ad904-17b0-4ae8-82ca-54e2a161491f
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-lifecycle-handler
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:51Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:54Z"
+    name: notification-service
+    namespace: knime
+    resourceVersion: "63319"
+    uid: a4c00b49-5fbf-4571-898f-7a10c2d10776
+  spec:
+    client:
+      clientId: notification-service
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Service Account for notification-service.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: 65d1d5fe-dbb1-432d-9479-5d25df6d4d06
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-notification-service
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:52Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:55Z"
+    name: rest-interface
+    namespace: knime
+    resourceVersion: "63340"
+    uid: 9bb82af3-a2e0-47a5-8e08-7a911e534670
+  spec:
+    client:
+      clientId: rest-interface
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Service Account for rest-interface.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: 7d27e512-2ffc-413e-9732-bb12c1f4c960
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-rest-interface
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:47Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:49Z"
+    name: s3-proxy
+    namespace: knime
+    resourceVersion: "63222"
+    uid: fe62560d-fa1c-4f09-95a9-a2dc4a29dad6
+  spec:
+    client:
+      clientId: s3-proxy
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Service Account for s3-proxy.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: c00b78fd-5ecb-4314-aa5b-112fd9a5f883
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-s3-proxy
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:51Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:54Z"
+    name: search-sync-service
+    namespace: knime
+    resourceVersion: "63323"
+    uid: f9523d7a-37f4-4aa8-87c8-7230648ac538
+  spec:
+    client:
+      clientId: search-sync-service
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Service Account for search-sync-service.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: cf28407a-88d5-4e8e-b0bb-31b5f05074ec
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-search-sync-service
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:53Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:55Z"
+    name: secret-store
+    namespace: knime
+    resourceVersion: "63345"
+    uid: 31f648ed-75a3-4c90-b659-bf26acc7d903
+  spec:
+    client:
+      clientId: secret-store
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Service Account for secret-store.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: 6b5a0490-866a-41d5-b3d7-83974a9131ed
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-secret-store
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:48Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:49Z"
+    name: session-service
+    namespace: knime
+    resourceVersion: "63235"
+    uid: 84d62cd9-b3ad-4d3f-8ad9-acac4addea55
+  spec:
+    client:
+      clientId: session-service
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Service Account for session-service.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: a920443e-54f1-4d93-bd53-32ad4e45345f
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-session-service
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:48Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:49Z"
+    name: trigger-service
+    namespace: knime
+    resourceVersion: "63232"
+    uid: 0e92a29d-f8a0-4300-ac20-f6b44ea86e4a
+  spec:
+    client:
+      clientId: trigger-service
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Service Account for trigger-service.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: b4d6e23a-a7d1-4f92-bfe0-932d244e6e98
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-trigger-service
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakClient
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - client.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:client:
+            .: {}
+            f:clientId: {}
+            f:defaultClientScopes: {}
+            f:description: {}
+            f:directAccessGrantsEnabled: {}
+            f:fullScopeAllowed: {}
+            f:protocol: {}
+            f:publicClient: {}
+            f:serviceAccountsEnabled: {}
+            f:standardFlowEnabled: {}
+          f:realmSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+          f:serviceAccountClientRoles:
+            .: {}
+            f:realm-management: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"client.cleanup": {}
+        f:status:
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:48Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:50Z"
+    name: userdata-svc
+    namespace: knime
+    resourceVersion: "63241"
+    uid: 2e57ff4a-d067-48de-b848-c209c75fe2cf
+  spec:
+    client:
+      clientId: userdata-svc
+      defaultClientScopes:
+      - groups
+      - email
+      - profile
+      - roles
+      - web-origins
+      description: Client used by userdata-service.
+      directAccessGrantsEnabled: false
+      fullScopeAllowed: false
+      id: a3125597-9998-4cec-a13c-002a6a1ce63e
+      implicitFlowEnabled: false
+      protocol: openid-connect
+      publicClient: false
+      serviceAccountsEnabled: true
+      standardFlowEnabled: false
+    realmSelector:
+      matchLabels:
+        app: sso
+    scopeMappings: {}
+    serviceAccountClientRoles:
+      realm-management:
+      - view-users
+  status:
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - keycloak-client-secret-userdata-svc

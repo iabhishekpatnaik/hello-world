@@ -1,0 +1,169 @@
+[
+    {
+        "name": "flannel.can.read.net.conf.json",
+        "labels": {
+            "desiredPosition": "1",
+            "iconKey": "kubernetes_text_analyze",
+            "iconUri": "https://troubleshoot.sh/images/analyzer-icons/text-analyze.svg"
+        },
+        "insight": {
+            "name": "flannel.can.read.net.conf.json",
+            "labels": {
+                "iconKey": "kubernetes_text_analyze",
+                "iconUri": "https://troubleshoot.sh/images/analyzer-icons/text-analyze.svg"
+            },
+            "primary": "Flannel: can read net-conf.json",
+            "detail": "can read net-conf.json",
+            "severity": "debug"
+        },
+        "severity": "debug",
+        "analyzerSpec": ""
+    },
+    {
+        "name": "flannel.net.conf.json.properly.formatted",
+        "labels": {
+            "desiredPosition": "1",
+            "iconKey": "kubernetes_text_analyze",
+            "iconUri": "https://troubleshoot.sh/images/analyzer-icons/text-analyze.svg"
+        },
+        "insight": {
+            "name": "flannel.net.conf.json.properly.formatted",
+            "labels": {
+                "iconKey": "kubernetes_text_analyze",
+                "iconUri": "https://troubleshoot.sh/images/analyzer-icons/text-analyze.svg"
+            },
+            "primary": "Flannel: net-conf.json properly formatted",
+            "detail": "properly formatted net-conf.json",
+            "severity": "debug"
+        },
+        "severity": "debug",
+        "analyzerSpec": ""
+    },
+    {
+        "name": "flannel.has.access",
+        "labels": {
+            "desiredPosition": "1",
+            "iconKey": "kubernetes_text_analyze",
+            "iconUri": "https://troubleshoot.sh/images/analyzer-icons/text-analyze.svg"
+        },
+        "insight": {
+            "name": "flannel.has.access",
+            "labels": {
+                "iconKey": "kubernetes_text_analyze",
+                "iconUri": "https://troubleshoot.sh/images/analyzer-icons/text-analyze.svg"
+            },
+            "primary": "Flannel: has access",
+            "detail": "has access",
+            "severity": "debug"
+        },
+        "severity": "debug",
+        "analyzerSpec": ""
+    },
+    {
+        "name": "required.kubernetes.version",
+        "labels": {
+            "desiredPosition": "1",
+            "iconKey": "kubernetes_cluster_version",
+            "iconUri": "https://troubleshoot.sh/images/analyzer-icons/kubernetes.svg?w=16\u0026h=16"
+        },
+        "insight": {
+            "name": "required.kubernetes.version",
+            "labels": {
+                "iconKey": "kubernetes_cluster_version",
+                "iconUri": "https://troubleshoot.sh/images/analyzer-icons/kubernetes.svg?w=16\u0026h=16"
+            },
+            "primary": "Required Kubernetes Version",
+            "detail": "Your cluster meets the recommended and required versions of Kubernetes",
+            "severity": "debug"
+        },
+        "severity": "debug",
+        "analyzerSpec": ""
+    },
+    {
+        "name": "container.runtime",
+        "labels": {
+            "desiredPosition": "1",
+            "iconKey": "kubernetes_container_runtime",
+            "iconUri": "https://troubleshoot.sh/images/analyzer-icons/container-runtime.svg?w=23\u0026h=16"
+        },
+        "insight": {
+            "name": "container.runtime",
+            "labels": {
+                "iconKey": "kubernetes_container_runtime",
+                "iconUri": "https://troubleshoot.sh/images/analyzer-icons/container-runtime.svg?w=23\u0026h=16"
+            },
+            "primary": "Container Runtime",
+            "detail": "A supported container runtime is present on all nodes",
+            "severity": "debug"
+        },
+        "severity": "debug",
+        "analyzerSpec": ""
+    },
+    {
+        "name": "pod.hub.execution.executor.31904678.6c80.48b0.a21d.73778e52546a.cdde6a7b.8e5b.42f3.a605.417e5092b948.status",
+        "labels": {
+            "desiredPosition": "1",
+            "iconKey": "",
+            "iconUri": ""
+        },
+        "insight": {
+            "name": "pod.hub.execution.executor.31904678.6c80.48b0.a21d.73778e52546a.cdde6a7b.8e5b.42f3.a605.417e5092b948.status",
+            "labels": {
+                "iconKey": "",
+                "iconUri": ""
+            },
+            "primary": "Pod hub-execution/executor-31904678-6c80-48b0-a21d-73778e52546a-cdde6a7b-8e5b-42f3-a605-417e5092b948 status",
+            "detail": "Status: Pending",
+            "severity": "error"
+        },
+        "severity": "error",
+        "analyzerSpec": "",
+        "error": "Status: Pending",
+        "involvedObject": {
+            "kind": "Pod",
+            "namespace": "hub-execution",
+            "name": "executor-31904678-6c80-48b0-a21d-73778e52546a-cdde6a7b-8e5b-42f3-a605-417e5092b948",
+            "apiVersion": "v1"
+        }
+    },
+    {
+        "name": "node.status.check",
+        "labels": {
+            "desiredPosition": "1",
+            "iconKey": "kubernetes_node_resources",
+            "iconUri": "https://troubleshoot.sh/images/analyzer-icons/node-resources.svg?w=16\u0026h=18"
+        },
+        "insight": {
+            "name": "node.status.check",
+            "labels": {
+                "iconKey": "kubernetes_node_resources",
+                "iconUri": "https://troubleshoot.sh/images/analyzer-icons/node-resources.svg?w=16\u0026h=18"
+            },
+            "primary": "Node status check",
+            "detail": "All nodes are online.",
+            "severity": "debug"
+        },
+        "severity": "debug",
+        "analyzerSpec": ""
+    },
+    {
+        "name": "kotsadm.status",
+        "labels": {
+            "desiredPosition": "1",
+            "iconKey": "kubernetes_deployment_status",
+            "iconUri": "https://troubleshoot.sh/images/analyzer-icons/deployment-status.svg?w=17\u0026h=17"
+        },
+        "insight": {
+            "name": "kotsadm.status",
+            "labels": {
+                "iconKey": "kubernetes_deployment_status",
+                "iconUri": "https://troubleshoot.sh/images/analyzer-icons/deployment-status.svg?w=17\u0026h=17"
+            },
+            "primary": "kotsadm Status",
+            "detail": "At least 1 replica of the Admin Console API is running and ready",
+            "severity": "debug"
+        },
+        "severity": "debug",
+        "analyzerSpec": ""
+    }
+]

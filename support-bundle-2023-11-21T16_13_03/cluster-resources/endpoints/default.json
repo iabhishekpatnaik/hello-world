@@ -1,0 +1,308 @@
+{
+  "kind": "EndpointsList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763995"
+  },
+  "items": [
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "kotsadm",
+        "namespace": "default",
+        "uid": "d2b2e793-b4ef-41ab-9d5d-ab8e8cfd9041",
+        "resourceVersion": "745615",
+        "creationTimestamp": "2023-11-10T12:59:18Z",
+        "labels": {
+          "kots.io/backup": "velero",
+          "kots.io/kotsadm": "true"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:30:55Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:55Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:kots.io/backup": {},
+                  "f:kots.io/kotsadm": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "kotsadm-5fb868948d-42jd4",
+                "uid": "074b7055-a641-4b66-8d66-ddf94aa087a8"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "http",
+              "port": 3000,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "kotsadm-rqlite",
+        "namespace": "default",
+        "uid": "d8ba596a-4a5e-4451-b679-e63dabe4d299",
+        "resourceVersion": "745296",
+        "creationTimestamp": "2023-11-10T12:59:18Z",
+        "labels": {
+          "app": "kotsadm-rqlite"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:30:07Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:30Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "kotsadm-rqlite-0",
+                "uid": "86bd26a3-9f49-4709-b3ee-b7ac9c8665eb"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "rqlite",
+              "port": 4001,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "kotsadm-rqlite-headless",
+        "namespace": "default",
+        "uid": "a672d1d0-aced-40b5-88b2-9d4e3827d89a",
+        "resourceVersion": "745294",
+        "creationTimestamp": "2023-11-10T12:59:18Z",
+        "labels": {
+          "service.kubernetes.io/headless": ""
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:30:07Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:30Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:service.kubernetes.io/headless": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "hostname": "kotsadm-rqlite-0",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "kotsadm-rqlite-0",
+                "uid": "86bd26a3-9f49-4709-b3ee-b7ac9c8665eb"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "port": 4001,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "kubernetes",
+        "namespace": "default",
+        "uid": "7044b263-d112-4949-99b6-c20eeba542f8",
+        "resourceVersion": "199",
+        "creationTimestamp": "2023-11-10T12:57:34Z",
+        "labels": {
+          "endpointslice.kubernetes.io/skip-mirror": "true"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-apiserver",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:57:34Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:endpointslice.kubernetes.io/skip-mirror": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***"
+            }
+          ],
+          "ports": [
+            {
+              "name": "https",
+              "port": 6443,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "kurl-proxy-kotsadm",
+        "namespace": "default",
+        "uid": "7eac93fa-080d-4e60-bc54-7aa8fd64ebe8",
+        "resourceVersion": "744799",
+        "creationTimestamp": "2023-11-10T12:59:19Z",
+        "labels": {
+          "kots.io/backup": "velero",
+          "kots.io/kotsadm": "true"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:44Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:29:57Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:kots.io/backup": {},
+                  "f:kots.io/kotsadm": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "kurl-proxy-kotsadm-5b8955b99b-wxqxs",
+                "uid": "1ae8b457-b97c-43aa-9802-a530c5ef40f7"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "port": 8800,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

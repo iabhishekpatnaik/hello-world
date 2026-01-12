@@ -1,0 +1,28 @@
+[version]
+v2023.11.02-0
+
+[options]
+ --ignore-warnings --spec=./addons/containerd/1.6.22/host-preflight.yaml --spec=./addons/flannel/0.22.0/host-preflight.yaml --spec=./addons/prometheus/0.65.2-46.8.0/host-preflight.yaml --spec=./addons/kotsadm/1.101.2/host-preflight.yaml --spec=./addons/containerd/1.6.22/host-preflight.yaml
+
+[results]
+[32m[PASS][0m Number of CPUs: This server has at least 4 CPU cores
+[32m[PASS][0m Amount of Memory: The system has at least 8G of memory
+[32m[PASS][0m Ephemeral Disk Usage /var/lib/kubelet: The disk containing directory /var/lib/kubelet has at least 30Gi of total space, has at least 10Gi of disk space available, and is less than 60% full
+[32m[PASS][0m Ephemeral Disk Usage /var/lib/containerd: The disk containing directory /var/lib/containerd has at least 30Gi of total space, has at least 10Gi of disk space available, and is less than 60% full.
+[32m[PASS][0m Ephemeral Disk Usage /var/openebs: The disk containing directory /var/openebs has sufficient space
+[32m[PASS][0m Kubernetes API TCP Port Status: Port 6443 is open
+[32m[PASS][0m ETCD Client API TCP Port Status: Port 2379 is open
+[32m[PASS][0m ETCD Server API TCP Port Status: Port 2380 is open
+[32m[PASS][0m ETCD Health Server TCP Port Status: Port 2381 is available
+[32m[PASS][0m Kubelet Health Server TCP Port Status: Port 10248 is available
+[32m[PASS][0m Kubelet API TCP Port Status: Port 10250 is open
+[32m[PASS][0m Kube Controller Manager Health Server TCP Port Status: Port 10257 is available
+[32m[PASS][0m Kube Scheduler Health Server TCP Port Status: Port 10259 is available
+[32m[PASS][0m Filesystem Performance: Write latency is ok (p99 target < 10ms, actual: 3.424256ms)
+[32m[PASS][0m NTP Status: System clock is synchronized
+[32m[PASS][0m NTP Status: Timezone is set to UTC
+[32m[PASS][0m Host OS Info: containerd addon supports ubuntu 22.04
+[32m[PASS][0m Flannel UDP port 8472 status: Port is open
+[32m[PASS][0m Node Exporter Metrics Server TCP Port Status: Port 9100 is available
+[32m[PASS][0m Can Access Replicated API: Connected to https://replicated.app
+[32m[PASS][0m Host OS Info: containerd addon supports ubuntu 22.04

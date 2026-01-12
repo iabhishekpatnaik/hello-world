@@ -1,0 +1,572 @@
+{
+  "kind": "EndpointsList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763995"
+  },
+  "items": [
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "kube-dns",
+        "namespace": "kube-system",
+        "uid": "2cbb7098-778b-4073-ba38-2c9b6d581b14",
+        "resourceVersion": "745075",
+        "creationTimestamp": "2023-11-10T12:57:49Z",
+        "labels": {
+          "k8s-app": "kube-dns",
+          "kubernetes.io/cluster-service": "true",
+          "kubernetes.io/name": "CoreDNS"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:29Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:19Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:k8s-app": {},
+                  "f:kubernetes.io/cluster-service": {},
+                  "f:kubernetes.io/name": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-565d847f94-cdrp2",
+                "uid": "f80918be-9b47-4460-9bac-b20789ef762f"
+              }
+            },
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-565d847f94-b67m8",
+                "uid": "07d0cb2f-a4bc-46b6-81b9-6b4a45efb172"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "dns-tcp",
+              "port": 53,
+              "protocol": "TCP"
+            },
+            {
+              "name": "dns",
+              "port": 53,
+              "protocol": "UDP"
+            },
+            {
+              "name": "metrics",
+              "port": 9153,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-coredns",
+        "namespace": "kube-system",
+        "uid": "637da582-4ccc-4390-94b2-0a71919c38cd",
+        "resourceVersion": "745076",
+        "creationTimestamp": "2023-11-10T12:59:12Z",
+        "labels": {
+          "app": "kube-prometheus-stack-coredns",
+          "app.kubernetes.io/instance": "v0.65.2-46.8.0",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/part-of": "kube-prometheus-stack",
+          "app.kubernetes.io/version": "46.8.0",
+          "chart": "kube-prometheus-stack-46.8.0",
+          "heritage": "Helm",
+          "jobLabel": "coredns",
+          "release": "v0.65.2-46.8.0",
+          "service.kubernetes.io/headless": ""
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:29Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:19Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:jobLabel": {},
+                  "f:release": {},
+                  "f:service.kubernetes.io/headless": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-565d847f94-cdrp2",
+                "uid": "f80918be-9b47-4460-9bac-b20789ef762f"
+              }
+            },
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-565d847f94-b67m8",
+                "uid": "07d0cb2f-a4bc-46b6-81b9-6b4a45efb172"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "http-metrics",
+              "port": 9153,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-kube-controller-manager",
+        "namespace": "kube-system",
+        "uid": "d03d16ac-b156-40e7-ad7d-6db31e33ab73",
+        "resourceVersion": "744997",
+        "creationTimestamp": "2023-11-10T12:59:12Z",
+        "labels": {
+          "app": "kube-prometheus-stack-kube-controller-manager",
+          "app.kubernetes.io/instance": "v0.65.2-46.8.0",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/part-of": "kube-prometheus-stack",
+          "app.kubernetes.io/version": "46.8.0",
+          "chart": "kube-prometheus-stack-46.8.0",
+          "heritage": "Helm",
+          "jobLabel": "kube-controller-manager",
+          "release": "v0.65.2-46.8.0",
+          "service.kubernetes.io/headless": ""
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:14Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:14Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:jobLabel": {},
+                  "f:release": {},
+                  "f:service.kubernetes.io/headless": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kube-controller-manager-ip-172-31-41-186",
+                "uid": "0b0aa3b3-a828-4eb2-925b-fced63da5e9e"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "http-metrics",
+              "port": 10257,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-kube-etcd",
+        "namespace": "kube-system",
+        "uid": "6120af64-8b9b-4d37-8fdf-65835066445b",
+        "resourceVersion": "383694",
+        "creationTimestamp": "2023-11-10T12:59:12Z",
+        "labels": {
+          "app": "kube-prometheus-stack-kube-etcd",
+          "app.kubernetes.io/instance": "v0.65.2-46.8.0",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/part-of": "kube-prometheus-stack",
+          "app.kubernetes.io/version": "46.8.0",
+          "chart": "kube-prometheus-stack-46.8.0",
+          "heritage": "Helm",
+          "jobLabel": "kube-etcd",
+          "release": "v0.65.2-46.8.0",
+          "service.kubernetes.io/headless": ""
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-16T10:49:56Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-16T10:50:35Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:jobLabel": {},
+                  "f:release": {},
+                  "f:service.kubernetes.io/headless": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "etcd-ip-172-31-41-186",
+                "uid": "202da109-a273-43b4-9f05-95945f71c1e4"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "http-metrics",
+              "port": 2381,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-kube-proxy",
+        "namespace": "kube-system",
+        "uid": "1a53ce26-8663-42d1-885e-3b57249cc815",
+        "resourceVersion": "744991",
+        "creationTimestamp": "2023-11-10T12:59:12Z",
+        "labels": {
+          "app": "kube-prometheus-stack-kube-proxy",
+          "app.kubernetes.io/instance": "v0.65.2-46.8.0",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/part-of": "kube-prometheus-stack",
+          "app.kubernetes.io/version": "46.8.0",
+          "chart": "kube-prometheus-stack-46.8.0",
+          "heritage": "Helm",
+          "jobLabel": "kube-proxy",
+          "release": "v0.65.2-46.8.0",
+          "service.kubernetes.io/headless": ""
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:15Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:13Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:jobLabel": {},
+                  "f:release": {},
+                  "f:service.kubernetes.io/headless": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kube-proxy-876jt",
+                "uid": "547739aa-d293-4a7e-b469-09d6d60649c3"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "http-metrics",
+              "port": 10249,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-kube-scheduler",
+        "namespace": "kube-system",
+        "uid": "289826ba-8119-498a-9a58-8b45646f026f",
+        "resourceVersion": "744828",
+        "creationTimestamp": "2023-11-10T12:59:12Z",
+        "labels": {
+          "app": "kube-prometheus-stack-kube-scheduler",
+          "app.kubernetes.io/instance": "v0.65.2-46.8.0",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/part-of": "kube-prometheus-stack",
+          "app.kubernetes.io/version": "46.8.0",
+          "chart": "kube-prometheus-stack-46.8.0",
+          "heritage": "Helm",
+          "jobLabel": "kube-scheduler",
+          "release": "v0.65.2-46.8.0",
+          "service.kubernetes.io/headless": ""
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:16Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:29:59Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:jobLabel": {},
+                  "f:release": {},
+                  "f:service.kubernetes.io/headless": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kube-scheduler-ip-172-31-41-186",
+                "uid": "ff145bb2-b6fd-4896-8a32-de023b956fc4"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "http-metrics",
+              "port": 10251,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-kubelet",
+        "namespace": "kube-system",
+        "uid": "f0b9ee43-7a21-4f1d-94c3-2b0e69cbd0cb",
+        "resourceVersion": "1192",
+        "creationTimestamp": "2023-11-10T12:59:15Z",
+        "labels": {
+          "app.kubernetes.io/managed-by": "prometheus-operator",
+          "app.kubernetes.io/name": "kubelet",
+          "k8s-app": "kubelet"
+        },
+        "managedFields": [
+          {
+            "manager": "PrometheusOperator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:59:15Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:k8s-app": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "targetRef": {
+                "kind": "Node",
+                "name": "ip-172-31-41-186",
+                "uid": "bb68af6c-5265-4852-90ba-5b1071387c4a"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "https-metrics",
+              "port": 10250,
+              "protocol": "TCP"
+            },
+            {
+              "name": "http-metrics",
+              "port": 10255,
+              "protocol": "TCP"
+            },
+            {
+              "name": "cadvisor",
+              "port": 4194,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+ℹ DISCOURSE_URL not set in .env file. Discourse features will be disabled.
+ℹ App version: 6.1.2-beta+0.0e3851831
+ℹ Library versions (including Node.js): { node: '18.14.2',
+  v8: '***HIDDEN***-node.22',
+  uv: '1.44.2',
+  zlib: '1.2.13',
+  brotli: '1.0.9',
+  ares: '1.18.1',
+  modules: '108',
+  nghttp2: '1.51.0',
+  napi: '8',
+  llhttp: '6.0.10',
+  uvwasi: '0.0.14',
+  acorn: '8.8.1',
+  simdutf: '3.1.0',
+  undici: '5.20.0',
+  openssl: '3.0.8+quic',
+  cldr: '42.0',
+  icu: '72.1',
+  tz: '2022g',
+  unicode: '15.0',
+  ngtcp2: '0.8.1',
+  nghttp3: '0.7.0' }
+ℹ Sitemap disabled
+ℹ Using Redis at hub-webapp-redis-master.knime.svc.cluster.local:6379
+ℹ Connection to Redis successful.
+ℹ Redis client and server ready.
+ℹ Listening on: http://***HIDDEN***:3000/
+
+ ERROR  Axios error: {
+    "message": "Request failed with status code 503",
+    "text": "no healthy upstream",
+    "path": "/accounts/hub:global",
+    "host": "api.hub.kbh-troubleshooting.com",
+    "method": "GET"
+}
+
+
+ WARN  Error while updating feature flags: Cannot read properties of undefined (reading 'data')
+
+ℹ Connection to Redis lost, retrying...
+ℹ Connection to Redis successful.
+ℹ Redis client and server ready.
+ℹ Using REST service at http://api.hub.kbh-troubleshooting.com/
+ℹ Public URL is http://hub.kbh-troubleshooting.com

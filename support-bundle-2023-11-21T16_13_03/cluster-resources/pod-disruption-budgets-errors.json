@@ -1,0 +1,16 @@
+{
+  "default": "the server could not find the requested resource",
+  "hub": "the server could not find the requested resource",
+  "hub-execution": "the server could not find the requested resource",
+  "istio-system": "the server could not find the requested resource",
+  "knime": "the server could not find the requested resource",
+  "kube-flannel": "the server could not find the requested resource",
+  "kube-node-lease": "the server could not find the requested resource",
+  "kube-public": "the server could not find the requested resource",
+  "kube-system": "the server could not find the requested resource",
+  "kurl": "the server could not find the requested resource",
+  "minio": "the server could not find the requested resource",
+  "monitoring": "the server could not find the requested resource",
+  "openebs": "the server could not find the requested resource",
+  "velero": "the server could not find the requested resource"
+}

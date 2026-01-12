@@ -1,0 +1,346 @@
+{
+  "kind": "StatefulSetList",
+  "apiVersion": "apps/v1",
+  "metadata": {
+    "resourceVersion": "763976"
+  },
+  "items": [
+    {
+      "kind": "StatefulSet",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "ha-minio",
+        "namespace": "minio",
+        "uid": "1752df40-5459-4d9f-ad62-88389842e0c2",
+        "resourceVersion": "670",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T12:58:23Z",
+        "labels": {
+          "app": "ha-minio"
+        },
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"StatefulSet\",\"metadata\":{\"annotations\":{\"kurl.sh/desired-scale\":\"6\"},\"labels\":{\"app\":\"ha-minio\"},\"name\":\"ha-minio\",\"namespace\":\"minio\"},\"spec\":{\"podManagementPolicy\":\"Parallel\",\"replicas\":0,\"selector\":{\"matchLabels\":{\"app\":\"ha-minio\"}},\"serviceName\":\"ha-minio\",\"template\":{\"metadata\":{\"labels\":{\"app\":\"ha-minio\"}},\"spec\":{\"affinity\":{\"podAntiAffinity\":{\"preferredDuringSchedulingIgnoredDuringExecution\":[{\"podAffinityTerm\":{\"labelSelector\":{\"matchExpressions\":[{\"key\":\"app\",\"operator\":\"In\",\"values\":[\"ha-minio\"]}]},\"topologyKey\":\"kubernetes.io/hostname\"},\"weight\":1}]}},\"containers\":[{\"args\":[\"--quiet\",\"server\",\"http://ha-minio-{0...5}.ha-minio.minio.svc.cluster.local/data\"],\"env\":[{\"name\":\"MINIO_UPDATE\",\"value\":\"off\"},{\"name\":\"MINIO_ACCESS_KEY\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"MINIO_ACCESS_KEY\",\"name\":\"minio-credentials\"}}},{\"name\":\"MINIO_SECRET_KEY\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"MINIO_SECRET_KEY\",\"name\":\"minio-credentials\"}}}],\"image\":\"minio/minio:RELEASE.2023-06-29T05-12-28Z\",\"livenessProbe\":{\"httpGet\":{\"path\":\"/minio/health/live\",\"port\":9000},\"initialDelaySeconds\":5,\"periodSeconds\":20},\"name\":\"minio\",\"ports\":[{\"containerPort\":9000}],\"readinessProbe\":{\"httpGet\":{\"path\":\"/minio/health/ready\",\"port\":9000},\"initialDelaySeconds\":5,\"periodSeconds\":20},\"volumeMounts\":[{\"mountPath\":\"/data\",\"name\":\"minio-data\"}]}]}},\"volumeClaimTemplates\":[{\"metadata\":{\"name\":\"minio-data\"},\"spec\":{\"accessModes\":[\"ReadWriteOnce\"],\"resources\":{\"requests\":{\"storage\":\"10Gi\"}},\"storageClassName\":\"default\"}}]}}\n",
+          "kurl.sh/desired-scale": "6"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T12:58:23Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:collisionCount": {},
+                "f:currentRevision": {},
+                "f:observedGeneration": {},
+                "f:updateRevision": {}
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "kubectl-client-side-apply",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T12:58:23Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kubectl.kubernetes.io/last-applied-configuration": {},
+                  "f:kurl.sh/desired-scale": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {}
+                }
+              },
+              "f:spec": {
+                "f:podManagementPolicy": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:serviceName": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:podAntiAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"minio\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"MINIO_ACCESS_KEY\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"MINIO_SECRET_KEY\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"MINIO_UPDATE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:livenessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":9000,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {},
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/data\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:terminationGracePeriodSeconds": {}
+                  }
+                },
+                "f:updateStrategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:partition": {}
+                  },
+                  "f:type": {}
+                },
+                "f:volumeClaimTemplates": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 0,
+        "selector": {
+          "matchLabels": {
+            "app": "ha-minio"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app": "ha-minio"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "minio",
+                "image": "minio/minio:RELEASE.2023-06-29T05-12-28Z",
+                "args": [
+                  "--quiet",
+                  "server",
+                  "http://ha-minio-{0...5}.ha-minio.minio.svc.cluster.local/data"
+                ],
+                "ports": [
+                  {
+                    "containerPort": 9000,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "MINIO_UPDATE",
+                    "value": "off"
+                  },
+                  {
+                    "name": "MINIO_ACCESS_KEY",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "minio-credentials",
+                        "key": "MINIO_ACCESS_KEY"
+                      }
+                    }
+                  },
+                  {
+                    "name": "MINIO_SECRET_KEY",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "minio-credentials",
+                        "key": "MINIO_SECRET_KEY"
+                      }
+                    }
+                  }
+                ],
+                "resources": {},
+                "volumeMounts": [
+                  {
+                    "name": "minio-data",
+                    "mountPath": "/data"
+                  }
+                ],
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/minio/health/live",
+                    "port": 9000,
+                    "scheme": "HTTP"
+                  },
+                  "initialDelaySeconds": 5,
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 20,
+                  "successThreshold": 1,
+                  "failureThreshold": 3
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/minio/health/ready",
+                    "port": 9000,
+                    "scheme": "HTTP"
+                  },
+                  "initialDelaySeconds": 5,
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 20,
+                  "successThreshold": 1,
+                  "failureThreshold": 3
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "securityContext": {},
+            "affinity": {
+              "podAntiAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app",
+                            "operator": "In",
+                            "values": [
+                              "ha-minio"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "kubernetes.io/hostname"
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "volumeClaimTemplates": [
+          {
+            "kind": "PersistentVolumeClaim",
+            "apiVersion": "v1",
+            "metadata": {
+              "name": "minio-data",
+              "creationTimestamp": null
+            },
+            "spec": {
+              "accessModes": [
+                "ReadWriteOnce"
+              ],
+              "resources": {
+                "requests": {
+                  "storage": "10Gi"
+                }
+              },
+              "storageClassName": "default",
+              "volumeMode": "Filesystem"
+            },
+            "status": {
+              "phase": "Pending"
+            }
+          }
+        ],
+        "serviceName": "ha-minio",
+        "podManagementPolicy": "Parallel",
+        "updateStrategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "partition": 0
+          }
+        },
+        "revisionHistoryLimit": 10
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 0,
+        "currentRevision": "ha-minio-547499766",
+        "updateRevision": "ha-minio-547499766",
+        "collisionCount": 0,
+        "availableReplicas": 0
+      }
+    }
+  ]
+}

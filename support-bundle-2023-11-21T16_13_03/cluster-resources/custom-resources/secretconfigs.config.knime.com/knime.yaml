@@ -1,0 +1,1591 @@
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-infrastructure
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:18:59Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:accessKeyId: {}
+            f:secretAccessKey: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:18:59Z"
+    name: accounts-minio-secretconfig
+    namespace: knime
+    resourceVersion: "4501"
+    uid: 49eee51e-e8e7-4783-ad03-f34ebaa3e1b8
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: accounts-minio-credentials
+    targetNamespace: hub
+    targetSecretData:
+      accessKeyId: $source.user
+      secretAccessKey: $source.password
+    targetSecretName: accounts-minio-credentials
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-persistence
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:08Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:password: {}
+            f:username: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:08Z"
+    name: accounts-service-db-secretconfig
+    namespace: knime
+    resourceVersion: "5238"
+    uid: a531aae8-e641-4f92-80f2-c20e16eac85c
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: accounts.knime-postgres-cluster.credentials
+    targetNamespace: hub
+    targetSecretData:
+      password: $source.password
+      username: $source.username
+    targetSecretName: accounts-service-db-secret
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-infrastructure
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:18:59Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:accessKeyId: {}
+            f:secretAccessKey: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:18:59Z"
+    name: catalog-minio-secretconfig
+    namespace: knime
+    resourceVersion: "4500"
+    uid: 2d541df4-fc19-4734-a6d2-ee95d8ba3aa1
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: catalog-minio-credentials
+    targetNamespace: hub
+    targetSecretData:
+      accessKeyId: $source.user
+      secretAccessKey: $source.password
+    targetSecretName: catalog-minio-credentials
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-persistence
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:08Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:POSTGRES_ADDRESS: {}
+            f:POSTGRES_DB: {}
+            f:POSTGRES_PASSWORD: {}
+            f:POSTGRES_USERNAME: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:08Z"
+    name: catalog-service-db-secretconfig
+    namespace: knime
+    resourceVersion: "5235"
+    uid: 6d4a1993-87f8-4e92-a6ef-b5579d391b9b
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: knime.knime-postgres-cluster.credentials
+    targetNamespace: hub
+    targetSecretData:
+      POSTGRES_ADDRESS: knime-postgres-cluster.knime.svc.cluster.local:5432
+      POSTGRES_DB: knime
+      POSTGRES_PASSWORD: $source.password
+      POSTGRES_USERNAME: $source.username
+    targetSecretName: catalog-service-db-secret
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-persistence
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:08Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:POSTGRES_PASSWORD: {}
+            f:POSTGRES_URI: {}
+            f:POSTGRES_USERNAME: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:08Z"
+    name: edge-db-secretconfig
+    namespace: knime
+    resourceVersion: "5240"
+    uid: ac74cab2-2d32-4e7c-b8af-aa9f19d1fc48
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: edge.knime-postgres-cluster.credentials
+    targetNamespace: hub
+    targetSecretData:
+      POSTGRES_PASSWORD: $source.password
+      POSTGRES_URI: jdbc:postgresql://knime-postgres-cluster.knime.svc.cluster.local:5432/edge
+      POSTGRES_USERNAME: $source.username
+    targetSecretName: edge-db-secret
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-infrastructure
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:18:59Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:accessKeyId: {}
+            f:secretAccessKey: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:18:59Z"
+    name: execution-minio-secretconfig
+    namespace: knime
+    resourceVersion: "4502"
+    uid: e04c6e64-1686-4540-8344-0f50eba6e4de
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: execution-minio-credentials
+    targetNamespace: hub
+    targetSecretData:
+      accessKeyId: $source.user
+      secretAccessKey: $source.password
+    targetSecretName: execution-minio-credentials
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-persistence
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:08Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:password: {}
+            f:url: {}
+            f:username: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:08Z"
+    name: execution-services-db-secretconfig
+    namespace: knime
+    resourceVersion: "5233"
+    uid: 13edb4b1-fc7c-4843-8cb9-dd7b76910476
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: execution.knime-postgres-cluster.credentials
+    targetNamespace: hub
+    targetSecretData:
+      password: $source.password
+      url: jdbc:postgresql://knime-postgres-cluster.knime.svc.cluster.local:5432/execution
+      username: $source.username
+    targetSecretName: execution-services-db-secret
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-auth-rely-secretconfig
+    namespace: knime
+    resourceVersion: "5355"
+    uid: dc5d4383-ac50-41af-ac9f-a43aebf312f0
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-auth-rely
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-auth-rely
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-catalog-service-secretconfig
+    namespace: knime
+    resourceVersion: "5365"
+    uid: 91bb20bb-41ca-4883-8797-0ab5325dac5b
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-catalog-service
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-catalog-service
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-persistence
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:08Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:POSTGRES_DATABASE: {}
+            f:POSTGRES_EXTERNAL_ADDRESS: {}
+            f:POSTGRES_EXTERNAL_PORT: {}
+            f:POSTGRES_HOST: {}
+            f:POSTGRES_PASSWORD: {}
+            f:POSTGRES_SUPERUSER: {}
+            f:POSTGRES_USERNAME: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:08Z"
+    name: keycloak-db-secretconfig
+    namespace: knime
+    resourceVersion: "5236"
+    uid: 9bda17b1-12b0-4fc9-b3b3-fa59f61389ec
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak.knime-postgres-cluster.credentials
+    targetNamespace: knime
+    targetSecretData:
+      POSTGRES_DATABASE: keycloak
+      POSTGRES_EXTERNAL_ADDRESS: knime-postgres-cluster.knime.svc.cluster.local
+      POSTGRES_EXTERNAL_PORT: "5432"
+      POSTGRES_HOST: knime-postgres-cluster.knime.svc.cluster.local
+      POSTGRES_PASSWORD: $source.password
+      POSTGRES_SUPERUSER: "true"
+      POSTGRES_USERNAME: $source.username
+    targetSecretName: keycloak-db-secret
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-execution-context-manager-secretconfig
+    namespace: knime
+    resourceVersion: "5353"
+    uid: 8e06f5bb-ac4c-47ca-a357-9d5aac6f5349
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-execution-context-manager
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-execution-context-manager
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-execution-operator-secretconfig
+    namespace: knime
+    resourceVersion: "5363"
+    uid: fd8b9ff5-9500-444c-88bc-2c24de2523d6
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-execution-operator
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-execution-operator
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-keycloak-proxy-secretconfig
+    namespace: knime
+    resourceVersion: "5359"
+    uid: 150b4f58-0806-4af1-8d31-693e80882136
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-keycloak-proxy
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-keycloak-proxy
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-knime-impersonation-secretconfig
+    namespace: knime
+    resourceVersion: "5350"
+    uid: 1769c49e-ca0f-4d11-bf7d-1c2140c0d02f
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-knime-impersonation
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-knime-impersonation
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-kubernetes-event-persistor-secretconfig
+    namespace: knime
+    resourceVersion: "5361"
+    uid: 63126f4b-8698-4dd5-b87a-0b343e621f3b
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-kubernetes-event-persistor
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-kubernetes-event-persistor
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-lifecycle-handler-secretconfig
+    namespace: knime
+    resourceVersion: "5364"
+    uid: 8bf51e9c-9d2e-48c0-8237-db04b722d257
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-lifecycle-handler
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-lifecycle-handler
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-notification-service-secretconfig
+    namespace: knime
+    resourceVersion: "5360"
+    uid: e9d1829e-67d7-4e4b-bdf3-bac5ba077e47
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-notification-service
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-notification-service
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-rest-interface-secretconfig
+    namespace: knime
+    resourceVersion: "5362"
+    uid: a560ea3f-6fcc-4cf4-9cad-bcca91edbc6c
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-rest-interface
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-rest-interface
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-s3-proxy-secretconfig
+    namespace: knime
+    resourceVersion: "5354"
+    uid: f20c83c0-9029-4bc9-96df-4cd0840df77a
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-s3-proxy
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-s3-proxy
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-search-sync-service-secretconfig
+    namespace: knime
+    resourceVersion: "5357"
+    uid: dfb5a465-dd14-4344-ad60-d92aadd123ad
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-search-sync-service
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-search-sync-service
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-secret-store-secretconfig
+    namespace: knime
+    resourceVersion: "5352"
+    uid: d6b0452a-751f-49f7-bc04-3255f65d9bd0
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-secret-store
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-secret-store
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-session-service-secretconfig
+    namespace: knime
+    resourceVersion: "5356"
+    uid: 649a5eb1-179a-4378-bf3c-ca06ac4548ce
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-session-service
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-session-service
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-trigger-service-secretconfig
+    namespace: knime
+    resourceVersion: "5358"
+    uid: 64c41f94-af30-49d1-8f80-30fc3a62d9be
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-trigger-service
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: keycloak-client-secret-trigger-service
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:clientId: {}
+            f:clientSecret: {}
+            f:realm: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    name: keycloak-userdata-svc-secretconfig
+    namespace: knime
+    resourceVersion: "5351"
+    uid: dd37fdb3-0955-4c6e-98cd-732c7fbc61c2
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: keycloak-client-secret-userdata-svc
+    targetNamespace: hub
+    targetSecretData:
+      clientId: $source.CLIENT_ID
+      clientSecret: $source.CLIENT_SECRET
+      realm: knime
+    targetSecretName: accounts-service-keycloak-client
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-persistence
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:08Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:password: {}
+            f:url: {}
+            f:urlWithoutProtocol: {}
+            f:username: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:08Z"
+    name: knime-artemis-secretconfig
+    namespace: knime
+    resourceVersion: "5237"
+    uid: e2c2dc5d-0c7e-4446-a85f-601f23b9b6e5
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: knime.artemis.credentials
+    targetNamespace: hub
+    targetSecretData:
+      password: $source.password
+      url: tcp://activemq-artemis.knime.svc.cluster.local:61616?reconnectAttempts=-1
+      urlWithoutProtocol: activemq-artemis.knime.svc.cluster.local:61616?reconnectAttempts=-1
+      username: $source.user
+    targetSecretName: knime-artemis
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-persistence
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:08Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:password: {}
+            f:username: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:08Z"
+    name: notification-service-db-secretconfig
+    namespace: knime
+    resourceVersion: "5241"
+    uid: 50ba1d71-d24a-4d8c-bc32-995c81408990
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: notification.knime-postgres-cluster.credentials
+    targetNamespace: hub
+    targetSecretData:
+      password: $source.password
+      username: $source.username
+    targetSecretName: notification-service-db-secret
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-persistence
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:08Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:password: {}
+            f:username: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:08Z"
+    name: secret-store-db-secretconfig
+    namespace: knime
+    resourceVersion: "5239"
+    uid: 380f74b3-7ddf-4e22-af42-7d14f25e9834
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: secret-store.knime-postgres-cluster.credentials
+    targetNamespace: hub
+    targetSecretData:
+      password: $source.password
+      username: $source.username
+    targetSecretName: secret-store-db-secret
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-persistence
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:08Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:password: {}
+            f:username: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:08Z"
+    name: session-service-db-secretconfig
+    namespace: knime
+    resourceVersion: "5232"
+    uid: 91509e9a-f5e8-4964-b466-d426a570af78
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: session.knime-postgres-cluster.credentials
+    targetNamespace: hub
+    targetSecretData:
+      password: $source.password
+      username: $source.username
+    targetSecretName: session-service-db-secret
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-persistence
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:08Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:password: {}
+            f:username: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:08Z"
+    name: trigger-service-db-secretconfig
+    namespace: knime
+    resourceVersion: "5234"
+    uid: e9232183-7ba5-4473-ae32-43d0f9aa8932
+  spec:
+    sourceNamespace: knime
+    sourceSecretName: trigger.knime-postgres-cluster.credentials
+    targetNamespace: hub
+    targetSecretData:
+      password: $source.password
+      username: $source.username
+    targetSecretName: trigger-service-db-secret

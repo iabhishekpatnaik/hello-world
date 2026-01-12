@@ -1,0 +1,81 @@
+{"level":"info","time":"2023-11-20T12:56:00.746797Z","msg":"FLAG: --concurrency=\"0\""}
+{"level":"info","time":"2023-11-20T12:56:00.746820Z","msg":"FLAG: --domain=\"hub.svc.cluster.local\""}
+{"level":"info","time":"2023-11-20T12:56:00.746826Z","msg":"FLAG: --help=\"false\""}
+{"level":"info","time":"2023-11-20T12:56:00.746829Z","msg":"FLAG: --log_as_json=\"true\""}
+{"level":"info","time":"2023-11-20T12:56:00.746833Z","msg":"FLAG: --log_caller=\"\""}
+{"level":"info","time":"2023-11-20T12:56:00.746836Z","msg":"FLAG: --log_output_level=\"default:info\""}
+{"level":"info","time":"2023-11-20T12:56:00.746839Z","msg":"FLAG: --log_rotate=\"\""}
+{"level":"info","time":"2023-11-20T12:56:00.746842Z","msg":"FLAG: --log_rotate_max_age=\"30\""}
+{"level":"info","time":"2023-11-20T12:56:00.746846Z","msg":"FLAG: --log_rotate_max_backups=\"1000\""}
+{"level":"info","time":"2023-11-20T12:56:00.746851Z","msg":"FLAG: --log_rotate_max_size=\"104857600\""}
+{"level":"info","time":"2023-11-20T12:56:00.746854Z","msg":"FLAG: --log_stacktrace_level=\"default:none\""}
+{"level":"info","time":"2023-11-20T12:56:00.746861Z","msg":"FLAG: --log_target=\"[stdout]\""}
+{"level":"info","time":"2023-11-20T12:56:00.746879Z","msg":"FLAG: --meshConfig=\"./etc/istio/config/mesh\""}
+{"level":"info","time":"2023-11-20T12:56:00.746887Z","msg":"FLAG: --outlierLogPath=\"\""}
+{"level":"info","time":"2023-11-20T12:56:00.746891Z","msg":"FLAG: --profiling=\"true\""}
+{"level":"info","time":"2023-11-20T12:56:00.746895Z","msg":"FLAG: --proxyComponentLogLevel=\"misc:error\""}
+{"level":"info","time":"2023-11-20T12:56:00.746898Z","msg":"FLAG: --proxyLogLevel=\"warning\""}
+{"level":"info","time":"2023-11-20T12:56:00.746907Z","msg":"FLAG: --s2a_enable_appengine_dialer=\"false\""}
+{"level":"info","time":"2023-11-20T12:56:00.746911Z","msg":"FLAG: --s2a_timeout=\"3s\""}
+{"level":"info","time":"2023-11-20T12:56:00.746914Z","msg":"FLAG: --serviceCluster=\"istio-proxy\""}
+{"level":"info","time":"2023-11-20T12:56:00.746917Z","msg":"FLAG: --stsPort=\"0\""}
+{"level":"info","time":"2023-11-20T12:56:00.746921Z","msg":"FLAG: --templateFile=\"\""}
+{"level":"info","time":"2023-11-20T12:56:00.746924Z","msg":"FLAG: --tokenManagerPlugin=\"GoogleTokenExchange\""}
+{"level":"info","time":"2023-11-20T12:56:00.746928Z","msg":"FLAG: --vklog=\"0\""}
+{"level":"info","time":"2023-11-20T12:56:00.746933Z","msg":"Version 1.18.1-b39cf40807721c60f7b29e3106e37faa5e5dbac7-Clean"}
+{"level":"info","time":"2023-11-20T12:56:00.751490Z","msg":"Maximum file descriptors (ulimit -n): 1048576"}
+{"level":"info","time":"2023-11-20T12:56:00.751619Z","msg":"Proxy role","ips":["***HIDDEN***"],"type":"sidecar","id":"knime-hub-execution-event-listener-5b774dd876-cb79v.hub","domain":"hub.svc.cluster.local"}
+{"level":"info","time":"2023-11-20T12:56:00.751704Z","msg":"Apply proxy config from env {}\n"}
+{"level":"info","time":"2023-11-20T12:56:00.753342Z","msg":"cpu limit detected as 2, setting concurrency"}
+{"level":"info","time":"2023-11-20T12:56:00.753612Z","msg":"Effective config: binaryPath: /usr/local/bin/envoy\nconcurrency: 2\nconfigPath: ./etc/istio/proxy\ncontrolPlaneAuthPolicy: MUTUAL_TLS\ndiscoveryAddress: istiod.istio-system.svc:15012\ndrainDuration: 45s\nproxyAdminPort: 15000\nserviceCluster: istio-proxy\nstatNameLength: 189\nstatusPort: 15020\nterminationDrainDuration: 5s\ntracing:\n  zipkin:\n    address: zipkin.istio-system:9411\n"}
+{"level":"info","time":"2023-11-20T12:56:00.753632Z","msg":"JWT policy is third-party-jwt"}
+{"level":"info","time":"2023-11-20T12:56:00.753635Z","msg":"using credential fetcher of JWT type in cluster.local trust domain"}
+{"level":"info","time":"2023-11-20T12:56:00.754531Z","msg":"Workload SDS socket not found. Starting Istio SDS Server"}
+{"level":"info","time":"2023-11-20T12:56:00.754556Z","msg":"CA Endpoint istiod.istio-system.svc:15012, provider Citadel"}
+{"level":"info","time":"2023-11-20T12:56:00.754554Z","msg":"Opening status port 15020"}
+{"level":"info","time":"2023-11-20T12:56:00.754578Z","msg":"Using CA istiod.istio-system.svc:15012 cert with certs: var/run/secrets/istio/root-cert.pem"}
+{"level":"info","time":"2023-11-20T12:56:00.774859Z","scope":"ads","msg":"All caches have been synced up in 31.30324ms, marking server ready"}
+{"level":"info","time":"2023-11-20T12:56:00.775105Z","scope":"xdsproxy","msg":"Initializing with upstream address \"istiod.istio-system.svc:15012\" and cluster \"Kubernetes\""}
+{"level":"info","time":"2023-11-20T12:56:00.775400Z","scope":"sds","msg":"Starting SDS grpc server"}
+{"level":"info","time":"2023-11-20T12:56:00.776220Z","msg":"starting Http service at ***HIDDEN***:15004"}
+{"level":"info","time":"2023-11-20T12:56:00.777515Z","msg":"Pilot SAN: [istiod.istio-system.svc]"}
+{"level":"info","time":"2023-11-20T12:56:00.778846Z","msg":"Starting proxy agent"}
+{"level":"info","time":"2023-11-20T12:56:00.778880Z","msg":"starting"}
+{"level":"info","time":"2023-11-20T12:56:00.778902Z","msg":"Envoy command: [-c etc/istio/proxy/envoy-rev.json --drain-time-s 45 --drain-strategy immediate --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --allow-unknown-static-fields --log-format {\"level\":\"%l\",\"time\":\"%Y-%m-%dT%T.%fZ\",\"scope\":\"envoy %n\",\"msg\":\"%j\",\"caller\":\"%g:%#\",\"thread\":%t} -l warning --component-log-level misc:error --concurrency 2]"}
+{"level":"info","time":"2023-11-20T12:56:00.850679Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-20T12:56:00.917653Z","scope":"ads","msg":"ADS: new connection for node:knime-hub-execution-event-listener-5b774dd876-cb79v.hub-1"}
+{"level":"info","time":"2023-11-20T12:56:00.917781Z","scope":"ads","msg":"ADS: new connection for node:knime-hub-execution-event-listener-5b774dd876-cb79v.hub-2"}
+{"level":"info","time":"2023-11-20T12:56:01.441680Z","scope":"cache","msg":"generated new workload certificate","latency":666178013,"ttl":86399558330381}
+{"level":"info","time":"2023-11-20T12:56:01.441739Z","scope":"cache","msg":"Root cert has changed, start rotating root cert"}
+{"level":"info","time":"2023-11-20T12:56:01.441759Z","scope":"ads","msg":"XDS: Incremental Pushing:0 ConnectedEndpoints:2 Version:"}
+{"level":"info","time":"2023-11-20T12:56:01.441821Z","scope":"cache","msg":"returned workload trust anchor from cache","ttl":86399558181293}
+{"level":"info","time":"2023-11-20T12:56:01.441866Z","scope":"cache","msg":"returned workload certificate from cache","ttl":86399558142881}
+{"level":"info","time":"2023-11-20T12:56:01.442003Z","scope":"cache","msg":"returned workload trust anchor from cache","ttl":86399558001943}
+{"level":"info","time":"2023-11-20T12:56:01.442619Z","scope":"ads","msg":"SDS: PUSH request for node:knime-hub-execution-event-listener-5b774dd876-cb79v.hub resources:1 size:1.1kB resource:ROOTCA"}
+{"level":"info","time":"2023-11-20T12:56:01.442694Z","scope":"cache","msg":"returned workload trust anchor from cache","ttl":86399557311005}
+{"level":"info","time":"2023-11-20T12:56:01.442889Z","scope":"ads","msg":"SDS: PUSH request for node:knime-hub-execution-event-listener-5b774dd876-cb79v.hub resources:1 size:4.0kB resource:default"}
+{"user_agent":null,"duration":0,"x_forwarded_for":null,"path_path":null,"upstream_transport_failure_reason":null,"upstream_cluster":"outbound|61616||activemq-artemis.knime.svc.cluster.local","bytes_sent":0,"upstream_host":null,"bytes_received":0,"start_time":"2023-11-20T12:56:01.575Z","downstream_local_address":"***HIDDEN***:61616","x_envoy_original_path":null,"route_name":null,"upstream_local_address":null,"x_knime_client_type":null,"requested_server_name":null,"knime_api_version":null,"x_forwarded_port":null,"method":null,"request_id":null,"if_none_match":null,"x_forwarded_proto":null,"downstream_remote_address":"***HIDDEN***:57054","istio_policy_status":"-","response_flags":"UH","path":null,"protocol":null,"upstream_service_time":null,"authority":null,"etag":null,"response_code":0}
+{"level":"info","time":"2023-11-20T12:56:02.409874Z","msg":"Readiness succeeded in 1.673744113s"}
+{"level":"info","time":"2023-11-20T12:56:02.410245Z","msg":"Envoy proxy is ready"}
+{"level":"info","time":"2023-11-20T13:25:50.643170Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-20T13:54:41.163438Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-20T14:24:11.531373Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-20T14:56:44.259932Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-20T15:26:00.451708Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-20T15:54:26.068011Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-20T16:21:48.995182Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-20T16:50:14.339078Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-20T17:04:14.168561Z","msg":"Status server has successfully terminated"}
+{"level":"error","time":"2023-11-20T17:04:14.168637Z","msg":"accept tcp [::]:15020: use of closed network connection"}
+{"level":"info","time":"2023-11-20T17:04:14.168654Z","msg":"Agent draining Proxy"}
+{"level":"info","time":"2023-11-20T17:04:14.170043Z","msg":"Graceful termination period is 5s, starting..."}
+{"downstream_remote_address":"***HIDDEN***:44486","x_forwarded_proto":null,"upstream_service_time":null,"if_none_match":null,"duration":14878284,"bytes_received":8374,"x_forwarded_for":null,"x_forwarded_port":null,"path_path":null,"upstream_local_address":"***HIDDEN***:46952","x_envoy_original_path":null,"start_time":"2023-11-20T12:56:15.770Z","requested_server_name":null,"route_name":null,"etag":null,"authority":null,"knime_api_version":null,"response_flags":"-","istio_policy_status":"-","x_knime_client_type":null,"protocol":null,"path":null,"method":null,"upstream_host":"***HIDDEN***:61616","upstream_cluster":"outbound|61616||activemq-artemis.knime.svc.cluster.local","downstream_local_address":"***HIDDEN***:61616","response_code":0,"user_agent":null,"upstream_transport_failure_reason":null,"request_id":null,"bytes_sent":8395}
+{"level":"info","time":"2023-11-20T17:04:19.170135Z","msg":"Graceful termination period complete, terminating remaining proxies."}
+{"level":"warn","time":"2023-11-20T17:04:19.170165Z","msg":"Aborted proxy instance"}
+{"level":"warn","time":"2023-11-20T17:04:19.170172Z","msg":"Aborting proxy"}
+{"level":"info","time":"2023-11-20T17:04:19.170309Z","msg":"Envoy aborted normally"}
+{"level":"info","time":"2023-11-20T17:04:19.170317Z","msg":"Agent has successfully terminated"}
+{"level":"error","time":"2023-11-20T17:04:19.170357Z","msg":"error serving tap http server: http: Server closed"}
+{"level":"info","time":"2023-11-20T17:04:19.170522Z","scope":"ads","msg":"ADS: \"@\" knime-hub-execution-event-listener-5b774dd876-cb79v.hub-1 terminated"}
+{"level":"info","time":"2023-11-20T17:04:19.170548Z","scope":"sds","msg":"SDS server for workload certificates started, listening on \"./var/run/secrets/workload-spiffe-uds/socket\""}
+{"level":"info","time":"2023-11-20T17:04:19.170540Z","scope":"ads","msg":"ADS: \"@\" knime-hub-execution-event-listener-5b774dd876-cb79v.hub-2 terminated"}

@@ -1,0 +1,67 @@
+{"level":"info","time":"2023-11-21T14:31:12.856398Z","msg":"FLAG: --concurrency=\"0\""}
+{"level":"info","time":"2023-11-21T14:31:12.856422Z","msg":"FLAG: --domain=\"hub-execution.svc.cluster.local\""}
+{"level":"info","time":"2023-11-21T14:31:12.856429Z","msg":"FLAG: --help=\"false\""}
+{"level":"info","time":"2023-11-21T14:31:12.856432Z","msg":"FLAG: --log_as_json=\"true\""}
+{"level":"info","time":"2023-11-21T14:31:12.856444Z","msg":"FLAG: --log_caller=\"\""}
+{"level":"info","time":"2023-11-21T14:31:12.856447Z","msg":"FLAG: --log_output_level=\"default:info\""}
+{"level":"info","time":"2023-11-21T14:31:12.856451Z","msg":"FLAG: --log_rotate=\"\""}
+{"level":"info","time":"2023-11-21T14:31:12.856454Z","msg":"FLAG: --log_rotate_max_age=\"30\""}
+{"level":"info","time":"2023-11-21T14:31:12.856458Z","msg":"FLAG: --log_rotate_max_backups=\"1000\""}
+{"level":"info","time":"2023-11-21T14:31:12.856462Z","msg":"FLAG: --log_rotate_max_size=\"104857600\""}
+{"level":"info","time":"2023-11-21T14:31:12.856466Z","msg":"FLAG: --log_stacktrace_level=\"default:none\""}
+{"level":"info","time":"2023-11-21T14:31:12.856476Z","msg":"FLAG: --log_target=\"[stdout]\""}
+{"level":"info","time":"2023-11-21T14:31:12.856484Z","msg":"FLAG: --meshConfig=\"./etc/istio/config/mesh\""}
+{"level":"info","time":"2023-11-21T14:31:12.856488Z","msg":"FLAG: --outlierLogPath=\"\""}
+{"level":"info","time":"2023-11-21T14:31:12.856492Z","msg":"FLAG: --profiling=\"true\""}
+{"level":"info","time":"2023-11-21T14:31:12.856495Z","msg":"FLAG: --proxyComponentLogLevel=\"misc:error\""}
+{"level":"info","time":"2023-11-21T14:31:12.856499Z","msg":"FLAG: --proxyLogLevel=\"warning\""}
+{"level":"info","time":"2023-11-21T14:31:12.856504Z","msg":"FLAG: --s2a_enable_appengine_dialer=\"false\""}
+{"level":"info","time":"2023-11-21T14:31:12.856508Z","msg":"FLAG: --s2a_timeout=\"3s\""}
+{"level":"info","time":"2023-11-21T14:31:12.856512Z","msg":"FLAG: --serviceCluster=\"istio-proxy\""}
+{"level":"info","time":"2023-11-21T14:31:12.856515Z","msg":"FLAG: --stsPort=\"0\""}
+{"level":"info","time":"2023-11-21T14:31:12.856519Z","msg":"FLAG: --templateFile=\"\""}
+{"level":"info","time":"2023-11-21T14:31:12.856523Z","msg":"FLAG: --tokenManagerPlugin=\"GoogleTokenExchange\""}
+{"level":"info","time":"2023-11-21T14:31:12.856527Z","msg":"FLAG: --vklog=\"0\""}
+{"level":"info","time":"2023-11-21T14:31:12.856531Z","msg":"Version 1.18.1-b39cf40807721c60f7b29e3106e37faa5e5dbac7-Clean"}
+{"level":"info","time":"2023-11-21T14:31:12.858045Z","msg":"Maximum file descriptors (ulimit -n): 1048576"}
+{"level":"info","time":"2023-11-21T14:31:12.858216Z","msg":"Proxy role","ips":["***HIDDEN***"],"type":"sidecar","id":"executor-9043c21d-150c-4de1-bee5-7e992ebd922d-5beb76ab-80b6-467d-a7ed-30f2287cea23.hub-execution","domain":"hub-execution.svc.cluster.local"}
+{"level":"info","time":"2023-11-21T14:31:12.858312Z","msg":"Apply proxy config from env {}\n"}
+{"level":"info","time":"2023-11-21T14:31:12.860353Z","msg":"cpu limit detected as 2, setting concurrency"}
+{"level":"info","time":"2023-11-21T14:31:12.860689Z","msg":"Effective config: binaryPath: /usr/local/bin/envoy\nconcurrency: 2\nconfigPath: ./etc/istio/proxy\ncontrolPlaneAuthPolicy: MUTUAL_TLS\ndiscoveryAddress: istiod.istio-system.svc:15012\ndrainDuration: 45s\nproxyAdminPort: 15000\nserviceCluster: istio-proxy\nstatNameLength: 189\nstatusPort: 15020\nterminationDrainDuration: 5s\ntracing:\n  zipkin:\n    address: zipkin.istio-system:9411\n"}
+{"level":"info","time":"2023-11-21T14:31:12.860705Z","msg":"JWT policy is third-party-jwt"}
+{"level":"info","time":"2023-11-21T14:31:12.860710Z","msg":"using credential fetcher of JWT type in cluster.local trust domain"}
+{"level":"info","time":"2023-11-21T14:31:12.862789Z","msg":"Workload SDS socket not found. Starting Istio SDS Server"}
+{"level":"info","time":"2023-11-21T14:31:12.862841Z","msg":"CA Endpoint istiod.istio-system.svc:15012, provider Citadel"}
+{"level":"info","time":"2023-11-21T14:31:12.862868Z","msg":"Using CA istiod.istio-system.svc:15012 cert with certs: var/run/secrets/istio/root-cert.pem"}
+{"level":"info","time":"2023-11-21T14:31:12.862803Z","msg":"Opening status port 15020"}
+{"level":"info","time":"2023-11-21T14:31:12.878890Z","scope":"ads","msg":"All caches have been synced up in 25.046079ms, marking server ready"}
+{"level":"info","time":"2023-11-21T14:31:12.879169Z","scope":"xdsproxy","msg":"Initializing with upstream address \"istiod.istio-system.svc:15012\" and cluster \"Kubernetes\""}
+{"level":"info","time":"2023-11-21T14:31:12.880728Z","msg":"Pilot SAN: [istiod.istio-system.svc]"}
+{"level":"info","time":"2023-11-21T14:31:12.881822Z","msg":"Starting proxy agent"}
+{"level":"info","time":"2023-11-21T14:31:12.881858Z","msg":"starting"}
+{"level":"info","time":"2023-11-21T14:31:12.881881Z","msg":"Envoy command: [-c etc/istio/proxy/envoy-rev.json --drain-time-s 45 --drain-strategy immediate --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --allow-unknown-static-fields --log-format {\"level\":\"%l\",\"time\":\"%Y-%m-%dT%T.%fZ\",\"scope\":\"envoy %n\",\"msg\":\"%j\",\"caller\":\"%g:%#\",\"thread\":%t} -l warning --component-log-level misc:error --concurrency 2]"}
+{"level":"info","time":"2023-11-21T14:31:12.882028Z","scope":"sds","msg":"Starting SDS grpc server"}
+{"level":"info","time":"2023-11-21T14:31:12.882074Z","msg":"starting Http service at ***HIDDEN***:15004"}
+{"level":"info","time":"2023-11-21T14:31:12.934878Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-21T14:31:12.974983Z","scope":"ads","msg":"ADS: new connection for node:executor-9043c21d-150c-4de1-bee5-7e992ebd922d-5beb76ab-80b6-467d-a7ed-30f2287cea23.hub-execution-1"}
+{"level":"info","time":"2023-11-21T14:31:12.975012Z","scope":"ads","msg":"ADS: new connection for node:executor-9043c21d-150c-4de1-bee5-7e992ebd922d-5beb76ab-80b6-467d-a7ed-30f2287cea23.hub-execution-2"}
+{"level":"info","time":"2023-11-21T14:31:13.123109Z","scope":"cache","msg":"generated new workload certificate","latency":240152270,"ttl":86399876898933}
+{"level":"info","time":"2023-11-21T14:31:13.123158Z","scope":"cache","msg":"Root cert has changed, start rotating root cert"}
+{"level":"info","time":"2023-11-21T14:31:13.123179Z","scope":"ads","msg":"XDS: Incremental Pushing:0 ConnectedEndpoints:2 Version:"}
+{"level":"info","time":"2023-11-21T14:31:13.123233Z","scope":"cache","msg":"returned workload trust anchor from cache","ttl":86399876767979}
+{"level":"info","time":"2023-11-21T14:31:13.123248Z","scope":"cache","msg":"returned workload certificate from cache","ttl":86399876761316}
+{"level":"info","time":"2023-11-21T14:31:13.123359Z","scope":"cache","msg":"returned workload trust anchor from cache","ttl":86399876648082}
+{"level":"info","time":"2023-11-21T14:31:13.123567Z","scope":"ads","msg":"SDS: PUSH request for node:executor-9043c21d-150c-4de1-bee5-7e992ebd922d-5beb76ab-80b6-467d-a7ed-30f2287cea23.hub-execution resources:1 size:4.0kB resource:default"}
+{"level":"info","time":"2023-11-21T14:31:13.123629Z","scope":"ads","msg":"SDS: PUSH request for node:executor-9043c21d-150c-4de1-bee5-7e992ebd922d-5beb76ab-80b6-467d-a7ed-30f2287cea23.hub-execution resources:1 size:1.1kB resource:ROOTCA"}
+{"level":"info","time":"2023-11-21T14:31:13.123676Z","scope":"cache","msg":"returned workload trust anchor from cache","ttl":86399876325231}
+{"level":"info","time":"2023-11-21T14:31:14.019965Z","msg":"Readiness succeeded in 1.170951444s"}
+{"level":"info","time":"2023-11-21T14:31:14.020243Z","msg":"Envoy proxy is ready"}
+{"level":"error","time":"2023-11-21T14:31:15.017029Z","msg":"Request to probe app failed: Get \"http://***HIDDEN***:3000/health/live\": dial tcp ***HIDDEN***:0->***HIDDEN***:3000: connect: connection refused, original URL path = /app-health/executor/startupz\napp URL path = /health/live"}
+{"level":"error","time":"2023-11-21T14:31:18.017001Z","msg":"Request to probe app failed: Get \"http://***HIDDEN***:3000/health/live\": dial tcp ***HIDDEN***:0->***HIDDEN***:3000: connect: connection refused, original URL path = /app-health/executor/startupz\napp URL path = /health/live"}
+{"level":"error","time":"2023-11-21T14:31:21.016100Z","msg":"Request to probe app failed: Get \"http://***HIDDEN***:3000/health/live\": dial tcp ***HIDDEN***:0->***HIDDEN***:3000: connect: connection refused, original URL path = /app-health/executor/startupz\napp URL path = /health/live"}
+{"level":"error","time":"2023-11-21T14:31:24.016110Z","msg":"Request to probe app failed: Get \"http://***HIDDEN***:3000/health/live\": dial tcp ***HIDDEN***:0->***HIDDEN***:3000: connect: connection refused, original URL path = /app-health/executor/startupz\napp URL path = /health/live"}
+{"level":"error","time":"2023-11-21T14:31:27.016351Z","msg":"Request to probe app failed: Get \"http://***HIDDEN***:3000/health/live\": dial tcp ***HIDDEN***:0->***HIDDEN***:3000: connect: connection refused, original URL path = /app-health/executor/startupz\napp URL path = /health/live"}
+{"level":"error","time":"2023-11-21T14:31:30.016196Z","msg":"Request to probe app failed: Get \"http://***HIDDEN***:3000/health/live\": dial tcp ***HIDDEN***:0->***HIDDEN***:3000: connect: connection refused, original URL path = /app-health/executor/startupz\napp URL path = /health/live"}
+{"level":"info","time":"2023-11-21T15:02:06.424301Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-21T15:34:46.532322Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-21T16:02:18.487792Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}

@@ -1,0 +1,200 @@
+{
+  "kind": "EndpointsList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763995"
+  },
+  "items": [
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "istio-ingressgateway",
+        "namespace": "istio-system",
+        "uid": "5697473c-6ea6-4584-893c-f6ec7f17c33e",
+        "resourceVersion": "745419",
+        "creationTimestamp": "2023-11-10T13:18:10Z",
+        "labels": {
+          "app": "istio-ingressgateway",
+          "app.kubernetes.io/managed-by": "Helm",
+          "install.operator.istio.io/owning-resource": "unknown",
+          "istio": "ingressgateway",
+          "istio.io/rev": "default",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "operator.istio.io/component": "IngressGateways",
+          "release": "istio"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:30:31Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:37Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:install.operator.istio.io/owning-resource": {},
+                  "f:istio": {},
+                  "f:istio.io/rev": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:operator.istio.io/component": {},
+                  "f:release": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "istio-system",
+                "name": "istio-ingressgateway-5b95744c44-rm7bl",
+                "uid": "b03fe8c0-5382-4e45-bf7e-8826352fd703"
+              }
+            },
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "istio-system",
+                "name": "istio-ingressgateway-5b95744c44-h8trd",
+                "uid": "88fefd60-e79d-4876-b338-d6da555e98d5"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "status-port",
+              "port": 15021,
+              "protocol": "TCP"
+            },
+            {
+              "name": "http2",
+              "port": 8080,
+              "protocol": "TCP"
+            },
+            {
+              "name": "https",
+              "port": 8443,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "istiod",
+        "namespace": "istio-system",
+        "uid": "ef79af86-0914-4b6c-8057-6b32e3e58463",
+        "resourceVersion": "745195",
+        "creationTimestamp": "2023-11-10T13:18:10Z",
+        "labels": {
+          "app": "istiod",
+          "app.kubernetes.io/managed-by": "Helm",
+          "install.operator.istio.io/owning-resource": "unknown",
+          "istio": "pilot",
+          "istio.io/rev": "default",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "operator.istio.io/component": "Pilot",
+          "release": "istio"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:57Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:25Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:install.operator.istio.io/owning-resource": {},
+                  "f:istio": {},
+                  "f:istio.io/rev": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:operator.istio.io/component": {},
+                  "f:release": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "istio-system",
+                "name": "istiod-84c695646f-rgcl8",
+                "uid": "4691e302-8213-4984-949a-7b042f1e461f"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "https-dns",
+              "port": 15012,
+              "protocol": "TCP"
+            },
+            {
+              "name": "grpc-xds",
+              "port": 15010,
+              "protocol": "TCP"
+            },
+            {
+              "name": "https-webhook",
+              "port": 15017,
+              "protocol": "TCP"
+            },
+            {
+              "name": "http-monitoring",
+              "port": 15014,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

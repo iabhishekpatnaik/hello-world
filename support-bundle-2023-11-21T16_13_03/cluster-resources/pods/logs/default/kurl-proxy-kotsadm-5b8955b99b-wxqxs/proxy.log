@@ -1,0 +1,165 @@
+2023/11/21 14:29:44 Commit 
+2023/11/21 14:29:44 Waiting for TLS credentials from secret kotsadm-tls
+2023/11/21 14:29:44 Watching for changes to secret kotsadm-tls
+2023/11/21 14:29:44 Kurl Proxy listening on :8800
+2023/11/21 14:29:44 	upstream: http://kotsadm:3000
+2023/11/21 14:29:44 	dex upstream: http://kotsadm-dex:5556
+2023/11/21 14:29:44 	cert: 2F:94:3B:69:15:E3:8E:7B:42:2A:EF:F5:27:8A:84:DE:B3:49:5C:6E
+2023/11/21 14:29:44 	anonymous uploads enabled: false
+2023/11/21 15:06:36 Watch of secret kotsadm-tls unexpectedly terminated. Reconnecting...
+2023/11/21 15:06:41 Watching for changes to secret kotsadm-tls
+2023/11/21 15:06:41 Cmux server terminated with accept tcp [::]:8800: use of closed network connection
+2023/11/21 15:06:41 Kurl Proxy listening on :8800
+2023/11/21 15:06:41 	upstream: http://kotsadm:3000
+2023/11/21 15:06:41 	dex upstream: http://kotsadm-dex:5556
+2023/11/21 15:06:41 	cert: 2F:94:3B:69:15:E3:8E:7B:42:2A:EF:F5:27:8A:84:DE:B3:49:5C:6E
+2023/11/21 15:06:41 	anonymous uploads enabled: false
+2023/11/21 16:06:19 Watch of secret kotsadm-tls unexpectedly terminated. Reconnecting...
+2023/11/21 16:06:24 Watching for changes to secret kotsadm-tls
+2023/11/21 16:06:24 Cmux server terminated with accept tcp [::]:8800: use of closed network connection
+2023/11/21 16:06:24 Kurl Proxy listening on :8800
+2023/11/21 16:06:24 	upstream: http://kotsadm:3000
+2023/11/21 16:06:24 	dex upstream: http://kotsadm-dex:5556
+2023/11/21 16:06:24 	cert: 2F:94:3B:69:15:E3:8E:7B:42:2A:EF:F5:27:8A:84:DE:B3:49:5C:6E
+2023/11/21 16:06:24 	anonymous uploads enabled: false
+2023/11/21 16:12:37 http: TLS handshake error from ***HIDDEN***:57445: remote error: tls: unknown certificate
+2023/11/21 16:12:37 http: TLS handshake error from ***HIDDEN***:45667: remote error: tls: unknown certificate
+[GIN] 2023/11/21 - 16:12:37 | 200 |    7.835357ms |       ***HIDDEN*** | GET      "/"
+[GIN] 2023/11/21 - 16:12:38 | 200 |  868.958782ms |       ***HIDDEN*** | GET      "/main.3abacff0cc156231b746.js"
+[GIN] 2023/11/21 - 16:12:38 | 200 |    1.708785ms |       ***HIDDEN*** | GET      "/api/v1/login/info"
+[GIN] 2023/11/21 - 16:12:38 | 401 |     328.995µs |       ***HIDDEN*** | GET      "/api/v1/apps"
+2023/11/21 16:12:38 http: TLS handshake error from ***HIDDEN***:33070: remote error: tls: unknown certificate
+2023/11/21 16:12:39 http: TLS handshake error from ***HIDDEN***:21646: remote error: tls: unknown certificate
+[GIN] 2023/11/21 - 16:12:39 | 401 |     278.866µs |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+2023/11/21 16:12:39 http: TLS handshake error from ***HIDDEN***:49263: remote error: tls: unknown certificate
+2023/11/21 16:12:39 http: TLS handshake error from ***HIDDEN***:2755: remote error: tls: unknown certificate
+2023/11/21 16:12:39 http: TLS handshake error from ***HIDDEN***:58278: remote error: tls: unknown certificate
+[GIN] 2023/11/21 - 16:12:39 | 200 |     310.817µs |       ***HIDDEN*** | GET      "/secure-console"
+[GIN] 2023/11/21 - 16:12:39 | 200 |     275.956µs |       ***HIDDEN*** | GET      "/secure-console"
+2023/11/21 16:12:39 http: TLS handshake error from ***HIDDEN***:20920: remote error: tls: unknown certificate
+[GIN] 2023/11/21 - 16:12:39 | 401 |     300.469µs |       ***HIDDEN*** | GET      "/api/v1/apps"
+[GIN] 2023/11/21 - 16:12:39 | 401 |     329.032µs |       ***HIDDEN*** | GET      "/api/v1/is-helm-managed"
+[GIN] 2023/11/21 - 16:12:39 | 200 |      439.02µs |       ***HIDDEN*** | GET      "/favicon-32x32.png"
+2023/11/21 16:12:39 http: TLS handshake error from ***HIDDEN***:12507: remote error: tls: unknown certificate
+[GIN] 2023/11/21 - 16:12:39 | 200 |    1.267419ms |       ***HIDDEN*** | GET      "/favicon-32x32.png"
+[GIN] 2023/11/21 - 16:12:39 | 200 |    7.455965ms |       ***HIDDEN*** | GET      "/api/v1/metadata"
+2023/11/21 16:12:39 http: TLS handshake error from ***HIDDEN***:23281: remote error: tls: unknown certificate
+[GIN] 2023/11/21 - 16:12:39 | 200 |  165.386038ms |       ***HIDDEN*** | GET      "/d9f9d55fef7df390e321.svg"
+[GIN] 2023/11/21 - 16:12:40 | 200 |  1.090435966s |       ***HIDDEN*** | GET      "/main.3abacff0cc156231b746.js"
+[GIN] 2023/11/21 - 16:12:40 | 401 |     331.515µs |       ***HIDDEN*** | GET      "/api/v1/apps"
+[GIN] 2023/11/21 - 16:12:40 | 200 |    1.949785ms |       ***HIDDEN*** | GET      "/api/v1/login/info"
+[GIN] 2023/11/21 - 16:12:40 | 200 |     301.995µs |       ***HIDDEN*** | GET      "/favicon-32x32.png"
+[GIN] 2023/11/21 - 16:12:40 | 200 |    6.920215ms |       ***HIDDEN*** | GET      "/api/v1/metadata"
+[GIN] 2023/11/21 - 16:12:49 | 401 |      427.03µs |       ***HIDDEN*** | GET      "/api/v1/apps"
+[GIN] 2023/11/21 - 16:12:53 | 200 |  1.005641607s |       ***HIDDEN*** | POST     "/api/v1/login"
+[GIN] 2023/11/21 - 16:12:53 | 200 |    3.279409ms |       ***HIDDEN*** | GET      "/api/v1/is-helm-managed"
+[GIN] 2023/11/21 - 16:12:53 | 200 |    1.531167ms |       ***HIDDEN*** | GET      "/api/v1/login/info"
+[GIN] 2023/11/21 - 16:12:53 | 200 |  273.455384ms |       ***HIDDEN*** | GET      "/api/v1/apps"
+[GIN] 2023/11/21 - 16:12:53 | 404 |    2.977714ms |       ***HIDDEN*** | GET      "/api/v1/pendingapp"
+[GIN] 2023/11/21 - 16:12:54 | 200 |  300.504574ms |       ***HIDDEN*** | GET      "/api/v1/velero"
+[GIN] 2023/11/21 - 16:12:54 | 200 |  310.567168ms |       ***HIDDEN*** | GET      "/api/v1/apps"
+[GIN] 2023/11/21 - 16:12:54 | 200 |    2.634519ms |       ***HIDDEN*** | GET      "/api/v1/is-helm-managed"
+2023/11/21 16:12:54 http: TLS handshake error from ***HIDDEN***:15597: remote error: tls: unknown certificate
+2023/11/21 16:12:54 http: TLS handshake error from ***HIDDEN***:36154: remote error: tls: unknown certificate
+2023/11/21 16:12:54 http: TLS handshake error from ***HIDDEN***:9202: remote error: tls: unknown certificate
+[GIN] 2023/11/21 - 16:12:54 | 200 |    3.947596ms |       ***HIDDEN*** | GET      "/api/v1/app/knime-hub/task/updatedownload"
+[GIN] 2023/11/21 - 16:12:54 | 200 |  177.382186ms |       ***HIDDEN*** | GET      "/api/v1/app/knime-hub/next-app-version"
+[GIN] 2023/11/21 - 16:12:54 | 200 |   72.814499ms |       ***HIDDEN*** | GET      "/api/v1/metadata"
+[GIN] 2023/11/21 - 16:12:54 | 200 |  215.025171ms |       ***HIDDEN*** | GET      "/api/v1/app/knime-hub/license"
+[GIN] 2023/11/21 - 16:12:55 | 200 |  359.597025ms |       ***HIDDEN*** | GET      "/api/v1/velero"
+[GIN] 2023/11/21 - 16:12:55 | 200 |  988.147416ms |       ***HIDDEN*** | GET      "/api/v1/apps"
+[GIN] 2023/11/21 - 16:12:55 | 200 |  1.061064156s |       ***HIDDEN*** | GET      "/api/v1/app/knime-hub"
+[GIN] 2023/11/21 - 16:12:55 | 200 |  1.029945276s |       ***HIDDEN*** | GET      "/api/v1/app/knime-hub/cluster/pqrsytazjchdlfzjswiwcfqhmqttjqku/dashboard"
+[GIN] 2023/11/21 - 16:12:55 | 200 |  150.707397ms |       ***HIDDEN*** | GET      "/api/v1/app/knime-hub/next-app-version"
+[GIN] 2023/11/21 - 16:12:55 | 200 |  489.900189ms |       ***HIDDEN*** | GET      "/api/v1/apps"
+[GIN] 2023/11/21 - 16:12:57 | 200 |   44.997789ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/app/knime-hub/supportbundles"
+[GIN] 2023/11/21 - 16:12:57 | 200 |  134.531779ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/app/knime-hub/supportbundles"
+[GIN] 2023/11/21 - 16:12:57 | 200 |  315.241738ms |       ***HIDDEN*** | GET      "/api/v1/velero"
+[GIN] 2023/11/21 - 16:12:57 | 200 |   91.047185ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/app/knime-hub/supportbundles"
+[GIN] 2023/11/21 - 16:12:57 | 200 |  166.172305ms |       ***HIDDEN*** | GET      "/d9f9d55fef7df390e321.svg"
+[GIN] 2023/11/21 - 16:12:57 | 200 |   137.86989ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/app/knime-hub/supportbundles"
+[GIN] 2023/11/21 - 16:12:57 | 200 |  624.352038ms |       ***HIDDEN*** | GET      "/api/v1/apps"
+[GIN] 2023/11/21 - 16:12:58 | 200 |  136.739897ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/app/knime-hub/supportbundles"
+[GIN] 2023/11/21 - 16:12:58 | 200 |   92.086329ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/app/knime-hub/supportbundles"
+[GIN] 2023/11/21 - 16:12:59 | 200 |  1.405076193s |       ***HIDDEN*** | POST     "/api/v1/troubleshoot/app/knime-hub/supportbundlecommand"
+[GIN] 2023/11/21 - 16:13:00 | 200 |   42.386926ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/app/knime-hub/supportbundles"
+[GIN] 2023/11/21 - 16:13:00 | 200 |    1.980299ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:13:00 | 200 |    1.703403ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:13:02 | 200 |   42.372533ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/app/knime-hub/supportbundles"
+[GIN] 2023/11/21 - 16:13:03 | 202 |  1.170934778s |       ***HIDDEN*** | POST     "/api/v1/troubleshoot/supportbundle/app/2XzB3rKi0QljeDzN32bEXzbyksY/cluster/pqrsytazjchdlfzjswiwcfqhmqttjqku/collect"
+[GIN] 2023/11/21 - 16:13:04 | 200 |  134.422337ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:04 | 200 |  420.692437ms |       ***HIDDEN*** | GET      "/api/v1/velero"
+[GIN] 2023/11/21 - 16:13:04 | 200 |  550.910371ms |       ***HIDDEN*** | GET      "/api/v1/apps"
+[GIN] 2023/11/21 - 16:13:05 | 200 |   34.172319ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:06 | 200 |   39.623006ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:07 | 200 |   35.696023ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:08 | 200 |   46.195687ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:09 | 200 |   38.076248ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:10 | 200 |   33.850666ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:11 | 200 |    1.844921ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:13:11 | 200 |   37.187944ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:11 | 200 |    1.714593ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:13:12 | 200 |   34.071411ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:13 | 200 |   35.773076ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:14 | 200 |   36.993176ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:15 | 200 |   33.905755ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:16 | 200 |   37.693855ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:17 | 200 |   36.800152ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:18 | 200 |   34.847414ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:19 | 200 |   35.877045ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:20 | 200 |   36.223015ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:21 | 200 |    1.854601ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:13:21 | 200 |   33.892299ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:21 | 200 |    1.591185ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:13:22 | 200 |   35.159143ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:23 | 200 |   38.122387ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:24 | 200 |   36.646574ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:25 | 200 |   34.450329ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:26 | 200 |   36.512939ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:27 | 200 |    33.86384ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:28 | 200 |    34.71747ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:29 | 200 |   35.544256ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:30 | 200 |   34.707332ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:31 | 200 |    1.907595ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:13:31 | 200 |   34.962394ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:31 | 200 |    1.552622ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:13:32 | 200 |   36.124218ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:33 | 200 |   33.541556ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:34 | 200 |   35.977978ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:35 | 200 |   36.430927ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:36 | 200 |   34.260248ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:37 | 200 |   34.899602ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:38 | 200 |   35.894865ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:39 | 200 |   34.843501ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:40 | 200 |   35.399186ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:41 | 200 |    1.862057ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:13:41 | 200 |   33.223826ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:41 | 200 |    1.546642ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:13:42 | 200 |   36.180782ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:43 | 200 |   38.509762ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:44 | 200 |   36.820858ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:45 | 200 |   34.215085ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:46 | 200 |   36.459718ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:47 | 200 |   34.258642ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:48 | 200 |   34.505631ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:49 | 200 |   35.035965ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:50 | 200 |   36.787412ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:51 | 200 |    2.038523ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:13:51 | 200 |    33.92419ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:51 | 200 |    1.516041ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:13:52 | 200 |   34.207235ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:53 | 200 |   35.722943ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:54 | 200 |   38.054087ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:55 | 200 |   37.094297ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:56 | 200 |   41.249952ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:57 | 200 |   34.513267ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:58 | 200 |   35.264814ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:13:59 | 200 |   37.112031ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:14:00 | 200 |   35.048829ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:14:01 | 200 |    2.042947ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:14:01 | 200 |   35.449367ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:14:01 | 200 |    1.648875ms |       ***HIDDEN*** | GET      "/api/v1/ping?slugs="
+[GIN] 2023/11/21 - 16:14:02 | 200 |   36.616447ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:14:03 | 200 |   35.213933ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:14:04 | 200 |   38.674072ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"
+[GIN] 2023/11/21 - 16:14:05 | 200 |   34.076385ms |       ***HIDDEN*** | GET      "/api/v1/troubleshoot/supportbundle/2yubcml8eiapis3zalkyesjv36q"

@@ -1,0 +1,3527 @@
+{
+  "kind": "StatefulSetList",
+  "apiVersion": "apps/v1",
+  "metadata": {
+    "resourceVersion": "763976"
+  },
+  "items": [
+    {
+      "kind": "StatefulSet",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "activemq-artemis",
+        "namespace": "knime",
+        "uid": "4ae86a70-1c53-4972-99e9-0a52c9c3d34e",
+        "resourceVersion": "744958",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:19:03Z",
+        "labels": {
+          "app": "activemq-artemis",
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "activemq-artemis",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T13:19:03Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:podManagementPolicy": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:serviceName": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:kots.io/app-slug": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:kots.io/app-slug": {},
+                      "f:kots.io/backup": {}
+                    },
+                    "f:name": {}
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:nodeAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"activemq-artemis\"}": {
+                        ".": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"ARTEMIS_PASSWORD\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"ARTEMIS_USER\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"ENABLE_MESSAGE_AUDIT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"ENABLE_RESOURCE_AUDIT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"JAVA_OPTIONS\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"LOG_CONSOLE_JSON\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":8161,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":61616,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:limits": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          },
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:securityContext": {
+                          ".": {},
+                          "f:allowPrivilegeEscalation": {},
+                          "f:capabilities": {
+                            ".": {},
+                            "f:drop": {}
+                          },
+                          "f:privileged": {},
+                          "f:readOnlyRootFilesystem": {},
+                          "f:runAsGroup": {},
+                          "f:runAsNonRoot": {},
+                          "f:runAsUser": {},
+                          "f:seccompProfile": {
+                            ".": {},
+                            "f:type": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/var/lib/artemis-instance\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"knime-hub-activemq-artemis-registry\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {
+                      ".": {},
+                      "f:fsGroup": {}
+                    },
+                    "f:terminationGracePeriodSeconds": {}
+                  }
+                },
+                "f:updateStrategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:partition": {}
+                  },
+                  "f:type": {}
+                },
+                "f:volumeClaimTemplates": {}
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:30:11Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:collisionCount": {},
+                "f:currentReplicas": {},
+                "f:currentRevision": {},
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updateRevision": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app": "activemq-artemis"
+          }
+        },
+        "template": {
+          "metadata": {
+            "name": "activemq-artemis",
+            "creationTimestamp": null,
+            "labels": {
+              "app": "activemq-artemis",
+              "kots.io/app-slug": "knime-hub",
+              "kots.io/backup": "velero"
+            },
+            "annotations": {
+              "kots.io/app-slug": "knime-hub"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "activemq-artemis",
+                "image": "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/activemq-artemis:2.29.0",
+                "ports": [
+                  {
+                    "containerPort": 61616,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 8161,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "ARTEMIS_USER",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "knime.artemis.credentials",
+                        "key": "user"
+                      }
+                    }
+                  },
+                  {
+                    "name": "ARTEMIS_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "knime.artemis.credentials",
+                        "key": "password"
+                      }
+                    }
+                  },
+                  {
+                    "name": "ENABLE_MESSAGE_AUDIT",
+                    "value": "false"
+                  },
+                  {
+                    "name": "ENABLE_RESOURCE_AUDIT",
+                    "value": "false"
+                  },
+                  {
+                    "name": "LOG_CONSOLE_JSON",
+                    "value": "true"
+                  },
+                  {
+                    "name": "JAVA_OPTIONS",
+                    "value": "-Xms1024M -Xmx2048M"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "cpu": "1",
+                    "memory": "2Gi"
+                  },
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "1Gi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "activemq-artemis-instance",
+                    "mountPath": "/var/lib/artemis-instance"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent",
+                "securityContext": {
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "privileged": false,
+                  "runAsUser": 10001,
+                  "runAsGroup": 10001,
+                  "runAsNonRoot": true,
+                  "readOnlyRootFilesystem": false,
+                  "allowPrivilegeEscalation": false,
+                  "seccompProfile": {
+                    "type": "RuntimeDefault"
+                  }
+                }
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "securityContext": {
+              "fsGroup": 10001
+            },
+            "imagePullSecrets": [
+              {
+                "name": "knime-hub-activemq-artemis-registry"
+              }
+            ],
+            "affinity": {
+              "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "preference": {
+                      "matchExpressions": [
+                        {
+                          "key": "hub.knime.com/role",
+                          "operator": "In",
+                          "values": [
+                            "core"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "volumeClaimTemplates": [
+          {
+            "kind": "PersistentVolumeClaim",
+            "apiVersion": "v1",
+            "metadata": {
+              "name": "activemq-artemis-instance",
+              "creationTimestamp": null
+            },
+            "spec": {
+              "accessModes": [
+                "ReadWriteOnce"
+              ],
+              "resources": {
+                "requests": {
+                  "storage": "2Gi"
+                }
+              },
+              "volumeMode": "Filesystem"
+            },
+            "status": {
+              "phase": "Pending"
+            }
+          }
+        ],
+        "serviceName": "activemq-artemis",
+        "podManagementPolicy": "OrderedReady",
+        "updateStrategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "partition": 0
+          }
+        },
+        "revisionHistoryLimit": 10
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 1,
+        "readyReplicas": 1,
+        "currentReplicas": 1,
+        "updatedReplicas": 1,
+        "currentRevision": "activemq-artemis-6d4595457",
+        "updateRevision": "activemq-artemis-6d4595457",
+        "collisionCount": 0,
+        "availableReplicas": 1
+      }
+    },
+    {
+      "kind": "StatefulSet",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "cdds-postgres-cluster",
+        "namespace": "knime",
+        "uid": "ae1eea07-918a-4530-ac48-238dd4d885a0",
+        "resourceVersion": "744778",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:20:12Z",
+        "labels": {
+          "application": "spilo",
+          "team": "cdds",
+          "version": "cdds-postgres-cluster"
+        },
+        "managedFields": [
+          {
+            "manager": "postgres-operator",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T13:20:12Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:team": {},
+                  "f:version": {}
+                }
+              },
+              "f:spec": {
+                "f:podManagementPolicy": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:serviceName": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:application": {},
+                      "f:team": {},
+                      "f:version": {}
+                    },
+                    "f:namespace": {}
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:nodeAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"postgres\"}": {
+                        ".": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"AWS_ACCESS_KEY_ID\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"AWS_ENDPOINT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"AWS_REGION\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"AWS_S3_FORCE_PATH_STYLE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"AWS_SECRET_ACCESS_KEY\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"BACKUP_NUM_TO_RETAIN\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"BACKUP_SCHEDULE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_AWS_ACCESS_KEY_ID\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_AWS_ENDPOINT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_AWS_REGION\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_AWS_S3_FORCE_PATH_STYLE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_AWS_SECRET_ACCESS_KEY\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_USE_WALG_BACKUP\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_USE_WALG_RESTORE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_WAL_S3_BUCKET\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"DCS_ENABLE_KUBERNETES_API\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"HUMAN_ROLE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"KUBERNETES_LABELS\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"KUBERNETES_ROLE_LABEL\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"KUBERNETES_SCOPE_LABEL\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"PAM_OAUTH2\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"PGPASSWORD_STANDBY\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"PGPASSWORD_SUPERUSER\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"PGROOT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"PGUSER_STANDBY\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"PGUSER_SUPERUSER\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"PGVERSION\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"POD_IP\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"POD_NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"SCOPE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"SPILO_CONFIGURATION\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"USE_WALG_BACKUP\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"USE_WALG_RESTORE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"WALG_DISABLE_S3_SSE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"WAL_S3_BUCKET\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":5432,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":8008,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:limits": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          },
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:securityContext": {
+                          ".": {},
+                          "f:allowPrivilegeEscalation": {},
+                          "f:privileged": {},
+                          "f:readOnlyRootFilesystem": {}
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/dev/shm\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/home/postgres/pgdata\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:initContainers": {
+                      ".": {},
+                      "k:{\"name\":\"date\"}": {
+                        ".": {},
+                        "f:command": {},
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:resources": {},
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"dshm\"}": {
+                        ".": {},
+                        "f:emptyDir": {
+                          ".": {},
+                          "f:medium": {}
+                        },
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:updateStrategy": {
+                  "f:type": {}
+                },
+                "f:volumeClaimTemplates": {}
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:29:55Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:collisionCount": {},
+                "f:currentReplicas": {},
+                "f:currentRevision": {},
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updateRevision": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "application": "spilo",
+            "version": "cdds-postgres-cluster"
+          }
+        },
+        "template": {
+          "metadata": {
+            "namespace": "knime",
+            "creationTimestamp": null,
+            "labels": {
+              "application": "spilo",
+              "team": "cdds",
+              "version": "cdds-postgres-cluster"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "dshm",
+                "emptyDir": {
+                  "medium": "Memory"
+                }
+              }
+            ],
+            "initContainers": [
+              {
+                "name": "date",
+                "image": "busybox:1.35",
+                "command": [
+                  "/bin/date"
+                ],
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "containers": [
+              {
+                "name": "postgres",
+                "image": "ghcr.io/zalando/spilo-15:3.0-p1",
+                "ports": [
+                  {
+                    "containerPort": 8008,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 5432,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 8080,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "SCOPE",
+                    "value": "cdds-postgres-cluster"
+                  },
+                  {
+                    "name": "PGROOT",
+                    "value": "/home/postgres/pgdata/pgroot"
+                  },
+                  {
+                    "name": "POD_IP",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "status.podIP"
+                      }
+                    }
+                  },
+                  {
+                    "name": "POD_NAMESPACE",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      }
+                    }
+                  },
+                  {
+                    "name": "PGUSER_SUPERUSER",
+                    "value": "***HIDDEN***"
+                  },
+                  {
+                    "name": "KUBERNETES_SCOPE_LABEL",
+                    "value": "version"
+                  },
+                  {
+                    "name": "KUBERNETES_ROLE_LABEL",
+                    "value": "spilo-role"
+                  },
+                  {
+                    "name": "PGPASSWORD_SUPERUSER",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "postgres.cdds-postgres-cluster.credentials",
+                        "key": "password"
+                      }
+                    }
+                  },
+                  {
+                    "name": "PGUSER_STANDBY",
+                    "value": "***HIDDEN***"
+                  },
+                  {
+                    "name": "PGPASSWORD_STANDBY",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "standby.cdds-postgres-cluster.credentials",
+                        "key": "password"
+                      }
+                    }
+                  },
+                  {
+                    "name": "PAM_OAUTH2",
+                    "value": "https://info.example.com/oauth2/tokeninfo?access_token= uid realm=/employees"
+                  },
+                  {
+                    "name": "HUMAN_ROLE",
+                    "value": "zalandos"
+                  },
+                  {
+                    "name": "PGVERSION",
+                    "value": "11"
+                  },
+                  {
+                    "name": "KUBERNETES_LABELS",
+                    "value": "{\"application\":\"spilo\"}"
+                  },
+                  {
+                    "name": "SPILO_CONFIGURATION",
+                    "value": "{\"postgresql\":{},\"bootstrap\":{\"initdb\":[{\"auth-host\":\"md5\"},{\"auth-local\":\"trust\"}],\"users\":{\"zalandos\":{\"password\":\"\",\"options\":[\"CREATEDB\",\"NOLOGIN\"]}},\"dcs\":{\"failsafe_mode\":false}}}"
+                  },
+                  {
+                    "name": "DCS_ENABLE_KUBERNETES_API",
+                    "value": "true"
+                  },
+                  {
+                    "name": "AWS_ACCESS_KEY_ID",
+                    "value": "***HIDDEN***"
+                  },
+                  {
+                    "name": "AWS_ENDPOINT",
+                    "value": "http://minio:9000"
+                  },
+                  {
+                    "name": "AWS_REGION",
+                    "value": "us-east-1"
+                  },
+                  {
+                    "name": "AWS_S3_FORCE_PATH_STYLE",
+                    "value": "true"
+                  },
+                  {
+                    "name": "AWS_SECRET_ACCESS_KEY",
+                    "value": ""
+                  },
+                  {
+                    "name": "BACKUP_NUM_TO_RETAIN",
+                    "value": "5"
+                  },
+                  {
+                    "name": "BACKUP_SCHEDULE",
+                    "value": "0 1 * * *"
+                  },
+                  {
+                    "name": "CLONE_AWS_ACCESS_KEY_ID",
+                    "value": "***HIDDEN***"
+                  },
+                  {
+                    "name": "CLONE_AWS_ENDPOINT",
+                    "value": "http://minio:9000"
+                  },
+                  {
+                    "name": "CLONE_AWS_REGION",
+                    "value": "us-east-1"
+                  },
+                  {
+                    "name": "CLONE_AWS_S3_FORCE_PATH_STYLE",
+                    "value": "true"
+                  },
+                  {
+                    "name": "CLONE_AWS_SECRET_ACCESS_KEY",
+                    "value": ""
+                  },
+                  {
+                    "name": "CLONE_USE_WALG_BACKUP",
+                    "value": "true"
+                  },
+                  {
+                    "name": "CLONE_USE_WALG_RESTORE",
+                    "value": "true"
+                  },
+                  {
+                    "name": "CLONE_WAL_S3_BUCKET",
+                    "value": "knime-postgres-backup"
+                  },
+                  {
+                    "name": "USE_WALG_BACKUP",
+                    "value": "true"
+                  },
+                  {
+                    "name": "USE_WALG_RESTORE",
+                    "value": "true"
+                  },
+                  {
+                    "name": "WALG_DISABLE_S3_SSE",
+                    "value": "true"
+                  },
+                  {
+                    "name": "WAL_S3_BUCKET",
+                    "value": "knime-postgres-backup"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "cpu": "500m",
+                    "memory": "512Mi"
+                  },
+                  "requests": {
+                    "cpu": "50m",
+                    "memory": "256Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "pgdata",
+                    "mountPath": "/home/postgres/pgdata"
+                  },
+                  {
+                    "name": "dshm",
+                    "mountPath": "/dev/shm"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent",
+                "securityContext": {
+                  "privileged": false,
+                  "readOnlyRootFilesystem": false,
+                  "allowPrivilegeEscalation": true
+                }
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 300,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "postgres-pod",
+            "serviceAccount": "postgres-pod",
+            "securityContext": {},
+            "affinity": {
+              "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "preference": {
+                      "matchExpressions": [
+                        {
+                          "key": "hub.knime.com/role",
+                          "operator": "In",
+                          "values": [
+                            "core"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "volumeClaimTemplates": [
+          {
+            "kind": "PersistentVolumeClaim",
+            "apiVersion": "v1",
+            "metadata": {
+              "name": "pgdata",
+              "creationTimestamp": null,
+              "labels": {
+                "application": "spilo",
+                "team": "cdds",
+                "version": "cdds-postgres-cluster"
+              }
+            },
+            "spec": {
+              "accessModes": [
+                "ReadWriteOnce"
+              ],
+              "resources": {
+                "requests": {
+                  "storage": "10Gi"
+                }
+              },
+              "volumeMode": "Filesystem"
+            },
+            "status": {
+              "phase": "Pending"
+            }
+          }
+        ],
+        "serviceName": "cdds-postgres-cluster",
+        "podManagementPolicy": "OrderedReady",
+        "updateStrategy": {
+          "type": "OnDelete"
+        },
+        "revisionHistoryLimit": 10
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 1,
+        "readyReplicas": 1,
+        "currentReplicas": 1,
+        "updatedReplicas": 1,
+        "currentRevision": "cdds-postgres-cluster-7684c4d74",
+        "updateRevision": "cdds-postgres-cluster-7684c4d74",
+        "collisionCount": 0,
+        "availableReplicas": 1
+      }
+    },
+    {
+      "kind": "StatefulSet",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "elasticsearch-master",
+        "namespace": "knime",
+        "uid": "f7462bd6-5ef2-4030-bebe-bbfc4b9516bd",
+        "resourceVersion": "745154",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:19:04Z",
+        "labels": {
+          "app": "elasticsearch-master",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "elasticsearch",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "elasticsearch"
+        },
+        "annotations": {
+          "esMajorVersion": "7",
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "elasticsearch",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T13:19:04Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:esMajorVersion": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:podManagementPolicy": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:serviceName": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:kots.io/app-slug": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:chart": {},
+                      "f:kots.io/app-slug": {},
+                      "f:kots.io/backup": {},
+                      "f:release": {}
+                    },
+                    "f:name": {}
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:nodeAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      },
+                      "f:podAntiAffinity": {
+                        ".": {},
+                        "f:requiredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"elasticsearch\"}": {
+                        ".": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"ES_JAVA_OPTS\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"cluster.initial_master_nodes\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"cluster.name\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"discovery.seed_hosts\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"http.max_content_length\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"network.host\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"node.data\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"node.ingest\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"node.master\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"node.name\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"node.remote_cluster_client\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:lifecycle": {
+                          ".": {},
+                          "f:postStart": {
+                            ".": {},
+                            "f:exec": {
+                              ".": {},
+                              "f:command": {}
+                            }
+                          }
+                        },
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":9200,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":9300,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:exec": {
+                            ".": {},
+                            "f:command": {}
+                          },
+                          "f:failureThreshold": {},
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:limits": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          },
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:securityContext": {
+                          ".": {},
+                          "f:allowPrivilegeEscalation": {},
+                          "f:capabilities": {
+                            ".": {},
+                            "f:drop": {}
+                          },
+                          "f:privileged": {},
+                          "f:readOnlyRootFilesystem": {},
+                          "f:runAsGroup": {},
+                          "f:runAsNonRoot": {},
+                          "f:runAsUser": {},
+                          "f:seccompProfile": {
+                            ".": {},
+                            "f:type": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/usr/share/elasticsearch/data\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:enableServiceLinks": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"knime-hub-elasticsearch-registry\"}": {}
+                    },
+                    "f:initContainers": {
+                      ".": {},
+                      "k:{\"name\":\"configure-sysctl\"}": {
+                        ".": {},
+                        "f:command": {},
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:resources": {},
+                        "f:securityContext": {
+                          ".": {},
+                          "f:privileged": {},
+                          "f:runAsUser": {}
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {
+                      ".": {},
+                      "f:fsGroup": {},
+                      "f:runAsUser": {}
+                    },
+                    "f:terminationGracePeriodSeconds": {}
+                  }
+                },
+                "f:updateStrategy": {
+                  "f:type": {}
+                },
+                "f:volumeClaimTemplates": {}
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:30:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:collisionCount": {},
+                "f:currentReplicas": {},
+                "f:currentRevision": {},
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updateRevision": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app": "elasticsearch-master"
+          }
+        },
+        "template": {
+          "metadata": {
+            "name": "elasticsearch-master",
+            "creationTimestamp": null,
+            "labels": {
+              "app": "elasticsearch-master",
+              "chart": "elasticsearch",
+              "kots.io/app-slug": "knime-hub",
+              "kots.io/backup": "velero",
+              "release": "elasticsearch"
+            },
+            "annotations": {
+              "kots.io/app-slug": "knime-hub"
+            }
+          },
+          "spec": {
+            "initContainers": [
+              {
+                "name": "configure-sysctl",
+                "image": "docker.elastic.co/elasticsearch/elasticsearch:7.10.2",
+                "command": [
+                  "sysctl",
+                  "-w",
+                  "vm.max_map_count=262144"
+                ],
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent",
+                "securityContext": {
+                  "privileged": true,
+                  "runAsUser": 0
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "elasticsearch",
+                "image": "docker.elastic.co/elasticsearch/elasticsearch:7.10.2",
+                "ports": [
+                  {
+                    "name": "http",
+                    "containerPort": 9200,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "name": "transport",
+                    "containerPort": 9300,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "node.name",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.name"
+                      }
+                    }
+                  },
+                  {
+                    "name": "cluster.initial_master_nodes",
+                    "value": "elasticsearch-master-0,"
+                  },
+                  {
+                    "name": "discovery.seed_hosts",
+                    "value": "elasticsearch-master-headless"
+                  },
+                  {
+                    "name": "cluster.name",
+                    "value": "elasticsearch"
+                  },
+                  {
+                    "name": "network.host",
+                    "value": "***HIDDEN***"
+                  },
+                  {
+                    "name": "ES_JAVA_OPTS",
+                    "value": "-Xmx1g -Xms1g"
+                  },
+                  {
+                    "name": "node.data",
+                    "value": "true"
+                  },
+                  {
+                    "name": "node.ingest",
+                    "value": "true"
+                  },
+                  {
+                    "name": "node.master",
+                    "value": "true"
+                  },
+                  {
+                    "name": "node.remote_cluster_client",
+                    "value": "true"
+                  },
+                  {
+                    "name": "http.max_content_length",
+                    "value": "500mb"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "cpu": "2",
+                    "memory": "2Gi"
+                  },
+                  "requests": {
+                    "cpu": "250m",
+                    "memory": "2Gi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "elasticsearch-master",
+                    "mountPath": "/usr/share/elasticsearch/data"
+                  }
+                ],
+                "readinessProbe": {
+                  "exec": {
+                    "command": [
+                      "sh",
+                      "-c",
+                      "#!/usr/bin/env bash -e\n# If the node is starting up wait for the cluster to be ready (request params: \"wait_for_status=green\u0026timeout=1s\" )\n# Once it has started only check that the node itself is responding\nSTART_FILE=/tmp/.es_start_file\n\n# Disable nss cache to avoid filling dentry cache when calling curl\n# This is required with Elasticsearch Docker using nss \u003c 3.52\nexport NSS_SDB_USE_CACHE=no\n\nhttp () {\n  local path=\"${1}\"\n  local args=\"${2}\"\n  set -- -XGET -s\n\n  if [ \"$args\" != \"\" ]; then\n    set -- \"$@\" $args\n  fi\n\n  if [ -n \"${ELASTIC_USERNAME}\" ] \u0026\u0026 [ -n \"${ELASTIC_PASSWORD}\" ]; then\n    set -- \"$@\" -u \"${ELASTIC_USERNAME}:${ELASTIC_PASSWORD}\"\n  fi\n\n  curl --output /dev/null -k \"$@\" \"http://***HIDDEN***:9200${path}\"\n}\n\nif [ -f \"${START_FILE}\" ]; then\n  echo 'Elasticsearch is already running, lets check the node is healthy'\n  HTTP_CODE=$(http \"/\" \"-w %{http_code}\")\n  RC=$?\n  if [[ ${RC} -ne 0 ]]; then\n    echo \"curl --output /dev/null -k -XGET -s -w '%{http_code}' \\${BASIC_AUTH} http://***HIDDEN***:9200/ failed with RC ${RC}\"\n    exit ${RC}\n  fi\n  # ready if HTTP code 200, 503 is tolerable if ES version is 6.x\n  if [[ ${HTTP_CODE} == \"200\" ]]; then\n    exit 0\n  elif [[ ${HTTP_CODE} == \"503\" \u0026\u0026 \"7\" == \"6\" ]]; then\n    exit 0\n  else\n    echo \"curl --output /dev/null -k -XGET -s -w '%{http_code}' \\${BASIC_AUTH} http://***HIDDEN***:9200/ failed with HTTP code ${HTTP_CODE}\"\n    exit 1\n  fi\n\nelse\n  echo 'Waiting for elasticsearch cluster to become ready (request params: \"wait_for_status=green\u0026timeout=1s\" )'\n  if http \"/_cluster/health?wait_for_status=green\u0026timeout=1s\" \"--fail\" ; then\n    touch ${START_FILE}\n    exit 0\n  else\n    echo 'Cluster is not yet ready (request params: \"wait_for_status=green\u0026timeout=1s\" )'\n    exit 1\n  fi\nfi\n"
+                    ]
+                  },
+                  "initialDelaySeconds": 10,
+                  "timeoutSeconds": 5,
+                  "periodSeconds": 10,
+                  "successThreshold": 3,
+                  "failureThreshold": 3
+                },
+                "lifecycle": {
+                  "postStart": {
+                    "exec": {
+                      "command": [
+                        "bash",
+                        "-c",
+                        "#!/bin/bash\n# Add a template to adjust number of shards/replicas.\nTEMPLATE_NAME=default\nINDEX_PATTERN=\"*\"\nSHARD_COUNT=1\nREPLICA_COUNT=0\nES_URL=http://localhost:9200\nwhile [[ \"$(curl -s -o /dev/null -w '%{http_code}\\n' $ES_URL)\" != \"200\" ]]; do sleep 1; done\ncurl -XPUT \"$ES_URL/_template/$TEMPLATE_NAME\" -H 'Content-Type: application/json' -d'{\"index_patterns\":['\\\"\"$INDEX_PATTERN\"\\\"'],\"settings\":{\"number_of_shards\":'$SHARD_COUNT',\"number_of_replicas\":'$REPLICA_COUNT'}}'\n"
+                      ]
+                    }
+                  }
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent",
+                "securityContext": {
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "privileged": false,
+                  "runAsUser": 1000,
+                  "runAsGroup": 1000,
+                  "runAsNonRoot": true,
+                  "readOnlyRootFilesystem": false,
+                  "allowPrivilegeEscalation": false,
+                  "seccompProfile": {
+                    "type": "RuntimeDefault"
+                  }
+                }
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 120,
+            "dnsPolicy": "ClusterFirst",
+            "securityContext": {
+              "runAsUser": 1000,
+              "fsGroup": 1000
+            },
+            "imagePullSecrets": [
+              {
+                "name": "knime-hub-elasticsearch-registry"
+              }
+            ],
+            "affinity": {
+              "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "preference": {
+                      "matchExpressions": [
+                        {
+                          "key": "hub.knime.com/role",
+                          "operator": "In",
+                          "values": [
+                            "core"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "podAntiAffinity": {
+                "requiredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "labelSelector": {
+                      "matchExpressions": [
+                        {
+                          "key": "app",
+                          "operator": "In",
+                          "values": [
+                            "elasticsearch-master"
+                          ]
+                        }
+                      ]
+                    },
+                    "topologyKey": "kubernetes.io/hostname"
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler",
+            "enableServiceLinks": true
+          }
+        },
+        "volumeClaimTemplates": [
+          {
+            "kind": "PersistentVolumeClaim",
+            "apiVersion": "v1",
+            "metadata": {
+              "name": "elasticsearch-master",
+              "creationTimestamp": null
+            },
+            "spec": {
+              "accessModes": [
+                "ReadWriteOnce"
+              ],
+              "resources": {
+                "requests": {
+                  "storage": "5Gi"
+                }
+              },
+              "volumeMode": "Filesystem"
+            },
+            "status": {
+              "phase": "Pending"
+            }
+          }
+        ],
+        "serviceName": "elasticsearch-master-headless",
+        "podManagementPolicy": "Parallel",
+        "updateStrategy": {
+          "type": "RollingUpdate"
+        },
+        "revisionHistoryLimit": 10
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 1,
+        "readyReplicas": 1,
+        "currentReplicas": 1,
+        "updatedReplicas": 1,
+        "currentRevision": "elasticsearch-master-7fc88d84d9",
+        "updateRevision": "elasticsearch-master-7fc88d84d9",
+        "collisionCount": 0,
+        "availableReplicas": 1
+      }
+    },
+    {
+      "kind": "StatefulSet",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "hub-webapp-redis-master",
+        "namespace": "knime",
+        "uid": "97730c37-8007-47c0-9cc9-4a8eae9e0ff1",
+        "resourceVersion": "745143",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:20:07Z",
+        "labels": {
+          "app": "redis",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "redis-10.5.6-5299ee8",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "redis"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "redis",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T13:20:07Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:podManagementPolicy": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:serviceName": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:checksum/configmap": {},
+                      "f:checksum/health": {},
+                      "f:checksum/secret": {},
+                      "f:kots.io/app-slug": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:chart": {},
+                      "f:kots.io/app-slug": {},
+                      "f:kots.io/backup": {},
+                      "f:release": {},
+                      "f:role": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:nodeAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"hub-webapp-redis\"}": {
+                        ".": {},
+                        "f:command": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"REDIS_PASSWORD\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"REDIS_PORT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"REDIS_REPLICATION_MODE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:livenessProbe": {
+                          ".": {},
+                          "f:exec": {
+                            ".": {},
+                            "f:command": {}
+                          },
+                          "f:failureThreshold": {},
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":6379,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:exec": {
+                            ".": {},
+                            "f:command": {}
+                          },
+                          "f:failureThreshold": {},
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {},
+                        "f:securityContext": {
+                          ".": {},
+                          "f:allowPrivilegeEscalation": {},
+                          "f:capabilities": {
+                            ".": {},
+                            "f:drop": {}
+                          },
+                          "f:privileged": {},
+                          "f:readOnlyRootFilesystem": {},
+                          "f:runAsGroup": {},
+                          "f:runAsNonRoot": {},
+                          "f:runAsUser": {},
+                          "f:seccompProfile": {
+                            ".": {},
+                            "f:type": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/data\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/health\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/opt/bitnami/redis/etc/\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/opt/bitnami/redis/mounted-etc\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"knime-hub-redis-registry\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {
+                      ".": {},
+                      "f:fsGroup": {}
+                    },
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"config\"}": {
+                        ".": {},
+                        "f:configMap": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:name": {}
+                        },
+                        "f:name": {}
+                      },
+                      "k:{\"name\":\"health\"}": {
+                        ".": {},
+                        "f:configMap": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:name": {}
+                        },
+                        "f:name": {}
+                      },
+                      "k:{\"name\":\"redis-tmp-conf\"}": {
+                        ".": {},
+                        "f:emptyDir": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:updateStrategy": {
+                  "f:type": {}
+                },
+                "f:volumeClaimTemplates": {}
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:30:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:collisionCount": {},
+                "f:currentReplicas": {},
+                "f:currentRevision": {},
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updateRevision": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app": "redis",
+            "release": "redis",
+            "role": "master"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app": "redis",
+              "chart": "redis-10.5.6-5299ee8",
+              "kots.io/app-slug": "knime-hub",
+              "kots.io/backup": "velero",
+              "release": "redis",
+              "role": "master"
+            },
+            "annotations": {
+              "checksum/configmap": "3f1d9e2ac51660afe63d6289d6f3cf150971f737ee946d71614f48b25ea82488",
+              "checksum/health": "bc2a753485b79e2bb74ac609e6cb28a72efd67d1e32658e0209709779b65e8a8",
+              "checksum/secret": "af785d4ab8b14f260347b3b8dc7dcaabe899a1bb8b4d4031c0939f1f6110fd9a",
+              "kots.io/app-slug": "knime-hub"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "health",
+                "configMap": {
+                  "name": "hub-webapp-redis-health",
+                  "defaultMode": 493
+                }
+              },
+              {
+                "name": "config",
+                "configMap": {
+                  "name": "hub-webapp-redis",
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "redis-tmp-conf",
+                "emptyDir": {}
+              }
+            ],
+            "containers": [
+              {
+                "name": "hub-webapp-redis",
+                "image": "docker.io/bitnami/redis:5.0.7-debian-10-r32",
+                "command": [
+                  "/bin/bash",
+                  "-c",
+                  "if [[ -n $REDIS_PASSWORD_FILE ]]; then\n  password_aux=`cat ${REDIS_PASSWORD_FILE}`\n  export REDIS_PASSWORD=***HIDDEN***;then\n  cp /opt/bitnami/redis/mounted-etc/master.conf /opt/bitnami/redis/etc/master.conf\nfi\nif [[ ! -f /opt/bitnami/redis/etc/redis.conf ]];then\n  cp /opt/bitnami/redis/mounted-etc/redis.conf /opt/bitnami/redis/etc/redis.conf\nfi\nARGS=(\"--port\" \"${REDIS_PORT}\")\nARGS+=(\"--requirepass\" \"${REDIS_PASSWORD}\")\nARGS+=(\"--masterauth\" \"${REDIS_PASSWORD}\")\nARGS+=(\"--include\" \"/opt/bitnami/redis/etc/redis.conf\")\nARGS+=(\"--include\" \"/opt/bitnami/redis/etc/master.conf\")\n/run.sh ${ARGS[@]}\n"
+                ],
+                "ports": [
+                  {
+                    "name": "redis",
+                    "containerPort": 6379,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "REDIS_REPLICATION_MODE",
+                    "value": "master"
+                  },
+                  {
+                    "name": "REDIS_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "hub-webapp-redis",
+                        "key": "redis-password"
+                      }
+                    }
+                  },
+                  {
+                    "name": "REDIS_PORT",
+                    "value": "6379"
+                  }
+                ],
+                "resources": {},
+                "volumeMounts": [
+                  {
+                    "name": "health",
+                    "mountPath": "/health"
+                  },
+                  {
+                    "name": "redis-data",
+                    "mountPath": "/data"
+                  },
+                  {
+                    "name": "config",
+                    "mountPath": "/opt/bitnami/redis/mounted-etc"
+                  },
+                  {
+                    "name": "redis-tmp-conf",
+                    "mountPath": "/opt/bitnami/redis/etc/"
+                  }
+                ],
+                "livenessProbe": {
+                  "exec": {
+                    "command": [
+                      "sh",
+                      "-c",
+                      "/health/ping_liveness_local.sh 5"
+                    ]
+                  },
+                  "initialDelaySeconds": 5,
+                  "timeoutSeconds": 5,
+                  "periodSeconds": 5,
+                  "successThreshold": 1,
+                  "failureThreshold": 5
+                },
+                "readinessProbe": {
+                  "exec": {
+                    "command": [
+                      "sh",
+                      "-c",
+                      "/health/ping_readiness_local.sh 5"
+                    ]
+                  },
+                  "initialDelaySeconds": 5,
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 5,
+                  "successThreshold": 1,
+                  "failureThreshold": 5
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent",
+                "securityContext": {
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "privileged": false,
+                  "runAsUser": 1000,
+                  "runAsGroup": 1000,
+                  "runAsNonRoot": true,
+                  "readOnlyRootFilesystem": false,
+                  "allowPrivilegeEscalation": false,
+                  "seccompProfile": {
+                    "type": "RuntimeDefault"
+                  }
+                }
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "default",
+            "serviceAccount": "default",
+            "securityContext": {
+              "fsGroup": 1001
+            },
+            "imagePullSecrets": [
+              {
+                "name": "knime-hub-redis-registry"
+              }
+            ],
+            "affinity": {
+              "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "preference": {
+                      "matchExpressions": [
+                        {
+                          "key": "hub.knime.com/role",
+                          "operator": "In",
+                          "values": [
+                            "core"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "volumeClaimTemplates": [
+          {
+            "kind": "PersistentVolumeClaim",
+            "apiVersion": "v1",
+            "metadata": {
+              "name": "redis-data",
+              "creationTimestamp": null,
+              "labels": {
+                "app": "redis",
+                "component": "master",
+                "heritage": "Helm",
+                "release": "redis"
+              }
+            },
+            "spec": {
+              "accessModes": [
+                "ReadWriteOnce"
+              ],
+              "resources": {
+                "requests": {
+                  "storage": "8Gi"
+                }
+              },
+              "volumeMode": "Filesystem"
+            },
+            "status": {
+              "phase": "Pending"
+            }
+          }
+        ],
+        "serviceName": "hub-webapp-redis-headless",
+        "podManagementPolicy": "OrderedReady",
+        "updateStrategy": {
+          "type": "RollingUpdate"
+        },
+        "revisionHistoryLimit": 10
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 1,
+        "readyReplicas": 1,
+        "currentReplicas": 1,
+        "updatedReplicas": 1,
+        "currentRevision": "hub-webapp-redis-master-769b446bb7",
+        "updateRevision": "hub-webapp-redis-master-769b446bb7",
+        "collisionCount": 0,
+        "availableReplicas": 1
+      }
+    },
+    {
+      "kind": "StatefulSet",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "keycloak",
+        "namespace": "knime",
+        "uid": "5fb051e4-696a-4b88-9f72-fe887b9fb3e1",
+        "resourceVersion": "762507",
+        "generation": 2,
+        "creationTimestamp": "2023-11-10T13:20:13Z",
+        "labels": {
+          "app": "keycloak",
+          "component": "keycloak"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "keycloak.org/v1alpha1",
+            "kind": "Keycloak",
+            "name": "knime-keycloak",
+            "uid": "1c638751-0600-4702-827c-6a507f1dc9e5",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "keycloak-operator",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T13:20:14Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:component": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"1c638751-0600-4702-827c-6a507f1dc9e5\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:podManagementPolicy": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:component": {}
+                    },
+                    "f:name": {},
+                    "f:namespace": {}
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:nodeAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"keycloak\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"CACHE_OWNERS_AUTH_SESSIONS_COUNT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CACHE_OWNERS_COUNT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"DB_ADDR\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"DB_DATABASE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"DB_PASSWORD\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"DB_PORT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"DB_SCHEMA\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"DB_USER\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"DB_VENDOR\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"JGROUPS_DISCOVERY_PROPERTIES\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"JGROUPS_DISCOVERY_PROTOCOL\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"KEYCLOAK_PASSWORD\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"KEYCLOAK_POSTGRESQL_SERVICE_HOST\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"KEYCLOAK_POSTGRESQL_SERVICE_PORT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"KEYCLOAK_STATISTICS\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"KEYCLOAK_USER\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"PROXY_ADDRESS_FORWARDING\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"X509_CA_BUNDLE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:livenessProbe": {
+                          ".": {},
+                          "f:exec": {
+                            ".": {},
+                            "f:command": {}
+                          },
+                          "f:failureThreshold": {},
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":8443,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":8778,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":9990,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:exec": {
+                            ".": {},
+                            "f:command": {}
+                          },
+                          "f:failureThreshold": {},
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {},
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/etc/x509/https\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/opt/jboss/keycloak/standalone/deployments\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/opt/jboss/startup-scripts\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/probes\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:initContainers": {
+                      ".": {},
+                      "k:{\"name\":\"extensions-init\"}": {
+                        ".": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"KEYCLOAK_EXTENSIONS\"}": {
+                            ".": {},
+                            "f:name": {}
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:resources": {},
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/opt/extensions\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"keycloak-extensions\"}": {
+                        ".": {},
+                        "f:emptyDir": {},
+                        "f:name": {}
+                      },
+                      "k:{\"name\":\"keycloak-probes\"}": {
+                        ".": {},
+                        "f:configMap": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:name": {}
+                        },
+                        "f:name": {}
+                      },
+                      "k:{\"name\":\"logging-config\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:projected": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:sources": {}
+                        }
+                      },
+                      "k:{\"name\":\"sso-x509-https-secret\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:secret": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:optional": {},
+                          "f:secretName": {}
+                        }
+                      }
+                    }
+                  }
+                },
+                "f:updateStrategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:partition": {}
+                  },
+                  "f:type": {}
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:31:17Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:currentReplicas": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app": "keycloak",
+            "component": "keycloak"
+          }
+        },
+        "template": {
+          "metadata": {
+            "name": "keycloak",
+            "namespace": "knime",
+            "creationTimestamp": null,
+            "labels": {
+              "app": "keycloak",
+              "component": "keycloak"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "sso-x509-https-secret",
+                "secret": {
+                  "secretName": "sso-x509-https-secret",
+                  "defaultMode": 420,
+                  "optional": true
+                }
+              },
+              {
+                "name": "keycloak-extensions",
+                "emptyDir": {}
+              },
+              {
+                "name": "keycloak-probes",
+                "configMap": {
+                  "name": "keycloak-probes",
+                  "defaultMode": 365
+                }
+              },
+              {
+                "name": "logging-config",
+                "projected": {
+                  "sources": [
+                    {
+                      "configMap": {
+                        "name": "keycloak-logging-config",
+                        "items": [
+                          {
+                            "key": "EVENT_LOGGING_CONFIG_SCRIPT",
+                            "path": "./logging-config.cli"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "defaultMode": 493
+                }
+              }
+            ],
+            "initContainers": [
+              {
+                "name": "extensions-init",
+                "image": "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-keycloak-extensions-init:19.0.3-legacy-00851e8",
+                "env": [
+                  {
+                    "name": "KEYCLOAK_EXTENSIONS"
+                  }
+                ],
+                "resources": {},
+                "volumeMounts": [
+                  {
+                    "name": "keycloak-extensions",
+                    "mountPath": "/opt/extensions"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "Always"
+              }
+            ],
+            "containers": [
+              {
+                "name": "keycloak",
+                "image": "quay.io/keycloak/keycloak:19.0.3-legacy",
+                "args": [
+                  "-Dkeycloak.profile.feature.scripts=enabled",
+                  "-Dkeycloak.profile.feature.upload_scripts=enabled",
+                  "-Dkeycloak.profile.feature.token_exchange=enabled",
+                  "-Dkeycloak.profile.feature.admin_fine_grained_authz=enabled",
+                  "-Dkeycloak.profile.feature.declarative_user_profile=enabled"
+                ],
+                "ports": [
+                  {
+                    "containerPort": 8443,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 9990,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 8778,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "DB_VENDOR",
+                    "value": "POSTGRES"
+                  },
+                  {
+                    "name": "DB_SCHEMA",
+                    "value": "public"
+                  },
+                  {
+                    "name": "DB_ADDR",
+                    "value": "keycloak-postgresql.knime"
+                  },
+                  {
+                    "name": "DB_PORT",
+                    "value": "5432"
+                  },
+                  {
+                    "name": "DB_DATABASE",
+                    "value": "***HIDDEN***"
+                  },
+                  {
+                    "name": "DB_USER",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "keycloak-db-secret",
+                        "key": "POSTGRES_USERNAME"
+                      }
+                    }
+                  },
+                  {
+                    "name": "DB_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "keycloak-db-secret",
+                        "key": "POSTGRES_PASSWORD"
+                      }
+                    }
+                  },
+                  {
+                    "name": "NAMESPACE",
+                    "value": "knime"
+                  },
+                  {
+                    "name": "JGROUPS_DISCOVERY_PROTOCOL",
+                    "value": "dns.DNS_PING"
+                  },
+                  {
+                    "name": "JGROUPS_DISCOVERY_PROPERTIES",
+                    "value": "dns_query=keycloak-discovery.knime"
+                  },
+                  {
+                    "name": "CACHE_OWNERS_COUNT",
+                    "value": "2"
+                  },
+                  {
+                    "name": "CACHE_OWNERS_AUTH_SESSIONS_COUNT",
+                    "value": "2"
+                  },
+                  {
+                    "name": "KEYCLOAK_USER",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "credential-knime-keycloak",
+                        "key": "ADMIN_USERNAME"
+                      }
+                    }
+                  },
+                  {
+                    "name": "KEYCLOAK_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "credential-knime-keycloak",
+                        "key": "ADMIN_PASSWORD"
+                      }
+                    }
+                  },
+                  {
+                    "name": "X509_CA_BUNDLE",
+                    "value": "/var/run/secrets/kubernetes.io/serviceaccount/*.crt"
+                  },
+                  {
+                    "name": "PROXY_ADDRESS_FORWARDING",
+                    "value": "true"
+                  },
+                  {
+                    "name": "KEYCLOAK_STATISTICS",
+                    "value": "all"
+                  },
+                  {
+                    "name": "KEYCLOAK_POSTGRESQL_SERVICE_HOST",
+                    "value": "keycloak-postgresql.knime.svc.cluster.local"
+                  },
+                  {
+                    "name": "KEYCLOAK_POSTGRESQL_SERVICE_PORT",
+                    "value": "5432"
+                  }
+                ],
+                "resources": {},
+                "volumeMounts": [
+                  {
+                    "name": "sso-x509-https-secret",
+                    "mountPath": "/etc/x509/https"
+                  },
+                  {
+                    "name": "keycloak-extensions",
+                    "mountPath": "/opt/jboss/keycloak/standalone/deployments"
+                  },
+                  {
+                    "name": "keycloak-probes",
+                    "mountPath": "/probes"
+                  },
+                  {
+                    "name": "logging-config",
+                    "mountPath": "/opt/jboss/startup-scripts"
+                  }
+                ],
+                "livenessProbe": {
+                  "exec": {
+                    "command": [
+                      "/bin/sh",
+                      "-c",
+                      "/probes/liveness_probe.sh"
+                    ]
+                  },
+                  "initialDelaySeconds": 30,
+                  "timeoutSeconds": 22,
+                  "periodSeconds": 30,
+                  "successThreshold": 1,
+                  "failureThreshold": 10
+                },
+                "readinessProbe": {
+                  "exec": {
+                    "command": [
+                      "/bin/sh",
+                      "-c",
+                      "/probes/readiness_probe.sh"
+                    ]
+                  },
+                  "initialDelaySeconds": 40,
+                  "timeoutSeconds": 22,
+                  "periodSeconds": 30,
+                  "successThreshold": 1,
+                  "failureThreshold": 10
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "Always"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "knime-hub-keycloak",
+            "serviceAccount": "knime-hub-keycloak",
+            "securityContext": {},
+            "affinity": {
+              "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "preference": {
+                      "matchExpressions": [
+                        {
+                          "key": "hub.knime.com/role",
+                          "operator": "In",
+                          "values": [
+                            "core"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "serviceName": "",
+        "podManagementPolicy": "OrderedReady",
+        "updateStrategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "partition": 0
+          }
+        },
+        "revisionHistoryLimit": 10
+      },
+      "status": {
+        "observedGeneration": 2,
+        "replicas": 1,
+        "readyReplicas": 1,
+        "currentReplicas": 1,
+        "updatedReplicas": 1,
+        "currentRevision": "keycloak-698c9d889",
+        "updateRevision": "keycloak-698c9d889",
+        "collisionCount": 0,
+        "availableReplicas": 1
+      }
+    },
+    {
+      "kind": "StatefulSet",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "knime-postgres-cluster",
+        "namespace": "knime",
+        "uid": "9a8b2123-3931-430e-94a1-d471b6fa9114",
+        "resourceVersion": "744898",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:20:14Z",
+        "labels": {
+          "application": "spilo",
+          "team": "knime",
+          "version": "knime-postgres-cluster"
+        },
+        "managedFields": [
+          {
+            "manager": "postgres-operator",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T13:20:14Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:team": {},
+                  "f:version": {}
+                }
+              },
+              "f:spec": {
+                "f:podManagementPolicy": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:serviceName": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:application": {},
+                      "f:team": {},
+                      "f:version": {}
+                    },
+                    "f:namespace": {}
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:nodeAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"postgres\"}": {
+                        ".": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"AWS_ACCESS_KEY_ID\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"AWS_ENDPOINT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"AWS_REGION\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"AWS_S3_FORCE_PATH_STYLE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"AWS_SECRET_ACCESS_KEY\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"BACKUP_NUM_TO_RETAIN\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"BACKUP_SCHEDULE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_AWS_ACCESS_KEY_ID\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_AWS_ENDPOINT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_AWS_REGION\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_AWS_S3_FORCE_PATH_STYLE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_AWS_SECRET_ACCESS_KEY\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_USE_WALG_BACKUP\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_USE_WALG_RESTORE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"CLONE_WAL_S3_BUCKET\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"DCS_ENABLE_KUBERNETES_API\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"HUMAN_ROLE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"KUBERNETES_LABELS\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"KUBERNETES_ROLE_LABEL\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"KUBERNETES_SCOPE_LABEL\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"PAM_OAUTH2\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"PGPASSWORD_STANDBY\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"PGPASSWORD_SUPERUSER\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"PGROOT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"PGUSER_STANDBY\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"PGUSER_SUPERUSER\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"PGVERSION\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"POD_IP\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"POD_NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"SCOPE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"SPILO_CONFIGURATION\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"USE_WALG_BACKUP\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"USE_WALG_RESTORE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"WALG_DISABLE_S3_SSE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"WAL_S3_BUCKET\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":5432,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":8008,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:limits": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          },
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:securityContext": {
+                          ".": {},
+                          "f:allowPrivilegeEscalation": {},
+                          "f:privileged": {},
+                          "f:readOnlyRootFilesystem": {}
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/dev/shm\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/home/postgres/pgdata\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:initContainers": {
+                      ".": {},
+                      "k:{\"name\":\"date\"}": {
+                        ".": {},
+                        "f:command": {},
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:resources": {},
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"dshm\"}": {
+                        ".": {},
+                        "f:emptyDir": {
+                          ".": {},
+                          "f:medium": {}
+                        },
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:updateStrategy": {
+                  "f:type": {}
+                },
+                "f:volumeClaimTemplates": {}
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:30:05Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:collisionCount": {},
+                "f:currentReplicas": {},
+                "f:currentRevision": {},
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updateRevision": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "application": "spilo",
+            "version": "knime-postgres-cluster"
+          }
+        },
+        "template": {
+          "metadata": {
+            "namespace": "knime",
+            "creationTimestamp": null,
+            "labels": {
+              "application": "spilo",
+              "team": "knime",
+              "version": "knime-postgres-cluster"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "dshm",
+                "emptyDir": {
+                  "medium": "Memory"
+                }
+              }
+            ],
+            "initContainers": [
+              {
+                "name": "date",
+                "image": "busybox:1.35",
+                "command": [
+                  "/bin/date"
+                ],
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "containers": [
+              {
+                "name": "postgres",
+                "image": "ghcr.io/zalando/spilo-15:3.0-p1",
+                "ports": [
+                  {
+                    "containerPort": 8008,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 5432,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 8080,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "SCOPE",
+                    "value": "knime-postgres-cluster"
+                  },
+                  {
+                    "name": "PGROOT",
+                    "value": "/home/postgres/pgdata/pgroot"
+                  },
+                  {
+                    "name": "POD_IP",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "status.podIP"
+                      }
+                    }
+                  },
+                  {
+                    "name": "POD_NAMESPACE",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      }
+                    }
+                  },
+                  {
+                    "name": "PGUSER_SUPERUSER",
+                    "value": "***HIDDEN***"
+                  },
+                  {
+                    "name": "KUBERNETES_SCOPE_LABEL",
+                    "value": "version"
+                  },
+                  {
+                    "name": "KUBERNETES_ROLE_LABEL",
+                    "value": "spilo-role"
+                  },
+                  {
+                    "name": "PGPASSWORD_SUPERUSER",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "postgres.knime-postgres-cluster.credentials",
+                        "key": "password"
+                      }
+                    }
+                  },
+                  {
+                    "name": "PGUSER_STANDBY",
+                    "value": "***HIDDEN***"
+                  },
+                  {
+                    "name": "PGPASSWORD_STANDBY",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "standby.knime-postgres-cluster.credentials",
+                        "key": "password"
+                      }
+                    }
+                  },
+                  {
+                    "name": "PAM_OAUTH2",
+                    "value": "https://info.example.com/oauth2/tokeninfo?access_token= uid realm=/employees"
+                  },
+                  {
+                    "name": "HUMAN_ROLE",
+                    "value": "zalandos"
+                  },
+                  {
+                    "name": "PGVERSION",
+                    "value": "11"
+                  },
+                  {
+                    "name": "KUBERNETES_LABELS",
+                    "value": "{\"application\":\"spilo\"}"
+                  },
+                  {
+                    "name": "SPILO_CONFIGURATION",
+                    "value": "{\"postgresql\":{\"parameters\":{\"log_filename\":\"postgresql-%I\",\"log_rotation_age\":\"60\",\"shared_buffers\":\"256MB\"}},\"bootstrap\":{\"initdb\":[{\"auth-host\":\"md5\"},{\"auth-local\":\"trust\"},\"data-checksums\",{\"encoding\":\"UTF8\"},{\"locale\":\"en_US.UTF-8\"}],\"users\":{\"zalandos\":{\"password\":\"\",\"options\":[\"CREATEDB\",\"NOLOGIN\"]}},\"dcs\":{\"ttl\":30,\"loop_wait\":10,\"retry_timeout\":10,\"maximum_lag_on_failover\":33554432,\"synchronous_node_count\":1,\"postgresql\":{\"parameters\":{\"archive_timeout\":\"300\",\"log_statement\":\"mod\",\"max_connections\":\"200\"}},\"failsafe_mode\":false}}}"
+                  },
+                  {
+                    "name": "DCS_ENABLE_KUBERNETES_API",
+                    "value": "true"
+                  },
+                  {
+                    "name": "AWS_ACCESS_KEY_ID",
+                    "value": "***HIDDEN***"
+                  },
+                  {
+                    "name": "AWS_ENDPOINT",
+                    "value": "http://minio:9000"
+                  },
+                  {
+                    "name": "AWS_REGION",
+                    "value": "us-east-1"
+                  },
+                  {
+                    "name": "AWS_S3_FORCE_PATH_STYLE",
+                    "value": "true"
+                  },
+                  {
+                    "name": "AWS_SECRET_ACCESS_KEY",
+                    "value": ""
+                  },
+                  {
+                    "name": "BACKUP_NUM_TO_RETAIN",
+                    "value": "5"
+                  },
+                  {
+                    "name": "BACKUP_SCHEDULE",
+                    "value": "0 1 * * *"
+                  },
+                  {
+                    "name": "CLONE_AWS_ACCESS_KEY_ID",
+                    "value": "***HIDDEN***"
+                  },
+                  {
+                    "name": "CLONE_AWS_ENDPOINT",
+                    "value": "http://minio:9000"
+                  },
+                  {
+                    "name": "CLONE_AWS_REGION",
+                    "value": "us-east-1"
+                  },
+                  {
+                    "name": "CLONE_AWS_S3_FORCE_PATH_STYLE",
+                    "value": "true"
+                  },
+                  {
+                    "name": "CLONE_AWS_SECRET_ACCESS_KEY",
+                    "value": ""
+                  },
+                  {
+                    "name": "CLONE_USE_WALG_BACKUP",
+                    "value": "true"
+                  },
+                  {
+                    "name": "CLONE_USE_WALG_RESTORE",
+                    "value": "true"
+                  },
+                  {
+                    "name": "CLONE_WAL_S3_BUCKET",
+                    "value": "knime-postgres-backup"
+                  },
+                  {
+                    "name": "USE_WALG_BACKUP",
+                    "value": "true"
+                  },
+                  {
+                    "name": "USE_WALG_RESTORE",
+                    "value": "true"
+                  },
+                  {
+                    "name": "WALG_DISABLE_S3_SSE",
+                    "value": "true"
+                  },
+                  {
+                    "name": "WAL_S3_BUCKET",
+                    "value": "knime-postgres-backup"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "cpu": "1",
+                    "memory": "1Gi"
+                  },
+                  "requests": {
+                    "cpu": "1",
+                    "memory": "1Gi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "pgdata",
+                    "mountPath": "/home/postgres/pgdata"
+                  },
+                  {
+                    "name": "dshm",
+                    "mountPath": "/dev/shm"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent",
+                "securityContext": {
+                  "privileged": false,
+                  "readOnlyRootFilesystem": false,
+                  "allowPrivilegeEscalation": true
+                }
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 300,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "postgres-pod",
+            "serviceAccount": "postgres-pod",
+            "securityContext": {},
+            "affinity": {
+              "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "preference": {
+                      "matchExpressions": [
+                        {
+                          "key": "hub.knime.com/role",
+                          "operator": "In",
+                          "values": [
+                            "core"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "volumeClaimTemplates": [
+          {
+            "kind": "PersistentVolumeClaim",
+            "apiVersion": "v1",
+            "metadata": {
+              "name": "pgdata",
+              "creationTimestamp": null,
+              "labels": {
+                "application": "spilo",
+                "team": "knime",
+                "version": "knime-postgres-cluster"
+              }
+            },
+            "spec": {
+              "accessModes": [
+                "ReadWriteOnce"
+              ],
+              "resources": {
+                "requests": {
+                  "storage": "10Gi"
+                }
+              },
+              "volumeMode": "Filesystem"
+            },
+            "status": {
+              "phase": "Pending"
+            }
+          }
+        ],
+        "serviceName": "knime-postgres-cluster",
+        "podManagementPolicy": "OrderedReady",
+        "updateStrategy": {
+          "type": "OnDelete"
+        },
+        "revisionHistoryLimit": 10
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 1,
+        "readyReplicas": 1,
+        "currentReplicas": 1,
+        "updatedReplicas": 1,
+        "currentRevision": "knime-postgres-cluster-d666859b7",
+        "updateRevision": "knime-postgres-cluster-d666859b7",
+        "collisionCount": 0,
+        "availableReplicas": 1
+      }
+    }
+  ]
+}

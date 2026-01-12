@@ -1,0 +1,1423 @@
+{
+  "kind": "EndpointsList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763995"
+  },
+  "items": [
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "activemq-artemis",
+        "namespace": "knime",
+        "uid": "612cbc74-9ada-4e7f-84ef-0255343a7712",
+        "resourceVersion": "744955",
+        "creationTimestamp": "2023-11-10T13:19:03Z",
+        "labels": {
+          "app": "activemq-artemis",
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:22Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:11Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "hostname": "activemq-artemis-0",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "activemq-artemis-0",
+                "uid": "f22ce634-0f74-4296-a41e-76a0ca0f9926"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "artemis",
+              "port": 61616,
+              "protocol": "TCP"
+            },
+            {
+              "name": "http",
+              "port": 8161,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "cdds-postgres-cluster",
+        "namespace": "knime",
+        "uid": "736b2645-f4a9-4691-ad0c-836dda206701",
+        "resourceVersion": "763986",
+        "creationTimestamp": "2023-11-10T13:20:08Z",
+        "labels": {
+          "application": "spilo",
+          "spilo-role": "master",
+          "team": "cdds",
+          "version": "cdds-postgres-cluster"
+        },
+        "annotations": {
+          "acquireTime": "2023-11-21T14:30:36.124603+00:00",
+          "leader": "cdds-postgres-cluster-0",
+          "optime": "369098752",
+          "renewTime": "2023-11-21T16:13:07.760054+00:00",
+          "transitions": "4",
+          "ttl": "30"
+        },
+        "managedFields": [
+          {
+            "manager": "postgres-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:08Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:spilo-role": {},
+                  "f:team": {},
+                  "f:version": {}
+                }
+              }
+            }
+          },
+          {
+            "manager": "Patroni",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:13:07Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:acquireTime": {},
+                  "f:leader": {},
+                  "f:optime": {},
+                  "f:renewTime": {},
+                  "f:transitions": {},
+                  "f:ttl": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "hostname": "cdds-postgres-cluster-0",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "cdds-postgres-cluster-0",
+                "uid": "413e9756-d1a1-4621-b5dc-205291567de6",
+                "resourceVersion": "745392"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "postgresql",
+              "port": 5432,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "cdds-postgres-cluster-config",
+        "namespace": "knime",
+        "uid": "411ad0b3-2244-4551-b7ea-fc54e32e7119",
+        "resourceVersion": "745412",
+        "creationTimestamp": "2023-11-10T13:20:52Z",
+        "labels": {
+          "application": "spilo",
+          "version": "cdds-postgres-cluster"
+        },
+        "annotations": {
+          "config": "{\"failsafe_mode\":false,\"loop_wait\":10,\"maximum_lag_on_failover\":33554432,\"postgresql\":{\"parameters\":{\"archive_mode\":\"on\",\"archive_timeout\":\"1800s\",\"autovacuum_analyze_scale_factor\":0.02,\"autovacuum_max_workers\":5,\"autovacuum_vacuum_scale_factor\":0.05,\"checkpoint_completion_target\":0.9,\"hot_standby\":\"on\",\"log_autovacuum_min_duration\":0,\"log_checkpoints\":\"on\",\"log_connections\":\"on\",\"log_disconnections\":\"on\",\"log_line_prefix\":\"%t [%p]: [%l-1] %c %x %d %u %a %h \",\"log_lock_waits\":\"on\",\"log_min_duration_statement\":500,\"log_statement\":\"ddl\",\"log_temp_files\":0,\"max_connections\":100,\"max_replication_slots\":10,\"max_wal_senders\":10,\"tcp_keepalives_idle\":900,\"tcp_keepalives_interval\":100,\"track_functions\":\"all\",\"wal_compression\":\"on\",\"wal_level\":\"hot_standby\",\"wal_log_hints\":\"on\"},\"use_pg_rewind\":true,\"use_slots\":true},\"retry_timeout\":10,\"ttl\":30}",
+          "history": "[[1,83886232,\"no recovery target specified\",\"2023-11-13T11:46:59.601176+00:00\",\"cdds-postgres-cluster-0\"],[2,167772312,\"no recovery target specified\",\"2023-11-16T10:51:22.439051+00:00\",\"cdds-postgres-cluster-0\"],[3,251658392,\"no recovery target specified\",\"2023-11-20T12:56:51.497410+00:00\",\"cdds-postgres-cluster-0\"],[4,318767256,\"no recovery target specified\",\"2023-11-21T14:30:36.774068+00:00\",\"cdds-postgres-cluster-0\"]]",
+          "initialize": "7299822848984969291"
+        },
+        "managedFields": [
+          {
+            "manager": "Patroni",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:37Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:config": {},
+                  "f:history": {},
+                  "f:initialize": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:version": {}
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "cdds-postgres-cluster-repl",
+        "namespace": "knime",
+        "uid": "5cd858ca-adbd-4a87-bda2-bad1dc8156c7",
+        "resourceVersion": "5280",
+        "creationTimestamp": "2023-11-10T13:20:10Z",
+        "labels": {
+          "application": "spilo",
+          "spilo-role": "replica",
+          "team": "cdds",
+          "version": "cdds-postgres-cluster"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-10T13:20:10Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:10Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:spilo-role": {},
+                  "f:team": {},
+                  "f:version": {}
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "elasticsearch-master",
+        "namespace": "knime",
+        "uid": "9c4ffb67-e48a-4008-a32b-cbff42a3a22e",
+        "resourceVersion": "745150",
+        "creationTimestamp": "2023-11-10T13:19:04Z",
+        "labels": {
+          "app": "elasticsearch-master",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "elasticsearch",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "elasticsearch"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:30:20Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "elasticsearch-master-0",
+                "uid": "2e485de9-0cd5-4b12-9f01-254ecdb30834"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "http",
+              "port": 9200,
+              "protocol": "TCP"
+            },
+            {
+              "name": "transport",
+              "port": 9300,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "elasticsearch-master-headless",
+        "namespace": "knime",
+        "uid": "5aaa3c34-bea5-44d8-b635-329360bd76ea",
+        "resourceVersion": "745153",
+        "creationTimestamp": "2023-11-10T13:19:04Z",
+        "labels": {
+          "app": "elasticsearch-master",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "elasticsearch",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "elasticsearch",
+          "service.kubernetes.io/headless": ""
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:30:20Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {},
+                  "f:service.kubernetes.io/headless": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "hostname": "elasticsearch-master-0",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "elasticsearch-master-0",
+                "uid": "2e485de9-0cd5-4b12-9f01-254ecdb30834"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "http",
+              "port": 9200,
+              "protocol": "TCP"
+            },
+            {
+              "name": "transport",
+              "port": 9300,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "hub-webapp-redis-headless",
+        "namespace": "knime",
+        "uid": "c9f5db4e-d332-4730-800c-8a58a8301001",
+        "resourceVersion": "745142",
+        "creationTimestamp": "2023-11-10T13:20:07Z",
+        "labels": {
+          "app": "redis",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "redis-10.5.6-5299ee8",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "redis",
+          "service.kubernetes.io/headless": ""
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:56Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {},
+                  "f:service.kubernetes.io/headless": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "hostname": "hub-webapp-redis-master-0",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "hub-webapp-redis-master-0",
+                "uid": "90313f24-a63b-46cb-b668-aeb91b586017"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "redis",
+              "port": 6379,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "hub-webapp-redis-master",
+        "namespace": "knime",
+        "uid": "5a4b415a-ac2b-455e-a72d-816ac9bc58ce",
+        "resourceVersion": "745140",
+        "creationTimestamp": "2023-11-10T13:20:07Z",
+        "labels": {
+          "app": "redis",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "redis-10.5.6-5299ee8",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "redis"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:56Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "hub-webapp-redis-master-0",
+                "uid": "90313f24-a63b-46cb-b668-aeb91b586017"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "redis",
+              "port": 6379,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "ingress-nginx-controller",
+        "namespace": "knime",
+        "uid": "d2e31a32-8b47-4d27-973b-49be36fada43",
+        "resourceVersion": "745220",
+        "creationTimestamp": "2023-11-10T13:18:22Z",
+        "labels": {
+          "app.kubernetes.io/component": "controller",
+          "app.kubernetes.io/instance": "ingress-nginx",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "ingress-nginx",
+          "app.kubernetes.io/part-of": "ingress-nginx",
+          "app.kubernetes.io/version": "1.3.1",
+          "helm.sh/chart": "ingress-nginx-4.2.5-73033d1",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:30:04Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:26Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:helm.sh/chart": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "ingress-nginx-controller-b485b478d-5kcfh",
+                "uid": "8151c74f-0ca6-4269-a323-a492ea293b6d"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "https",
+              "port": 443,
+              "protocol": "TCP",
+              "appProtocol": "https"
+            },
+            {
+              "name": "http",
+              "port": 80,
+              "protocol": "TCP",
+              "appProtocol": "http"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "ingress-nginx-controller-admission",
+        "namespace": "knime",
+        "uid": "5caa407c-1ffb-41b5-8d51-47e3feb916f1",
+        "resourceVersion": "745221",
+        "creationTimestamp": "2023-11-10T13:18:22Z",
+        "labels": {
+          "app.kubernetes.io/component": "controller",
+          "app.kubernetes.io/instance": "ingress-nginx",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "ingress-nginx",
+          "app.kubernetes.io/part-of": "ingress-nginx",
+          "app.kubernetes.io/version": "1.3.1",
+          "helm.sh/chart": "ingress-nginx-4.2.5-73033d1",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:30:04Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:26Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:helm.sh/chart": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "ingress-nginx-controller-b485b478d-5kcfh",
+                "uid": "8151c74f-0ca6-4269-a323-a492ea293b6d"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "https-webhook",
+              "port": 8443,
+              "protocol": "TCP",
+              "appProtocol": "https"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "keycloak",
+        "namespace": "knime",
+        "uid": "93eab8c9-26ff-4586-8e90-96d4995dd8e0",
+        "resourceVersion": "745901",
+        "creationTimestamp": "2023-11-10T13:20:13Z",
+        "labels": {
+          "app": "keycloak"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:31:15Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:31:17Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "keycloak-0",
+                "uid": "a97dab8a-7845-4439-b626-303913d8b62a"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "keycloak",
+              "port": 8443,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "keycloak-discovery",
+        "namespace": "knime",
+        "uid": "4f250eb0-cd32-4d44-8a70-2b37a0137bf2",
+        "resourceVersion": "745903",
+        "creationTimestamp": "2023-11-10T13:20:13Z",
+        "labels": {
+          "app": "keycloak",
+          "service.kubernetes.io/headless": ""
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:31:15Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:31:17Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:service.kubernetes.io/headless": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "keycloak-0",
+                "uid": "a97dab8a-7845-4439-b626-303913d8b62a"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "port": 8080,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "keycloak-monitoring",
+        "namespace": "knime",
+        "uid": "30a4bf39-a44d-41ca-a860-78a7fc91d2dc",
+        "resourceVersion": "745900",
+        "creationTimestamp": "2023-11-10T13:20:13Z",
+        "labels": {
+          "app": "keycloak"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:31:15Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:31:17Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "keycloak-0",
+                "uid": "a97dab8a-7845-4439-b626-303913d8b62a"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "keycloak-monitoring",
+              "port": 9990,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "keycloak-operator-metrics",
+        "namespace": "knime",
+        "uid": "edb686d3-7ccf-4215-9f6c-af6bdadb302e",
+        "resourceVersion": "762498",
+        "creationTimestamp": "2023-11-10T13:18:49Z",
+        "labels": {
+          "monitoring-key": "middleware",
+          "name": "keycloak-operator"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:04:44Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:monitoring-key": {},
+                  "f:name": {}
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "knime-hub-endpoint-status-tracker",
+        "namespace": "knime",
+        "uid": "4245d15e-ff11-4bcf-b988-48663c78cb80",
+        "resourceVersion": "745030",
+        "creationTimestamp": "2023-11-10T13:19:00Z",
+        "labels": {
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:45Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:16Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "knime-hub-endpoint-status-tracker-7d55d8b5d6-52946",
+                "uid": "7a7edf37-7e22-4ec7-9261-20a1ebbc8647"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "port": 8080,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "knime-postgres-cluster",
+        "namespace": "knime",
+        "uid": "13ac5646-8343-4257-b72f-6a53434d5333",
+        "resourceVersion": "763967",
+        "creationTimestamp": "2023-11-10T13:20:08Z",
+        "labels": {
+          "application": "spilo",
+          "spilo-role": "master",
+          "team": "knime",
+          "version": "knime-postgres-cluster"
+        },
+        "annotations": {
+          "acquireTime": "2023-11-13T13:25:24.272845+00:00",
+          "leader": "knime-postgres-cluster-0",
+          "optime": "13572779688",
+          "renewTime": "2023-11-21T16:13:02.982959+00:00",
+          "transitions": "2",
+          "ttl": "30"
+        },
+        "managedFields": [
+          {
+            "manager": "postgres-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:08Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:spilo-role": {},
+                  "f:team": {},
+                  "f:version": {}
+                }
+              }
+            }
+          },
+          {
+            "manager": "Patroni",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:13:03Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:acquireTime": {},
+                  "f:leader": {},
+                  "f:optime": {},
+                  "f:renewTime": {},
+                  "f:transitions": {},
+                  "f:ttl": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "hostname": "knime-postgres-cluster-0",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "knime-postgres-cluster-0",
+                "uid": "9fd94ba1-0d5b-4200-88af-40515a5adc45",
+                "resourceVersion": "744896"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "postgresql",
+              "port": 5432,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "knime-postgres-cluster-config",
+        "namespace": "knime",
+        "uid": "1554a44c-7877-4853-875d-5ff5075d9136",
+        "resourceVersion": "745338",
+        "creationTimestamp": "2023-11-10T13:20:52Z",
+        "labels": {
+          "application": "spilo",
+          "version": "knime-postgres-cluster"
+        },
+        "annotations": {
+          "config": "{\"failsafe_mode\":false,\"loop_wait\":10,\"maximum_lag_on_failover\":33554432,\"postgresql\":{\"parameters\":{\"archive_mode\":\"on\",\"archive_timeout\":\"300\",\"autovacuum_analyze_scale_factor\":0.02,\"autovacuum_max_workers\":5,\"autovacuum_vacuum_scale_factor\":0.05,\"checkpoint_completion_target\":0.9,\"hot_standby\":\"on\",\"log_autovacuum_min_duration\":0,\"log_checkpoints\":\"on\",\"log_connections\":\"on\",\"log_disconnections\":\"on\",\"log_line_prefix\":\"%t [%p]: [%l-1] %c %x %d %u %a %h \",\"log_lock_waits\":\"on\",\"log_min_duration_statement\":500,\"log_statement\":\"mod\",\"log_temp_files\":0,\"max_connections\":\"200\",\"max_replication_slots\":10,\"max_wal_senders\":10,\"tcp_keepalives_idle\":900,\"tcp_keepalives_interval\":100,\"track_functions\":\"all\",\"wal_compression\":\"on\",\"wal_level\":\"hot_standby\",\"wal_log_hints\":\"on\"},\"use_pg_rewind\":true,\"use_slots\":true},\"retry_timeout\":10,\"synchronous_node_count\":1,\"ttl\":30}",
+          "history": "[[1,117440664,\"no recovery target specified\",\"2023-11-13T11:47:04.145211+00:00\",\"knime-postgres-cluster-0\"],[2,184549528,\"no recovery target specified\",\"2023-11-13T13:25:24.598478+00:00\",\"knime-postgres-cluster-0\"],[3,6375342232,\"no recovery target specified\",\"2023-11-16T10:51:02.474900+00:00\",\"knime-postgres-cluster-0\"],[4,12398362776,\"no recovery target specified\",\"2023-11-20T12:56:56.013360+00:00\",\"knime-postgres-cluster-0\"],[5,13237223576,\"no recovery target specified\",\"2023-11-21T14:30:31.694083+00:00\",\"knime-postgres-cluster-0\"]]",
+          "initialize": "7299822848179302475"
+        },
+        "managedFields": [
+          {
+            "manager": "Patroni",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:32Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:config": {},
+                  "f:history": {},
+                  "f:initialize": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:version": {}
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "knime-postgres-cluster-repl",
+        "namespace": "knime",
+        "uid": "54b81bad-c98c-407a-8226-4111e80b05f6",
+        "resourceVersion": "5265",
+        "creationTimestamp": "2023-11-10T13:20:09Z",
+        "labels": {
+          "application": "spilo",
+          "spilo-role": "replica",
+          "team": "knime",
+          "version": "knime-postgres-cluster"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-10T13:20:09Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:09Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:application": {},
+                  "f:spilo-role": {},
+                  "f:team": {},
+                  "f:version": {}
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "minio",
+        "namespace": "knime",
+        "uid": "ba89b431-201d-4083-9f80-329796c6a0aa",
+        "resourceVersion": "745258",
+        "creationTimestamp": "2023-11-10T13:19:22Z",
+        "labels": {
+          "app": "minio",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "minio-3.6.3-597315a",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "monitoring": "true",
+          "release": "minio"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:54Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:28Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:monitoring": {},
+                  "f:release": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "minio-7d6fc7d974-5qcqc",
+                "uid": "4f915229-3852-42b7-bb28-e3743cea84c7"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "http",
+              "port": 9000,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "minio-console",
+        "namespace": "knime",
+        "uid": "5bc1d725-ea7a-4cf0-bf50-d0d1c88fa655",
+        "resourceVersion": "745259",
+        "creationTimestamp": "2023-11-10T13:19:22Z",
+        "labels": {
+          "app": "minio",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "minio-3.6.3-597315a",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "minio"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:54Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:28Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "minio-7d6fc7d974-5qcqc",
+                "uid": "4f915229-3852-42b7-bb28-e3743cea84c7"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "name": "http",
+              "port": 9001,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "postgres-operator",
+        "namespace": "knime",
+        "uid": "25da48f9-d408-4888-9510-8ac4bec5fbc4",
+        "resourceVersion": "745273",
+        "creationTimestamp": "2023-11-10T13:19:02Z",
+        "labels": {
+          "app.kubernetes.io/instance": "postgres-operator",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "postgres-operator",
+          "helm.sh/chart": "postgres-operator-1.10.0-34c4225",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:58Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:28Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:helm.sh/chart": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "knime",
+                "name": "postgres-operator-687f6c85db-4sjgj",
+                "uid": "9835a526-a41a-47f3-b0a1-fe393da020ed"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "port": 8080,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

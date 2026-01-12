@@ -1,0 +1,576 @@
+- apiVersion: velero.io/v1
+  kind: ServerStatusRequest
+  metadata:
+    creationTimestamp: "2023-11-21T16:12:54Z"
+    generateName: velero-cli-
+    generation: 2
+    managedFields:
+    - apiVersion: velero.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+        f:spec: {}
+        f:status: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2023-11-21T16:12:54Z"
+    - apiVersion: velero.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:phase: {}
+          f:plugins: {}
+          f:processedTimestamp: {}
+          f:serverVersion: {}
+      manager: velero-server
+      operation: Update
+      time: "2023-11-21T16:12:54Z"
+    name: velero-cli-7crnf
+    namespace: velero
+    resourceVersion: "763939"
+    uid: e2d95ba1-8594-4d29-bfdf-97fdff0bf7f1
+  spec: {}
+  status:
+    phase: Processed
+    plugins:
+    - kind: ObjectStore
+      name: replicated.com/hostpath
+    - kind: ObjectStore
+      name: replicated.com/nfs
+    - kind: ObjectStore
+      name: replicated.com/pvc
+    - kind: ObjectStore
+      name: velero.io/aws
+    - kind: ObjectStore
+      name: velero.io/gcp
+    - kind: ObjectStore
+      name: velero.io/azure
+    - kind: VolumeSnapshotter
+      name: velero.io/aws
+    - kind: VolumeSnapshotter
+      name: velero.io/gcp
+    - kind: VolumeSnapshotter
+      name: velero.io/azure
+    - kind: BackupItemAction
+      name: velero.io/crd-remap-version
+    - kind: BackupItemAction
+      name: velero.io/pod
+    - kind: BackupItemAction
+      name: velero.io/pv
+    - kind: BackupItemAction
+      name: velero.io/service-account
+    - kind: BackupItemAction
+      name: velero.io/crd-remap-version
+    - kind: BackupItemAction
+      name: velero.io/pod
+    - kind: BackupItemAction
+      name: velero.io/pv
+    - kind: BackupItemAction
+      name: velero.io/service-account
+    - kind: RestoreItemAction
+      name: velero.io/add-pv-from-pvc
+    - kind: RestoreItemAction
+      name: velero.io/add-pvc-from-pod
+    - kind: RestoreItemAction
+      name: velero.io/admission-webhook-configuration
+    - kind: RestoreItemAction
+      name: velero.io/apiservice
+    - kind: RestoreItemAction
+      name: velero.io/change-image-name
+    - kind: RestoreItemAction
+      name: velero.io/change-pvc-node-selector
+    - kind: RestoreItemAction
+      name: velero.io/change-storage-class
+    - kind: RestoreItemAction
+      name: velero.io/cluster-role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/crd-preserve-fields
+    - kind: RestoreItemAction
+      name: velero.io/init-restore-hook
+    - kind: RestoreItemAction
+      name: velero.io/job
+    - kind: RestoreItemAction
+      name: velero.io/pod
+    - kind: RestoreItemAction
+      name: velero.io/pod-volume-restore
+    - kind: RestoreItemAction
+      name: velero.io/role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/secret
+    - kind: RestoreItemAction
+      name: velero.io/service
+    - kind: RestoreItemAction
+      name: velero.io/service-account
+    - kind: RestoreItemAction
+      name: kurl.sh/restore-kotsadm-plugin
+    - kind: RestoreItemAction
+      name: velero.io/add-pv-from-pvc
+    - kind: RestoreItemAction
+      name: velero.io/add-pvc-from-pod
+    - kind: RestoreItemAction
+      name: velero.io/admission-webhook-configuration
+    - kind: RestoreItemAction
+      name: velero.io/apiservice
+    - kind: RestoreItemAction
+      name: velero.io/change-image-name
+    - kind: RestoreItemAction
+      name: velero.io/change-pvc-node-selector
+    - kind: RestoreItemAction
+      name: velero.io/change-storage-class
+    - kind: RestoreItemAction
+      name: velero.io/cluster-role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/crd-preserve-fields
+    - kind: RestoreItemAction
+      name: velero.io/init-restore-hook
+    - kind: RestoreItemAction
+      name: velero.io/job
+    - kind: RestoreItemAction
+      name: velero.io/pod
+    - kind: RestoreItemAction
+      name: velero.io/pod-volume-restore
+    - kind: RestoreItemAction
+      name: velero.io/role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/secret
+    - kind: RestoreItemAction
+      name: velero.io/service
+    - kind: RestoreItemAction
+      name: velero.io/service-account
+    - kind: RestoreItemAction
+      name: kurl.sh/restore-kotsadm-plugin
+    processedTimestamp: "2023-11-21T16:12:54Z"
+    serverVersion: v1.11.0
+- apiVersion: velero.io/v1
+  kind: ServerStatusRequest
+  metadata:
+    creationTimestamp: "2023-11-21T16:13:04Z"
+    generateName: velero-cli-
+    generation: 2
+    managedFields:
+    - apiVersion: velero.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+        f:spec: {}
+        f:status: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2023-11-21T16:13:04Z"
+    - apiVersion: velero.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:phase: {}
+          f:plugins: {}
+          f:processedTimestamp: {}
+          f:serverVersion: {}
+      manager: velero-server
+      operation: Update
+      time: "2023-11-21T16:13:04Z"
+    name: velero-cli-8cbvw
+    namespace: velero
+    resourceVersion: "763976"
+    uid: 1f5c5a56-de24-48b1-ba96-4c6aa7d6164a
+  spec: {}
+  status:
+    phase: Processed
+    plugins:
+    - kind: ObjectStore
+      name: replicated.com/hostpath
+    - kind: ObjectStore
+      name: replicated.com/nfs
+    - kind: ObjectStore
+      name: replicated.com/pvc
+    - kind: ObjectStore
+      name: velero.io/aws
+    - kind: ObjectStore
+      name: velero.io/gcp
+    - kind: ObjectStore
+      name: velero.io/azure
+    - kind: VolumeSnapshotter
+      name: velero.io/aws
+    - kind: VolumeSnapshotter
+      name: velero.io/gcp
+    - kind: VolumeSnapshotter
+      name: velero.io/azure
+    - kind: BackupItemAction
+      name: velero.io/crd-remap-version
+    - kind: BackupItemAction
+      name: velero.io/pod
+    - kind: BackupItemAction
+      name: velero.io/pv
+    - kind: BackupItemAction
+      name: velero.io/service-account
+    - kind: BackupItemAction
+      name: velero.io/crd-remap-version
+    - kind: BackupItemAction
+      name: velero.io/pod
+    - kind: BackupItemAction
+      name: velero.io/pv
+    - kind: BackupItemAction
+      name: velero.io/service-account
+    - kind: RestoreItemAction
+      name: velero.io/add-pv-from-pvc
+    - kind: RestoreItemAction
+      name: velero.io/add-pvc-from-pod
+    - kind: RestoreItemAction
+      name: velero.io/admission-webhook-configuration
+    - kind: RestoreItemAction
+      name: velero.io/apiservice
+    - kind: RestoreItemAction
+      name: velero.io/change-image-name
+    - kind: RestoreItemAction
+      name: velero.io/change-pvc-node-selector
+    - kind: RestoreItemAction
+      name: velero.io/change-storage-class
+    - kind: RestoreItemAction
+      name: velero.io/cluster-role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/crd-preserve-fields
+    - kind: RestoreItemAction
+      name: velero.io/init-restore-hook
+    - kind: RestoreItemAction
+      name: velero.io/job
+    - kind: RestoreItemAction
+      name: velero.io/pod
+    - kind: RestoreItemAction
+      name: velero.io/pod-volume-restore
+    - kind: RestoreItemAction
+      name: velero.io/role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/secret
+    - kind: RestoreItemAction
+      name: velero.io/service
+    - kind: RestoreItemAction
+      name: velero.io/service-account
+    - kind: RestoreItemAction
+      name: kurl.sh/restore-kotsadm-plugin
+    - kind: RestoreItemAction
+      name: velero.io/add-pv-from-pvc
+    - kind: RestoreItemAction
+      name: velero.io/add-pvc-from-pod
+    - kind: RestoreItemAction
+      name: velero.io/admission-webhook-configuration
+    - kind: RestoreItemAction
+      name: velero.io/apiservice
+    - kind: RestoreItemAction
+      name: velero.io/change-image-name
+    - kind: RestoreItemAction
+      name: velero.io/change-pvc-node-selector
+    - kind: RestoreItemAction
+      name: velero.io/change-storage-class
+    - kind: RestoreItemAction
+      name: velero.io/cluster-role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/crd-preserve-fields
+    - kind: RestoreItemAction
+      name: velero.io/init-restore-hook
+    - kind: RestoreItemAction
+      name: velero.io/job
+    - kind: RestoreItemAction
+      name: velero.io/pod
+    - kind: RestoreItemAction
+      name: velero.io/pod-volume-restore
+    - kind: RestoreItemAction
+      name: velero.io/role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/secret
+    - kind: RestoreItemAction
+      name: velero.io/service
+    - kind: RestoreItemAction
+      name: velero.io/service-account
+    - kind: RestoreItemAction
+      name: kurl.sh/restore-kotsadm-plugin
+    processedTimestamp: "2023-11-21T16:13:04Z"
+    serverVersion: v1.11.0
+- apiVersion: velero.io/v1
+  kind: ServerStatusRequest
+  metadata:
+    creationTimestamp: "2023-11-21T16:12:57Z"
+    generateName: velero-cli-
+    generation: 2
+    managedFields:
+    - apiVersion: velero.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+        f:spec: {}
+        f:status: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2023-11-21T16:12:57Z"
+    - apiVersion: velero.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:phase: {}
+          f:plugins: {}
+          f:processedTimestamp: {}
+          f:serverVersion: {}
+      manager: velero-server
+      operation: Update
+      time: "2023-11-21T16:12:57Z"
+    name: velero-cli-rq8pn
+    namespace: velero
+    resourceVersion: "763945"
+    uid: ddde752e-a0cb-457f-95b9-5eae9cc45690
+  spec: {}
+  status:
+    phase: Processed
+    plugins:
+    - kind: BackupItemAction
+      name: velero.io/crd-remap-version
+    - kind: BackupItemAction
+      name: velero.io/pod
+    - kind: BackupItemAction
+      name: velero.io/pv
+    - kind: BackupItemAction
+      name: velero.io/service-account
+    - kind: BackupItemAction
+      name: velero.io/crd-remap-version
+    - kind: BackupItemAction
+      name: velero.io/pod
+    - kind: BackupItemAction
+      name: velero.io/pv
+    - kind: BackupItemAction
+      name: velero.io/service-account
+    - kind: RestoreItemAction
+      name: velero.io/add-pv-from-pvc
+    - kind: RestoreItemAction
+      name: velero.io/add-pvc-from-pod
+    - kind: RestoreItemAction
+      name: velero.io/admission-webhook-configuration
+    - kind: RestoreItemAction
+      name: velero.io/apiservice
+    - kind: RestoreItemAction
+      name: velero.io/change-image-name
+    - kind: RestoreItemAction
+      name: velero.io/change-pvc-node-selector
+    - kind: RestoreItemAction
+      name: velero.io/change-storage-class
+    - kind: RestoreItemAction
+      name: velero.io/cluster-role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/crd-preserve-fields
+    - kind: RestoreItemAction
+      name: velero.io/init-restore-hook
+    - kind: RestoreItemAction
+      name: velero.io/job
+    - kind: RestoreItemAction
+      name: velero.io/pod
+    - kind: RestoreItemAction
+      name: velero.io/pod-volume-restore
+    - kind: RestoreItemAction
+      name: velero.io/role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/secret
+    - kind: RestoreItemAction
+      name: velero.io/service
+    - kind: RestoreItemAction
+      name: velero.io/service-account
+    - kind: RestoreItemAction
+      name: kurl.sh/restore-kotsadm-plugin
+    - kind: RestoreItemAction
+      name: velero.io/add-pv-from-pvc
+    - kind: RestoreItemAction
+      name: velero.io/add-pvc-from-pod
+    - kind: RestoreItemAction
+      name: velero.io/admission-webhook-configuration
+    - kind: RestoreItemAction
+      name: velero.io/apiservice
+    - kind: RestoreItemAction
+      name: velero.io/change-image-name
+    - kind: RestoreItemAction
+      name: velero.io/change-pvc-node-selector
+    - kind: RestoreItemAction
+      name: velero.io/change-storage-class
+    - kind: RestoreItemAction
+      name: velero.io/cluster-role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/crd-preserve-fields
+    - kind: RestoreItemAction
+      name: velero.io/init-restore-hook
+    - kind: RestoreItemAction
+      name: velero.io/job
+    - kind: RestoreItemAction
+      name: velero.io/pod
+    - kind: RestoreItemAction
+      name: velero.io/pod-volume-restore
+    - kind: RestoreItemAction
+      name: velero.io/role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/secret
+    - kind: RestoreItemAction
+      name: velero.io/service
+    - kind: RestoreItemAction
+      name: velero.io/service-account
+    - kind: RestoreItemAction
+      name: kurl.sh/restore-kotsadm-plugin
+    - kind: ObjectStore
+      name: replicated.com/hostpath
+    - kind: ObjectStore
+      name: replicated.com/nfs
+    - kind: ObjectStore
+      name: replicated.com/pvc
+    - kind: ObjectStore
+      name: velero.io/aws
+    - kind: ObjectStore
+      name: velero.io/gcp
+    - kind: ObjectStore
+      name: velero.io/azure
+    - kind: VolumeSnapshotter
+      name: velero.io/aws
+    - kind: VolumeSnapshotter
+      name: velero.io/gcp
+    - kind: VolumeSnapshotter
+      name: velero.io/azure
+    processedTimestamp: "2023-11-21T16:12:57Z"
+    serverVersion: v1.11.0
+- apiVersion: velero.io/v1
+  kind: ServerStatusRequest
+  metadata:
+    creationTimestamp: "2023-11-21T16:12:54Z"
+    generateName: velero-cli-
+    generation: 2
+    managedFields:
+    - apiVersion: velero.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+        f:spec: {}
+        f:status: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2023-11-21T16:12:54Z"
+    - apiVersion: velero.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:phase: {}
+          f:plugins: {}
+          f:processedTimestamp: {}
+          f:serverVersion: {}
+      manager: velero-server
+      operation: Update
+      time: "2023-11-21T16:12:54Z"
+    name: velero-cli-s8tjr
+    namespace: velero
+    resourceVersion: "763935"
+    uid: 40ee1905-715c-4022-9ba4-e796d133a579
+  spec: {}
+  status:
+    phase: Processed
+    plugins:
+    - kind: BackupItemAction
+      name: velero.io/crd-remap-version
+    - kind: BackupItemAction
+      name: velero.io/pod
+    - kind: BackupItemAction
+      name: velero.io/pv
+    - kind: BackupItemAction
+      name: velero.io/service-account
+    - kind: RestoreItemAction
+      name: velero.io/add-pv-from-pvc
+    - kind: RestoreItemAction
+      name: velero.io/add-pvc-from-pod
+    - kind: RestoreItemAction
+      name: velero.io/admission-webhook-configuration
+    - kind: RestoreItemAction
+      name: velero.io/apiservice
+    - kind: RestoreItemAction
+      name: velero.io/change-image-name
+    - kind: RestoreItemAction
+      name: velero.io/change-pvc-node-selector
+    - kind: RestoreItemAction
+      name: velero.io/change-storage-class
+    - kind: RestoreItemAction
+      name: velero.io/cluster-role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/crd-preserve-fields
+    - kind: RestoreItemAction
+      name: velero.io/init-restore-hook
+    - kind: RestoreItemAction
+      name: velero.io/job
+    - kind: RestoreItemAction
+      name: velero.io/pod
+    - kind: RestoreItemAction
+      name: velero.io/pod-volume-restore
+    - kind: RestoreItemAction
+      name: velero.io/role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/secret
+    - kind: RestoreItemAction
+      name: velero.io/service
+    - kind: RestoreItemAction
+      name: velero.io/service-account
+    - kind: RestoreItemAction
+      name: kurl.sh/restore-kotsadm-plugin
+    - kind: RestoreItemAction
+      name: velero.io/add-pv-from-pvc
+    - kind: RestoreItemAction
+      name: velero.io/add-pvc-from-pod
+    - kind: RestoreItemAction
+      name: velero.io/admission-webhook-configuration
+    - kind: RestoreItemAction
+      name: velero.io/apiservice
+    - kind: RestoreItemAction
+      name: velero.io/change-image-name
+    - kind: RestoreItemAction
+      name: velero.io/change-pvc-node-selector
+    - kind: RestoreItemAction
+      name: velero.io/change-storage-class
+    - kind: RestoreItemAction
+      name: velero.io/cluster-role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/crd-preserve-fields
+    - kind: RestoreItemAction
+      name: velero.io/init-restore-hook
+    - kind: RestoreItemAction
+      name: velero.io/job
+    - kind: RestoreItemAction
+      name: velero.io/pod
+    - kind: RestoreItemAction
+      name: velero.io/pod-volume-restore
+    - kind: RestoreItemAction
+      name: velero.io/role-bindings
+    - kind: RestoreItemAction
+      name: velero.io/secret
+    - kind: RestoreItemAction
+      name: velero.io/service
+    - kind: RestoreItemAction
+      name: velero.io/service-account
+    - kind: RestoreItemAction
+      name: kurl.sh/restore-kotsadm-plugin
+    - kind: ObjectStore
+      name: replicated.com/hostpath
+    - kind: ObjectStore
+      name: replicated.com/nfs
+    - kind: ObjectStore
+      name: replicated.com/pvc
+    - kind: ObjectStore
+      name: velero.io/aws
+    - kind: ObjectStore
+      name: velero.io/gcp
+    - kind: ObjectStore
+      name: velero.io/azure
+    - kind: VolumeSnapshotter
+      name: velero.io/aws
+    - kind: VolumeSnapshotter
+      name: velero.io/gcp
+    - kind: VolumeSnapshotter
+      name: velero.io/azure
+    - kind: BackupItemAction
+      name: velero.io/crd-remap-version
+    - kind: BackupItemAction
+      name: velero.io/pod
+    - kind: BackupItemAction
+      name: velero.io/pv
+    - kind: BackupItemAction
+      name: velero.io/service-account
+    processedTimestamp: "2023-11-21T16:12:54Z"
+    serverVersion: v1.11.0

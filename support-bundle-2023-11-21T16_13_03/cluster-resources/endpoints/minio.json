@@ -1,0 +1,94 @@
+{
+  "kind": "EndpointsList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763995"
+  },
+  "items": [
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "ha-minio",
+        "namespace": "minio",
+        "uid": "e6ae5b42-d6f0-4fdb-8053-eee962f40beb",
+        "resourceVersion": "645",
+        "creationTimestamp": "2023-11-10T12:58:23Z",
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-10T12:58:23Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:58:23Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "minio",
+        "namespace": "minio",
+        "uid": "c62c038d-f223-4657-b475-0ffa67150bc5",
+        "resourceVersion": "745015",
+        "creationTimestamp": "2023-11-10T12:58:23Z",
+        "annotations": {
+          "endpoints.kubernetes.io/last-change-trigger-time": "2023-11-21T14:29:40Z"
+        },
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:15Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+                }
+              },
+              "f:subsets": {}
+            }
+          }
+        ]
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "***HIDDEN***",
+              "nodeName": "ip-172-31-41-186",
+              "targetRef": {
+                "kind": "Pod",
+                "namespace": "minio",
+                "name": "minio-64bc666678-7vbwx",
+                "uid": "90e2c8c1-69a8-4984-9538-b242b7f0a366"
+              }
+            }
+          ],
+          "ports": [
+            {
+              "port": 9000,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

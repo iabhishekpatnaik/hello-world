@@ -1,0 +1,137 @@
+{
+  "kind": "IngressList",
+  "apiVersion": "networking.k8s.io/v1",
+  "metadata": {
+    "resourceVersion": "763982"
+  },
+  "items": [
+    {
+      "kind": "Ingress",
+      "apiVersion": "networking.k8s.io/v1",
+      "metadata": {
+        "name": "hub",
+        "namespace": "istio-system",
+        "uid": "7fcd8acf-bbc9-4563-9268-482d09cc8ac8",
+        "resourceVersion": "745231",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:18:59Z",
+        "labels": {
+          "app": "hub",
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-infrastructure",
+          "meta.helm.sh/release-namespace": "knime",
+          "nginx.ingress.kubernetes.io/backend-protocol": "HTTP",
+          "nginx.ingress.kubernetes.io/proxy-buffer-size": "64k",
+          "nginx.ingress.kubernetes.io/proxy-buffering": "on",
+          "nginx.ingress.kubernetes.io/proxy-buffers-number": "4"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2023-11-10T13:18:59Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {},
+                  "f:nginx.ingress.kubernetes.io/backend-protocol": {},
+                  "f:nginx.ingress.kubernetes.io/proxy-buffer-size": {},
+                  "f:nginx.ingress.kubernetes.io/proxy-buffering": {},
+                  "f:nginx.ingress.kubernetes.io/proxy-buffers-number": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:ingressClassName": {},
+                "f:rules": {}
+              }
+            }
+          },
+          {
+            "manager": "nginx-ingress-controller",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2023-11-21T14:30:26Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:loadBalancer": {
+                  "f:ingress": {}
+                }
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "ingressClassName": "knimehub",
+        "rules": [
+          {
+            "host": "hub.kbh-troubleshooting.com",
+            "http": {
+              "paths": [
+                {
+                  "path": "/",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "istio-ingressgateway",
+                      "port": {
+                        "number": 443
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "host": "api.hub.kbh-troubleshooting.com",
+            "http": {
+              "paths": [
+                {
+                  "path": "/",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "istio-ingressgateway",
+                      "port": {
+                        "number": 443
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "loadBalancer": {
+          "ingress": [
+            {
+              "ip": "***HIDDEN***"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

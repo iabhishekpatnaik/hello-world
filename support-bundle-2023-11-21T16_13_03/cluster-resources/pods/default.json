@@ -1,0 +1,2203 @@
+{
+  "kind": "PodList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763974"
+  },
+  "items": [
+    {
+      "kind": "Pod",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "kotsadm-5fb868948d-42jd4",
+        "generateName": "kotsadm-5fb868948d-",
+        "namespace": "default",
+        "uid": "074b7055-a641-4b66-8d66-ddf94aa087a8",
+        "resourceVersion": "745614",
+        "creationTimestamp": "2023-11-10T12:59:18Z",
+        "labels": {
+          "app": "kotsadm",
+          "kots.io/backup": "velero",
+          "kots.io/kotsadm": "true",
+          "pod-template-hash": "5fb868948d"
+        },
+        "annotations": {
+          "backup.velero.io/backup-volumes": "backup",
+          "pre.hook.backup.velero.io/command": "[\"/backup.sh\"]",
+          "pre.hook.backup.velero.io/timeout": "10m"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "ReplicaSet",
+            "name": "kotsadm-5fb868948d",
+            "uid": "86c636bf-fc76-45a1-b47e-8da15ff496ae",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:59:18Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:backup.velero.io/backup-volumes": {},
+                  "f:pre.hook.backup.velero.io/command": {},
+                  "f:pre.hook.backup.velero.io/timeout": {}
+                },
+                "f:generateName": {},
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:kots.io/backup": {},
+                  "f:kots.io/kotsadm": {},
+                  "f:pod-template-hash": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"86c636bf-fc76-45a1-b47e-8da15ff496ae\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:containers": {
+                  "k:{\"name\":\"kotsadm\"}": {
+                    ".": {},
+                    "f:args": {},
+                    "f:command": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"API_ADVERTISE_ENDPOINT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"API_ENCRYPTION_KEY\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"API_ENDPOINT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"AUTO_CREATE_CLUSTER\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"AUTO_CREATE_CLUSTER_NAME\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"AUTO_CREATE_CLUSTER_TOKEN\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"KURL_INSTALL_ID\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KURL_PROXY_TLS_CERT_PATH\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"POD_NAMESPACE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:fieldRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"POD_OWNER_KIND\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"POSTGRES_SCHEMA_DIR\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"POSTGRES_URI\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"PROMETHEUS_ADDRESS\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"RQLITE_PASSWORD\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"RQLITE_URI\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"S3_ACCESS_KEY_ID\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"S3_BUCKET_ENDPOINT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"S3_BUCKET_NAME\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"S3_ENDPOINT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"S3_SECRET_ACCESS_KEY\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"SESSION_KEY\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"SHARED_PASSWORD_BCRYPT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:ports": {
+                      ".": {},
+                      "k:{\"containerPort\":3000,\"protocol\":\"TCP\"}": {
+                        ".": {},
+                        "f:containerPort": {},
+                        "f:name": {},
+                        "f:protocol": {}
+                      }
+                    },
+                    "f:readinessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:initialDelaySeconds": {},
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:resources": {
+                      ".": {},
+                      "f:limits": {
+                        ".": {},
+                        "f:cpu": {}
+                      },
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/backup\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/kubernetes/pki/kubelet\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {},
+                        "f:readOnly": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/kurl-proxy/ca\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {},
+                        "f:readOnly": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/ssl/certs/ca-certificates.crt\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/scripts/start-kotsadm-web.sh\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {},
+                        "f:subPath": {}
+                      }
+                    }
+                  }
+                },
+                "f:dnsPolicy": {},
+                "f:enableServiceLinks": {},
+                "f:initContainers": {
+                  ".": {},
+                  "k:{\"name\":\"restore-db\"}": {
+                    ".": {},
+                    "f:command": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"RQLITE_PASSWORD\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {
+                      ".": {},
+                      "f:limits": {
+                        ".": {},
+                        "f:cpu": {}
+                      },
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/backup\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  },
+                  "k:{\"name\":\"restore-s3\"}": {
+                    ".": {},
+                    "f:command": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"S3_ACCESS_KEY_ID\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"S3_BUCKET_ENDPOINT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"S3_BUCKET_NAME\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"S3_ENDPOINT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"S3_SECRET_ACCESS_KEY\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {
+                      ".": {},
+                      "f:limits": {
+                        ".": {},
+                        "f:cpu": {}
+                      },
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/backup\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  },
+                  "k:{\"name\":\"schemahero-apply\"}": {
+                    ".": {},
+                    "f:args": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"SCHEMAHERO_DDL\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"SCHEMAHERO_DRIVER\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"SCHEMAHERO_URI\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {
+                      ".": {},
+                      "f:limits": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      },
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/migrations\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  },
+                  "k:{\"name\":\"schemahero-plan\"}": {
+                    ".": {},
+                    "f:args": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"SCHEMAHERO_DRIVER\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"SCHEMAHERO_OUT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"SCHEMAHERO_SPEC_FILE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"SCHEMAHERO_URI\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {
+                      ".": {},
+                      "f:limits": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      },
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/migrations\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:restartPolicy": {},
+                "f:schedulerName": {},
+                "f:securityContext": {
+                  ".": {},
+                  "f:runAsUser": {}
+                },
+                "f:serviceAccount": {},
+                "f:serviceAccountName": {},
+                "f:terminationGracePeriodSeconds": {},
+                "f:volumes": {
+                  ".": {},
+                  "k:{\"name\":\"backup\"}": {
+                    ".": {},
+                    "f:emptyDir": {},
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"host-cacerts\"}": {
+                    ".": {},
+                    "f:hostPath": {
+                      ".": {},
+                      "f:path": {},
+                      "f:type": {}
+                    },
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"kotsadm-web-scripts\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"kubelet-client-cert\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:secret": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:secretName": {}
+                    }
+                  },
+                  "k:{\"name\":\"kurl-proxy-kotsadm-tls-cert\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:secret": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:secretName": {}
+                    }
+                  },
+                  "k:{\"name\":\"migrations\"}": {
+                    ".": {},
+                    "f:emptyDir": {
+                      ".": {},
+                      "f:medium": {}
+                    },
+                    "f:name": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:55Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  "k:{\"type\":\"ContainersReady\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Initialized\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Ready\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:containerStatuses": {},
+                "f:hostIP": {},
+                "f:initContainerStatuses": {},
+                "f:phase": {},
+                "f:podIP": {},
+                "f:podIPs": {
+                  ".": {},
+                  "k:{\"ip\":\"***HIDDEN***\"}": {
+                    ".": {},
+                    "f:ip": {}
+                  }
+                },
+                "f:startTime": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "host-cacerts",
+            "hostPath": {
+              "path": "/etc/ssl/certs/ca-certificates.crt",
+              "type": "File"
+            }
+          },
+          {
+            "name": "kubelet-client-cert",
+            "secret": {
+              "secretName": "kubelet-client-cert",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "kurl-proxy-kotsadm-tls-cert",
+            "secret": {
+              "secretName": "kotsadm-tls",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "kotsadm-web-scripts",
+            "configMap": {
+              "name": "kotsadm-web-scripts",
+              "defaultMode": 511
+            }
+          },
+          {
+            "name": "backup",
+            "emptyDir": {}
+          },
+          {
+            "name": "migrations",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "kube-api-access-4z2b9",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "kube-root-ca.crt",
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "path": "namespace",
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          }
+        ],
+        "initContainers": [
+          {
+            "name": "schemahero-plan",
+            "image": "docker.io/kotsadm/kotsadm-migrations:v1.101.2",
+            "args": [
+              "plan"
+            ],
+            "env": [
+              {
+                "name": "SCHEMAHERO_DRIVER",
+                "value": "rqlite"
+              },
+              {
+                "name": "SCHEMAHERO_SPEC_FILE",
+                "value": "/tables"
+              },
+              {
+                "name": "SCHEMAHERO_URI",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-rqlite",
+                    "key": "uri"
+                  }
+                }
+              },
+              {
+                "name": "SCHEMAHERO_OUT",
+                "value": "/migrations/plan.yaml"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "100m",
+                "memory": "100Mi"
+              },
+              "requests": {
+                "cpu": "50m",
+                "memory": "50Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "migrations",
+                "mountPath": "/migrations"
+              },
+              {
+                "name": "kube-api-access-4z2b9",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          },
+          {
+            "name": "schemahero-apply",
+            "image": "docker.io/kotsadm/kotsadm-migrations:v1.101.2",
+            "args": [
+              "apply"
+            ],
+            "env": [
+              {
+                "name": "SCHEMAHERO_DRIVER",
+                "value": "rqlite"
+              },
+              {
+                "name": "SCHEMAHERO_DDL",
+                "value": "/migrations/plan.yaml"
+              },
+              {
+                "name": "SCHEMAHERO_URI",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-rqlite",
+                    "key": "uri"
+                  }
+                }
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "100m",
+                "memory": "100Mi"
+              },
+              "requests": {
+                "cpu": "50m",
+                "memory": "50Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "migrations",
+                "mountPath": "/migrations"
+              },
+              {
+                "name": "kube-api-access-4z2b9",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          },
+          {
+            "name": "restore-db",
+            "image": "docker.io/kotsadm/kotsadm:v1.101.2",
+            "command": [
+              "/restore-db.sh"
+            ],
+            "env": [
+              {
+                "name": "RQLITE_PASSWORD",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-rqlite",
+                    "key": "password"
+                  }
+                }
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "1"
+              },
+              "requests": {
+                "cpu": "100m",
+                "memory": "100Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "backup",
+                "mountPath": "/backup"
+              },
+              {
+                "name": "kube-api-access-4z2b9",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          },
+          {
+            "name": "restore-s3",
+            "image": "docker.io/kotsadm/kotsadm:v1.101.2",
+            "command": [
+              "/restore-s3.sh"
+            ],
+            "env": [
+              {
+                "name": "S3_ENDPOINT",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-s3",
+                    "key": "endpoint"
+                  }
+                }
+              },
+              {
+                "name": "S3_BUCKET_NAME",
+                "value": "kotsadm"
+              },
+              {
+                "name": "S3_ACCESS_KEY_ID",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-s3",
+                    "key": "access-key-id"
+                  }
+                }
+              },
+              {
+                "name": "S3_SECRET_ACCESS_KEY",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-s3",
+                    "key": "secret-access-key"
+                  }
+                }
+              },
+              {
+                "name": "S3_BUCKET_ENDPOINT",
+                "value": "true"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "1"
+              },
+              "requests": {
+                "cpu": "100m",
+                "memory": "100Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "backup",
+                "mountPath": "/backup"
+              },
+              {
+                "name": "kube-api-access-4z2b9",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          }
+        ],
+        "containers": [
+          {
+            "name": "kotsadm",
+            "image": "docker.io/kotsadm/kotsadm:v1.101.2",
+            "command": [
+              "bash"
+            ],
+            "args": [
+              "/scripts/start-kotsadm-web.sh"
+            ],
+            "ports": [
+              {
+                "name": "http",
+                "containerPort": 3000,
+                "protocol": "TCP"
+              }
+            ],
+            "env": [
+              {
+                "name": "PROMETHEUS_ADDRESS",
+                "value": "http://prometheus-k8s.monitoring.svc.cluster.local:9090"
+              },
+              {
+                "name": "KURL_INSTALL_ID",
+                "value": "2xrbg7cllkg4l7ga"
+              },
+              {
+                "name": "AUTO_CREATE_CLUSTER",
+                "value": "1"
+              },
+              {
+                "name": "AUTO_CREATE_CLUSTER_NAME",
+                "value": "this-cluster"
+              },
+              {
+                "name": "AUTO_CREATE_CLUSTER_TOKEN",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-cluster-token",
+                    "key": "kotsadm-cluster-token"
+                  }
+                }
+              },
+              {
+                "name": "SHARED_PASSWORD_BCRYPT",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-password",
+                    "key": "passwordBcrypt"
+                  }
+                }
+              },
+              {
+                "name": "SESSION_KEY",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-session",
+                    "key": "key"
+                  }
+                }
+              },
+              {
+                "name": "POSTGRES_URI",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-postgres",
+                    "key": "uri",
+                    "optional": true
+                  }
+                }
+              },
+              {
+                "name": "POSTGRES_SCHEMA_DIR",
+                "value": "/postgres/tables"
+              },
+              {
+                "name": "RQLITE_URI",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-rqlite",
+                    "key": "uri"
+                  }
+                }
+              },
+              {
+                "name": "RQLITE_PASSWORD",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-rqlite",
+                    "key": "password"
+                  }
+                }
+              },
+              {
+                "name": "POD_NAMESPACE",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.namespace"
+                  }
+                }
+              },
+              {
+                "name": "API_ENCRYPTION_KEY",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-encryption",
+                    "key": "encryptionKey"
+                  }
+                }
+              },
+              {
+                "name": "S3_ENDPOINT",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-s3",
+                    "key": "endpoint"
+                  }
+                }
+              },
+              {
+                "name": "S3_BUCKET_NAME",
+                "value": "kotsadm"
+              },
+              {
+                "name": "S3_ACCESS_KEY_ID",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-s3",
+                    "key": "access-key-id"
+                  }
+                }
+              },
+              {
+                "name": "S3_SECRET_ACCESS_KEY",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-s3",
+                    "key": "secret-access-key"
+                  }
+                }
+              },
+              {
+                "name": "S3_BUCKET_ENDPOINT",
+                "value": "true"
+              },
+              {
+                "name": "API_ADVERTISE_ENDPOINT",
+                "value": "http://localhost:8800"
+              },
+              {
+                "name": "API_ENDPOINT",
+                "value": "http://kotsadm.default.svc.cluster.local:3000"
+              },
+              {
+                "name": "POD_OWNER_KIND",
+                "value": "deployment"
+              },
+              {
+                "name": "KURL_PROXY_TLS_CERT_PATH",
+                "value": "/etc/kurl-proxy/ca/tls.crt"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "1"
+              },
+              "requests": {
+                "cpu": "100m",
+                "memory": "100Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "host-cacerts",
+                "mountPath": "/etc/ssl/certs/ca-certificates.crt"
+              },
+              {
+                "name": "kotsadm-web-scripts",
+                "mountPath": "/scripts/start-kotsadm-web.sh",
+                "subPath": "start-kotsadm-web.sh"
+              },
+              {
+                "name": "backup",
+                "mountPath": "/backup"
+              },
+              {
+                "name": "kubelet-client-cert",
+                "readOnly": true,
+                "mountPath": "/etc/kubernetes/pki/kubelet"
+              },
+              {
+                "name": "kurl-proxy-kotsadm-tls-cert",
+                "readOnly": true,
+                "mountPath": "/etc/kurl-proxy/ca"
+              },
+              {
+                "name": "kube-api-access-4z2b9",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/healthz",
+                "port": 3000,
+                "scheme": "HTTP"
+              },
+              "initialDelaySeconds": 10,
+              "timeoutSeconds": 1,
+              "periodSeconds": 10,
+              "successThreshold": 1,
+              "failureThreshold": 3
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          }
+        ],
+        "restartPolicy": "Always",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "serviceAccountName": "kotsadm",
+        "serviceAccount": "kotsadm",
+        "nodeName": "ip-172-31-41-186",
+        "securityContext": {
+          "runAsUser": 1001
+        },
+        "schedulerName": "default-scheduler",
+        "tolerations": [
+          {
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          }
+        ],
+        "priority": 0,
+        "enableServiceLinks": true,
+        "preemptionPolicy": "PreemptLowerPriority"
+      },
+      "status": {
+        "phase": "Running",
+        "conditions": [
+          {
+            "type": "Initialized",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:30:39Z"
+          },
+          {
+            "type": "Ready",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:30:55Z"
+          },
+          {
+            "type": "ContainersReady",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:30:55Z"
+          },
+          {
+            "type": "PodScheduled",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-10T12:59:18Z"
+          }
+        ],
+        "hostIP": "***HIDDEN***",
+        "podIP": "***HIDDEN***",
+        "podIPs": [
+          {
+            "ip": "***HIDDEN***"
+          }
+        ],
+        "startTime": "2023-11-10T12:59:18Z",
+        "initContainerStatuses": [
+          {
+            "name": "schemahero-plan",
+            "state": {
+              "terminated": {
+                "exitCode": 0,
+                "reason": "Completed",
+                "startedAt": "2023-11-21T14:30:37Z",
+                "finishedAt": "2023-11-21T14:30:38Z",
+                "containerID": "containerd://d7856b5f868af40473a5dfdad9d1e71e4e62cf7ed5b21c5e6afcce7643513969"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 2,
+            "image": "docker.io/kotsadm/kotsadm-migrations:v1.101.2",
+            "imageID": "sha256:941696ea2dd77fcba023550a4faac83a47dd242cc252e9b6145de3812047ff37",
+            "containerID": "containerd://d7856b5f868af40473a5dfdad9d1e71e4e62cf7ed5b21c5e6afcce7643513969"
+          },
+          {
+            "name": "schemahero-apply",
+            "state": {
+              "terminated": {
+                "exitCode": 0,
+                "reason": "Completed",
+                "startedAt": "2023-11-21T14:30:39Z",
+                "finishedAt": "2023-11-21T14:30:39Z",
+                "containerID": "containerd://e87f2e58eef1769c5e87de617648fc91fd685215f9a2808bd20c6bda7122c3d3"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/kotsadm/kotsadm-migrations:v1.101.2",
+            "imageID": "sha256:941696ea2dd77fcba023550a4faac83a47dd242cc252e9b6145de3812047ff37",
+            "containerID": "containerd://e87f2e58eef1769c5e87de617648fc91fd685215f9a2808bd20c6bda7122c3d3"
+          },
+          {
+            "name": "restore-db",
+            "state": {
+              "terminated": {
+                "exitCode": 0,
+                "reason": "Completed",
+                "startedAt": "2023-11-21T14:30:40Z",
+                "finishedAt": "2023-11-21T14:30:40Z",
+                "containerID": "containerd://d7603e58fdb4a57a1095552812f62701545db4fea3af55a647942b8775b665da"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/kotsadm/kotsadm:v1.101.2",
+            "imageID": "sha256:c340a30dd2dabeb91488b104932fbebb7985cab2fdcd70faa8a31bea521a70f7",
+            "containerID": "containerd://d7603e58fdb4a57a1095552812f62701545db4fea3af55a647942b8775b665da"
+          },
+          {
+            "name": "restore-s3",
+            "state": {
+              "terminated": {
+                "exitCode": 0,
+                "reason": "Completed",
+                "startedAt": "2023-11-21T14:30:41Z",
+                "finishedAt": "2023-11-21T14:30:41Z",
+                "containerID": "containerd://33f3845ba6d543f76ea4bc1192c35191818d3793918b47a5f49444d78d60b7a2"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/kotsadm/kotsadm:v1.101.2",
+            "imageID": "sha256:c340a30dd2dabeb91488b104932fbebb7985cab2fdcd70faa8a31bea521a70f7",
+            "containerID": "containerd://33f3845ba6d543f76ea4bc1192c35191818d3793918b47a5f49444d78d60b7a2"
+          }
+        ],
+        "containerStatuses": [
+          {
+            "name": "kotsadm",
+            "state": {
+              "running": {
+                "startedAt": "2023-11-21T14:30:44Z"
+              }
+            },
+            "lastState": {
+              "terminated": {
+                "exitCode": 137,
+                "reason": "Error",
+                "startedAt": "2023-11-20T12:56:45Z",
+                "finishedAt": "2023-11-20T17:04:34Z",
+                "containerID": "containerd://4068242350c587b1691f7ec9ee9b2544bd1c0f86fc3f9591ffb5e7d02178ec91"
+              }
+            },
+            "ready": true,
+            "restartCount": 4,
+            "image": "docker.io/kotsadm/kotsadm:v1.101.2",
+            "imageID": "sha256:c340a30dd2dabeb91488b104932fbebb7985cab2fdcd70faa8a31bea521a70f7",
+            "containerID": "containerd://62a835c05b48f906c522261dbfe8d5c384568bd5dc57d39b6525ca19a1fd00fb",
+            "started": true
+          }
+        ],
+        "qosClass": "Burstable"
+      }
+    },
+    {
+      "kind": "Pod",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "kotsadm-rqlite-0",
+        "generateName": "kotsadm-rqlite-",
+        "namespace": "default",
+        "uid": "86bd26a3-9f49-4709-b3ee-b7ac9c8665eb",
+        "resourceVersion": "745293",
+        "creationTimestamp": "2023-11-20T17:04:27Z",
+        "labels": {
+          "app": "kotsadm-rqlite",
+          "controller-revision-hash": "kotsadm-rqlite-7f86674f8f",
+          "kots.io/backup": "velero",
+          "kots.io/kotsadm": "true",
+          "statefulset.kubernetes.io/pod-name": "kotsadm-rqlite-0"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "StatefulSet",
+            "name": "kotsadm-rqlite",
+            "uid": "5d3d27a3-e123-44ce-a341-501ac53a162c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-20T17:04:27Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:generateName": {},
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:controller-revision-hash": {},
+                  "f:kots.io/backup": {},
+                  "f:kots.io/kotsadm": {},
+                  "f:statefulset.kubernetes.io/pod-name": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"5d3d27a3-e123-44ce-a341-501ac53a162c\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:affinity": {
+                  ".": {},
+                  "f:podAntiAffinity": {
+                    ".": {},
+                    "f:requiredDuringSchedulingIgnoredDuringExecution": {}
+                  }
+                },
+                "f:containers": {
+                  "k:{\"name\":\"rqlite\"}": {
+                    ".": {},
+                    "f:args": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"RQLITE_PASSWORD\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:livenessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:initialDelaySeconds": {},
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:name": {},
+                    "f:ports": {
+                      ".": {},
+                      "k:{\"containerPort\":4001,\"protocol\":\"TCP\"}": {
+                        ".": {},
+                        "f:containerPort": {},
+                        "f:name": {},
+                        "f:protocol": {}
+                      }
+                    },
+                    "f:readinessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:initialDelaySeconds": {},
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:resources": {
+                      ".": {},
+                      "f:limits": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      },
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/auth/config.json\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {},
+                        "f:subPath": {}
+                      },
+                      "k:{\"mountPath\":\"/rqlite/file\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:dnsPolicy": {},
+                "f:enableServiceLinks": {},
+                "f:hostname": {},
+                "f:restartPolicy": {},
+                "f:schedulerName": {},
+                "f:securityContext": {
+                  ".": {},
+                  "f:fsGroup": {},
+                  "f:runAsUser": {}
+                },
+                "f:subdomain": {},
+                "f:terminationGracePeriodSeconds": {},
+                "f:volumes": {
+                  ".": {},
+                  "k:{\"name\":\"authconfig\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:secret": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:items": {},
+                      "f:secretName": {}
+                    }
+                  },
+                  "k:{\"name\":\"kotsadm-rqlite\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:persistentVolumeClaim": {
+                      ".": {},
+                      "f:claimName": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-scheduler",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-20T17:04:27Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"PodScheduled\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                }
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:30Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  "k:{\"type\":\"ContainersReady\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Initialized\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Ready\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:containerStatuses": {},
+                "f:hostIP": {},
+                "f:phase": {},
+                "f:podIP": {},
+                "f:podIPs": {
+                  ".": {},
+                  "k:{\"ip\":\"***HIDDEN***\"}": {
+                    ".": {},
+                    "f:ip": {}
+                  }
+                },
+                "f:startTime": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "kotsadm-rqlite",
+            "persistentVolumeClaim": {
+              "claimName": "kotsadm-rqlite-kotsadm-rqlite-0"
+            }
+          },
+          {
+            "name": "authconfig",
+            "secret": {
+              "secretName": "kotsadm-rqlite",
+              "items": [
+                {
+                  "key": "authconfig.json",
+                  "path": "authconfig.json"
+                }
+              ],
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "kube-api-access-wm8jg",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "kube-root-ca.crt",
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "path": "namespace",
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "rqlite",
+            "image": "rqlite/rqlite:7.21.4",
+            "args": [
+              "-disco-mode=dns",
+              "-disco-config={\"name\":\"kotsadm-rqlite-headless\"}",
+              "-bootstrap-expect=1",
+              "-auth=/auth/config.json",
+              "-join-as=kotsadm"
+            ],
+            "ports": [
+              {
+                "name": "rqlite",
+                "containerPort": 4001,
+                "protocol": "TCP"
+              }
+            ],
+            "env": [
+              {
+                "name": "RQLITE_PASSWORD",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "kotsadm-rqlite",
+                    "key": "password"
+                  }
+                }
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "200m",
+                "memory": "1Gi"
+              },
+              "requests": {
+                "cpu": "100m",
+                "memory": "100Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "kotsadm-rqlite",
+                "mountPath": "/rqlite/file"
+              },
+              {
+                "name": "authconfig",
+                "mountPath": "/auth/config.json",
+                "subPath": "authconfig.json"
+              },
+              {
+                "name": "kube-api-access-wm8jg",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "livenessProbe": {
+              "httpGet": {
+                "path": "/readyz?noleader",
+                "port": "rqlite",
+                "scheme": "HTTP"
+              },
+              "initialDelaySeconds": 30,
+              "timeoutSeconds": 5,
+              "periodSeconds": 10,
+              "successThreshold": 1,
+              "failureThreshold": 3
+            },
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/readyz",
+                "port": "rqlite",
+                "scheme": "HTTP"
+              },
+              "initialDelaySeconds": 1,
+              "timeoutSeconds": 1,
+              "periodSeconds": 1,
+              "successThreshold": 1,
+              "failureThreshold": 3
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          }
+        ],
+        "restartPolicy": "Always",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "serviceAccountName": "default",
+        "serviceAccount": "default",
+        "nodeName": "ip-172-31-41-186",
+        "securityContext": {
+          "runAsUser": 1001,
+          "fsGroup": 1001
+        },
+        "hostname": "kotsadm-rqlite-0",
+        "subdomain": "kotsadm-rqlite-headless",
+        "affinity": {
+          "podAntiAffinity": {
+            "requiredDuringSchedulingIgnoredDuringExecution": [
+              {
+                "labelSelector": {
+                  "matchExpressions": [
+                    {
+                      "key": "app",
+                      "operator": "In",
+                      "values": [
+                        "kotsadm-rqlite"
+                      ]
+                    }
+                  ]
+                },
+                "topologyKey": "kubernetes.io/hostname"
+              }
+            ]
+          }
+        },
+        "schedulerName": "default-scheduler",
+        "tolerations": [
+          {
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          }
+        ],
+        "priority": 0,
+        "enableServiceLinks": true,
+        "preemptionPolicy": "PreemptLowerPriority"
+      },
+      "status": {
+        "phase": "Running",
+        "conditions": [
+          {
+            "type": "Initialized",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:35Z"
+          },
+          {
+            "type": "Ready",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:30:07Z"
+          },
+          {
+            "type": "ContainersReady",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:30:07Z"
+          },
+          {
+            "type": "PodScheduled",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:35Z"
+          }
+        ],
+        "hostIP": "***HIDDEN***",
+        "podIP": "***HIDDEN***",
+        "podIPs": [
+          {
+            "ip": "***HIDDEN***"
+          }
+        ],
+        "startTime": "2023-11-21T14:29:35Z",
+        "containerStatuses": [
+          {
+            "name": "rqlite",
+            "state": {
+              "running": {
+                "startedAt": "2023-11-21T14:29:59Z"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/rqlite/rqlite:7.21.4",
+            "imageID": "sha256:443c22b5679e61e3e924ce8c990b7e4a6d5617f63223e05a14fa75d68b2ce420",
+            "containerID": "containerd://9f4287092af4acc5aea6b1ce6e94f202a35e958c05412e12ac85c4df880e1f82",
+            "started": true
+          }
+        ],
+        "qosClass": "Burstable"
+      }
+    },
+    {
+      "kind": "Pod",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "kurl-proxy-kotsadm-5b8955b99b-wxqxs",
+        "generateName": "kurl-proxy-kotsadm-5b8955b99b-",
+        "namespace": "default",
+        "uid": "1ae8b457-b97c-43aa-9802-a530c5ef40f7",
+        "resourceVersion": "744797",
+        "creationTimestamp": "2023-11-20T17:04:19Z",
+        "labels": {
+          "app": "kurl-proxy-kotsadm",
+          "kots.io/backup": "velero",
+          "kots.io/kotsadm": "true",
+          "pod-template-hash": "5b8955b99b"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "ReplicaSet",
+            "name": "kurl-proxy-kotsadm-5b8955b99b",
+            "uid": "8acf1844-8ec9-4498-b756-0e7349792ff9",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-20T17:04:19Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:generateName": {},
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:kots.io/backup": {},
+                  "f:kots.io/kotsadm": {},
+                  "f:pod-template-hash": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"8acf1844-8ec9-4498-b756-0e7349792ff9\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:containers": {
+                  "k:{\"name\":\"proxy\"}": {
+                    ".": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"DEX_UPSTREAM_ORIGIN\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"NAMESPACE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:fieldRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"NODE_PORT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"TLS_SECRET_NAME\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"UPSTREAM_ORIGIN\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {
+                      ".": {},
+                      "f:limits": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      },
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/etc/kotsadm\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:dnsPolicy": {},
+                "f:enableServiceLinks": {},
+                "f:restartPolicy": {},
+                "f:schedulerName": {},
+                "f:securityContext": {},
+                "f:serviceAccount": {},
+                "f:serviceAccountName": {},
+                "f:terminationGracePeriodSeconds": {},
+                "f:volumes": {
+                  ".": {},
+                  "k:{\"name\":\"kotsadm-config\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {},
+                      "f:optional": {}
+                    },
+                    "f:name": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-scheduler",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-20T17:04:19Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"PodScheduled\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                }
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:29:57Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  "k:{\"type\":\"ContainersReady\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Initialized\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Ready\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:containerStatuses": {},
+                "f:hostIP": {},
+                "f:phase": {},
+                "f:podIP": {},
+                "f:podIPs": {
+                  ".": {},
+                  "k:{\"ip\":\"***HIDDEN***\"}": {
+                    ".": {},
+                    "f:ip": {}
+                  }
+                },
+                "f:startTime": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "kotsadm-config",
+            "configMap": {
+              "name": "kotsadm-application-metadata",
+              "defaultMode": 420,
+              "optional": true
+            }
+          },
+          {
+            "name": "kube-api-access-9sn97",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "kube-root-ca.crt",
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "path": "namespace",
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "proxy",
+            "image": "docker.io/kotsadm/kurl-proxy:v1.101.2",
+            "env": [
+              {
+                "name": "NODE_PORT",
+                "value": "8800"
+              },
+              {
+                "name": "UPSTREAM_ORIGIN",
+                "value": "http://kotsadm:3000"
+              },
+              {
+                "name": "DEX_UPSTREAM_ORIGIN",
+                "value": "http://kotsadm-dex:5556"
+              },
+              {
+                "name": "TLS_SECRET_NAME",
+                "value": ""
+              },
+              {
+                "name": "NAMESPACE",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.namespace"
+                  }
+                }
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "200m",
+                "memory": "200Mi"
+              },
+              "requests": {
+                "cpu": "50m",
+                "memory": "50Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "kotsadm-config",
+                "mountPath": "/etc/kotsadm"
+              },
+              {
+                "name": "kube-api-access-9sn97",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          }
+        ],
+        "restartPolicy": "Always",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "serviceAccountName": "kurl-proxy",
+        "serviceAccount": "kurl-proxy",
+        "nodeName": "ip-172-31-41-186",
+        "securityContext": {},
+        "schedulerName": "default-scheduler",
+        "tolerations": [
+          {
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          }
+        ],
+        "priority": 0,
+        "enableServiceLinks": true,
+        "preemptionPolicy": "PreemptLowerPriority"
+      },
+      "status": {
+        "phase": "Running",
+        "conditions": [
+          {
+            "type": "Initialized",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:35Z"
+          },
+          {
+            "type": "Ready",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:44Z"
+          },
+          {
+            "type": "ContainersReady",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:44Z"
+          },
+          {
+            "type": "PodScheduled",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:35Z"
+          }
+        ],
+        "hostIP": "***HIDDEN***",
+        "podIP": "***HIDDEN***",
+        "podIPs": [
+          {
+            "ip": "***HIDDEN***"
+          }
+        ],
+        "startTime": "2023-11-21T14:29:35Z",
+        "containerStatuses": [
+          {
+            "name": "proxy",
+            "state": {
+              "running": {
+                "startedAt": "2023-11-21T14:29:44Z"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/kotsadm/kurl-proxy:v1.101.2",
+            "imageID": "sha256:6d307d6305274245cdb662811f706967631d8f4a3b4d279d10ea6b31fa7396b1",
+            "containerID": "containerd://5622eb77ccd82326b6b157f2d5d298ecb0a61276eed654ade2cb22e3ed4cdfc3",
+            "started": true
+          }
+        ],
+        "qosClass": "Burstable"
+      }
+    }
+  ]
+}

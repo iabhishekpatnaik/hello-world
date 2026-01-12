@@ -1,0 +1,113 @@
+{
+  "kind": "EventList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763992"
+  },
+  "items": [
+    {
+      "kind": "Event",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "istio-ingressgateway.1799a9c337a21759",
+        "namespace": "istio-system",
+        "uid": "27e8cd36-cc7c-4454-a089-c748fc5481f1",
+        "resourceVersion": "763397",
+        "creationTimestamp": "2023-11-21T14:29:50Z",
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:09:51Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "HorizontalPodAutoscaler",
+        "namespace": "istio-system",
+        "name": "istio-ingressgateway",
+        "uid": "c6d43479-5c59-460e-bab2-1ed25306a3ea",
+        "apiVersion": "autoscaling/v2",
+        "resourceVersion": "4398"
+      },
+      "reason": "FailedGetResourceMetric",
+      "message": "failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server could not find the requested resource (get pods.metrics.k8s.io)",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "firstTimestamp": "2023-11-21T14:29:50Z",
+      "lastTimestamp": "2023-11-21T16:09:51Z",
+      "count": 401,
+      "type": "Warning",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "kind": "Event",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "istiod.1799a9c337d1b804",
+        "namespace": "istio-system",
+        "uid": "e25f4689-9a27-4953-9fb2-7cded5033c34",
+        "resourceVersion": "763398",
+        "creationTimestamp": "2023-11-21T14:29:50Z",
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:09:51Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "HorizontalPodAutoscaler",
+        "namespace": "istio-system",
+        "name": "istiod",
+        "uid": "745ad934-faf6-48da-81ab-938977371ba4",
+        "apiVersion": "autoscaling/v2",
+        "resourceVersion": "4217"
+      },
+      "reason": "FailedGetResourceMetric",
+      "message": "failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server could not find the requested resource (get pods.metrics.k8s.io)",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "firstTimestamp": "2023-11-21T14:29:50Z",
+      "lastTimestamp": "2023-11-21T16:09:51Z",
+      "count": 401,
+      "type": "Warning",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    }
+  ]
+}

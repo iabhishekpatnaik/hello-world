@@ -1,0 +1,58 @@
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-execution-trigger-service
+      meta.helm.sh/release-namespace: hub
+    creationTimestamp: "2023-11-10T14:20:27Z"
+    generation: 1
+    labels:
+      app: trigger-service
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+      release: kube-prometheus-stack
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+            f:release: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T14:20:27Z"
+    name: trigger-service
+    namespace: hub
+    resourceVersion: "16975"
+    uid: b9d7a57a-dc3d-43f4-8152-36d6bd8e74aa
+  spec:
+    endpoints:
+    - interval: 30s
+      path: /q/metrics
+      port: http
+      scheme: http
+    namespaceSelector:
+      matchNames:
+      - hub
+    selector:
+      matchLabels:
+        app: trigger-service

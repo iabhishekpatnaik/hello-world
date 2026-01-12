@@ -1,0 +1,62 @@
+{
+  "kind": "RoleList",
+  "apiVersion": "rbac.authorization.k8s.io/v1",
+  "metadata": {
+    "resourceVersion": "763994"
+  },
+  "items": [
+    {
+      "kind": "Role",
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "metadata": {
+        "name": "ekco-rotate-certs",
+        "namespace": "kurl",
+        "uid": "b466de08-8233-4df8-a191-403675944122",
+        "resourceVersion": "514",
+        "creationTimestamp": "2023-11-10T12:58:14Z",
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"rbac.authorization.k8s.io/v1\",\"kind\":\"Role\",\"metadata\":{\"annotations\":{},\"name\":\"ekco-rotate-certs\",\"namespace\":\"kurl\"},\"rules\":[{\"apiGroups\":[\"\"],\"resources\":[\"pods\",\"pods/log\",\"configmaps\",\"secrets\"],\"verbs\":[\"get\",\"list\",\"delete\",\"create\",\"update\",\"deletecollection\"]}]}\n"
+        },
+        "managedFields": [
+          {
+            "manager": "kubectl-client-side-apply",
+            "operation": "Update",
+            "apiVersion": "rbac.authorization.k8s.io/v1",
+            "time": "2023-11-10T12:58:14Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                }
+              },
+              "f:rules": {}
+            }
+          }
+        ]
+      },
+      "rules": [
+        {
+          "verbs": [
+            "get",
+            "list",
+            "delete",
+            "create",
+            "update",
+            "deletecollection"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "pods",
+            "pods/log",
+            "configmaps",
+            "secrets"
+          ]
+        }
+      ]
+    }
+  ]
+}

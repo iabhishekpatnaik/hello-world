@@ -1,0 +1,5 @@
+{"level":"info","time":"2023-11-21T14:29:45Z","message":"KNIME Hub Endpoint Status Tracker started."}
+{"level":"info","time":"2023-11-21T14:29:45Z","message":"log level set to `INFO`."}
+{"level":"info","time":"2023-11-21T14:29:45Z","message":"reading config from /data/config.yaml."}
+{"level":"info","time":"2023-11-21T14:29:45Z","message":"config loaded successfully, 5 endpoints identified."}
+{"level":"info","time":"2023-11-21T14:29:45Z","message":"service started on port 8080."}

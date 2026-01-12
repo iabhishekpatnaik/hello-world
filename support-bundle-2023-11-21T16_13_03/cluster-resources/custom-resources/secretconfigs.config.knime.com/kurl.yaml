@@ -1,0 +1,51 @@
+- apiVersion: config.knime.com/v1alpha1
+  kind: SecretConfig
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-execution-registry
+      meta.helm.sh/release-namespace: kurl
+    creationTimestamp: "2023-11-10T13:19:18Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: config.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:sourceNamespace: {}
+          f:sourceSecretName: {}
+          f:targetNamespace: {}
+          f:targetSecretData:
+            .: {}
+            f:.dockerconfigjson: {}
+          f:targetSecretName: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:19:18Z"
+    name: kurl-registry-secretconfig
+    namespace: kurl
+    resourceVersion: "4779"
+    uid: 26e5c821-73f2-419f-92a0-a24f1721b202
+  spec:
+    sourceNamespace: default
+    sourceSecretName: registry-creds
+    targetNamespace: hub-execution
+    targetSecretData:
+      .dockerconfigjson: $source..dockerconfigjson
+    targetSecretName: registry-creds

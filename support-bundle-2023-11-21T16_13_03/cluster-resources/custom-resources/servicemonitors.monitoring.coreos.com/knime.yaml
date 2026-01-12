@@ -1,0 +1,113 @@
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2023-11-10T13:18:50Z"
+    generation: 1
+    labels:
+      monitoring-key: middleware
+      name: keycloak-operator
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:monitoring-key: {}
+            f:name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"d3c83231-00ae-45e0-8ba7-8d418d9c55e0"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-10T13:18:50Z"
+    name: keycloak-operator-metrics
+    namespace: knime
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: keycloak-operator-metrics
+      uid: d3c83231-00ae-45e0-8ba7-8d418d9c55e0
+    resourceVersion: "4440"
+    uid: 793914a0-e97f-4d17-a3e0-7cb4bda51f45
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      port: http-metrics
+    - bearerTokenSecret:
+        key: ""
+      port: cr-metrics
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        monitoring-key: middleware
+        name: keycloak-operator
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2023-11-10T13:20:13Z"
+    generation: 1
+    labels:
+      monitoring-key: middleware
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:monitoring-key: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"1c638751-0600-4702-827c-6a507f1dc9e5"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-10T13:20:13Z"
+    name: keycloak-service-monitor
+    namespace: knime
+    ownerReferences:
+    - apiVersion: keycloak.org/v1alpha1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Keycloak
+      name: knime-keycloak
+      uid: 1c638751-0600-4702-827c-6a507f1dc9e5
+    resourceVersion: "5473"
+    uid: c07334bd-e3d7-4d23-909c-f4d02256f8ea
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      path: /auth/realms/master/metrics
+      port: keycloak
+      scheme: https
+      tlsConfig:
+        ca: {}
+        cert: {}
+        insecureSkipVerify: true
+    - bearerTokenSecret:
+        key: ""
+      path: /metrics
+      port: keycloak-monitoring
+      scheme: http
+      tlsConfig:
+        ca: {}
+        cert: {}
+        insecureSkipVerify: true
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        app: keycloak

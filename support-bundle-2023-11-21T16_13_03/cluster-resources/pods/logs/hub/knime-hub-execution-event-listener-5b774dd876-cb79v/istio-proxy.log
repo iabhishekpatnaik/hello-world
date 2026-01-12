@@ -1,0 +1,83 @@
+{"level":"info","time":"2023-11-21T14:29:34.101083Z","msg":"FLAG: --concurrency=\"0\""}
+{"level":"info","time":"2023-11-21T14:29:34.101105Z","msg":"FLAG: --domain=\"hub.svc.cluster.local\""}
+{"level":"info","time":"2023-11-21T14:29:34.101112Z","msg":"FLAG: --help=\"false\""}
+{"level":"info","time":"2023-11-21T14:29:34.101115Z","msg":"FLAG: --log_as_json=\"true\""}
+{"level":"info","time":"2023-11-21T14:29:34.101117Z","msg":"FLAG: --log_caller=\"\""}
+{"level":"info","time":"2023-11-21T14:29:34.101121Z","msg":"FLAG: --log_output_level=\"default:info\""}
+{"level":"info","time":"2023-11-21T14:29:34.101124Z","msg":"FLAG: --log_rotate=\"\""}
+{"level":"info","time":"2023-11-21T14:29:34.101131Z","msg":"FLAG: --log_rotate_max_age=\"30\""}
+{"level":"info","time":"2023-11-21T14:29:34.101134Z","msg":"FLAG: --log_rotate_max_backups=\"1000\""}
+{"level":"info","time":"2023-11-21T14:29:34.101137Z","msg":"FLAG: --log_rotate_max_size=\"104857600\""}
+{"level":"info","time":"2023-11-21T14:29:34.101140Z","msg":"FLAG: --log_stacktrace_level=\"default:none\""}
+{"level":"info","time":"2023-11-21T14:29:34.101151Z","msg":"FLAG: --log_target=\"[stdout]\""}
+{"level":"info","time":"2023-11-21T14:29:34.101158Z","msg":"FLAG: --meshConfig=\"./etc/istio/config/mesh\""}
+{"level":"info","time":"2023-11-21T14:29:34.101162Z","msg":"FLAG: --outlierLogPath=\"\""}
+{"level":"info","time":"2023-11-21T14:29:34.101165Z","msg":"FLAG: --profiling=\"true\""}
+{"level":"info","time":"2023-11-21T14:29:34.101170Z","msg":"FLAG: --proxyComponentLogLevel=\"misc:error\""}
+{"level":"info","time":"2023-11-21T14:29:34.101174Z","msg":"FLAG: --proxyLogLevel=\"warning\""}
+{"level":"info","time":"2023-11-21T14:29:34.101180Z","msg":"FLAG: --s2a_enable_appengine_dialer=\"false\""}
+{"level":"info","time":"2023-11-21T14:29:34.101186Z","msg":"FLAG: --s2a_timeout=\"3s\""}
+{"level":"info","time":"2023-11-21T14:29:34.101189Z","msg":"FLAG: --serviceCluster=\"istio-proxy\""}
+{"level":"info","time":"2023-11-21T14:29:34.101194Z","msg":"FLAG: --stsPort=\"0\""}
+{"level":"info","time":"2023-11-21T14:29:34.101197Z","msg":"FLAG: --templateFile=\"\""}
+{"level":"info","time":"2023-11-21T14:29:34.101201Z","msg":"FLAG: --tokenManagerPlugin=\"GoogleTokenExchange\""}
+{"level":"info","time":"2023-11-21T14:29:34.101205Z","msg":"FLAG: --vklog=\"0\""}
+{"level":"info","time":"2023-11-21T14:29:34.101210Z","msg":"Version 1.18.1-b39cf40807721c60f7b29e3106e37faa5e5dbac7-Clean"}
+{"level":"info","time":"2023-11-21T14:29:34.102704Z","msg":"Maximum file descriptors (ulimit -n): 1048576"}
+{"level":"info","time":"2023-11-21T14:29:34.102861Z","msg":"Proxy role","ips":["***HIDDEN***"],"type":"sidecar","id":"knime-hub-execution-event-listener-5b774dd876-cb79v.hub","domain":"hub.svc.cluster.local"}
+{"level":"info","time":"2023-11-21T14:29:34.102940Z","msg":"Apply proxy config from env {}\n"}
+{"level":"info","time":"2023-11-21T14:29:34.104279Z","msg":"cpu limit detected as 2, setting concurrency"}
+{"level":"info","time":"2023-11-21T14:29:34.104559Z","msg":"Effective config: binaryPath: /usr/local/bin/envoy\nconcurrency: 2\nconfigPath: ./etc/istio/proxy\ncontrolPlaneAuthPolicy: MUTUAL_TLS\ndiscoveryAddress: istiod.istio-system.svc:15012\ndrainDuration: 45s\nproxyAdminPort: 15000\nserviceCluster: istio-proxy\nstatNameLength: 189\nstatusPort: 15020\nterminationDrainDuration: 5s\ntracing:\n  zipkin:\n    address: zipkin.istio-system:9411\n"}
+{"level":"info","time":"2023-11-21T14:29:34.104575Z","msg":"JWT policy is third-party-jwt"}
+{"level":"info","time":"2023-11-21T14:29:34.104579Z","msg":"using credential fetcher of JWT type in cluster.local trust domain"}
+{"level":"info","time":"2023-11-21T14:29:34.105612Z","msg":"Workload SDS socket not found. Starting Istio SDS Server"}
+{"level":"info","time":"2023-11-21T14:29:34.105628Z","msg":"CA Endpoint istiod.istio-system.svc:15012, provider Citadel"}
+{"level":"info","time":"2023-11-21T14:29:34.105612Z","msg":"Opening status port 15020"}
+{"level":"info","time":"2023-11-21T14:29:34.105648Z","msg":"Using CA istiod.istio-system.svc:15012 cert with certs: var/run/secrets/istio/root-cert.pem"}
+{"level":"info","time":"2023-11-21T14:29:34.119379Z","scope":"ads","msg":"All caches have been synced up in 20.444977ms, marking server ready"}
+{"level":"info","time":"2023-11-21T14:29:34.119572Z","scope":"xdsproxy","msg":"Initializing with upstream address \"istiod.istio-system.svc:15012\" and cluster \"Kubernetes\""}
+{"level":"info","time":"2023-11-21T14:29:34.119588Z","scope":"sds","msg":"Starting SDS grpc server"}
+{"level":"info","time":"2023-11-21T14:29:34.119834Z","msg":"starting Http service at ***HIDDEN***:15004"}
+{"level":"info","time":"2023-11-21T14:29:34.120815Z","msg":"Pilot SAN: [istiod.istio-system.svc]"}
+{"level":"info","time":"2023-11-21T14:29:34.121625Z","msg":"Starting proxy agent"}
+{"level":"info","time":"2023-11-21T14:29:34.121649Z","msg":"starting"}
+{"level":"info","time":"2023-11-21T14:29:34.121669Z","msg":"Envoy command: [-c etc/istio/proxy/envoy-rev.json --drain-time-s 45 --drain-strategy immediate --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --allow-unknown-static-fields --log-format {\"level\":\"%l\",\"time\":\"%Y-%m-%dT%T.%fZ\",\"scope\":\"envoy %n\",\"msg\":\"%j\",\"caller\":\"%g:%#\",\"thread\":%t} -l warning --component-log-level misc:error --concurrency 2]"}
+{"level":"warn","time":"2023-11-21T14:29:54.107127Z","scope":"ca","msg":"ca request failed, starting attempt 1 in 105.452611ms"}
+{"level":"warn","time":"2023-11-21T14:29:54.212885Z","scope":"ca","msg":"ca request failed, starting attempt 2 in 202.80573ms"}
+{"level":"warn","time":"2023-11-21T14:29:54.415858Z","scope":"ca","msg":"ca request failed, starting attempt 3 in 405.909042ms"}
+{"level":"warn","time":"2023-11-21T14:29:54.821943Z","scope":"ca","msg":"ca request failed, starting attempt 4 in 759.11782ms"}
+{"level":"warn","time":"2023-11-21T14:29:59.115383Z","scope":"sds","msg":"failed to warm certificate: failed to generate workload certificate: create certificate: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp: lookup istiod.istio-system.svc on ***HIDDEN***:53: read udp ***HIDDEN***:58018->***HIDDEN***:53: read: connection refused\""}
+{"level":"warn","time":"2023-11-21T14:29:59.667398Z","scope":"ca","msg":"ca request failed, starting attempt 1 in 108.286176ms"}
+{"level":"warn","time":"2023-11-21T14:29:59.776729Z","scope":"ca","msg":"ca request failed, starting attempt 2 in 196.303459ms"}
+{"level":"warn","time":"2023-11-21T14:29:59.974136Z","scope":"ca","msg":"ca request failed, starting attempt 3 in 411.6534ms"}
+{"level":"warn","time":"2023-11-21T14:30:00.386672Z","scope":"ca","msg":"ca request failed, starting attempt 4 in 866.247766ms"}
+{"level":"warn","time":"2023-11-21T14:30:19.620128Z","scope":"sds","msg":"failed to warm certificate: failed to generate workload certificate: create certificate: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp: lookup istiod.istio-system.svc on ***HIDDEN***:53: no such host\""}
+{"level":"warn","time":"2023-11-21T14:30:20.328432Z","scope":"ca","msg":"ca request failed, starting attempt 1 in 103.38556ms"}
+{"level":"warn","time":"2023-11-21T14:30:20.432715Z","scope":"ca","msg":"ca request failed, starting attempt 2 in 218.708125ms"}
+{"level":"warn","time":"2023-11-21T14:30:20.652312Z","scope":"ca","msg":"ca request failed, starting attempt 3 in 411.096688ms"}
+{"level":"warn","time":"2023-11-21T14:30:21.063861Z","scope":"ca","msg":"ca request failed, starting attempt 4 in 810.952254ms"}
+{"level":"warn","time":"2023-11-21T14:30:21.875616Z","scope":"sds","msg":"failed to warm certificate: failed to generate workload certificate: create certificate: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp: lookup istiod.istio-system.svc on ***HIDDEN***:53: no such host\""}
+{"level":"warn","time":"2023-11-21T14:30:23.404595Z","scope":"ca","msg":"ca request failed, starting attempt 1 in 109.986661ms"}
+{"level":"warn","time":"2023-11-21T14:30:23.514851Z","scope":"ca","msg":"ca request failed, starting attempt 2 in 189.895191ms"}
+{"level":"warn","time":"2023-11-21T14:30:23.705171Z","scope":"ca","msg":"ca request failed, starting attempt 3 in 389.125773ms"}
+{"level":"warn","time":"2023-11-21T14:30:24.094413Z","scope":"ca","msg":"ca request failed, starting attempt 4 in 873.884694ms"}
+{"level":"warn","time":"2023-11-21T14:30:24.968747Z","scope":"sds","msg":"failed to warm certificate: failed to generate workload certificate: create certificate: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp ***HIDDEN***:15012: connect: connection refused\""}
+{"level":"info","time":"2023-11-21T14:30:25.938461Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-21T14:30:27.554147Z","scope":"cache","msg":"generated new workload certificate","latency":244232772,"ttl":86399445856966}
+{"level":"info","time":"2023-11-21T14:30:27.554189Z","scope":"cache","msg":"Root cert has changed, start rotating root cert"}
+{"level":"info","time":"2023-11-21T14:30:27.554208Z","scope":"ads","msg":"XDS: Incremental Pushing:0 ConnectedEndpoints:0 Version:"}
+{"level":"info","time":"2023-11-21T14:30:27.554243Z","scope":"cache","msg":"returned workload trust anchor from cache","ttl":86399445757826}
+{"level":"info","time":"2023-11-21T14:30:49.206159Z","scope":"ads","msg":"ADS: new connection for node:knime-hub-execution-event-listener-5b774dd876-cb79v.hub-1"}
+{"level":"info","time":"2023-11-21T14:30:49.206183Z","scope":"ads","msg":"ADS: new connection for node:knime-hub-execution-event-listener-5b774dd876-cb79v.hub-2"}
+{"level":"info","time":"2023-11-21T14:30:49.206207Z","scope":"cache","msg":"returned workload certificate from cache","ttl":86377793795389}
+{"level":"info","time":"2023-11-21T14:30:49.206294Z","scope":"cache","msg":"returned workload trust anchor from cache","ttl":86377793708183}
+{"level":"info","time":"2023-11-21T14:30:49.206456Z","scope":"ads","msg":"SDS: PUSH request for node:knime-hub-execution-event-listener-5b774dd876-cb79v.hub resources:1 size:4.0kB resource:default"}
+{"level":"info","time":"2023-11-21T14:30:49.206579Z","scope":"ads","msg":"SDS: PUSH request for node:knime-hub-execution-event-listener-5b774dd876-cb79v.hub resources:1 size:1.1kB resource:ROOTCA"}
+{"level":"info","time":"2023-11-21T14:30:50.297764Z","msg":"Readiness succeeded in 1m16.20370989s"}
+{"level":"info","time":"2023-11-21T14:30:50.298046Z","msg":"Envoy proxy is ready"}
+{"level":"info","time":"2023-11-21T15:00:23.863774Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-21T15:31:15.599839Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"route_name":null,"knime_api_version":null,"start_time":"2023-11-21T16:01:48.564Z","protocol":null,"bytes_sent":4123,"upstream_cluster":"outbound|443||kubernetes.default.svc.cluster.local","response_flags":"-","x_knime_client_type":null,"path":null,"request_id":null,"downstream_remote_address":"***HIDDEN***:54720","user_agent":null,"authority":null,"upstream_host":"***HIDDEN***:6443","method":null,"x_envoy_original_path":null,"upstream_transport_failure_reason":null,"istio_policy_status":"-","downstream_local_address":"***HIDDEN***:443","duration":90011,"upstream_local_address":"***HIDDEN***:46648","if_none_match":null,"response_code":0,"etag":null,"x_forwarded_port":null,"bytes_received":2912,"path_path":null,"x_forwarded_for":null,"requested_server_name":null,"upstream_service_time":null,"x_forwarded_proto":null}
+{"level":"info","time":"2023-11-21T16:04:11.194481Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"x_forwarded_port":null,"response_code":0,"upstream_transport_failure_reason":null,"upstream_local_address":"***HIDDEN***:46200","istio_policy_status":"-","route_name":null,"duration":90008,"knime_api_version":null,"requested_server_name":null,"x_envoy_original_path":null,"if_none_match":null,"upstream_host":"***HIDDEN***:6443","user_agent":null,"bytes_received":1754,"path_path":null,"x_forwarded_proto":null,"path":null,"downstream_local_address":"***HIDDEN***:443","etag":null,"x_knime_client_type":null,"protocol":null,"method":null,"downstream_remote_address":"***HIDDEN***:59898","authority":null,"response_flags":"-","x_forwarded_for":null,"bytes_sent":2318,"upstream_service_time":null,"upstream_cluster":"outbound|443||kubernetes.default.svc.cluster.local","start_time":"2023-11-21T16:03:34.480Z","request_id":null}
+{"upstream_cluster":"outbound|443||kubernetes.default.svc.cluster.local","downstream_remote_address":"***HIDDEN***:50780","route_name":null,"x_forwarded_port":null,"upstream_service_time":null,"upstream_transport_failure_reason":null,"path_path":null,"path":null,"if_none_match":null,"upstream_host":"***HIDDEN***:6443","protocol":null,"istio_policy_status":"-","bytes_received":2912,"knime_api_version":null,"start_time":"2023-11-21T16:05:32.604Z","upstream_local_address":"***HIDDEN***:46382","duration":90011,"x_envoy_original_path":null,"authority":null,"request_id":null,"response_code":0,"x_knime_client_type":null,"user_agent":null,"x_forwarded_proto":null,"x_forwarded_for":null,"method":null,"bytes_sent":4145,"etag":null,"downstream_local_address":"***HIDDEN***:443","response_flags":"-","requested_server_name":null}

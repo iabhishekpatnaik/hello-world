@@ -1,0 +1,1243 @@
+goroutine 8552 [running]:
+runtime/pprof.writeGoroutineStacks({0x68a4f20, 0xc001b2a000})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/pprof/pprof.go:703 +0x70
+runtime/pprof.writeGoroutine({0x68a4f20?, 0xc001b2a000?}, 0xc0019888b0?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/pprof/pprof.go:692 +0x2b
+runtime/pprof.(*Profile).WriteTo(0xc001b2a000?, {0x68a4f20?, 0xc001b2a000?}, 0xc?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/pprof/pprof.go:329 +0x14b
+github.com/replicatedhq/kots/pkg/supportbundle.getGoRoutines({0x68d2d20, 0xc001b2a000}, 0xc0024d6ed0?)
+	/home/runner/work/kots/kots/pkg/supportbundle/server.go:45 +0x1c5
+net/http.HandlerFunc.ServeHTTP(0xc001b26200?, {0x68d2d20?, 0xc001b2a000?}, 0x800?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:2122 +0x2f
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc001ab4000, {0x68d2d20, 0xc001b2a000}, 0xc001b26100)
+	/home/runner/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210 +0x1cf
+net/http.serverHandler.ServeHTTP({0xc0024d6cf0?}, {0x68d2d20, 0xc001b2a000}, 0xc001b26100)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc0024f03f0, {0x68d5e30, 0xc0016ac8a0})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:3089 +0x5ed
+
+goroutine 1 [IO wait]:
+internal/poll.runtime_pollWait(0x7f42e59f51b8, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc001d4d200?, 0x4?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Accept(0xc001d4d200)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:614 +0x2bd
+net.(*netFD).accept(0xc001d4d200)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_unix.go:172 +0x35
+net.(*TCPListener).accept(0xc000ca9f80)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/tcpsock_posix.go:148 +0x25
+net.(*TCPListener).Accept(0xc000ca9f80)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/tcpsock.go:297 +0x3d
+net/http.(*Server).Serve(0xc000abf2c0, {0x68d2b10, 0xc000ca9f80})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:3059 +0x385
+net/http.(*Server).ListenAndServe(0xc000abf2c0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:2988 +0x7d
+github.com/replicatedhq/kots/pkg/apiserver.Start(0xc002767c80)
+	/home/runner/work/kots/kots/pkg/apiserver/server.go:236 +0x180b
+github.com/replicatedhq/kots/cmd/kotsadm/cli.APICmd.func2(0xc0010f4f00?, {0x3e42ece?, 0x0?, 0x0?})
+	/home/runner/work/kots/kots/cmd/kotsadm/cli/api.go:39 +0x1c5
+github.com/spf13/cobra.(*Command).execute(0xc0010f4f00, {0x8c53cd0, 0x0, 0x0})
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0010f4c00)
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/replicatedhq/kots/cmd/kotsadm/cli.InitAndExecute()
+	/home/runner/work/kots/kots/cmd/kotsadm/cli/root.go:39 +0x1e
+main.main()
+	/home/runner/work/kots/kots/cmd/kotsadm/main.go:13 +0x8a
+
+goroutine 11 [select]:
+go.opencensus.io/stats/view.(*worker).start(0xc0001ddc80)
+	/home/runner/go/pkg/mod/go.opencensus.io@v0.24.0/stats/view/worker.go:292 +0xad
+created by go.opencensus.io/stats/view.init.0
+	/home/runner/go/pkg/mod/go.opencensus.io@v0.24.0/stats/view/worker.go:34 +0x96
+
+goroutine 194 [sleep]:
+time.Sleep(0x77359400)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/time.go:195 +0x135
+github.com/replicatedhq/kots/pkg/operator.startLoop.func1()
+	/home/runner/work/kots/kots/pkg/operator/operator.go:114 +0x3f
+created by github.com/replicatedhq/kots/pkg/operator.startLoop
+	/home/runner/work/kots/kots/pkg/operator/operator.go:111 +0x65
+
+goroutine 6195 [select, 1 minutes]:
+net/http.(*persistConn).writeLoop(0xc0004c25a0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:2410 +0xf2
+created by net/http.(*Transport).dialConn
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1766 +0x173d
+
+goroutine 252 [select]:
+k8s.io/client-go/tools/cache.(*processorListener).pop(0xc000d141b0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:938 +0x119
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 251 [chan receive]:
+k8s.io/client-go/tools/cache.(*processorListener).run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:968 +0x57
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x30?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:226 +0x3e
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0xc0018f8f38?, {0x68a4080, 0xc00111cde0}, 0x1, 0xc002080000)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:227 +0xb6
+k8s.io/apimachinery/pkg/util/wait.JitterUntil(0x362f4a0?, 0x3b9aca00, 0x0, 0xd0?, 0xc0018f8f88?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:204 +0x89
+k8s.io/apimachinery/pkg/util/wait.Until(...)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:161
+k8s.io/client-go/tools/cache.(*processorListener).run(0xc000d141b0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:967 +0x6b
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 177 [sync.Cond.Wait, 103 minutes]:
+sync.runtime_notifyListWait(0xc00013e658, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0x362aaa0?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+k8s.io/client-go/tools/cache.(*DeltaFIFO).Pop(0xc00013e630, 0xc00112c090)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/delta_fifo.go:575 +0x256
+k8s.io/client-go/tools/cache.(*controller).processLoop(0xc00076a780)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:192 +0x36
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x30?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:226 +0x3e
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0x12463e5?, {0x68a4080, 0xc00112c0c0}, 0x1, 0xc0004eaea0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:227 +0xb6
+k8s.io/apimachinery/pkg/util/wait.JitterUntil(0xc00076a7f8?, 0x3b9aca00, 0x0, 0x0?, 0x6fc23ac00?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:204 +0x89
+k8s.io/apimachinery/pkg/util/wait.Until(...)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:161
+k8s.io/client-go/tools/cache.(*controller).Run(0xc00076a780, 0xc0004eaea0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:163 +0x385
+github.com/replicatedhq/kots/pkg/operator/client.(*Client).runHooksInformer.func1()
+	/home/runner/work/kots/kots/pkg/operator/client/hooks.go:78 +0x238
+created by github.com/replicatedhq/kots/pkg/operator/client.(*Client).runHooksInformer
+	/home/runner/work/kots/kots/pkg/operator/client/hooks.go:26 +0xf1
+
+goroutine 178 [select, 103 minutes]:
+github.com/replicatedhq/kots/pkg/appstate.(*Monitor).run(0xc000feba40, {0x68d5d88, 0xc0000db720})
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:85 +0x215
+created by github.com/replicatedhq/kots/pkg/appstate.NewMonitor
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:48 +0x1a5
+
+goroutine 46 [IO wait]:
+internal/poll.runtime_pollWait(0x7f42e59f5398, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc000a9eb00?, 0xc001dc2000?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc000a9eb00, {0xc001dc2000, 0xa000, 0xa000})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc000a9eb00, {0xc001dc2000?, 0xc001dc2047?, 0x68d?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc0001a0220, {0xc001dc2000?, 0x74ac63?, 0xc000e31a30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/net.go:183 +0x45
+crypto/tls.(*atLeastReader).Read(0xc001b7d338, {0xc001dc2000?, 0xc001b7d338?, 0x0?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:788 +0x3d
+bytes.(*Buffer).ReadFrom(0xc000e31b10, {0x6899020, 0xc001b7d338})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bytes/buffer.go:202 +0x98
+crypto/tls.(*Conn).readFromUntil(0xc000e31880, {0x68a4be0?, 0xc0001a0220}, 0x9fbe?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:810 +0xe5
+crypto/tls.(*Conn).readRecordOrCCS(0xc000e31880, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:617 +0x116
+crypto/tls.(*Conn).readRecord(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc000e31880, {0xc000d4e000, 0x1000, 0x0?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:1316 +0x16f
+bufio.(*Reader).Read(0xc00012a7e0, {0xc0001fa660, 0x9, 0xc0016ff588?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:237 +0x1bb
+io.ReadAtLeast({0x68980c0, 0xc00012a7e0}, {0xc0001fa660, 0x9, 0x9}, 0x9)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/io/io.go:332 +0x9a
+io.ReadFull(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/io/io.go:351
+golang.org/x/net/http2.readFrameHeader({0xc0001fa660?, 0x9?, 0xc000000000?}, {0x68980c0?, 0xc00012a7e0?})
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/frame.go:237 +0x6e
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc0001fa620)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/frame.go:498 +0x95
+golang.org/x/net/http2.(*clientConnReadLoop).run(0xc0004d3f98)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:2260 +0x12e
+golang.org/x/net/http2.(*ClientConn).readLoop(0xc000caf500)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:2155 +0x6f
+created by golang.org/x/net/http2.(*Transport).newClientConn
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:818 +0xc1f
+
+goroutine 154 [chan receive]:
+k8s.io/client-go/tools/cache.(*processorListener).run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:968 +0x57
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x30?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:226 +0x3e
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0xc000134f38?, {0x68a4080, 0xc0021cc5a0}, 0x1, 0xc0001945a0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:227 +0xb6
+k8s.io/apimachinery/pkg/util/wait.JitterUntil(0x0?, 0x3b9aca00, 0x0, 0x5f?, 0x0?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:204 +0x89
+k8s.io/apimachinery/pkg/util/wait.Until(...)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:161
+k8s.io/client-go/tools/cache.(*processorListener).run(0xc0016d6000)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:967 +0x6b
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 155 [select]:
+k8s.io/client-go/tools/cache.(*processorListener).pop(0xc0016d6000)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:938 +0x119
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 173 [select]:
+k8s.io/client-go/tools/cache.(*Reflector).startResync(0xc001aaa000, 0xc0011a21e0, 0xc00052c060, 0x0?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:368 +0x114
+created by k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:355 +0x32a
+
+goroutine 162 [chan receive, 103 minutes]:
+k8s.io/client-go/tools/cache.(*controller).Run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:133 +0x28
+created by k8s.io/client-go/tools/cache.(*controller).Run
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:132 +0xc5
+
+goroutine 179 [chan receive]:
+github.com/replicatedhq/kots/pkg/operator/client.(*Client).runAppStateMonitor(0xc0002189a0)
+	/home/runner/work/kots/kots/pkg/operator/client/client.go:103 +0x114
+created by github.com/replicatedhq/kots/pkg/operator/client.(*Client).Init
+	/home/runner/work/kots/kots/pkg/operator/client/client.go:82 +0x18a
+
+goroutine 277 [chan receive, 103 minutes]:
+k8s.io/client-go/tools/cache.(*sharedProcessor).run(0xc002228000, 0x0?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:802 +0x58
+k8s.io/apimachinery/pkg/util/wait.(*Group).StartWithChannel.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:55 +0x22
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 153 [select]:
+k8s.io/client-go/tools/cache.(*processorListener).pop(0xc0017ee090)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:938 +0x119
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 240 [sleep]:
+time.Sleep(0xdf8475800)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/time.go:195 +0x135
+github.com/replicatedhq/kots/pkg/snapshotscheduler.startLoop.func1()
+	/home/runner/work/kots/kots/pkg/snapshotscheduler/snapshotscheduler.go:34 +0x3f
+created by github.com/replicatedhq/kots/pkg/snapshotscheduler.startLoop
+	/home/runner/work/kots/kots/pkg/snapshotscheduler/snapshotscheduler.go:31 +0x65
+
+goroutine 171 [IO wait]:
+internal/poll.runtime_pollWait(0x7f42e59f4d08, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc001683600?, 0x5?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Accept(0xc001683600)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:614 +0x2bd
+net.(*netFD).accept(0xc001683600)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_unix.go:172 +0x35
+net.(*TCPListener).accept(0xc00045fc38)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/tcpsock_posix.go:148 +0x25
+net.(*TCPListener).Accept(0xc00045fc38)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/tcpsock.go:297 +0x3d
+net/http.(*Server).Serve(0xc002280000, {0x68d2b10, 0xc00045fc38})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:3059 +0x385
+net/http.(*Server).ListenAndServe(0xc002280000)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:2988 +0x7d
+github.com/replicatedhq/kots/pkg/supportbundle.StartServer.func1()
+	/home/runner/work/kots/kots/pkg/supportbundle/server.go:27 +0x16f
+created by github.com/replicatedhq/kots/pkg/supportbundle.StartServer
+	/home/runner/work/kots/kots/pkg/supportbundle/server.go:14 +0x25
+
+goroutine 163 [select]:
+k8s.io/client-go/tools/cache.watchHandler({0x0?, 0x0?, 0x8a97660?}, {0x68b8380, 0xc001fc81c0}, {0x7f41e5533190, 0xc00013e630}, {0x690f7c0?, 0x3deb9c0}, 0x0, ...)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:712 +0x185
+k8s.io/client-go/tools/cache.(*Reflector).watch(0xc000abf1d0, {0x0?, 0x0?}, 0xc0004eaea0, 0xc0007685e0?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:431 +0x54e
+k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch(0xc000abf1d0, 0xc0004eaea0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:356 +0x34e
+k8s.io/client-go/tools/cache.(*Reflector).Run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:289 +0x26
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x10?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:226 +0x3e
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0xc000744c00?, {0x68a4060, 0xc0001bd7c0}, 0x1, 0xc0004eaea0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:227 +0xb6
+k8s.io/client-go/tools/cache.(*Reflector).Run(0xc000abf1d0, 0xc0004eaea0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:288 +0x17d
+k8s.io/apimachinery/pkg/util/wait.(*Group).StartWithChannel.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:55 +0x22
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 183 [select]:
+k8s.io/client-go/tools/cache.(*Reflector).startResync(0xc000abf1d0, 0xc0004eaea0, 0xc00007dec0, 0xc0004f5b00?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:368 +0x114
+created by k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:355 +0x32a
+
+goroutine 278 [chan receive, 103 minutes]:
+k8s.io/client-go/tools/cache.(*controller).Run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:133 +0x28
+created by k8s.io/client-go/tools/cache.(*controller).Run
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:132 +0xc5
+
+goroutine 305 [select, 103 minutes]:
+github.com/robfig/cron/v3.(*Cron).run(0xc00076a280)
+	/home/runner/go/pkg/mod/github.com/robfig/cron/v3@v3.0.1/cron.go:263 +0xab9
+created by github.com/robfig/cron/v3.(*Cron).Start
+	/home/runner/go/pkg/mod/github.com/robfig/cron/v3@v3.0.1/cron.go:222 +0xca
+
+goroutine 238 [select, 103 minutes]:
+github.com/robfig/cron/v3.(*Cron).run(0xc00076a1e0)
+	/home/runner/go/pkg/mod/github.com/robfig/cron/v3@v3.0.1/cron.go:263 +0xab9
+created by github.com/robfig/cron/v3.(*Cron).Start
+	/home/runner/go/pkg/mod/github.com/robfig/cron/v3@v3.0.1/cron.go:222 +0xca
+
+goroutine 239 [sleep]:
+time.Sleep(0xdf8475800)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/time.go:195 +0x135
+github.com/replicatedhq/kots/pkg/snapshotscheduler.startLoop.func1()
+	/home/runner/work/kots/kots/pkg/snapshotscheduler/snapshotscheduler.go:34 +0x3f
+created by github.com/replicatedhq/kots/pkg/snapshotscheduler.startLoop
+	/home/runner/work/kots/kots/pkg/snapshotscheduler/snapshotscheduler.go:31 +0x65
+
+goroutine 4761 [select, 2 minutes]:
+golang.org/x/net/http2.(*clientStream).writeRequest(0xc0017b0f00, 0xc000eadf00)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1473 +0xb27
+golang.org/x/net/http2.(*clientStream).doRequest(0xc000514320?, 0xc001430fb8?)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1335 +0x1e
+created by golang.org/x/net/http2.(*ClientConn).RoundTrip
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1229 +0x33f
+
+goroutine 338 [chan receive, 103 minutes]:
+k8s.io/client-go/tools/cache.(*controller).Run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:133 +0x28
+created by k8s.io/client-go/tools/cache.(*controller).Run
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:132 +0xc5
+
+goroutine 279 [select]:
+k8s.io/client-go/tools/cache.watchHandler({0x0?, 0x0?, 0x8a97660?}, {0x68b8380, 0xc001e15080}, {0x7f41e5533190, 0xc001aa80b0}, {0x690f7c0?, 0x3de91e0}, 0x0, ...)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:712 +0x185
+k8s.io/client-go/tools/cache.(*Reflector).watch(0xc001aaa000, {0x0?, 0x0?}, 0xc0011a21e0, 0xc001132020?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:431 +0x54e
+k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch(0xc001aaa000, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:356 +0x34e
+k8s.io/client-go/tools/cache.(*Reflector).Run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:289 +0x26
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x10?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:226 +0x3e
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0xc0025b8040?, {0x68a4060, 0xc002228050}, 0x1, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:227 +0xb6
+k8s.io/client-go/tools/cache.(*Reflector).Run(0xc001aaa000, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:288 +0x17d
+k8s.io/apimachinery/pkg/util/wait.(*Group).StartWithChannel.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:55 +0x22
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 5682 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7f42e59f4df8, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc00037fe80?, 0xc001d28000?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc00037fe80, {0xc001d28000, 0x1000, 0x1000})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc00037fe80, {0xc001d28000?, 0x43c987?, 0xc0021c8c30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc0004e5950, {0xc001d28000?, 0x0?, 0xc000348820?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/net.go:183 +0x45
+net/http.(*persistConn).Read(0xc001424000, {0xc001d28000?, 0xc001333440?, 0xc0021c8d30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1943 +0x4e
+bufio.(*Reader).fill(0xc0020bb320)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:106 +0xff
+bufio.(*Reader).Peek(0xc0020bb320, 0x1)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:144 +0x5d
+net/http.(*persistConn).readLoop(0xc001424000)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:2107 +0x1ac
+created by net/http.(*Transport).dialConn
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1765 +0x16ea
+
+goroutine 337 [chan receive, 103 minutes]:
+k8s.io/client-go/tools/cache.(*sharedProcessor).run(0xc00037c000, 0x0?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:802 +0x58
+k8s.io/apimachinery/pkg/util/wait.(*Group).StartWithChannel.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:55 +0x22
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 5270 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc00136f3c8, 0x3)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc001a937d0?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+golang.org/x/net/http2.(*pipe).Read(0xc00136f3b0, {0xc00123d201, 0x5ff, 0x5ff})
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/pipe.go:76 +0xeb
+golang.org/x/net/http2.transportResponseBody.Read({0x0?}, {0xc00123d201?, 0x2?, 0x3e54646?})
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:2543 +0x75
+encoding/json.(*Decoder).refill(0xc0013c8640)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:165 +0x188
+encoding/json.(*Decoder).readValue(0xc0013c8640)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:140 +0xbb
+encoding/json.(*Decoder).Decode(0xc0013c8640, {0x381df20, 0xc0019792f0})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:63 +0x78
+k8s.io/apimachinery/pkg/util/framer.(*jsonFrameReader).Read(0xc0010f06f0, {0xc000f24000, 0x400, 0x400})
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/framer/framer.go:152 +0x1a5
+k8s.io/apimachinery/pkg/runtime/serializer/streaming.(*decoder).Decode(0xc0022290e0, 0xc00236a100?, {0x68b8128, 0xc0004f1400})
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/runtime/serializer/streaming/streaming.go:77 +0xa7
+k8s.io/client-go/rest/watch.(*Decoder).Decode(0xc000db4100)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/rest/watch/decoder.go:49 +0x4f
+k8s.io/apimachinery/pkg/watch.(*StreamWatcher).receive(0xc001a6cbc0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/watch/streamwatcher.go:105 +0xdc
+created by k8s.io/apimachinery/pkg/watch.NewStreamWatcher
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/watch/streamwatcher.go:76 +0x130
+
+goroutine 299 [select, 103 minutes]:
+github.com/replicatedhq/kots/pkg/appstate.(*AppMonitor).run(0xc0003d40a0, {0x68d5d88, 0xc0003d4050})
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:158 +0x1d9
+created by github.com/replicatedhq/kots/pkg/appstate.NewAppMonitor
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:129 +0x1e5
+
+goroutine 300 [chan receive]:
+github.com/replicatedhq/kots/pkg/appstate.(*Monitor).run.func2()
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:97 +0xf5
+created by github.com/replicatedhq/kots/pkg/appstate.(*Monitor).run
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:96 +0x335
+
+goroutine 301 [select]:
+github.com/replicatedhq/kots/pkg/appstate.(*AppMonitor).runInformers(0xc0003d40a0, {0x68d5d88, 0xc0003d4140}, {0xc0005d9680?, 0x7?, 0x8?})
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:234 +0x8fd
+created by github.com/replicatedhq/kots/pkg/appstate.(*AppMonitor).run
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:169 +0x14f
+
+goroutine 302 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc001aa80d8, 0x6a)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc001fa96a0?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+k8s.io/client-go/tools/cache.(*DeltaFIFO).Pop(0xc001aa80b0, 0xc000a96170)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/delta_fifo.go:575 +0x256
+k8s.io/client-go/tools/cache.(*controller).processLoop(0xc00076a000)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:192 +0x36
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x30?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:226 +0x3e
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0x12463e5?, {0x68a4080, 0xc000c75d40}, 0x1, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:227 +0xb6
+k8s.io/apimachinery/pkg/util/wait.JitterUntil(0xc00076a078?, 0x3b9aca00, 0x0, 0x0?, 0xdf8475800?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:204 +0x89
+k8s.io/apimachinery/pkg/util/wait.Until(...)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:161
+k8s.io/client-go/tools/cache.(*controller).Run(0xc00076a000, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:163 +0x385
+k8s.io/client-go/tools/cache.(*sharedIndexInformer).Run(0xc001aa8000, 0x68d5000?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:503 +0x542
+github.com/replicatedhq/kots/pkg/appstate.runInformer({0x68d5d88, 0xc0003d4140}, {0x7f42e5a36530, 0xc001aa8000}, {0x68c2a60?, 0xc0025b0000})
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:260 +0x1a9
+github.com/replicatedhq/kots/pkg/appstate.runStatefulSetController({0x68d5d88, 0xc0003d4140}, {0x6916ba8?, 0xc0001831e0}, {0xc001a51400, 0x5}, {0xc0011082d0, 0x1, 0x1}, 0xc0011a2180)
+	/home/runner/work/kots/kots/pkg/appstate/statefulsets.go:60 +0x305
+github.com/replicatedhq/kots/pkg/appstate.(*AppMonitor).runInformers.func2.1()
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:210 +0x68
+created by github.com/replicatedhq/kots/pkg/appstate.(*AppMonitor).runInformers.func2
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:209 +0x17c
+
+goroutine 303 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc0018be0d8, 0x68)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc000f3ca40?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+k8s.io/client-go/tools/cache.(*DeltaFIFO).Pop(0xc0018be0b0, 0xc0003662a0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/delta_fifo.go:575 +0x256
+k8s.io/client-go/tools/cache.(*controller).processLoop(0xc0017f2000)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:192 +0x36
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x30?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:226 +0x3e
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0x12463e5?, {0x68a4080, 0xc001ab0240}, 0x1, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:227 +0xb6
+k8s.io/apimachinery/pkg/util/wait.JitterUntil(0xc0017f2078?, 0x3b9aca00, 0x0, 0x0?, 0xdf8475800?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:204 +0x89
+k8s.io/apimachinery/pkg/util/wait.Until(...)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:161
+k8s.io/client-go/tools/cache.(*controller).Run(0xc0017f2000, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:163 +0x385
+k8s.io/client-go/tools/cache.(*sharedIndexInformer).Run(0xc0018be000, 0x68d5000?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:503 +0x542
+github.com/replicatedhq/kots/pkg/appstate.runInformer({0x68d5d88, 0xc0003d4140}, {0x7f42e5a36530, 0xc0018be000}, {0x68c29a0?, 0xc001642000})
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:260 +0x1a9
+github.com/replicatedhq/kots/pkg/appstate.runDeploymentController({0x68d5d88, 0xc0003d4140}, {0x6916ba8?, 0xc0001831e0}, {0xc001a51400, 0x5}, {0xc0011082a0, 0x1, 0x0?}, 0xc0011a2180)
+	/home/runner/work/kots/kots/pkg/appstate/deployments.go:47 +0x451
+github.com/replicatedhq/kots/pkg/appstate.(*AppMonitor).runInformers.func2.1()
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:210 +0x68
+created by github.com/replicatedhq/kots/pkg/appstate.(*AppMonitor).runInformers.func2
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:209 +0x17c
+
+goroutine 304 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc00013e238, 0x8c)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc0014511c0?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+k8s.io/client-go/tools/cache.(*DeltaFIFO).Pop(0xc00013e210, 0xc00013a1b0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/delta_fifo.go:575 +0x256
+k8s.io/client-go/tools/cache.(*controller).processLoop(0xc000ac00a0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:192 +0x36
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x30?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:226 +0x3e
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0x12463e5?, {0x68a4080, 0xc0011084b0}, 0x1, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:227 +0xb6
+k8s.io/apimachinery/pkg/util/wait.JitterUntil(0xc000ac0118?, 0x3b9aca00, 0x0, 0x0?, 0xdf8475800?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:204 +0x89
+k8s.io/apimachinery/pkg/util/wait.Until(...)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:161
+k8s.io/client-go/tools/cache.(*controller).Run(0xc000ac00a0, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:163 +0x385
+k8s.io/client-go/tools/cache.(*sharedIndexInformer).Run(0xc00013e0b0, 0x68d5000?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:503 +0x542
+github.com/replicatedhq/kots/pkg/appstate.runInformer({0x68d5d88, 0xc0003d4140}, {0x7f42e5a36530, 0xc00013e0b0}, {0x68c29a0?, 0xc00148c060})
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:260 +0x1a9
+github.com/replicatedhq/kots/pkg/appstate.runDeploymentController({0x68d5d88, 0xc0003d4140}, {0x6916ba8?, 0xc0001831e0}, {0xc00052bb60, 0x3}, {0xc0003cd200, 0x5, 0xc0018fafd0?}, 0xc0011a2180)
+	/home/runner/work/kots/kots/pkg/appstate/deployments.go:47 +0x451
+github.com/replicatedhq/kots/pkg/appstate.(*AppMonitor).runInformers.func2.1()
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:210 +0x68
+created by github.com/replicatedhq/kots/pkg/appstate.(*AppMonitor).runInformers.func2
+	/home/runner/work/kots/kots/pkg/appstate/appstate.go:209 +0x17c
+
+goroutine 152 [chan receive]:
+k8s.io/client-go/tools/cache.(*processorListener).run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:968 +0x57
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x30?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:226 +0x3e
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0xc0018faf38?, {0x68a4080, 0xc00112c0f0}, 0x1, 0xc00007c540)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:227 +0xb6
+k8s.io/apimachinery/pkg/util/wait.JitterUntil(0x13?, 0x3b9aca00, 0x0, 0xd0?, 0xc0018faf88?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:204 +0x89
+k8s.io/apimachinery/pkg/util/wait.Until(...)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:161
+k8s.io/client-go/tools/cache.(*processorListener).run(0xc0017ee090)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:967 +0x6b
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 322 [chan receive, 103 minutes]:
+k8s.io/client-go/tools/cache.(*sharedProcessor).run(0xc0003d4190, 0xc0018fa7b0?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/shared_informer.go:802 +0x58
+k8s.io/apimachinery/pkg/util/wait.(*Group).StartWithChannel.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:55 +0x22
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 323 [chan receive, 103 minutes]:
+k8s.io/client-go/tools/cache.(*controller).Run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:133 +0x28
+created by k8s.io/client-go/tools/cache.(*controller).Run
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/controller.go:132 +0xc5
+
+goroutine 324 [select]:
+k8s.io/client-go/tools/cache.watchHandler({0x0?, 0x0?, 0x8a97660?}, {0x68b8380, 0xc001a6cbc0}, {0x7f41e5533190, 0xc00013e210}, {0x690f7c0?, 0x3de8aa0}, 0x0, ...)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:712 +0x185
+k8s.io/client-go/tools/cache.(*Reflector).watch(0xc000546000, {0x0?, 0x0?}, 0xc0011a21e0, 0xc001312a20?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:431 +0x54e
+k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch(0xc000546000, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:356 +0x34e
+k8s.io/client-go/tools/cache.(*Reflector).Run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:289 +0x26
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x10?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:226 +0x3e
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0xc0021b8040?, {0x68a4060, 0xc0003d41e0}, 0x1, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:227 +0xb6
+k8s.io/client-go/tools/cache.(*Reflector).Run(0xc000546000, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:288 +0x17d
+k8s.io/apimachinery/pkg/util/wait.(*Group).StartWithChannel.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:55 +0x22
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 107 [select]:
+k8s.io/client-go/tools/cache.(*Reflector).startResync(0xc000546000, 0xc0011a21e0, 0xc00194a4e0, 0x0?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:368 +0x114
+created by k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:355 +0x32a
+
+goroutine 339 [select]:
+k8s.io/client-go/tools/cache.watchHandler({0x0?, 0x0?, 0x8a97660?}, {0x68b8380, 0xc0025b0c40}, {0x7f41e5533190, 0xc0018be0b0}, {0x690f7c0?, 0x3de8aa0}, 0x0, ...)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:712 +0x185
+k8s.io/client-go/tools/cache.(*Reflector).watch(0xc0018c4000, {0x0?, 0x0?}, 0xc0011a21e0, 0xc001642040?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:431 +0x54e
+k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch(0xc0018c4000, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:356 +0x34e
+k8s.io/client-go/tools/cache.(*Reflector).Run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:289 +0x26
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0x10?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:226 +0x3e
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0xc001a0a040?, {0x68a4060, 0xc00037c050}, 0x1, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/backoff.go:227 +0xb6
+k8s.io/client-go/tools/cache.(*Reflector).Run(0xc0018c4000, 0xc0011a21e0)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:288 +0x17d
+k8s.io/apimachinery/pkg/util/wait.(*Group).StartWithChannel.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:55 +0x22
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1()
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:72 +0x5a
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/wait/wait.go:70 +0x85
+
+goroutine 342 [select]:
+k8s.io/client-go/tools/cache.(*Reflector).startResync(0xc0018c4000, 0xc0011a21e0, 0xc000fba4e0, 0x0?)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:368 +0x114
+created by k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/cache/reflector.go:355 +0x32a
+
+goroutine 4763 [chan receive, 2 minutes]:
+github.com/replicatedhq/kots/pkg/informers.Start.func1()
+	/home/runner/work/kots/kots/pkg/informers/informers.go:59 +0x74
+created by github.com/replicatedhq/kots/pkg/informers.Start
+	/home/runner/work/kots/kots/pkg/informers/informers.go:56 +0x231
+
+goroutine 8293 [select]:
+golang.org/x/net/http2.(*clientStream).writeRequest(0xc0003cdb00, 0xc000eaca00)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1473 +0xb27
+golang.org/x/net/http2.(*clientStream).doRequest(0x7ff226?, 0xc001cb58c0?)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1335 +0x1e
+created by golang.org/x/net/http2.(*ClientConn).RoundTrip
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1229 +0x33f
+
+goroutine 4757 [select, 3 minutes]:
+golang.org/x/net/http2.(*clientStream).writeRequest(0xc000556000, 0xc00036e300)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1473 +0xb27
+golang.org/x/net/http2.(*clientStream).doRequest(0x3c?, 0x628cd30?)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1335 +0x1e
+created by golang.org/x/net/http2.(*ClientConn).RoundTrip
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1229 +0x33f
+
+goroutine 4758 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc000556048, 0x3)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc0015f0450?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+golang.org/x/net/http2.(*pipe).Read(0xc000556030, {0xc0013f3201, 0x5ff, 0x5ff})
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/pipe.go:76 +0xeb
+golang.org/x/net/http2.transportResponseBody.Read({0x0?}, {0xc0013f3201?, 0x2?, 0x3e54646?})
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:2543 +0x75
+encoding/json.(*Decoder).refill(0xc000dfa8c0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:165 +0x188
+encoding/json.(*Decoder).readValue(0xc000dfa8c0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:140 +0xbb
+encoding/json.(*Decoder).Decode(0xc000dfa8c0, {0x381df20, 0xc001765218})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:63 +0x78
+k8s.io/apimachinery/pkg/util/framer.(*jsonFrameReader).Read(0xc000f27560, {0xc001c20000, 0x400, 0x400})
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/framer/framer.go:152 +0x1a5
+k8s.io/apimachinery/pkg/runtime/serializer/streaming.(*decoder).Decode(0xc000bde0a0, 0xc001cc21a0?, {0x68b8128, 0xc001718ac0})
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/runtime/serializer/streaming/streaming.go:77 +0xa7
+k8s.io/client-go/rest/watch.(*Decoder).Decode(0xc000072280)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/rest/watch/decoder.go:49 +0x4f
+k8s.io/apimachinery/pkg/watch.(*StreamWatcher).receive(0xc001fc81c0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/watch/streamwatcher.go:105 +0xdc
+created by k8s.io/apimachinery/pkg/watch.NewStreamWatcher
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/watch/streamwatcher.go:76 +0x130
+
+goroutine 5548 [select]:
+net/http.(*persistConn).writeLoop(0xc0017e3560)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:2410 +0xf2
+created by net/http.(*Transport).dialConn
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1766 +0x173d
+
+goroutine 5445 [IO wait]:
+internal/poll.runtime_pollWait(0x7f42e59f4c18, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc001a9fd80?, 0xc001ea5000?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc001a9fd80, {0xc001ea5000, 0x1000, 0x1000})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc001a9fd80, {0xc001ea5000?, 0x43c987?, 0xc00050ec30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc001446bc8, {0xc001ea5000?, 0x0?, 0xc001f00d00?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/net.go:183 +0x45
+net/http.(*persistConn).Read(0xc001de4d80, {0xc001ea5000?, 0xc00052c540?, 0xc00050ed30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1943 +0x4e
+bufio.(*Reader).fill(0xc0000d8ae0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:106 +0xff
+bufio.(*Reader).Peek(0xc0000d8ae0, 0x1)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:144 +0x5d
+net/http.(*persistConn).readLoop(0xc001de4d80)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:2107 +0x1ac
+created by net/http.(*Transport).dialConn
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1765 +0x16ea
+
+goroutine 4762 [sync.Cond.Wait, 2 minutes]:
+sync.runtime_notifyListWait(0xc0017b0f48, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc0017b0f38?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+golang.org/x/net/http2.(*pipe).Read(0xc0017b0f30, {0xc0018cf800, 0x200, 0x200})
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/pipe.go:76 +0xeb
+golang.org/x/net/http2.transportResponseBody.Read({0x0?}, {0xc0018cf800?, 0x3?, 0x736572676e692000?})
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:2543 +0x75
+encoding/json.(*Decoder).refill(0xc000fe4a00)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:165 +0x188
+encoding/json.(*Decoder).readValue(0xc000fe4a00)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:140 +0xbb
+encoding/json.(*Decoder).Decode(0xc000fe4a00, {0x381df20, 0xc001b7d698})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:63 +0x78
+k8s.io/apimachinery/pkg/util/framer.(*jsonFrameReader).Read(0xc00111d6e0, {0xc001828400, 0x400, 0x400})
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/framer/framer.go:152 +0x1a5
+k8s.io/apimachinery/pkg/runtime/serializer/streaming.(*decoder).Decode(0xc000bded70, 0xc001430e88?, {0x68b8128, 0xc001a6c200})
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/runtime/serializer/streaming/streaming.go:77 +0xa7
+k8s.io/client-go/rest/watch.(*Decoder).Decode(0xc0011a4940)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/rest/watch/decoder.go:49 +0x4f
+k8s.io/apimachinery/pkg/watch.(*StreamWatcher).receive(0xc001be9bc0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/watch/streamwatcher.go:105 +0xdc
+created by k8s.io/apimachinery/pkg/watch.NewStreamWatcher
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/watch/streamwatcher.go:76 +0x130
+
+goroutine 5839 [select, 1 minutes]:
+net/http.(*persistConn).writeLoop(0xc001e10900)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:2410 +0xf2
+created by net/http.(*Transport).dialConn
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1766 +0x173d
+
+goroutine 8294 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc0003cdb48, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc0003cdb38?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+golang.org/x/net/http2.(*pipe).Read(0xc0003cdb30, {0xc001027400, 0x200, 0x200})
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/pipe.go:76 +0xeb
+golang.org/x/net/http2.transportResponseBody.Read({0x0?}, {0xc001027400?, 0x3?, 0xc0018fac00?})
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:2543 +0x75
+encoding/json.(*Decoder).refill(0xc0020ccf00)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:165 +0x188
+encoding/json.(*Decoder).readValue(0xc0020ccf00)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:140 +0xbb
+encoding/json.(*Decoder).Decode(0xc0020ccf00, {0x381df20, 0xc001b7de90})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:63 +0x78
+k8s.io/apimachinery/pkg/util/framer.(*jsonFrameReader).Read(0xc001cb3e90, {0xc0020ea400, 0x400, 0x400})
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/framer/framer.go:152 +0x1a5
+k8s.io/apimachinery/pkg/runtime/serializer/streaming.(*decoder).Decode(0xc0000da0f0, 0x0?, {0x68b8128, 0xc001e150c0})
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/runtime/serializer/streaming/streaming.go:77 +0xa7
+k8s.io/client-go/rest/watch.(*Decoder).Decode(0xc000d48100)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/rest/watch/decoder.go:49 +0x4f
+k8s.io/apimachinery/pkg/watch.(*StreamWatcher).receive(0xc001e15080)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/watch/streamwatcher.go:105 +0xdc
+created by k8s.io/apimachinery/pkg/watch.NewStreamWatcher
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/watch/streamwatcher.go:76 +0x130
+
+goroutine 5547 [IO wait]:
+internal/poll.runtime_pollWait(0x7f42e59f4b28, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc001d4cd80?, 0xc00147b000?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc001d4cd80, {0xc00147b000, 0x1000, 0x1000})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc001d4cd80, {0xc00147b000?, 0x43c987?, 0xc0004d0c30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc001928348, {0xc00147b000?, 0x0?, 0xc000583ba0?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/net.go:183 +0x45
+net/http.(*persistConn).Read(0xc0017e3560, {0xc00147b000?, 0xc00210be60?, 0xc0004d0d30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1943 +0x4e
+bufio.(*Reader).fill(0xc001666fc0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:106 +0xff
+bufio.(*Reader).Peek(0xc001666fc0, 0x1)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:144 +0x5d
+net/http.(*persistConn).readLoop(0xc0017e3560)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:2107 +0x1ac
+created by net/http.(*Transport).dialConn
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1765 +0x16ea
+
+goroutine 5269 [select, 3 minutes]:
+golang.org/x/net/http2.(*clientStream).writeRequest(0xc00136f380, 0xc000c38e00)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1473 +0xb27
+golang.org/x/net/http2.(*clientStream).doRequest(0x61ae6a?, 0x628fdd0?)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1335 +0x1e
+created by golang.org/x/net/http2.(*ClientConn).RoundTrip
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1229 +0x33f
+
+goroutine 5683 [select, 1 minutes]:
+net/http.(*persistConn).writeLoop(0xc001424000)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:2410 +0xf2
+created by net/http.(*Transport).dialConn
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1766 +0x173d
+
+goroutine 5243 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc0013707c8, 0x2)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc002184060?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+golang.org/x/net/http2.(*pipe).Read(0xc0013707b0, {0xc0013a1201, 0x5ff, 0x5ff})
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/pipe.go:76 +0xeb
+golang.org/x/net/http2.transportResponseBody.Read({0x0?}, {0xc0013a1201?, 0x2?, 0x3e54646?})
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:2543 +0x75
+encoding/json.(*Decoder).refill(0xc001129e00)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:165 +0x188
+encoding/json.(*Decoder).readValue(0xc001129e00)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:140 +0xbb
+encoding/json.(*Decoder).Decode(0xc001129e00, {0x381df20, 0xc0011372a8})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/json/stream.go:63 +0x78
+k8s.io/apimachinery/pkg/util/framer.(*jsonFrameReader).Read(0xc00227d050, {0xc000f25000, 0x400, 0x400})
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/framer/framer.go:152 +0x1a5
+k8s.io/apimachinery/pkg/runtime/serializer/streaming.(*decoder).Decode(0xc000bdfa40, 0xc0021a9000?, {0x68b8128, 0xc00180cf40})
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/runtime/serializer/streaming/streaming.go:77 +0xa7
+k8s.io/client-go/rest/watch.(*Decoder).Decode(0xc0006aad60)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/rest/watch/decoder.go:49 +0x4f
+k8s.io/apimachinery/pkg/watch.(*StreamWatcher).receive(0xc0025b0c40)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/watch/streamwatcher.go:105 +0xdc
+created by k8s.io/apimachinery/pkg/watch.NewStreamWatcher
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/watch/streamwatcher.go:76 +0x130
+
+goroutine 5576 [IO wait]:
+internal/poll.runtime_pollWait(0x7f42e59f50c8, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc001682980?, 0xc000179000?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc001682980, {0xc000179000, 0x1000, 0x1000})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc001682980, {0xc000179000?, 0x43c987?, 0xc000f6cc30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc0014460c0, {0xc000179000?, 0x0?, 0xc001f00d00?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/net.go:183 +0x45
+net/http.(*persistConn).Read(0xc0019ed320, {0xc000179000?, 0xc0022844e0?, 0xc000f6cd30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1943 +0x4e
+bufio.(*Reader).fill(0xc000f15020)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:106 +0xff
+bufio.(*Reader).Peek(0xc000f15020, 0x1)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:144 +0x5d
+net/http.(*persistConn).readLoop(0xc0019ed320)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:2107 +0x1ac
+created by net/http.(*Transport).dialConn
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1765 +0x16ea
+
+goroutine 8728 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc00174d5d0, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0x3441676b5861382b?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+github.com/moby/spdystream.(*PriorityFrameQueue).Pop(0xc001742960)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/priority.go:102 +0x99
+github.com/moby/spdystream.(*Connection).frameHandler(0xc0018be160, 0x6a5662396f555556?, 0x65714275704c467a?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:414 +0x36
+github.com/moby/spdystream.(*Connection).Serve.func2(0x3635336348393868?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:331 +0x66
+created by github.com/moby/spdystream.(*Connection).Serve
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:327 +0x71
+
+goroutine 5577 [select]:
+net/http.(*persistConn).writeLoop(0xc0019ed320)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:2410 +0xf2
+created by net/http.(*Transport).dialConn
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1766 +0x173d
+
+goroutine 5446 [select]:
+net/http.(*persistConn).writeLoop(0xc001de4d80)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:2410 +0xf2
+created by net/http.(*Transport).dialConn
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1766 +0x173d
+
+goroutine 5242 [select, 2 minutes]:
+golang.org/x/net/http2.(*clientStream).writeRequest(0xc001370780, 0xc001d7a200)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1473 +0xb27
+golang.org/x/net/http2.(*clientStream).doRequest(0x68d5e30?, 0xc0016adb00?)
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1335 +0x1e
+created by golang.org/x/net/http2.(*ClientConn).RoundTrip
+	/home/runner/go/pkg/mod/golang.org/x/net@v0.11.0/http2/transport.go:1229 +0x33f
+
+goroutine 5381 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7f42e59f52a8, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc001fb4100?, 0xc000554000?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc001fb4100, {0xc000554000, 0x1000, 0x1000})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc001fb4100, {0xc000554000?, 0x4b2b46?, 0x0?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc001928048, {0xc000554000?, 0x0?, 0xc002332ed8?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/net.go:183 +0x45
+net/http.(*connReader).Read(0xc002332ed0, {0xc000554000, 0x1000, 0x1000})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:782 +0x171
+bufio.(*Reader).fill(0xc001d36cc0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:106 +0xff
+bufio.(*Reader).Peek(0xc001d36cc0, 0x4)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:144 +0x5d
+net/http.(*conn).serve(0xc00113a3f0, {0x68d5e30, 0xc0016adb00})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:2030 +0x77c
+created by net/http.(*Server).Serve
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:3089 +0x5ed
+
+goroutine 6202 [IO wait]:
+internal/poll.runtime_pollWait(0x7f42e59f4fd8, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc0001dd100?, 0xc001689000?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc0001dd100, {0xc001689000, 0x1000, 0x1000})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc0001dd100, {0xc001689000?, 0x4b2b46?, 0x0?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc0012d6078, {0xc001689000?, 0x0?, 0xc001cb58c8?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/net.go:183 +0x45
+net/http.(*connReader).Read(0xc001cb58c0, {0xc001689000, 0x1000, 0x1000})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:782 +0x171
+bufio.(*Reader).fill(0xc00117f200)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:106 +0xff
+bufio.(*Reader).Peek(0xc00117f200, 0x4)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:144 +0x5d
+net/http.(*conn).serve(0xc0020d1290, {0x68d5e30, 0xc0016adb00})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:2030 +0x77c
+created by net/http.(*Server).Serve
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:3089 +0x5ed
+
+goroutine 8634 [semacquire]:
+sync.runtime_Semacquire(0x19a5630?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:62 +0x27
+sync.(*WaitGroup).Wait(0xc001980870?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/waitgroup.go:116 +0x4b
+k8s.io/client-go/tools/remotecommand.(*streamProtocolV4).stream(0xc0017e6bc0, {0x7f41e52c96e8?, 0xc001a2c8d0?})
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/remotecommand/v4.go:72 +0xe5
+k8s.io/client-go/tools/remotecommand.(*streamExecutor).StreamWithContext.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/remotecommand/remotecommand.go:171 +0xa2
+created by k8s.io/client-go/tools/remotecommand.(*streamExecutor).StreamWithContext
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/remotecommand/remotecommand.go:165 +0x215
+
+goroutine 8731 [chan receive]:
+github.com/moby/spdystream.(*Connection).Serve.func1(0x5a79692b4f316d38?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:322 +0x2b
+created by github.com/moby/spdystream.(*Connection).Serve
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:321 +0x150
+
+goroutine 5838 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7f42e59f4858, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc0019e5580?, 0xc001314000?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc0019e5580, {0xc001314000, 0xc000, 0xc000})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc0019e5580, {0xc001314000?, 0xc000752005?, 0x4b3?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc001e0e0f0, {0xc001314000?, 0xc001b4b918?, 0xc002114c30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/net.go:183 +0x45
+crypto/tls.(*atLeastReader).Read(0xc000176840, {0xc001314000?, 0xc000176840?, 0x0?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:788 +0x3d
+bytes.(*Buffer).ReadFrom(0xc002114d10, {0x6899020, 0xc000176840})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bytes/buffer.go:202 +0x98
+crypto/tls.(*Conn).readFromUntil(0xc002114a80, {0x68a4be0?, 0xc001e0e0f0}, 0x0?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:810 +0xe5
+crypto/tls.(*Conn).readRecordOrCCS(0xc002114a80, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:617 +0x116
+crypto/tls.(*Conn).readRecord(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc002114a80, {0xc000766000, 0x1000, 0x13?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:1316 +0x16f
+net/http.(*persistConn).Read(0xc001e10900, {0xc000766000?, 0xc0013339e0?, 0xc001b4bd30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1943 +0x4e
+bufio.(*Reader).fill(0xc000cd0ba0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:106 +0xff
+bufio.(*Reader).Peek(0xc000cd0ba0, 0x1)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:144 +0x5d
+net/http.(*persistConn).readLoop(0xc001e10900)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:2107 +0x1ac
+created by net/http.(*Transport).dialConn
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1765 +0x16ea
+
+goroutine 5937 [chan receive, 1 minutes]:
+github.com/replicatedhq/kots/pkg/supportbundle.makeAppVersionArchiveCollectors.func1()
+	/home/runner/work/kots/kots/pkg/supportbundle/spec.go:995 +0x3f
+created by github.com/replicatedhq/kots/pkg/supportbundle.makeAppVersionArchiveCollectors
+	/home/runner/work/kots/kots/pkg/supportbundle/spec.go:994 +0xad
+
+goroutine 8727 [chan receive]:
+github.com/moby/spdystream.(*Connection).Serve.func1(0xc001cb58c0?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:322 +0x2b
+created by github.com/moby/spdystream.(*Connection).Serve
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:321 +0x150
+
+goroutine 6218 [select]:
+github.com/replicatedhq/troubleshoot/pkg/collect.(*CollectExec).Collect(0xc000bd9490, 0xc00217eac8?)
+	/home/runner/go/pkg/mod/github.com/replicatedhq/troubleshoot@v0.70.2/pkg/collect/exec.go:59 +0x1a6
+github.com/replicatedhq/troubleshoot/pkg/supportbundle.runCollectors({0x68d5e30, 0xc00168b890}, {0xc000867400?, 0x2c?, 0x1?}, 0xc000565c48, {0xc00135f400, 0x43}, {0x628cd40, 0x1, ...})
+	/home/runner/go/pkg/mod/github.com/replicatedhq/troubleshoot@v0.70.2/pkg/supportbundle/collect.go:172 +0x14b2
+github.com/replicatedhq/troubleshoot/pkg/supportbundle.CollectSupportBundleFromSpec(0xc0012ba928, 0x1?, {0x628cd40, 0x1, 0x8a8f720, 0xc00225cd80, {0x688fcf8, 0x0}, 0xc001874660, 0x0, ...})
+	/home/runner/go/pkg/mod/github.com/replicatedhq/troubleshoot@v0.70.2/pkg/supportbundle/supportbundle.go:124 +0x7e9
+github.com/replicatedhq/troubleshoot/pkg/supportbundle.CollectSupportBundleFromURI({0xc001df1350?, 0x4b2345?}, {0xc001a35900, 0x3, 0x4}, {0x628cd40, 0x1, 0x8a8f720, 0xc00225cd80, {0x688fcf8, ...}, ...})
+	/home/runner/go/pkg/mod/github.com/replicatedhq/troubleshoot@v0.70.2/pkg/supportbundle/supportbundle.go:228 +0x125
+github.com/replicatedhq/kots/pkg/supportbundle.executeSupportBundleCollectRoutine.func2()
+	/home/runner/work/kots/kots/pkg/supportbundle/execute.go:186 +0x26c
+created by github.com/replicatedhq/kots/pkg/supportbundle.executeSupportBundleCollectRoutine
+	/home/runner/work/kots/kots/pkg/supportbundle/execute.go:178 +0x299
+
+goroutine 6197 [chan receive, 1 minutes]:
+github.com/replicatedhq/kots/pkg/supportbundle.makeAppVersionArchiveCollectors.func1()
+	/home/runner/work/kots/kots/pkg/supportbundle/spec.go:995 +0x3f
+created by github.com/replicatedhq/kots/pkg/supportbundle.makeAppVersionArchiveCollectors
+	/home/runner/work/kots/kots/pkg/supportbundle/spec.go:994 +0xad
+
+goroutine 6194 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7f42e59f4a38, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc001a9f880?, 0xc001b18000?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc001a9f880, {0xc001b18000, 0xc000, 0xc000})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc001a9f880, {0xc001b18000?, 0xc00014a005?, 0x4b3?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc001e0e000, {0xc001b18000?, 0x0?, 0xc00119cc30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/net.go:183 +0x45
+crypto/tls.(*atLeastReader).Read(0xc00139a288, {0xc001b18000?, 0xc00139a288?, 0x0?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:788 +0x3d
+bytes.(*Buffer).ReadFrom(0xc00119cd10, {0x6899020, 0xc00139a288})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bytes/buffer.go:202 +0x98
+crypto/tls.(*Conn).readFromUntil(0xc00119ca80, {0x68a4be0?, 0xc001e0e000}, 0x0?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:810 +0xe5
+crypto/tls.(*Conn).readRecordOrCCS(0xc00119ca80, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:617 +0x116
+crypto/tls.(*Conn).readRecord(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc00119ca80, {0xc000d4f000, 0x1000, 0x13?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:1316 +0x16f
+net/http.(*persistConn).Read(0xc0004c25a0, {0xc000d4f000?, 0xc001d1a180?, 0xc0029aed30?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1943 +0x4e
+bufio.(*Reader).fill(0xc0005a25a0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:106 +0xff
+bufio.(*Reader).Peek(0xc0005a25a0, 0x1)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bufio/bufio.go:144 +0x5d
+net/http.(*persistConn).readLoop(0xc0004c25a0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:2107 +0x1ac
+created by net/http.(*Transport).dialConn
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/transport.go:1765 +0x16ea
+
+goroutine 8632 [IO wait]:
+internal/poll.runtime_pollWait(0x7f42e59f4768, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc001a9e200?, 0xc0014ea700?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc001a9e200, {0xc0014ea700, 0x700, 0x700})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc001a9e200, {0xc0014ea700?, 0x2b?, 0x664?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc001e0e368, {0xc0014ea700?, 0x2b?, 0x664?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/net.go:183 +0x45
+crypto/tls.(*atLeastReader).Read(0xc0021f7ba8, {0xc0014ea700?, 0xc0021f7ba8?, 0x0?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:788 +0x3d
+bytes.(*Buffer).ReadFrom(0xc00144ad10, {0x6899020, 0xc0021f7ba8})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bytes/buffer.go:202 +0x98
+crypto/tls.(*Conn).readFromUntil(0xc00144aa80, {0x68a4be0?, 0xc001e0e368}, 0xc0016f1300?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:810 +0xe5
+crypto/tls.(*Conn).readRecordOrCCS(0xc00144aa80, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:617 +0x116
+crypto/tls.(*Conn).readRecord(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc00144aa80, {0xc0011cc2c4, 0x4, 0x451e52?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/crypto/tls/conn.go:1316 +0x16f
+io.ReadAtLeast({0x7f42e5a27980, 0xc00144aa80}, {0xc0011cc2c4, 0x4, 0x4}, 0x4)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/io/io.go:332 +0x9a
+io.ReadFull(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/io/io.go:351
+encoding/binary.Read({0x7f42e5a27980, 0xc00144aa80}, {0x68e1b00, 0x8c53cd0}, {0x356aca0?, 0xc0011cc2c0})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/encoding/binary/binary.go:233 +0xc8
+github.com/moby/spdystream/spdy.(*Framer).ReadFrame(0xc001025d40)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/spdy/read.go:164 +0x5b
+github.com/moby/spdystream.(*idleAwareFramer).ReadFrame(0xc001477900)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:167 +0x25
+github.com/moby/spdystream.(*Connection).Serve(0xc0018be160, 0xc000e02d20)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:341 +0x26d
+created by k8s.io/apimachinery/pkg/util/httpstream/spdy.newConnection
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/httpstream/spdy/connection.go:94 +0x145
+
+goroutine 6217 [select]:
+github.com/replicatedhq/kots/pkg/supportbundle.executeUpdateRoutine.func1()
+	/home/runner/work/kots/kots/pkg/supportbundle/execute.go:59 +0x179
+created by github.com/replicatedhq/kots/pkg/supportbundle.executeUpdateRoutine
+	/home/runner/work/kots/kots/pkg/supportbundle/execute.go:51 +0x10a
+
+goroutine 8730 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc00174d610, 0x1)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc0021ac060?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+github.com/moby/spdystream.(*PriorityFrameQueue).Pop(0xc001742990)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/priority.go:102 +0x99
+github.com/moby/spdystream.(*Connection).frameHandler(0xc0018be160, 0x4c6b352f36357073?, 0x486d4977324c7176?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:414 +0x36
+github.com/moby/spdystream.(*Connection).Serve.func2(0x2f56632b5465792b?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:331 +0x66
+created by github.com/moby/spdystream.(*Connection).Serve
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:327 +0x71
+
+goroutine 8704 [select]:
+k8s.io/client-go/tools/remotecommand.(*streamExecutor).StreamWithContext(0x28?, {0x68d5dc0, 0xc0001b6000}, {{0x0, 0x0}, {0x6898180, 0xc001ae8ff0}, {0x6898180, 0xc001ae9020}, 0x0, ...})
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/remotecommand/remotecommand.go:174 +0x2be
+k8s.io/client-go/tools/remotecommand.(*streamExecutor).Stream(0x0?, {{0x0, 0x0}, {0x6898180, 0xc001ae8ff0}, {0x6898180, 0xc001ae9020}, 0x0, {0x0, 0x0}})
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/remotecommand/remotecommand.go:115 +0x65
+github.com/replicatedhq/troubleshoot/pkg/collect.getExecOutputs(_, _, {{{0x0, 0x0}, {0x0, 0x0}}, {{0xc0006c1c80, 0x18}, {0xc0006c1c98, 0x13}, ...}, ...}, ...)
+	/home/runner/go/pkg/mod/github.com/replicatedhq/troubleshoot@v0.70.2/pkg/collect/exec.go:136 +0x542
+github.com/replicatedhq/troubleshoot/pkg/collect.execWithoutTimeout(0xc00225cd80?, {0xc00135f400, 0x43}, 0xc00021f7c0)
+	/home/runner/go/pkg/mod/github.com/replicatedhq/troubleshoot@v0.70.2/pkg/collect/exec.go:86 +0x234
+github.com/replicatedhq/troubleshoot/pkg/collect.(*CollectExec).Collect.func1()
+	/home/runner/go/pkg/mod/github.com/replicatedhq/troubleshoot@v0.70.2/pkg/collect/exec.go:51 +0x3e
+created by github.com/replicatedhq/troubleshoot/pkg/collect.(*CollectExec).Collect
+	/home/runner/go/pkg/mod/github.com/replicatedhq/troubleshoot@v0.70.2/pkg/collect/exec.go:50 +0x118
+
+goroutine 8726 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc00174d590, 0x1)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc002453ec0?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+github.com/moby/spdystream.(*PriorityFrameQueue).Pop(0xc001742930)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/priority.go:102 +0x99
+github.com/moby/spdystream.(*Connection).frameHandler(0xc0018be160, 0x92381e?, 0xc000556600?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:414 +0x36
+github.com/moby/spdystream.(*Connection).Serve.func2(0xc0001146b8?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:331 +0x66
+created by github.com/moby/spdystream.(*Connection).Serve
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:327 +0x71
+
+goroutine 8672 [select]:
+github.com/moby/spdystream.(*Stream).Read(0xc0019583c0, {0xc00246e0ed, 0x313, 0xc001e28688?})
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/stream.go:96 +0xb2
+bytes.(*Buffer).ReadFrom(0xc001ae9020, {0x7f41e52c9a10, 0xc0019583c0})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bytes/buffer.go:202 +0x98
+io.copyBuffer({0x6898180, 0xc001ae9020}, {0x7f41e52c9a10, 0xc0019583c0}, {0x0, 0x0, 0x0})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/io/io.go:413 +0x14b
+io.Copy(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/io/io.go:386
+k8s.io/client-go/tools/remotecommand.(*streamProtocolV2).copyStderr.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/remotecommand/v2.go:166 +0x111
+created by k8s.io/client-go/tools/remotecommand.(*streamProtocolV2).copyStderr
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/remotecommand/v2.go:161 +0x90
+
+goroutine 8729 [chan receive]:
+github.com/moby/spdystream.(*Connection).Serve.func1(0x4c58726f73634259?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:322 +0x2b
+created by github.com/moby/spdystream.(*Connection).Serve
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:321 +0x150
+
+goroutine 8732 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc00174d650, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0x7337583179385938?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+github.com/moby/spdystream.(*PriorityFrameQueue).Pop(0xc0017429c0)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/priority.go:102 +0x99
+github.com/moby/spdystream.(*Connection).frameHandler(0xc0018be160, 0x4d6d64662b646750?, 0x4f4d4978534e5a72?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:414 +0x36
+github.com/moby/spdystream.(*Connection).Serve.func2(0x652f30776a683135?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:331 +0x66
+created by github.com/moby/spdystream.(*Connection).Serve
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:327 +0x71
+
+goroutine 8670 [select]:
+github.com/moby/spdystream.(*Stream).Read(0xc001958280, {0xc001660800, 0x200, 0x4?})
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/stream.go:96 +0xb2
+io.ReadAll({0x7f41e52c9a10, 0xc001958280})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/io/io.go:701 +0x103
+k8s.io/client-go/tools/remotecommand.watchErrorStream.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/remotecommand/errorstream.go:41 +0x7f
+created by k8s.io/client-go/tools/remotecommand.watchErrorStream
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/remotecommand/errorstream.go:38 +0xd5
+
+goroutine 8553 [IO wait]:
+internal/poll.runtime_pollWait(0x7f42e59f4ee8, 0x72)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc000482000?, 0xc0024d6d01?, 0x0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc000482000, {0xc0024d6d01, 0x1, 0x1})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc000482000, {0xc0024d6d01?, 0x19a5791?, 0x6898180?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc001928000, {0xc0024d6d01?, 0x6f6f426573726150?, 0x2020200a7d7d206c?})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/net.go:183 +0x45
+net/http.(*connReader).backgroundRead(0xc0024d6cf0)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:674 +0x3f
+created by net/http.(*connReader).startBackgroundRead
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:670 +0xca
+
+goroutine 8671 [select]:
+github.com/moby/spdystream.(*Stream).Read(0xc001958320, {0xc000d7f600, 0x200, 0xc001e27e88?})
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/stream.go:96 +0xb2
+bytes.(*Buffer).ReadFrom(0xc001ae8ff0, {0x7f41e52c9a10, 0xc001958320})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/bytes/buffer.go:202 +0x98
+io.copyBuffer({0x6898180, 0xc001ae8ff0}, {0x7f41e52c9a10, 0xc001958320}, {0x0, 0x0, 0x0})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/io/io.go:413 +0x14b
+io.Copy(...)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/io/io.go:386
+k8s.io/client-go/tools/remotecommand.(*streamProtocolV2).copyStdout.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/remotecommand/v2.go:149 +0x10b
+created by k8s.io/client-go/tools/remotecommand.(*streamProtocolV2).copyStdout
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.27.4/tools/remotecommand/v2.go:141 +0x8d
+
+goroutine 8724 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc00174d550, 0x4)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0x68da200?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/sync/cond.go:70 +0x8c
+github.com/moby/spdystream.(*PriorityFrameQueue).Pop(0xc001742900)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/priority.go:102 +0x99
+github.com/moby/spdystream.(*Connection).frameHandler(0xc0018be160, 0xc001ca1da0?, 0x0?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:414 +0x36
+github.com/moby/spdystream.(*Connection).Serve.func2(0xc000134eb8?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:331 +0x66
+created by github.com/moby/spdystream.(*Connection).Serve
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:327 +0x71
+
+goroutine 8723 [chan receive]:
+github.com/moby/spdystream.(*Connection).Serve.func1(0x628faf0?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:322 +0x2b
+created by github.com/moby/spdystream.(*Connection).Serve
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:321 +0x150
+
+goroutine 8633 [select]:
+k8s.io/apimachinery/pkg/util/httpstream/spdy.(*connection).sendPings(0xc001a2c8d0, 0x628fae0?)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/httpstream/spdy/connection.go:192 +0xcb
+created by k8s.io/apimachinery/pkg/util/httpstream/spdy.newConnection
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.27.4/pkg/util/httpstream/spdy/connection.go:96 +0x19f
+
+goroutine 8631 [select]:
+github.com/moby/spdystream.(*idleAwareFramer).monitor(0xc001477900)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:77 +0xde
+created by github.com/moby/spdystream.NewConnection
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:268 +0x3ca
+
+goroutine 8725 [chan receive]:
+github.com/moby/spdystream.(*Connection).Serve.func1(0xc000115fa8?)
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:322 +0x2b
+created by github.com/moby/spdystream.(*Connection).Serve
+	/home/runner/go/pkg/mod/github.com/moby/spdystream@v0.2.0/connection.go:321 +0x150

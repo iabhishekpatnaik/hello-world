@@ -1,0 +1,2 @@
+failed to stream command output: unable to upgrade connection: container not found ("collector")
+

@@ -1,0 +1,61 @@
+{"level":"info","time":"2023-11-21T14:31:05.794059Z","msg":"FLAG: --concurrency=\"0\""}
+{"level":"info","time":"2023-11-21T14:31:05.794081Z","msg":"FLAG: --domain=\"hub.svc.cluster.local\""}
+{"level":"info","time":"2023-11-21T14:31:05.794085Z","msg":"FLAG: --help=\"false\""}
+{"level":"info","time":"2023-11-21T14:31:05.794087Z","msg":"FLAG: --log_as_json=\"true\""}
+{"level":"info","time":"2023-11-21T14:31:05.794089Z","msg":"FLAG: --log_caller=\"\""}
+{"level":"info","time":"2023-11-21T14:31:05.794091Z","msg":"FLAG: --log_output_level=\"default:info\""}
+{"level":"info","time":"2023-11-21T14:31:05.794093Z","msg":"FLAG: --log_rotate=\"\""}
+{"level":"info","time":"2023-11-21T14:31:05.794096Z","msg":"FLAG: --log_rotate_max_age=\"30\""}
+{"level":"info","time":"2023-11-21T14:31:05.794098Z","msg":"FLAG: --log_rotate_max_backups=\"1000\""}
+{"level":"info","time":"2023-11-21T14:31:05.794100Z","msg":"FLAG: --log_rotate_max_size=\"104857600\""}
+{"level":"info","time":"2023-11-21T14:31:05.794102Z","msg":"FLAG: --log_stacktrace_level=\"default:none\""}
+{"level":"info","time":"2023-11-21T14:31:05.794107Z","msg":"FLAG: --log_target=\"[stdout]\""}
+{"level":"info","time":"2023-11-21T14:31:05.794110Z","msg":"FLAG: --meshConfig=\"./etc/istio/config/mesh\""}
+{"level":"info","time":"2023-11-21T14:31:05.794112Z","msg":"FLAG: --outlierLogPath=\"\""}
+{"level":"info","time":"2023-11-21T14:31:05.794114Z","msg":"FLAG: --profiling=\"true\""}
+{"level":"info","time":"2023-11-21T14:31:05.794116Z","msg":"FLAG: --proxyComponentLogLevel=\"misc:error\""}
+{"level":"info","time":"2023-11-21T14:31:05.794118Z","msg":"FLAG: --proxyLogLevel=\"warning\""}
+{"level":"info","time":"2023-11-21T14:31:05.794122Z","msg":"FLAG: --s2a_enable_appengine_dialer=\"false\""}
+{"level":"info","time":"2023-11-21T14:31:05.794124Z","msg":"FLAG: --s2a_timeout=\"3s\""}
+{"level":"info","time":"2023-11-21T14:31:05.794127Z","msg":"FLAG: --serviceCluster=\"istio-proxy\""}
+{"level":"info","time":"2023-11-21T14:31:05.794129Z","msg":"FLAG: --stsPort=\"0\""}
+{"level":"info","time":"2023-11-21T14:31:05.794131Z","msg":"FLAG: --templateFile=\"\""}
+{"level":"info","time":"2023-11-21T14:31:05.794133Z","msg":"FLAG: --tokenManagerPlugin=\"GoogleTokenExchange\""}
+{"level":"info","time":"2023-11-21T14:31:05.794136Z","msg":"FLAG: --vklog=\"0\""}
+{"level":"info","time":"2023-11-21T14:31:05.794138Z","msg":"Version 1.18.1-b39cf40807721c60f7b29e3106e37faa5e5dbac7-Clean"}
+{"level":"info","time":"2023-11-21T14:31:05.795726Z","msg":"Maximum file descriptors (ulimit -n): 1048576"}
+{"level":"info","time":"2023-11-21T14:31:05.795889Z","msg":"Proxy role","ips":["***HIDDEN***"],"type":"sidecar","id":"keycloak-proxy-ff54f5bcb-xxrf4.hub","domain":"hub.svc.cluster.local"}
+{"level":"info","time":"2023-11-21T14:31:05.795983Z","msg":"Apply proxy config from env {}\n"}
+{"level":"info","time":"2023-11-21T14:31:05.797634Z","msg":"cpu limit detected as 2, setting concurrency"}
+{"level":"info","time":"2023-11-21T14:31:05.797898Z","msg":"Effective config: binaryPath: /usr/local/bin/envoy\nconcurrency: 2\nconfigPath: ./etc/istio/proxy\ncontrolPlaneAuthPolicy: MUTUAL_TLS\ndiscoveryAddress: istiod.istio-system.svc:15012\ndrainDuration: 45s\nproxyAdminPort: 15000\nserviceCluster: istio-proxy\nstatNameLength: 189\nstatusPort: 15020\nterminationDrainDuration: 5s\ntracing:\n  zipkin:\n    address: zipkin.istio-system:9411\n"}
+{"level":"info","time":"2023-11-21T14:31:05.797917Z","msg":"JWT policy is third-party-jwt"}
+{"level":"info","time":"2023-11-21T14:31:05.797922Z","msg":"using credential fetcher of JWT type in cluster.local trust domain"}
+{"level":"info","time":"2023-11-21T14:31:05.799241Z","msg":"Workload SDS socket not found. Starting Istio SDS Server"}
+{"level":"info","time":"2023-11-21T14:31:05.799262Z","msg":"CA Endpoint istiod.istio-system.svc:15012, provider Citadel"}
+{"level":"info","time":"2023-11-21T14:31:05.799253Z","msg":"Opening status port 15020"}
+{"level":"info","time":"2023-11-21T14:31:05.799300Z","msg":"Using CA istiod.istio-system.svc:15012 cert with certs: var/run/secrets/istio/root-cert.pem"}
+{"level":"info","time":"2023-11-21T14:31:05.812687Z","scope":"ads","msg":"All caches have been synced up in 22.726446ms, marking server ready"}
+{"level":"info","time":"2023-11-21T14:31:05.812889Z","scope":"xdsproxy","msg":"Initializing with upstream address \"istiod.istio-system.svc:15012\" and cluster \"Kubernetes\""}
+{"level":"info","time":"2023-11-21T14:31:05.812894Z","scope":"sds","msg":"Starting SDS grpc server"}
+{"level":"info","time":"2023-11-21T14:31:05.813157Z","msg":"starting Http service at ***HIDDEN***:15004"}
+{"level":"info","time":"2023-11-21T14:31:05.814205Z","msg":"Pilot SAN: [istiod.istio-system.svc]"}
+{"level":"info","time":"2023-11-21T14:31:05.815057Z","msg":"Starting proxy agent"}
+{"level":"info","time":"2023-11-21T14:31:05.815082Z","msg":"starting"}
+{"level":"info","time":"2023-11-21T14:31:05.815107Z","msg":"Envoy command: [-c etc/istio/proxy/envoy-rev.json --drain-time-s 45 --drain-strategy immediate --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --allow-unknown-static-fields --log-format {\"level\":\"%l\",\"time\":\"%Y-%m-%dT%T.%fZ\",\"scope\":\"envoy %n\",\"msg\":\"%j\",\"caller\":\"%g:%#\",\"thread\":%t} -l warning --component-log-level misc:error --concurrency 2]"}
+{"level":"info","time":"2023-11-21T14:31:05.866756Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-21T14:31:05.908039Z","scope":"ads","msg":"ADS: new connection for node:keycloak-proxy-ff54f5bcb-xxrf4.hub-1"}
+{"level":"info","time":"2023-11-21T14:31:05.908292Z","scope":"ads","msg":"ADS: new connection for node:keycloak-proxy-ff54f5bcb-xxrf4.hub-2"}
+{"level":"info","time":"2023-11-21T14:31:05.910300Z","scope":"cache","msg":"generated new workload certificate","latency":97430419,"ttl":86399089704193}
+{"level":"info","time":"2023-11-21T14:31:05.910330Z","scope":"cache","msg":"Root cert has changed, start rotating root cert"}
+{"level":"info","time":"2023-11-21T14:31:05.910347Z","scope":"ads","msg":"XDS: Incremental Pushing:0 ConnectedEndpoints:2 Version:"}
+{"level":"info","time":"2023-11-21T14:31:05.910394Z","scope":"cache","msg":"returned workload trust anchor from cache","ttl":86399089608271}
+{"level":"info","time":"2023-11-21T14:31:05.910415Z","scope":"cache","msg":"returned workload trust anchor from cache","ttl":86399089597581}
+{"level":"info","time":"2023-11-21T14:31:05.910539Z","scope":"cache","msg":"returned workload certificate from cache","ttl":86399089468818}
+{"level":"info","time":"2023-11-21T14:31:05.910893Z","scope":"ads","msg":"SDS: PUSH request for node:keycloak-proxy-ff54f5bcb-xxrf4.hub resources:1 size:1.1kB resource:ROOTCA"}
+{"level":"info","time":"2023-11-21T14:31:05.910950Z","scope":"cache","msg":"returned workload trust anchor from cache","ttl":86399089051802}
+{"level":"info","time":"2023-11-21T14:31:05.910998Z","scope":"ads","msg":"SDS: PUSH request for node:keycloak-proxy-ff54f5bcb-xxrf4.hub resources:1 size:4.0kB resource:default"}
+{"level":"info","time":"2023-11-21T14:31:07.526946Z","msg":"Readiness succeeded in 1.744154134s"}
+{"level":"info","time":"2023-11-21T14:31:07.527233Z","msg":"Envoy proxy is ready"}
+{"level":"info","time":"2023-11-21T15:00:57.075986Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-21T15:30:30.048556Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-21T15:59:10.429142Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}

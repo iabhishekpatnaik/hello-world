@@ -1,0 +1,10 @@
+{
+  "namespace": "kube-system",
+  "name": "coredns",
+  "key": "",
+  "configMapExists": true,
+  "keyExists": false,
+  "data": {
+    "Corefile": "\n.:53 {\n\terrors\n\thealth {\n\t   lameduck 5s\n\t}\n\tready\n\trewrite name api.hub.kbh-troubleshooting.com ingress-nginx-controller.knime.svc.cluster.local\n    rewrite name auth.hub.kbh-troubleshooting.com ingress-nginx-controller.knime.svc.cluster.local\n    rewrite name storage.hub.kbh-troubleshooting.com ingress-nginx-controller.knime.svc.cluster.local\n\tkubernetes cluster.local in-addr.arpa ip6.arpa {\n\t   pods insecure\n\t   fallthrough in-addr.arpa ip6.arpa\n\t   ttl 30\n\t}\n\tprometheus :9153\n\tforward . /etc/resolv.conf {\n\t   max_concurrent 1000\n\t}\n\tcache 30\n\tloop\n\treload\n\tloadbalance\n}\n"
+  }
+}

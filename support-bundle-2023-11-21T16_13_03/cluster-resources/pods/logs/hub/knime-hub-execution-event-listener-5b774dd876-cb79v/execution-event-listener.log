@@ -1,0 +1,109 @@
+2023/11/21 14:31:25 Parsing environment variables...
+2023/11/21 14:31:25 Parsed config: {URL:activemq-artemis.knime.svc.cluster.local:61616?reconnectAttempts=-1 Username:knime Password:fg7GWfcUNIK6e7Ev9mY52XpwnYB5nacv Topic:execution-context-operation-events::execution-context-operation-events Namespace:hub-execution ConfigMapNames:[execution-env-variables] ImagePullSecrets:[regcred registry-creds] DeploymentStrategy:Recreate}
+2023/11/21 14:31:25 Dialing "amqp://activemq-artemis.knime.svc.cluster.local:61616?reconnectAttempts=-1"
+2023/11/21 14:31:25 Creating receiver for topic "execution-context-operation-events::execution-context-operation-events"
+2023/11/21 16:01:48 Received message
+Properties: eventVersion=1
+Message: {
+	"executionContextID": "d7eec3d2-77ab-413a-9609-ccb8d4124108",
+	"scope": "hub:global",
+	"operationType": "CREATED",
+	"isTemplate": false,
+	"operationInfo": {
+		"minExecutors": 1,
+		"maxExecutors": 1,
+		"dockerImage": "registry.hub.knime.com/knime/knime-full:r-5.1.2-433",
+		"containerCores": 1,
+		"containerMemoryLimit": 32768,
+		"executorCPUUsagePercentLimit": 90,
+		"executorHeapUsagePercentLimit": 90,
+		"envVars": {
+			"KNIME_EXECUTOR_PER_JOB_LOGGING": "true",
+			"KNIME_CORE_MAX_THREADS": "2",
+			"KNIME_EXECUTOR_MAX_JOB_OUTPUT_SIZE": "10",
+			"KNIME_EXECUTOR_CPU_USAGE_PERCENT_LIMIT": "90",
+			"KNIME_EXECUTOR_HEAP_USAGE_PERCENT_LIMIT": "90",
+			"KNIME_EXECUTOR_MAX_LOADED_JOBS": "2147483647"
+		},
+		"autoStart": {
+			"enabled": false
+		},
+		"autoStop": {
+			"enabled": false,
+			"idleTime": "PT10M"
+		}
+	},
+	"artemisUserName": "d7eec3d2-77ab-413a-9609-ccb8d4124108-user",
+	"artemisUserPassword": "df8dbb869c0693f4b841dfc5fcbf61e7ca7e7fe8ec2c6ce1aa9128de6cfa822d"
+}
+2023/11/21 16:01:48 Using in cluster config for k8s client
+2023/11/21 16:01:48 Applying executor deployment: d7eec3d2-77ab-413a-9609-ccb8d4124108
+2023/11/21 16:01:48 Resource def:
+2023/11/21 16:01:48 &{map[apiVersion:hub.knime.com/v1alpha1 kind:ExecutionContext metadata:map[annotations:map[scope:hub:global] name:d7eec3d2-77ab-413a-9609-ccb8d4124108] spec:map[autoStart:map[enabled:false] autoStop:map[enabled:false idleTime:PT10M] eventBroker:map[URL:tcp://d7eec3d2-77ab-413a-9609-ccb8d4124108-user:df8dbb869c0693f4b841dfc5fcbf61e7ca7e7fe8ec2c6ce1aa9128de6cfa822d@activemq-artemis.knime.svc.cluster.local:61616?reconnectAttempts=-1] executor:map[applicationArguments:[] env:[map[name:KNIME_EXECUTOR_PER_JOB_LOGGING value:true] map[name:KNIME_CORE_MAX_THREADS value:2] map[name:KNIME_EXECUTOR_MAX_JOB_OUTPUT_SIZE value:10] map[name:KNIME_EXECUTOR_CPU_USAGE_PERCENT_LIMIT value:90] map[name:KNIME_EXECUTOR_HEAP_USAGE_PERCENT_LIMIT value:90] map[name:KNIME_EXECUTOR_MAX_LOADED_JOBS value:2147483647]] envFrom:[{ &ConfigMapEnvSource{LocalObjectReference:LocalObjectReference{Name:execution-env-variables,},Optional:nil,} nil}] image:registry.hub.knime.com/knime/knime-full imagePullSecrets:[map[name:regcred] map[name:registry-creds]] imageTag:r-5.1.2-433 replicaCount:1 resources:map[cores:1 memoryLimit:32768] updateStrategy:Recreate vmArguments:[]]]]}
+2023/11/21 16:03:34 Received message
+Properties: eventVersion=1
+Message: {
+	"executionContextID": "d7eec3d2-77ab-413a-9609-ccb8d4124108",
+	"scope": "hub:global",
+	"operationType": "DELETED",
+	"isTemplate": false,
+	"operationInfo": {
+		"minExecutors": 1,
+		"maxExecutors": 1,
+		"dockerImage": "registry.hub.knime.com/knime/knime-full:r-5.1.2-433",
+		"containerCores": 1,
+		"containerMemoryLimit": 32768,
+		"executorCPUUsagePercentLimit": 90,
+		"executorHeapUsagePercentLimit": 90,
+		"envVars": {},
+		"autoStart": {
+			"enabled": false
+		},
+		"autoStop": {
+			"enabled": false,
+			"idleTime": "PT10M"
+		}
+	},
+	"artemisUserName": "d7eec3d2-77ab-413a-9609-ccb8d4124108-user",
+	"artemisUserPassword": "df8dbb869c0693f4b841dfc5fcbf61e7ca7e7fe8ec2c6ce1aa9128de6cfa822d"
+}
+2023/11/21 16:03:34 Using in cluster config for k8s client
+2023/11/21 16:03:34 Deleting executor deployment: d7eec3d2-77ab-413a-9609-ccb8d4124108
+2023/11/21 16:05:32 Received message
+Properties: eventVersion=1
+Message: {
+	"executionContextID": "31904678-6c80-48b0-a21d-73778e52546a",
+	"scope": "hub:global",
+	"operationType": "CREATED",
+	"isTemplate": false,
+	"operationInfo": {
+		"minExecutors": 1,
+		"maxExecutors": 1,
+		"dockerImage": "registry.hub.knime.com/knime/knime-full:r-5.1.2-433",
+		"containerCores": 1,
+		"containerMemoryLimit": 32768,
+		"executorCPUUsagePercentLimit": 90,
+		"executorHeapUsagePercentLimit": 90,
+		"envVars": {
+			"KNIME_EXECUTOR_PER_JOB_LOGGING": "true",
+			"KNIME_CORE_MAX_THREADS": "2",
+			"KNIME_EXECUTOR_MAX_JOB_OUTPUT_SIZE": "10",
+			"KNIME_EXECUTOR_CPU_USAGE_PERCENT_LIMIT": "90",
+			"KNIME_EXECUTOR_HEAP_USAGE_PERCENT_LIMIT": "90",
+			"KNIME_EXECUTOR_MAX_LOADED_JOBS": "2147483647"
+		},
+		"autoStart": {
+			"enabled": false
+		},
+		"autoStop": {
+			"enabled": false,
+			"idleTime": "PT10M"
+		}
+	},
+	"artemisUserName": "31904678-6c80-48b0-a21d-73778e52546a-user",
+	"artemisUserPassword": "6fba679f1bbc0bd388b05df05f41b4f4b33653eadfa69455aa888f4e07ad4fad"
+}
+2023/11/21 16:05:32 Using in cluster config for k8s client
+2023/11/21 16:05:32 Applying executor deployment: 31904678-6c80-48b0-a21d-73778e52546a
+2023/11/21 16:05:32 Resource def:
+2023/11/21 16:05:32 &{map[apiVersion:hub.knime.com/v1alpha1 kind:ExecutionContext metadata:map[annotations:map[scope:hub:global] name:31904678-6c80-48b0-a21d-73778e52546a] spec:map[autoStart:map[enabled:false] autoStop:map[enabled:false idleTime:PT10M] eventBroker:map[URL:tcp://31904678-6c80-48b0-a21d-73778e52546a-user:6fba679f1bbc0bd388b05df05f41b4f4b33653eadfa69455aa888f4e07ad4fad@activemq-artemis.knime.svc.cluster.local:61616?reconnectAttempts=-1] executor:map[applicationArguments:[] env:[map[name:KNIME_EXECUTOR_MAX_LOADED_JOBS value:2147483647] map[name:KNIME_EXECUTOR_PER_JOB_LOGGING value:true] map[name:KNIME_CORE_MAX_THREADS value:2] map[name:KNIME_EXECUTOR_MAX_JOB_OUTPUT_SIZE value:10] map[name:KNIME_EXECUTOR_CPU_USAGE_PERCENT_LIMIT value:90] map[name:KNIME_EXECUTOR_HEAP_USAGE_PERCENT_LIMIT value:90]] envFrom:[{ &ConfigMapEnvSource{LocalObjectReference:LocalObjectReference{Name:execution-env-variables,},Optional:nil,} nil}] image:registry.hub.knime.com/knime/knime-full imagePullSecrets:[map[name:regcred] map[name:registry-creds]] imageTag:r-5.1.2-433 replicaCount:1 resources:map[cores:1 memoryLimit:32768] updateStrategy:Recreate vmArguments:[]]]]}

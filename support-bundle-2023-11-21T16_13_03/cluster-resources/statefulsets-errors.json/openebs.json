@@ -1,0 +1,315 @@
+{
+  "kind": "ReplicaSetList",
+  "apiVersion": "apps/v1",
+  "metadata": {
+    "resourceVersion": "763977"
+  },
+  "items": [
+    {
+      "kind": "ReplicaSet",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "openebs-localpv-provisioner-8488c699fb",
+        "namespace": "openebs",
+        "uid": "e97e35e8-725c-48be-81d7-29a753ce4754",
+        "resourceVersion": "745165",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T12:58:19Z",
+        "labels": {
+          "app": "openebs",
+          "component": "localpv-provisioner",
+          "name": "openebs-localpv-provisioner",
+          "openebs.io/component-name": "openebs-localpv-provisioner",
+          "openebs.io/version": "3.6.0",
+          "pod-template-hash": "8488c699fb",
+          "release": "openebs"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/desired-replicas": "1",
+          "deployment.kubernetes.io/max-replicas": "1",
+          "deployment.kubernetes.io/revision": "1"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "name": "openebs-localpv-provisioner",
+            "uid": "91a20324-ba7f-4b29-b571-eb04be6f9cdf",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T12:58:19Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/desired-replicas": {},
+                  "f:deployment.kubernetes.io/max-replicas": {},
+                  "f:deployment.kubernetes.io/revision": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:component": {},
+                  "f:name": {},
+                  "f:openebs.io/component-name": {},
+                  "f:openebs.io/version": {},
+                  "f:pod-template-hash": {},
+                  "f:release": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"91a20324-ba7f-4b29-b571-eb04be6f9cdf\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:replicas": {},
+                "f:selector": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:component": {},
+                      "f:name": {},
+                      "f:openebs.io/component-name": {},
+                      "f:openebs.io/version": {},
+                      "f:pod-template-hash": {},
+                      "f:release": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:containers": {
+                      "k:{\"name\":\"openebs-localpv-provisioner\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"BDC_BD_BIND_RETRIES\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"LEADER_ELECTION_ENABLED\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"NODE_NAME\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"OPENEBS_IO_BASE_PATH\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"OPENEBS_IO_ENABLE_ANALYTICS\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"OPENEBS_IO_HELPER_IMAGE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"OPENEBS_IO_INSTALLER_TYPE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"OPENEBS_NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"OPENEBS_SERVICE_ACCOUNT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:livenessProbe": {
+                          ".": {},
+                          "f:exec": {
+                            ".": {},
+                            "f:command": {}
+                          },
+                          "f:failureThreshold": {},
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:name": {},
+                        "f:resources": {},
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:30:23Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:fullyLabeledReplicas": {},
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app": "openebs",
+            "pod-template-hash": "8488c699fb",
+            "release": "openebs"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app": "openebs",
+              "component": "localpv-provisioner",
+              "name": "openebs-localpv-provisioner",
+              "openebs.io/component-name": "openebs-localpv-provisioner",
+              "openebs.io/version": "3.6.0",
+              "pod-template-hash": "8488c699fb",
+              "release": "openebs"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "openebs-localpv-provisioner",
+                "image": "openebs/provisioner-localpv:3.4.0",
+                "args": [
+                  "--bd-time-out=$(BDC_BD_BIND_RETRIES)"
+                ],
+                "env": [
+                  {
+                    "name": "BDC_BD_BIND_RETRIES",
+                    "value": "12"
+                  },
+                  {
+                    "name": "OPENEBS_NAMESPACE",
+                    "value": "openebs"
+                  },
+                  {
+                    "name": "NODE_NAME",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "spec.nodeName"
+                      }
+                    }
+                  },
+                  {
+                    "name": "OPENEBS_SERVICE_ACCOUNT",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "spec.serviceAccountName"
+                      }
+                    }
+                  },
+                  {
+                    "name": "OPENEBS_IO_ENABLE_ANALYTICS",
+                    "value": "true"
+                  },
+                  {
+                    "name": "OPENEBS_IO_BASE_PATH",
+                    "value": "/var/openebs/local"
+                  },
+                  {
+                    "name": "OPENEBS_IO_HELPER_IMAGE",
+                    "value": "openebs/linux-utils:3.4.0"
+                  },
+                  {
+                    "name": "OPENEBS_IO_INSTALLER_TYPE",
+                    "value": "charts-helm"
+                  },
+                  {
+                    "name": "LEADER_ELECTION_ENABLED",
+                    "value": "true"
+                  }
+                ],
+                "resources": {},
+                "livenessProbe": {
+                  "exec": {
+                    "command": [
+                      "sh",
+                      "-c",
+                      "test `pgrep -c \"^provisioner-loc.*\"` = 1"
+                    ]
+                  },
+                  "initialDelaySeconds": 30,
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 60,
+                  "successThreshold": 1,
+                  "failureThreshold": 3
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "openebs",
+            "serviceAccount": "openebs",
+            "securityContext": {},
+            "schedulerName": "default-scheduler"
+          }
+        }
+      },
+      "status": {
+        "replicas": 1,
+        "fullyLabeledReplicas": 1,
+        "readyReplicas": 1,
+        "availableReplicas": 1,
+        "observedGeneration": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "EndpointsList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763995"
+  },
+  "items": [
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "openebs.io-local",
+        "namespace": "openebs",
+        "uid": "a07221c0-fb19-40eb-af8a-8c89142a8db7",
+        "resourceVersion": "763995",
+        "creationTimestamp": "2023-11-10T12:58:20Z",
+        "annotations": {
+          "control-plane.alpha.kubernetes.io/leader": "{\"holderIdentity\":\"openebs-localpv-provisioner-8488c699fb-qv86c_9860ff43-c870-4b97-b7f3-27120b37b7ad\",\"leaseDurationSeconds\":15,\"acquireTime\":\"2023-11-21T14:30:12Z\",\"renewTime\":\"2023-11-21T16:13:08Z\",\"leaderTransitions\":4}"
+        },
+        "managedFields": [
+          {
+            "manager": "provisioner-localpv",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:13:08Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:control-plane.alpha.kubernetes.io/leader": {}
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

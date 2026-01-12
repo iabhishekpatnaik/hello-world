@@ -1,0 +1,125 @@
+* processing: http://knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080/status?endpoint=catalog-service
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ***HIDDEN***:8080...
+* Connected to knime-hub-endpoint-status-tracker.knime.svc.cluster.local (***HIDDEN***) port 8080
+> GET /status?endpoint=catalog-service HTTP/1.1
+> Host: knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080
+> User-Agent: curl/8.2.1
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Content-Type: text/plain
+< Date: Tue, 21 Nov 2023 14:30:30 GMT
+< Content-Length: 5
+< 
+{ [5 bytes data]
+100     5  100     5    0     0   2365      0 --:--:-- --:--:-- --:--:--  2500
+* Connection #0 to host knime-hub-endpoint-status-tracker.knime.svc.cluster.local left intact
+
+waiting...
+
+* processing: http://knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080/status?endpoint=catalog-service
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ***HIDDEN***:8080...
+* Connected to knime-hub-endpoint-status-tracker.knime.svc.cluster.local (***HIDDEN***) port 8080
+> GET /status?endpoint=catalog-service HTTP/1.1
+> Host: knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080
+> User-Agent: curl/8.2.1
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Content-Type: text/plain
+< Date: Tue, 21 Nov 2023 14:30:40 GMT
+< Content-Length: 5
+< 
+{ [5 bytes data]
+100     5  100     5    0     0   2453      0 --:--:-- --:--:-- --:--:--  5000
+* Connection #0 to host knime-hub-endpoint-status-tracker.knime.svc.cluster.local left intact
+
+waiting...
+
+* processing: http://knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080/status?endpoint=catalog-service
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ***HIDDEN***:8080...
+* Connected to knime-hub-endpoint-status-tracker.knime.svc.cluster.local (***HIDDEN***) port 8080
+> GET /status?endpoint=catalog-service HTTP/1.1
+> Host: knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080
+> User-Agent: curl/8.2.1
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Content-Type: text/plain
+< Date: Tue, 21 Nov 2023 14:30:50 GMT
+< Content-Length: 5
+< 
+{ [5 bytes data]
+100     5  100     5    0     0   3419      0 --:--:-- --:--:-- --:--:--  5000
+* Connection #0 to host knime-hub-endpoint-status-tracker.knime.svc.cluster.local left intact
+
+waiting...
+
+* processing: http://knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080/status?endpoint=catalog-service
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ***HIDDEN***:8080...
+* Connected to knime-hub-endpoint-status-tracker.knime.svc.cluster.local (***HIDDEN***) port 8080
+> GET /status?endpoint=catalog-service HTTP/1.1
+> Host: knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080
+> User-Agent: curl/8.2.1
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Content-Type: text/plain
+< Date: Tue, 21 Nov 2023 14:31:00 GMT
+< Content-Length: 5
+< 
+{ [5 bytes data]
+100     5  100     5    0     0   2586      0 --:--:-- --:--:-- --:--:--  5000
+* Connection #0 to host knime-hub-endpoint-status-tracker.knime.svc.cluster.local left intact
+
+waiting...
+
+* processing: http://knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080/status?endpoint=catalog-service
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ***HIDDEN***:8080...
+* Connected to knime-hub-endpoint-status-tracker.knime.svc.cluster.local (***HIDDEN***) port 8080
+> GET /status?endpoint=catalog-service HTTP/1.1
+> Host: knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080
+> User-Agent: curl/8.2.1
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Content-Type: text/plain
+< Date: Tue, 21 Nov 2023 14:31:10 GMT
+< Content-Length: 5
+< 
+{ [5 bytes data]
+100     5  100     5    0     0   3484      0 --:--:-- --:--:-- --:--:--  5000
+* Connection #0 to host knime-hub-endpoint-status-tracker.knime.svc.cluster.local left intact
+
+waiting...
+
+* processing: http://knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080/status?endpoint=catalog-service
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ***HIDDEN***:8080...
+* Connected to knime-hub-endpoint-status-tracker.knime.svc.cluster.local (***HIDDEN***) port 8080
+> GET /status?endpoint=catalog-service HTTP/1.1
+> Host: knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080
+> User-Agent: curl/8.2.1
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Content-Type: text/plain
+< Date: Tue, 21 Nov 2023 14:31:20 GMT
+< Content-Length: 2
+< 
+{ [2 bytes data]
+100     2  100     2    0     0   1463      0 --:--:-- --:--:-- --:--:--  2000
+* Connection #0 to host knime-hub-endpoint-status-tracker.knime.svc.cluster.local left intact
+
+now available.

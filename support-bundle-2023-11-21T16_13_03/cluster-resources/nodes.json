@@ -1,0 +1,880 @@
+{
+  "kind": "NodeList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763992"
+  },
+  "items": [
+    {
+      "kind": "Node",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "ip-172-31-41-186",
+        "uid": "bb68af6c-5265-4852-90ba-5b1071387c4a",
+        "resourceVersion": "763618",
+        "creationTimestamp": "2023-11-10T12:57:32Z",
+        "labels": {
+          "beta.kubernetes.io/arch": "amd64",
+          "beta.kubernetes.io/os": "linux",
+          "kubernetes.io/arch": "amd64",
+          "kubernetes.io/hostname": "ip-172-31-41-186",
+          "kubernetes.io/os": "linux",
+          "kurl.sh/cluster": "true",
+          "node-role.kubernetes.io/control-plane": "",
+          "node-role.kubernetes.io/master": "",
+          "node.kubernetes.io/exclude-from-external-load-balancers": ""
+        },
+        "annotations": {
+          "flannel.alpha.coreos.com/backend-data": "{\"VNI\":1,\"VtepMAC\":\"d6:4e:a1:a4:3c:f5\"}",
+          "flannel.alpha.coreos.com/backend-type": "vxlan",
+          "flannel.alpha.coreos.com/kube-subnet-manager": "true",
+          "flannel.alpha.coreos.com/public-ip": "***HIDDEN***",
+          "kubeadm.alpha.kubernetes.io/cri-socket": "unix:///run/containerd/containerd.sock",
+          "node.alpha.kubernetes.io/ttl": "0",
+          "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+        },
+        "managedFields": [
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:57:32Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:volumes.kubernetes.io/controller-managed-attach-detach": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:beta.kubernetes.io/arch": {},
+                  "f:beta.kubernetes.io/os": {},
+                  "f:kubernetes.io/arch": {},
+                  "f:kubernetes.io/hostname": {},
+                  "f:kubernetes.io/os": {},
+                  "f:kurl.sh/cluster": {}
+                }
+              }
+            }
+          },
+          {
+            "manager": "kubeadm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:57:35Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:kubeadm.alpha.kubernetes.io/cri-socket": {}
+                },
+                "f:labels": {
+                  "f:node-role.kubernetes.io/control-plane": {},
+                  "f:node.kubernetes.io/exclude-from-external-load-balancers": {}
+                }
+              }
+            }
+          },
+          {
+            "manager": "kubectl-label",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:57:46Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  "f:node-role.kubernetes.io/master": {}
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-20T17:04:13Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:node.alpha.kubernetes.io/ttl": {}
+                }
+              },
+              "f:spec": {
+                "f:podCIDR": {},
+                "f:podCIDRs": {
+                  ".": {},
+                  "v:\"***HIDDEN***/24\"": {}
+                }
+              }
+            }
+          },
+          {
+            "manager": "flanneld",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:29:20Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:flannel.alpha.coreos.com/backend-data": {},
+                  "f:flannel.alpha.coreos.com/backend-type": {},
+                  "f:flannel.alpha.coreos.com/kube-subnet-manager": {},
+                  "f:flannel.alpha.coreos.com/public-ip": {}
+                }
+              },
+              "f:status": {
+                "f:conditions": {
+                  "k:{\"type\":\"NetworkUnavailable\"}": {
+                    ".": {},
+                    "f:lastHeartbeatTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                }
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:11:06Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:allocatable": {
+                  "f:memory": {}
+                },
+                "f:capacity": {
+                  "f:memory": {}
+                },
+                "f:conditions": {
+                  "k:{\"type\":\"DiskPressure\"}": {
+                    "f:lastHeartbeatTime": {}
+                  },
+                  "k:{\"type\":\"MemoryPressure\"}": {
+                    "f:lastHeartbeatTime": {}
+                  },
+                  "k:{\"type\":\"PIDPressure\"}": {
+                    "f:lastHeartbeatTime": {}
+                  },
+                  "k:{\"type\":\"Ready\"}": {
+                    "f:lastHeartbeatTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {}
+                  }
+                },
+                "f:images": {},
+                "f:nodeInfo": {
+                  "f:bootID": {},
+                  "f:kernelVersion": {}
+                }
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "podCIDR": "***HIDDEN***/24",
+        "podCIDRs": [
+          "***HIDDEN***/24"
+        ]
+      },
+      "status": {
+        "capacity": {
+          "cpu": "16",
+          "ephemeral-storage": "507930276Ki",
+          "hugepages-1Gi": "0",
+          "hugepages-2Mi": "0",
+          "memory": "32037012Ki",
+          "pods": "110"
+        },
+        "allocatable": {
+          "cpu": "16",
+          "ephemeral-storage": "468108541587",
+          "hugepages-1Gi": "0",
+          "hugepages-2Mi": "0",
+          "memory": "31934612Ki",
+          "pods": "110"
+        },
+        "conditions": [
+          {
+            "type": "NetworkUnavailable",
+            "status": "False",
+            "lastHeartbeatTime": "2023-11-21T14:29:20Z",
+            "lastTransitionTime": "2023-11-21T14:29:20Z",
+            "reason": "FlannelIsUp",
+            "message": "Flannel is running on this node"
+          },
+          {
+            "type": "MemoryPressure",
+            "status": "False",
+            "lastHeartbeatTime": "2023-11-21T16:11:06Z",
+            "lastTransitionTime": "2023-11-10T12:57:30Z",
+            "reason": "KubeletHasSufficientMemory",
+            "message": "kubelet has sufficient memory available"
+          },
+          {
+            "type": "DiskPressure",
+            "status": "False",
+            "lastHeartbeatTime": "2023-11-21T16:11:06Z",
+            "lastTransitionTime": "2023-11-10T12:57:30Z",
+            "reason": "KubeletHasNoDiskPressure",
+            "message": "kubelet has no disk pressure"
+          },
+          {
+            "type": "PIDPressure",
+            "status": "False",
+            "lastHeartbeatTime": "2023-11-21T16:11:06Z",
+            "lastTransitionTime": "2023-11-10T12:57:30Z",
+            "reason": "KubeletHasSufficientPID",
+            "message": "kubelet has sufficient PID available"
+          },
+          {
+            "type": "Ready",
+            "status": "True",
+            "lastHeartbeatTime": "2023-11-21T16:11:06Z",
+            "lastTransitionTime": "2023-11-21T14:29:01Z",
+            "reason": "KubeletReady",
+            "message": "kubelet is posting ready status. AppArmor enabled"
+          }
+        ],
+        "addresses": [
+          {
+            "type": "InternalIP",
+            "address": "***HIDDEN***"
+          },
+          {
+            "type": "Hostname",
+            "address": "ip-172-31-41-186"
+          }
+        ],
+        "daemonEndpoints": {
+          "kubeletEndpoint": {
+            "Port": 10250
+          }
+        },
+        "nodeInfo": {
+          "machineID": "ec2e8a878e7f20788db59f2a290793f1",
+          "systemUUID": "ec2e8a87-8e7f-2078-8db5-9f2a290793f1",
+          "bootID": "c1624aeb-34bb-443e-b4d7-fdd834d62ca7",
+          "kernelVersion": "6.2.0-1015-aws",
+          "osImage": "Ubuntu 22.04.3 LTS",
+          "containerRuntimeVersion": "containerd://1.6.22",
+          "kubeletVersion": "v1.25.12",
+          "kubeProxyVersion": "v1.25.12",
+          "operatingSystem": "linux",
+          "architecture": "amd64"
+        },
+        "images": [
+          {
+            "names": [
+              "registry.hub.knime.com/knime/knime-full@sha256:6f68eca626f3df0b6c87cd7882bd55fce5c028a5c28ddc1fdc9ec43091b0b4d0",
+              "registry.hub.knime.com/knime/knime-full:r-5.1.2-433"
+            ],
+            "sizeBytes": 4322418357
+          },
+          {
+            "names": [
+              "docker.io/kotsadm/kotsadm:v1.101.2"
+            ],
+            "sizeBytes": 919776036
+          },
+          {
+            "names": [
+              "docker.io/replicated/kurl-util:v2023.11.02-0"
+            ],
+            "sizeBytes": 626795008
+          },
+          {
+            "names": [
+              "docker.elastic.co/elasticsearch/elasticsearch@sha256:d528cec81720266974fdfe7a0f12fee928dc02e5a2c754b45b9a84c84695bfd9",
+              "docker.elastic.co/elasticsearch/elasticsearch:7.10.2"
+            ],
+            "sizeBytes": 455809703
+          },
+          {
+            "names": [
+              "quay.io/keycloak/keycloak@sha256:710ffffce4a0d3e43a462446da1fac5f5cf2745e100bb62899fb1ce340f42947",
+              "quay.io/keycloak/keycloak:19.0.3-legacy"
+            ],
+            "sizeBytes": 395959864
+          },
+          {
+            "names": [
+              "ghcr.io/zalando/spilo-15@sha256:c4cc3fa31265fb60b2972bd1e5dbb94fd735107ad5d5e6eb17369f2097469225",
+              "ghcr.io/zalando/spilo-15:3.0-p1"
+            ],
+            "sizeBytes": 371180192
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-keycloak-init@sha256:48bfc4a535177a704ccb554492bf86b22826dc4d4dd3f8a65df8136793be65c4",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-keycloak-init:0.4.5-beta-20231013-113713-000005-3e978d9"
+            ],
+            "sizeBytes": 365097960
+          },
+          {
+            "names": [
+              "docker.io/grafana/grafana:9.5.3"
+            ],
+            "sizeBytes": 316721594
+          },
+          {
+            "names": [
+              "k8s.gcr.io/etcd:3.5.6-0",
+              "registry.k8s.io/etcd:3.5.6-0"
+            ],
+            "sizeBytes": 300831420
+          },
+          {
+            "names": [
+              "docker.io/minio/minio:RELEASE.2023-06-29T05-12-28Z"
+            ],
+            "sizeBytes": 264830332
+          },
+          {
+            "names": [
+              "quay.io/prometheus/prometheus:v2.44.0"
+            ],
+            "sizeBytes": 235527124
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-rest-interface@sha256:ecba96b9d619555461fbdd5e8c90aeb3e76e18d1d14ae4d9436bf28bdad4c26b",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-rest-interface:2.1.1-stable-0016-8b6556b5"
+            ],
+            "sizeBytes": 233507614
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-accounts-service@sha256:805afa1cc1c686ffd54c8e2d8650dd6c52d96153980c1799e233bae4e64354d7",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-accounts-service:2.1.1-stable-0010-27fcc6a"
+            ],
+            "sizeBytes": 230155099
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-post-execution-handler@sha256:dfeec4bf8fffc8b98813f52a02b004efe3a80a1a67f3d6266338d17faa961c19",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-post-execution-handler:2.1.0-stable-0002-16e8e8b"
+            ],
+            "sizeBytes": 217287177
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-schedule-handler@sha256:78608824d75cb6626e807266acd5ba2da8436838fbd4dae1eef21f3fa8d3d2bf",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-schedule-handler:2.1.0-stable-0002-7b6165b"
+            ],
+            "sizeBytes": 217285266
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-lifecycle-handler@sha256:59247847f4808c6a0fd7ffc6f650846c1efd27b35c90525188cecf8e103efcb0",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-lifecycle-handler:2.1.0-stable-0002-943be8f"
+            ],
+            "sizeBytes": 216240610
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-state-persistor@sha256:90978948e3a6328fd8917106cb2a0075e4d91d8bfdf085da5438068ddbd0a78b",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-state-persistor:2.1.1-stable-0010-3376f3b"
+            ],
+            "sizeBytes": 212522869
+          },
+          {
+            "names": [
+              "docker.io/kotsadm/kurl-proxy:v1.101.2"
+            ],
+            "sizeBytes": 194554297
+          },
+          {
+            "names": [
+              "docker.io/kotsadm/kotsadm-migrations:v1.101.2"
+            ],
+            "sizeBytes": 184085774
+          },
+          {
+            "names": [
+              "docker.io/replicated/local-volume-provider:v0.5.4"
+            ],
+            "sizeBytes": 183378593
+          },
+          {
+            "names": [
+              "docker.io/replicated/ekco:v0.28.3"
+            ],
+            "sizeBytes": 182853608
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-catalog-service@sha256:aadf6d5cffd1e2dfb9e27850c0919d27cf85873d906e4a653f27fcc4d9720352",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-catalog-service:4.2.0-rc-000001-0ccbd258"
+            ],
+            "sizeBytes": 161007664
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/activemq-artemis@sha256:77b59c1ba197dd109186e356c3d1f56b0fe3333c1e881e412072d46e875f56f3",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/activemq-artemis:2.29.0"
+            ],
+            "sizeBytes": 158396606
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-search-service@sha256:ff99ddda6de5b80f198af73c0448b598851938554a37881a2204f9fe42457744",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-search-service:2.1.0-stable-0009-922ac00"
+            ],
+            "sizeBytes": 156410070
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-secret-store@sha256:457019383551266a95fd069073b40fac775c09ca0d91030bcd42f162ee21eeb9",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-secret-store:1.0.0-beta-20231101-174905-000230-be52b25"
+            ],
+            "sizeBytes": 146761988
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-search-sync-service@sha256:5bd9b7757bf5fd79bc7af461aec82889d5b684ad602cc5490ec0ba6e42f55f66",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-search-sync-service:2.1.0-stable-0011-64da0cf"
+            ],
+            "sizeBytes": 146063555
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-trigger-service@sha256:9ecfb9924ae3eb83106cf93a667ca8f5e7a604b93575748fb69d3d6715a3c94d",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-trigger-service:2.0.1-stable-0002-1a27734"
+            ],
+            "sizeBytes": 143428771
+          },
+          {
+            "names": [
+              "k8s.gcr.io/kube-apiserver:v1.25.12",
+              "registry.k8s.io/kube-apiserver:v1.25.12"
+            ],
+            "sizeBytes": 131146212
+          },
+          {
+            "names": [
+              "docker.io/velero/velero:v1.11.0"
+            ],
+            "sizeBytes": 124711260
+          },
+          {
+            "names": [
+              "k8s.gcr.io/kube-controller-manager:v1.25.12",
+              "registry.k8s.io/kube-controller-manager:v1.25.12"
+            ],
+            "sizeBytes": 120046410
+          },
+          {
+            "names": [
+              "registry.k8s.io/ingress-nginx/controller@sha256:54f7fe2c6c5a9db9a0ebf1131797109bb7a4d91f56b9b362bde2abd237dd1974",
+              "registry.k8s.io/ingress-nginx/controller:v1.3.1"
+            ],
+            "sizeBytes": 106591191
+          },
+          {
+            "names": [
+              "docker.io/kotsadm/dex:v2.37.0"
+            ],
+            "sizeBytes": 96975826
+          },
+          {
+            "names": [
+              "docker.io/istio/proxyv2@sha256:7d1f3b4876e1652b344be6681ab9a62e454828503eecae59a94a406ea86be1fd",
+              "docker.io/istio/proxyv2:1.18.1"
+            ],
+            "sizeBytes": 95959127
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-webapp@sha256:369c6ad4dd95599267b8438699eff262594985744ff99e6ba695503a418ffe48",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-webapp:6.1.2-beta-001438-0e3851831"
+            ],
+            "sizeBytes": 94081300
+          },
+          {
+            "names": [
+              "quay.io/kiwigrid/k8s-sidecar:1.24.3"
+            ],
+            "sizeBytes": 82922836
+          },
+          {
+            "names": [
+              "docker.io/istio/pilot@sha256:cf2f1c2ca1b8fdf029601c29c22536e0cf808cfc9e7b1c413809c425963652e8",
+              "docker.io/istio/pilot:1.18.1"
+            ],
+            "sizeBytes": 80996556
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-crd-updater@sha256:7712278ae26b32f99fa54c33f029f1ff982430ffc3f655fb9103caa930c4c5f0",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-crd-updater:0.2.0-b52c21a"
+            ],
+            "sizeBytes": 80194337
+          },
+          {
+            "names": [
+              "quay.io/minio/minio@sha256:08c4c6187dae998a5e3805752e645195c9f3fe7300b41f37c22c8919088bbda8",
+              "quay.io/minio/minio:RELEASE.2022-03-17T06-34-49Z"
+            ],
+            "sizeBytes": 79270670
+          },
+          {
+            "names": [
+              "docker.io/openebs/linux-utils:3.4.0"
+            ],
+            "sizeBytes": 75015146
+          },
+          {
+            "names": [
+              "docker.io/openebs/provisioner-localpv:3.4.0"
+            ],
+            "sizeBytes": 71085002
+          },
+          {
+            "names": [
+              "docker.io/flannel/flannel:v0.22.0"
+            ],
+            "sizeBytes": 70869309
+          },
+          {
+            "names": [
+              "k8s.gcr.io/prometheus-adapter/prometheus-adapter:v0.10.0",
+              "registry.k8s.io/prometheus-adapter/prometheus-adapter:v0.10.0"
+            ],
+            "sizeBytes": 70135197
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-team-init@sha256:b04f83a611b926eada2238c233b92eaaa4db79c077e7d9671f09e842c9dccebd",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-team-init:0.3.0-beta-20230620-232722-000004-a7c3024"
+            ],
+            "sizeBytes": 68268329
+          },
+          {
+            "names": [
+              "quay.io/prometheus/alertmanager:v0.25.0"
+            ],
+            "sizeBytes": 66533196
+          },
+          {
+            "names": [
+              "docker.io/kurlsh/s3cmd:20230406-9a6d89f"
+            ],
+            "sizeBytes": 65701421
+          },
+          {
+            "names": [
+              "k8s.gcr.io/kube-proxy:v1.25.12",
+              "registry.k8s.io/kube-proxy:v1.25.12"
+            ],
+            "sizeBytes": 64020681
+          },
+          {
+            "names": [
+              "quay.io/keycloak/keycloak-operator@sha256:09d52508fee909e3d0519026960ae6f4ee34d09fa1a369a5e528fe4a95905835",
+              "quay.io/keycloak/keycloak-operator:19.0.3-legacy"
+            ],
+            "sizeBytes": 60764790
+          },
+          {
+            "names": [
+              "quay.io/prometheus-operator/prometheus-operator:v0.65.2"
+            ],
+            "sizeBytes": 58115839
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-vault-initializer@sha256:331d2236295938319c9c30988b547a4ff16d1cce7ebb7eb678add9a7c64fdca4",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-vault-initializer:0.2.0"
+            ],
+            "sizeBytes": 54297883
+          },
+          {
+            "names": [
+              "docker.io/velero/velero-plugin-for-microsoft-azure:v1.7.0"
+            ],
+            "sizeBytes": 53002275
+          },
+          {
+            "names": [
+              "k8s.gcr.io/kube-scheduler:v1.25.12",
+              "registry.k8s.io/kube-scheduler:v1.25.12"
+            ],
+            "sizeBytes": 52990281
+          },
+          {
+            "names": [
+              "docker.io/hashicorp/vault@sha256:b888abc3fc0529550d4a6c87884419e86b8cb736fe556e3e717a6bc50888b3b8",
+              "docker.io/hashicorp/vault:1.13.1"
+            ],
+            "sizeBytes": 52884340
+          },
+          {
+            "names": [
+              "quay.io/minio/mc@sha256:0a72723e37bbab55c8870f035ec2ef8a7cc5dbea832deff0d5a1d49bb79b2109",
+              "quay.io/minio/mc:RELEASE.2022-03-17T07-21-29Z"
+            ],
+            "sizeBytes": 50672528
+          },
+          {
+            "names": [
+              "k8s.gcr.io/coredns/coredns:v1.9.3",
+              "k8s.gcr.io/coredns:v1.9.3",
+              "registry.k8s.io/coredns/coredns:v1.9.3",
+              "registry.k8s.io/coredns:v1.9.3"
+            ],
+            "sizeBytes": 48931294
+          },
+          {
+            "names": [
+              "docker.io/velero/velero-plugin-for-aws:v1.7.0"
+            ],
+            "sizeBytes": 47217127
+          },
+          {
+            "names": [
+              "docker.io/bitnami/redis@sha256:652304ba52799cbb7b4ff8f65bfd021b4aebc48fdd8522df16bd9b6951b56c96",
+              "docker.io/bitnami/redis:5.0.7-debian-10-r32"
+            ],
+            "sizeBytes": 44302306
+          },
+          {
+            "names": [
+              "k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.9.2",
+              "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.9.2"
+            ],
+            "sizeBytes": 43519361
+          },
+          {
+            "names": [
+              "docker.io/rqlite/rqlite:7.21.4"
+            ],
+            "sizeBytes": 43406892
+          },
+          {
+            "names": [
+              "docker.io/velero/velero-plugin-for-gcp:v1.7.0"
+            ],
+            "sizeBytes": 39856615
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-keycloak-extensions-init@sha256:642c68dc5bb3450be248f71783f5d56d16deccb617119dbf1b0d1ebcdc52e48e",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-keycloak-extensions-init:19.0.3-legacy-00851e8"
+            ],
+            "sizeBytes": 37658661
+          },
+          {
+            "names": [
+              "docker.io/openpolicyagent/opa@sha256:e547618a8265b03db85ae7b2317ae40a5b985189480c94f9b989267aff6c2fec",
+              "docker.io/openpolicyagent/opa:0.45.0-rootless"
+            ],
+            "sizeBytes": 35821435
+          },
+          {
+            "names": [
+              "registry.opensource.zalan.do/acid/postgres-operator@sha256:498f7a31db02d937c16118af570c5370ef12ff024b3a68fef696a9556fa25688",
+              "registry.opensource.zalan.do/acid/postgres-operator:v1.10.0"
+            ],
+            "sizeBytes": 30508383
+          },
+          {
+            "names": [
+              "docker.io/library/haproxy:2.8.3-alpine3.18"
+            ],
+            "sizeBytes": 24622092
+          },
+          {
+            "names": [
+              "docker.io/library/registry:2.8.2"
+            ],
+            "sizeBytes": 24610357
+          },
+          {
+            "names": [
+              "quay.io/prometheus/node-exporter:v1.5.0"
+            ],
+            "sizeBytes": 23848967
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-operator@sha256:64a42218b202205de289fc9f13a1a2d2518d372b89f65a1db48e6bd8735d2224",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-operator:0.2.0-beta-20231011-143924-000054-61cb7b0"
+            ],
+            "sizeBytes": 20804799
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-registry@sha256:7fd7d95ff553d0dccca43cdc3c378360501fa1b83d3cc53f94baf7538a5dd5b6",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-registry:1.0.1-beta-20230908-153838-000006-b642a0f"
+            ],
+            "sizeBytes": 20196614
+          },
+          {
+            "names": [
+              "registry.k8s.io/ingress-nginx/kube-webhook-certgen@sha256:549e71a6ca248c5abd51cdb73dbc3083df62cf92ed5e6147c780e30f7e007a47"
+            ],
+            "sizeBytes": 19389719
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-secret-operator@sha256:d7ec878aadb1675bdca1d29e29ee1414b8a71f2a7a35eda10253e22c9de97253",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-secret-operator:0.2.0-beta-20230928-201727-000010-6a269a9"
+            ],
+            "sizeBytes": 19227475
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-keycloak-service-account-mapping@sha256:9b88e9e40c2be9c86c1c7c6c22550e4dcc53868f8f3662b4b15e4c06c5a92e51",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-keycloak-service-account-mapping:1.0.1-0bf67de4"
+            ],
+            "sizeBytes": 18905182
+          },
+          {
+            "names": [
+              "docker.io/velero/velero-restore-helper:v1.11.0"
+            ],
+            "sizeBytes": 18845015
+          },
+          {
+            "names": [
+              "gcr.io/velero-gcp/velero-restore-helper:v1.11.0"
+            ],
+            "sizeBytes": 18845015
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-content-importer@sha256:4313633689a5dcdf369b6c76d54035a01408d4f3444d08611b2e2aa4f94b82e1",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-content-importer:0.2.3-beta-20231027-161224-000005-7883903"
+            ],
+            "sizeBytes": 18622392
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/coredns-updater@sha256:0941aac1d669f07996bff71dd5594e9c06e8d1e7e4c870218aadeedd3b86ebb0",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/coredns-updater:0.0.6"
+            ],
+            "sizeBytes": 15341901
+          },
+          {
+            "names": [
+              "quay.io/prometheus-operator/prometheus-config-reloader:v0.65.2"
+            ],
+            "sizeBytes": 14591835
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-context-manager@sha256:edc8b27173cc82e1e2ed8e99faa16239b4d45cfcdcc6be831284ea57aeab7acc",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-context-manager:1.0.0-beta-20230921-225441-000020-35a324f"
+            ],
+            "sizeBytes": 13989317
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-event-listener@sha256:9a84abd3e37c83832c8845a4da1fc866d36e5f1338838b7fbb7dbf9393df24fc",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-event-listener:0.0.1-beta-20230908-163938-000045-94d2261"
+            ],
+            "sizeBytes": 11982600
+          },
+          {
+            "names": [
+              "docker.io/curlimages/curl@sha256:bb0843a1307b1aa73f65f24379d11dde881c16db62ba50810de0c64d48e740ed",
+              "docker.io/curlimages/curl:8.2.1"
+            ],
+            "sizeBytes": 10025555
+          },
+          {
+            "names": [
+              "docker.io/flannel/flannel-cni-plugin:v1.1.2"
+            ],
+            "sizeBytes": 8250502
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-webapp@sha256:c3c110111f17f28d60c416a52821d0d2e70bc19374af963dfabe878d830114a8",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-webapp:0.5.0-beta-000219-094b8a8"
+            ],
+            "sizeBytes": 6351324
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-s3-proxy@sha256:c3f4ec2c01d2ac8d3a4eaaa9c7a87be87c8c8fa52e20106bcb51fe0edf7ba684",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-s3-proxy:1.2.2-stable-0007-092b574"
+            ],
+            "sizeBytes": 6265308
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-keycloak-proxy@sha256:71d3e6eb39cfd65e96ddbf673934dbcace4663ce770fe0db12b986255611cec6",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-execution-keycloak-proxy:3.1.1-stable-0007-bbed704"
+            ],
+            "sizeBytes": 6175094
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-swagger@sha256:0c920f7b96229add865fd2831ca77e3d8d0910728a0046a11ee2c50a29ea3285",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-swagger:1.2.0-beta-20231024-154803-000044-cab1be8"
+            ],
+            "sizeBytes": 5836652
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-auth-exchanger@sha256:c301162c28b560c179f5ad33c3879f1b79be05f7f4ab18515fcb241a73fc7acb",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-auth-exchanger:1.2.2-stable-0008-75436a0"
+            ],
+            "sizeBytes": 5543948
+          },
+          {
+            "names": [
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-endpoint-status-tracker@sha256:53d6fc3579d8b8d35d28cac13a7d2b913aa9e50444941f34fbd0502a3ecea267",
+              "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-endpoint-status-tracker:0.2.0-beta-20230908-135743-000013-399ba19"
+            ],
+            "sizeBytes": 4768245
+          },
+          {
+            "names": [
+              "docker.io/library/alpine@sha256:eece025e432126ce23f223450a0326fbebde39cdf496a85d8c016293fc851978",
+              "docker.io/library/alpine:latest"
+            ],
+            "sizeBytes": 3405605
+          },
+          {
+            "names": [
+              "docker.io/library/busybox@sha256:7ae8447f3a7f5bccaa765926f25fc038e425cf1b2be6748727bbea9a13102094",
+              "docker.io/library/busybox:1.35"
+            ],
+            "sizeBytes": 2217191
+          },
+          {
+            "names": [
+              "k8s.gcr.io/pause:3.8",
+              "registry.k8s.io/pause:3.8"
+            ],
+            "sizeBytes": 714610
+          },
+          {
+            "names": [
+              "k8s.gcr.io/pause:3.6",
+              "registry.k8s.io/pause:3.6"
+            ],
+            "sizeBytes": 685866
+          }
+        ]
+      }
+    }
+  ]
+}

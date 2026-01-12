@@ -1,0 +1,409 @@
+Nov 21, 2023 2:30:29 PM org.keycloak.common.crypto.CryptoIntegration detectProvider
+INFO: Detected crypto provider: org.keycloak.crypto.def.DefaultCryptoProvider
+Added 'admin' to '/opt/jboss/keycloak/standalone/configuration/keycloak-add-user.json', restart server to load user
+-Dkeycloak.profile.feature.scripts=enabled -Dkeycloak.profile.feature.upload_scripts=enabled -Dkeycloak.profile.feature.token_exchange=enabled -Dkeycloak.profile.feature.admin_fine_grained_authz=enabled -Dkeycloak.profile.feature.declarative_user_profile=enabled
+=========================================================================
+
+  Using PostgreSQL database
+
+=========================================================================
+
+[0m14:30:31,038 INFO  [org.jboss.modules] (CLI command executor) JBoss Modules version 2.0.2.Final
+[0m[0m14:30:31,079 INFO  [org.jboss.msc] (CLI command executor) JBoss MSC version 1.4.13.Final
+[0m[0m14:30:31,086 INFO  [org.jboss.threads] (CLI command executor) JBoss Threads version 2.4.0.Final
+[0m[0m14:30:31,161 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: Keycloak 19.0.3 (WildFly Core 18.1.1.Final) starting
+[0m[0m14:30:31,209 INFO  [org.jboss.vfs] (MSC service thread 1-1) VFS000002: Failed to clean existing content for temp file provider of type temp. Enable DEBUG level log to find what caused this
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.wildfly.extension.elytron.SSLDefinitions (jar:file:/opt/jboss/keycloak/modules/system/layers/base/org/wildfly/extension/elytron/main/wildfly-elytron-integration-18.1.1.Final.jar!/) to method com.sun.net.ssl.internal.ssl.Provider.isFIPS()
+WARNING: Please consider reporting this to the maintainers of org.wildfly.extension.elytron.SSLDefinitions
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[0m[0m14:30:31,613 INFO  [org.wildfly.security] (ServerService Thread Pool -- 19) ELY00001: WildFly Elytron version 1.19.0.Final
+[0m[33m14:30:32,097 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-1) WFLYELY00023: KeyStore file '/opt/jboss/keycloak/standalone/configuration/application.keystore' does not exist. Used blank.
+[0m[33m14:30:32,100 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY01084: KeyStore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+[0m[0m14:30:32,115 INFO  [org.jboss.as.patching] (MSC service thread 1-1) WFLYPAT0050: Keycloak cumulative patch ID is: base, one-off patches include: none
+[0m[0m14:30:32,177 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m14:30:32,178 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Keycloak 19.0.3 (WildFly Core 18.1.1.Final) started in 1134ms - Started 49 of 72 services (24 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml
+[0mThe batch executed successfully
+[0m14:30:32,272 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0050: Keycloak 19.0.3 (WildFly Core 18.1.1.Final) stopped in 10ms
+[0m[0m14:30:33,206 INFO  [org.jboss.modules] (CLI command executor) JBoss Modules version 2.0.2.Final
+[0m[0m14:30:33,243 INFO  [org.jboss.msc] (CLI command executor) JBoss MSC version 1.4.13.Final
+[0m[0m14:30:33,249 INFO  [org.jboss.threads] (CLI command executor) JBoss Threads version 2.4.0.Final
+[0m[0m14:30:33,324 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: Keycloak 19.0.3 (WildFly Core 18.1.1.Final) starting
+[0m[0m14:30:33,370 INFO  [org.jboss.vfs] (MSC service thread 1-2) VFS000002: Failed to clean existing content for temp file provider of type temp. Enable DEBUG level log to find what caused this
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.wildfly.extension.elytron.SSLDefinitions (jar:file:/opt/jboss/keycloak/modules/system/layers/base/org/wildfly/extension/elytron/main/wildfly-elytron-integration-18.1.1.Final.jar!/) to method com.sun.net.ssl.internal.ssl.Provider.isFIPS()
+WARNING: Please consider reporting this to the maintainers of org.wildfly.extension.elytron.SSLDefinitions
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[0m[0m14:30:33,745 INFO  [org.wildfly.security] (ServerService Thread Pool -- 21) ELY00001: WildFly Elytron version 1.19.0.Final
+[0m[33m14:30:34,325 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY00023: KeyStore file '/opt/jboss/keycloak/standalone/configuration/application.keystore' does not exist. Used blank.
+[0m[33m14:30:34,329 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY01084: KeyStore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+[0m[0m14:30:34,340 INFO  [org.jboss.as.patching] (MSC service thread 1-1) WFLYPAT0050: Keycloak cumulative patch ID is: base, one-off patches include: none
+[0m[0m14:30:34,412 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m14:30:34,414 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Keycloak 19.0.3 (WildFly Core 18.1.1.Final) started in 1204ms - Started 49 of 79 services (31 services are lazy, passive or on-demand) - Server configuration file in use: standalone-ha.xml
+[0mThe batch executed successfully
+[0m14:30:34,510 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0050: Keycloak 19.0.3 (WildFly Core 18.1.1.Final) stopped in 7ms
+[0mCreating Keycloak truststore..
+Keycloak truststore successfully created at: /opt/jboss/keycloak/standalone/configuration/keystores/truststore.jks
+Warning: use -cacerts option to access cacerts keystore
+Importing certificates from system's Java CA certificate bundle into Keycloak truststore..
+Successfully imported certificates from system's Java CA certificate bundle into Keycloak truststore at: /opt/jboss/keycloak/standalone/configuration/keystores/truststore.jks
+Setting JGroups discovery to dns.DNS_PING with properties {dns_query=>keycloak-discovery.knime}
+Setting cache owners to 2 replicas
+Enabling replication of AuthenticationSessions with 2 replicas
+Executing cli script: /opt/jboss/startup-scripts/logging-config.cli
+[0m14:30:54,913 INFO  [org.jboss.modules] (CLI command executor) JBoss Modules version 2.0.2.Final
+[0m[0m14:30:54,958 INFO  [org.jboss.msc] (CLI command executor) JBoss MSC version 1.4.13.Final
+[0m[0m14:30:54,966 INFO  [org.jboss.threads] (CLI command executor) JBoss Threads version 2.4.0.Final
+[0m[0m14:30:55,039 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: Keycloak 19.0.3 (WildFly Core 18.1.1.Final) starting
+[0m[0m14:30:55,090 INFO  [org.jboss.vfs] (MSC service thread 1-1) VFS000002: Failed to clean existing content for temp file provider of type temp. Enable DEBUG level log to find what caused this
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.wildfly.extension.elytron.SSLDefinitions (jar:file:/opt/jboss/keycloak/modules/system/layers/base/org/wildfly/extension/elytron/main/wildfly-elytron-integration-18.1.1.Final.jar!/) to method com.sun.net.ssl.internal.ssl.Provider.isFIPS()
+WARNING: Please consider reporting this to the maintainers of org.wildfly.extension.elytron.SSLDefinitions
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[0m[0m14:30:55,455 INFO  [org.wildfly.security] (ServerService Thread Pool -- 21) ELY00001: WildFly Elytron version 1.19.0.Final
+[0m[33m14:30:56,035 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-1) WFLYELY00023: KeyStore file '/opt/jboss/keycloak/standalone/configuration/application.keystore' does not exist. Used blank.
+[0m[33m14:30:56,042 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-1) WFLYELY01084: KeyStore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+[0m[0m14:30:56,053 INFO  [org.jboss.as.patching] (MSC service thread 1-1) WFLYPAT0050: Keycloak cumulative patch ID is: base, one-off patches include: none
+[0m[33m14:30:56,272 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY00024: Certificate [e-tugracertificationauthority] in KeyStore is not valid: java.security.cert.CertificateExpiredException: NotAfter: Fri Mar 03 12:09:48 UTC 2023
+	at java.base/sun.security.x509.CertificateValidity.valid(CertificateValidity.java:277)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:675)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:648)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.checkCertificatesValidity(KeyStoreService.java:230)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.start(KeyStoreService.java:192)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1739)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1701)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1559)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1363)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[0m[33m14:30:56,273 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY00024: Certificate [staatdernederlandenevrootca] in KeyStore is not valid: java.security.cert.CertificateExpiredException: NotAfter: Thu Dec 08 11:10:28 UTC 2022
+	at java.base/sun.security.x509.CertificateValidity.valid(CertificateValidity.java:277)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:675)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:648)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.checkCertificatesValidity(KeyStoreService.java:230)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.start(KeyStoreService.java:192)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1739)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1701)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1559)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1363)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[0m[33m14:30:56,273 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY00024: Certificate [securitycommunicationrootca] in KeyStore is not valid: java.security.cert.CertificateExpiredException: NotAfter: Sat Sep 30 04:20:49 UTC 2023
+	at java.base/sun.security.x509.CertificateValidity.valid(CertificateValidity.java:277)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:675)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:648)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.checkCertificatesValidity(KeyStoreService.java:230)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.start(KeyStoreService.java:192)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1739)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1701)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1559)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1363)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[0m[33m14:30:56,273 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY00024: Certificate [hongkongpostrootca1] in KeyStore is not valid: java.security.cert.CertificateExpiredException: NotAfter: Mon May 15 04:52:29 UTC 2023
+	at java.base/sun.security.x509.CertificateValidity.valid(CertificateValidity.java:277)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:675)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:648)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.checkCertificatesValidity(KeyStoreService.java:230)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.start(KeyStoreService.java:192)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1739)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1701)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1559)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1363)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[0m[0m14:30:56,306 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m14:30:56,307 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Keycloak 19.0.3 (WildFly Core 18.1.1.Final) started in 1391ms - Started 51 of 81 services (31 services are lazy, passive or on-demand) - Server configuration file in use: standalone-ha.xml
+[0m{"outcome" => "success"}
+[0m14:30:56,393 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0050: Keycloak 19.0.3 (WildFly Core 18.1.1.Final) stopped in 8ms
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /opt/jboss/keycloak
+
+  JAVA: java
+
+  JAVA_OPTS:  -server -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true   --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED 
+
+=========================================================================
+
+[0m14:30:56,893 INFO  [org.jboss.modules] (main) JBoss Modules version 2.0.2.Final
+[0m[0m14:30:57,208 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.13.Final
+[0m[0m14:30:57,214 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+[0m[0m14:30:57,282 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: Keycloak 19.0.3 (WildFly Core 18.1.1.Final) starting
+[0m[0m14:30:57,330 INFO  [org.jboss.vfs] (MSC service thread 1-1) VFS000002: Failed to clean existing content for temp file provider of type temp. Enable DEBUG level log to find what caused this
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.wildfly.extension.elytron.SSLDefinitions (jar:file:/opt/jboss/keycloak/modules/system/layers/base/org/wildfly/extension/elytron/main/wildfly-elytron-integration-18.1.1.Final.jar!/) to method com.sun.net.ssl.internal.ssl.Provider.isFIPS()
+WARNING: Please consider reporting this to the maintainers of org.wildfly.extension.elytron.SSLDefinitions
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[0m[0m14:30:57,741 INFO  [org.wildfly.security] (ServerService Thread Pool -- 21) ELY00001: WildFly Elytron version 1.19.0.Final
+[0m[0m14:30:58,127 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) WFLYDS0015: Re-attempting failed deployment keycloak-metrics-spi-2.5.3.jar
+[0m[0m14:30:58,145 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 18) WFLYDR0001: Content added at location /opt/jboss/keycloak/standalone/data/content/0e/b67d0e2bb9a0086088ad1abfa88e76fe8d1d8e/content
+[0m[0m14:30:58,216 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m14:30:58,228 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.8.7.Final
+[0m[0m14:30:58,234 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.8.7.Final
+[0m[0m14:30:58,254 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 39) WFLYIO001: Worker 'default' has auto-configured to 2 IO threads with 16 max task threads based on your 1 available processors
+[0m[0m14:30:58,256 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 42) WFLYCLJG0001: Activating JGroups subsystem. JGroups version 4.2.20
+[0m[33m14:30:58,256 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 53) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+[0m[0m14:30:58,257 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 37) WFLYHEALTH0001: Activating Base Health Subsystem
+[0m[0m14:30:58,259 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 49) WFLYNAM0001: Activating Naming Subsystem
+[0m[0m14:30:58,262 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 40) WFLYRS0016: RESTEasy version 4.7.6.Final
+[0m[0m14:30:58,262 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
+[0m[0m14:30:58,281 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 47) WFLYMETRICS0001: Activating Base Metrics Subsystem
+[0m[0m14:30:58,290 INFO  [org.jboss.as.connector] (MSC service thread 1-1) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 1.5.3.Final)
+[0m[0m14:30:58,299 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 32) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+[0m[0m14:30:58,302 INFO  [org.jboss.remoting] (MSC service thread 1-2) JBoss Remoting version 5.0.24.Final
+[0m[0m14:30:58,321 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 32) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.3)
+[0m[33m14:30:58,334 WARN  [org.wildfly.clustering.web.undertow] (ServerService Thread Pool -- 54) WFLYCLWEBUT0007: No routing provider found for default-server; using legacy provider based on static configuration
+[0m[0m14:30:58,345 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0018: Started Driver service with driver-name = h2
+[0m[0m14:30:58,359 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0018: Started Driver service with driver-name = postgresql
+[0m[0m14:30:58,360 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0003: Undertow 2.2.17.Final starting
+[0m[0m14:30:58,368 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 54) WFLYUT0014: Creating file handler for path '/opt/jboss/keycloak/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+[0m[0m14:30:58,375 INFO  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 4 (per class), which is derived from the number of CPUs on this host.
+[0m[0m14:30:58,375 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 16 (per class), which is derived from thread worker pool sizing.
+[0m[0m14:30:58,375 INFO  [org.jboss.as.naming] (MSC service thread 1-2) WFLYNAM0003: Starting Naming Service
+[0m[0m14:30:58,388 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+[0m[33m14:30:58,426 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-1) WFLYELY00023: KeyStore file '/opt/jboss/keycloak/standalone/configuration/application.keystore' does not exist. Used blank.
+[0m[33m14:30:58,621 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-1) WFLYELY01084: KeyStore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+[0m[0m14:30:58,634 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0012: Started server default-server.
+[0m[33m14:30:58,681 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY00024: Certificate [e-tugracertificationauthority] in KeyStore is not valid: java.security.cert.CertificateExpiredException: NotAfter: Fri Mar 03 12:09:48 UTC 2023
+	at java.base/sun.security.x509.CertificateValidity.valid(CertificateValidity.java:277)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:675)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:648)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.checkCertificatesValidity(KeyStoreService.java:230)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.start(KeyStoreService.java:192)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1739)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1701)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1559)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1363)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[0m[33m14:30:58,682 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY00024: Certificate [staatdernederlandenevrootca] in KeyStore is not valid: java.security.cert.CertificateExpiredException: NotAfter: Thu Dec 08 11:10:28 UTC 2022
+	at java.base/sun.security.x509.CertificateValidity.valid(CertificateValidity.java:277)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:675)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:648)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.checkCertificatesValidity(KeyStoreService.java:230)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.start(KeyStoreService.java:192)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1739)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1701)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1559)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1363)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[0m[33m14:30:58,682 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY00024: Certificate [securitycommunicationrootca] in KeyStore is not valid: java.security.cert.CertificateExpiredException: NotAfter: Sat Sep 30 04:20:49 UTC 2023
+	at java.base/sun.security.x509.CertificateValidity.valid(CertificateValidity.java:277)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:675)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:648)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.checkCertificatesValidity(KeyStoreService.java:230)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.start(KeyStoreService.java:192)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1739)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1701)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1559)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1363)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[0m[33m14:30:58,682 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY00024: Certificate [hongkongpostrootca1] in KeyStore is not valid: java.security.cert.CertificateExpiredException: NotAfter: Mon May 15 04:52:29 UTC 2023
+	at java.base/sun.security.x509.CertificateValidity.valid(CertificateValidity.java:277)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:675)
+	at java.base/sun.security.x509.X509CertImpl.checkValidity(X509CertImpl.java:648)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.checkCertificatesValidity(KeyStoreService.java:230)
+	at org.wildfly.extension.elytron@18.1.1.Final//org.wildfly.extension.elytron.KeyStoreService.start(KeyStoreService.java:192)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1739)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1701)
+	at org.jboss.msc@1.4.13.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1559)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1363)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[0m[0m14:30:58,688 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0006: Undertow AJP listener ajp listening on ***HIDDEN***:8009
+[0m[0m14:30:58,688 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) Queuing requests.
+[0m[0m14:30:58,689 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0018: Host default-host starting
+[0m[0m14:30:58,692 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0006: Undertow HTTP listener default listening on ***HIDDEN***:8080
+[0m[0m14:30:58,696 INFO  [org.jboss.as.patching] (MSC service thread 1-1) WFLYPAT0050: Keycloak cumulative patch ID is: base, one-off patches include: none
+[0m[0m14:30:58,701 INFO  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+[0m[0m14:30:58,702 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0006: Undertow HTTPS listener https listening on ***HIDDEN***:8443
+[0m[0m14:30:58,704 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) WFLYDS0013: Started FileSystemDeploymentService for directory /opt/jboss/keycloak/standalone/deployments
+[0m[0m14:30:58,709 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0027: Starting deployment of "keycloak-metrics-spi-2.5.3.jar" (runtime-name: "keycloak-metrics-spi-2.5.3.jar")
+[0m[0m14:30:58,709 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0027: Starting deployment of "keycloak-server.war" (runtime-name: "keycloak-server.war")
+[0m[0m14:30:58,718 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 56) MODCLUSTER000001: Initializing mod_cluster version 1.4.4.Final
+[0m[0m14:30:58,746 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 56) MODCLUSTER000032: Listening to proxy advertisements on /***HIDDEN***:23364
+[0m[0m14:30:58,886 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0001: Bound data source [java:jboss/datasources/KeycloakDS]
+[0m[0m14:30:58,886 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m14:30:58,939 INFO  [org.keycloak.subsystem.server.extension.KeycloakProviderDeploymentProcessor] (MSC service thread 1-1) Deploying Keycloak provider: keycloak-metrics-spi-2.5.3.jar
+[0m[0m14:31:02,092 INFO  [org.jgroups.protocols.pbcast.GMS] (ServerService Thread Pool -- 56) keycloak-0: no members discovered after 3005 ms: creating cluster as coordinator
+[0m[0m14:31:02,458 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 56) ISPN000128: Infinispan version: Infinispan 'Triskaidekaphobia' 13.0.10.Final
+[0m[0m14:31:02,512 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 58) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+[0m[0m14:31:02,513 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 56) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+[0m[0m14:31:02,513 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 57) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+[0m[0m14:31:02,512 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 60) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+[0m[0m14:31:02,513 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 59) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+[0m[0m14:31:02,630 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 59) ISPN000078: Starting JGroups channel `ejb`
+[0m[0m14:31:02,630 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 58) ISPN000078: Starting JGroups channel `ejb`
+[0m[0m14:31:02,630 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 60) ISPN000078: Starting JGroups channel `ejb`
+[0m[0m14:31:02,630 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 57) ISPN000078: Starting JGroups channel `ejb`
+[0m[0m14:31:02,630 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 56) ISPN000078: Starting JGroups channel `ejb`
+[0m[0m14:31:02,634 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 59) ISPN000094: Received new cluster view for channel ejb: [keycloak-0|0] (1) [keycloak-0]
+[0m[0m14:31:02,634 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 60) ISPN000094: Received new cluster view for channel ejb: [keycloak-0|0] (1) [keycloak-0]
+[0m[0m14:31:02,634 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 56) ISPN000094: Received new cluster view for channel ejb: [keycloak-0|0] (1) [keycloak-0]
+[0m[0m14:31:02,634 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 57) ISPN000094: Received new cluster view for channel ejb: [keycloak-0|0] (1) [keycloak-0]
+[0m[0m14:31:02,634 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 58) ISPN000094: Received new cluster view for channel ejb: [keycloak-0|0] (1) [keycloak-0]
+[0m[0m14:31:02,648 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 57) ISPN000079: Channel `ejb` local address is `keycloak-0`, physical addresses are `[***HIDDEN***:7600]`
+[0m[0m14:31:02,648 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 59) ISPN000079: Channel `ejb` local address is `keycloak-0`, physical addresses are `[***HIDDEN***:7600]`
+[0m[0m14:31:02,648 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 58) ISPN000079: Channel `ejb` local address is `keycloak-0`, physical addresses are `[***HIDDEN***:7600]`
+[0m[0m14:31:02,648 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 60) ISPN000079: Channel `ejb` local address is `keycloak-0`, physical addresses are `[***HIDDEN***:7600]`
+[0m[0m14:31:02,648 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 56) ISPN000079: Channel `ejb` local address is `keycloak-0`, physical addresses are `[***HIDDEN***:7600]`
+[0m[0m14:31:03,175 INFO  [org.infinispan.CONFIG] (MSC service thread 1-2) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+[0m[0m14:31:03,175 INFO  [org.infinispan.CONFIG] (MSC service thread 1-2) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+[0m[0m14:31:03,191 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 63) WFLYCLINF0002: Started work cache from keycloak container
+[0m[0m14:31:03,192 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 60) WFLYCLINF0002: Started loginFailures cache from keycloak container
+[0m[0m14:31:03,194 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 61) WFLYCLINF0002: Started authenticationSessions cache from keycloak container
+[0m[0m14:31:03,194 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 57) WFLYCLINF0002: Started actionTokens cache from keycloak container
+[0m[0m14:31:03,197 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 56) WFLYCLINF0002: Started sessions cache from keycloak container
+[0m[0m14:31:03,198 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 59) WFLYCLINF0002: Started clientSessions cache from keycloak container
+[0m[0m14:31:03,198 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 67) WFLYCLINF0002: Started offlineClientSessions cache from keycloak container
+[0m[0m14:31:03,198 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 65) WFLYCLINF0002: Started offlineSessions cache from keycloak container
+[0m[0m14:31:03,205 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 58) WFLYCLINF0002: Started realms cache from keycloak container
+[0m[0m14:31:03,205 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 62) WFLYCLINF0002: Started authorization cache from keycloak container
+[0m[0m14:31:03,205 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 64) WFLYCLINF0002: Started keys cache from keycloak container
+[0m[0m14:31:03,206 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 66) WFLYCLINF0002: Started users cache from keycloak container
+[0m[0m14:31:03,213 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 68) WFLYCLINF0002: Started http-remoting-connector cache from ejb container
+[0m[33m14:31:03,288 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0273: Excluded subsystem webservices via jboss-deployment-structure.xml does not exist.
+[0m[0m14:31:03,463 INFO  [org.keycloak.common.crypto.CryptoIntegration] (ServerService Thread Pool -- 66) Detected crypto provider: org.keycloak.crypto.def.DefaultCryptoProvider
+[0m[0m14:31:03,576 INFO  [org.keycloak.services] (ServerService Thread Pool -- 66) KC-SERVICES0001: Loading config from standalone.xml or domain.xml
+[0m[0m14:31:03,619 INFO  [org.keycloak.common.Profile] (ServerService Thread Pool -- 66) Preview feature enabled: admin_fine_grained_authz
+[0m[0m14:31:03,619 INFO  [org.keycloak.common.Profile] (ServerService Thread Pool -- 66) Preview feature enabled: scripts
+[0m[0m14:31:03,620 INFO  [org.keycloak.common.Profile] (ServerService Thread Pool -- 66) Preview feature enabled: token_exchange
+[0m[0m14:31:03,620 INFO  [org.keycloak.common.Profile] (ServerService Thread Pool -- 66) Preview feature enabled: declarative_user_profile
+[0m[0m14:31:03,647 INFO  [org.keycloak.url.DefaultHostnameProviderFactory] (ServerService Thread Pool -- 66) Frontend: <request>, Admin: <frontend>, Backend: <request>
+[0m[33m14:31:04,386 WARN  [org.keycloak.services] (ServerService Thread Pool -- 66) KC-SERVICES0047: metrics-listener (org.jboss.aerogear.keycloak.metrics.MetricsEventListenerFactory) is implementing the internal SPI eventsListener. This SPI is internal and may change without notice
+[0m[33m14:31:04,393 WARN  [org.keycloak.services] (ServerService Thread Pool -- 66) KC-SERVICES0047: metrics (org.jboss.aerogear.keycloak.metrics.MetricsEndpointFactory) is implementing the internal SPI realm-restapi-extension. This SPI is internal and may change without notice
+[0m[0m14:31:04,422 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 66) WFLYCLINF0002: Started realmRevisions cache from keycloak container
+[0m[0m14:31:04,428 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 66) WFLYCLINF0002: Started userRevisions cache from keycloak container
+[0m[0m14:31:04,435 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 66) WFLYCLINF0002: Started authorizationRevisions cache from keycloak container
+[0m[0m14:31:04,436 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (ServerService Thread Pool -- 66) Node name: keycloak-0, Site name: null
+[0m[0m14:31:05,024 INFO  [org.keycloak.connections.jpa.DefaultJpaConnectionProviderFactory] (ServerService Thread Pool -- 66) Database info: {databaseUrl=jdbc:postgresql://keycloak-postgresql.knime:5432/keycloak, databaseUser=keycloak, databaseProduct=PostgreSQL 11.19 (Ubuntu 11.19-1.pgdg22.04+1), databaseDriver=PostgreSQL JDBC Driver 42.3.3}
+[0m[0m14:31:06,043 INFO  [org.hibernate.jpa.boot.internal.PersistenceXmlParser] (ServerService Thread Pool -- 66) HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+[0m[0m14:31:06,108 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 66) HHH000204: Processing PersistenceUnitInfo [
+	name: keycloak-default
+	...]
+[0m[0m14:31:06,206 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 66) HHH000412: Hibernate Core {5.3.24.Final}
+[0m[0m14:31:06,208 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 66) HHH000206: hibernate.properties not found
+[0m[0m14:31:06,439 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 66) HCANN000001: Hibernate Commons Annotations {5.0.5.Final}
+[0m[0m14:31:06,615 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 66) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+[0m[0m14:31:06,683 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 66) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[0m[0m14:31:06,688 INFO  [org.hibernate.type.BasicTypeRegistry] (ServerService Thread Pool -- 66) HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@6a791cf8
+[0m[0m14:31:06,696 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 66) Envers integration enabled? : true
+[0m[0m14:31:06,964 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 66) HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
+[0m[0m14:31:07,200 INFO  [org.hibernate.validator.internal.util.Version] (ServerService Thread Pool -- 66) HV000001: Hibernate Validator 6.0.23.Final
+[0m[0m14:31:08,153 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 66) HHH000397: Using ASTQueryTranslatorFactory
+[0m[0m14:31:09,093 INFO  [org.keycloak.services] (ServerService Thread Pool -- 66) KC-SERVICES0006: Importing users from '/opt/jboss/keycloak/standalone/configuration/keycloak-add-user.json'
+[0m[33m14:31:09,193 WARN  [org.keycloak.services] (ServerService Thread Pool -- 66) KC-SERVICES0104: Not creating user admin. It already exists.
+[0m[0m14:31:09,336 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 66) RESTEASY002225: Deploying javax.ws.rs.core.Application: class org.keycloak.services.resources.KeycloakApplication
+[0m[0m14:31:09,338 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 66) RESTEASY002200: Adding class resource org.keycloak.services.resources.JsResource from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m14:31:09,338 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 66) RESTEASY002205: Adding provider class org.keycloak.services.filters.KeycloakSecurityHeadersFilter from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m14:31:09,338 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 66) RESTEASY002205: Adding provider class org.keycloak.services.error.KcUnrecognizedPropertyExceptionHandler from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m14:31:09,338 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 66) RESTEASY002200: Adding class resource org.keycloak.services.resources.ThemeResource from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m14:31:09,338 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 66) RESTEASY002205: Adding provider class org.keycloak.services.error.KeycloakErrorHandler from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m14:31:09,338 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 66) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.admin.AdminRoot from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m14:31:09,339 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 66) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.RealmsResource from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m14:31:09,339 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 66) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.RobotsResource from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m14:31:09,339 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 66) RESTEASY002210: Adding provider singleton org.keycloak.services.util.ObjectMapperResolver from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m14:31:09,339 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 66) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.WelcomeResource from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m14:31:09,401 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 66) WFLYUT0021: Registered web context: '/auth' for server 'default-server'
+[0m[0m14:31:09,455 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 33) WFLYSRV0010: Deployed "keycloak-metrics-spi-2.5.3.jar" (runtime-name : "keycloak-metrics-spi-2.5.3.jar")
+[0m[0m14:31:09,456 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "keycloak-server.war" (runtime-name : "keycloak-server.war")
+[0m[0m14:31:09,488 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m14:31:09,490 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Keycloak 19.0.3 (WildFly Core 18.1.1.Final) started in 12801ms - Started 719 of 1022 services (699 services are lazy, passive or on-demand) - Server configuration file in use: standalone-ha.xml
+[0m[0m14:31:09,491 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://***HIDDEN***:9990/management
+[0m[0m14:31:09,491 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://***HIDDEN***:9990
+[0m[33m14:31:24,833 WARN  [org.wildfly.extension.elytron] (default task-1) WFLYELY01085: Generated self-signed certificate at /opt/jboss/keycloak/standalone/configuration/application.keystore. Please note that self-signed certificates are not secure and should only be used for testing purposes. Do not use this self-signed certificate in production.
+SHA-1 fingerprint of the generated key is 34:72:92:87:bb:65:ae:93:3b:a3:78:1f:6a:69:93:a0:fc:d2:20:6b
+SHA-256 fingerprint of the generated key is 93:3c:d9:d5:89:f6:be:c5:c1:a0:58:71:5e:57:fe:f0:a4:5e:ac:31:dc:a2:20:0c:2b:d7:ef:f8:02:b5:b8:f5
+[0m[32m14:41:27,797 DEBUG [org.keycloak.events] (default task-2) type=CLIENT_LOGIN, realmId=knime, clientId=search-sync-service, userId=5f40c3de-e12e-4574-a3f8-6be300708e58, ipAddress=***HIDDEN***, token_id=60d3498d-f38f-4241-8f37-dce90a879ffb, grant_type=client_credentials, scope='groups profile email', client_auth_method=client-secret, username=service-account-search-sync-service, authSessionParentId=d28d3fa0-126f-4ad2-bb91-9b39b56a035d, authSessionTabId=jNkSc7WnUuQ
+[0m[32m14:46:09,220 DEBUG [org.keycloak.events.jpa.JpaEventStoreProvider] (Timer-2) Cleared 0 expired events in all realms
+[0m[32m14:51:27,185 DEBUG [org.keycloak.events] (default task-2) type=CLIENT_LOGIN, realmId=knime, clientId=search-sync-service, userId=5f40c3de-e12e-4574-a3f8-6be300708e58, ipAddress=***HIDDEN***, token_id=5a7d6a2b-f392-457b-8b76-6a4f5353f9ba, grant_type=client_credentials, scope='groups profile email', client_auth_method=client-secret, username=service-account-search-sync-service, authSessionParentId=70d89f35-e868-44f6-bb70-39632dea0c2b, authSessionTabId=K1b4leTO-HE
+[0m[32m15:01:09,212 DEBUG [org.keycloak.events.jpa.JpaEventStoreProvider] (Timer-2) Cleared 0 expired events in all realms
+[0m[32m15:01:27,137 DEBUG [org.keycloak.events] (default task-2) type=CLIENT_LOGIN, realmId=knime, clientId=search-sync-service, userId=5f40c3de-e12e-4574-a3f8-6be300708e58, ipAddress=***HIDDEN***, token_id=b1c2dc53-e443-4c71-bd8e-7eb68dcd175f, grant_type=client_credentials, scope='groups profile email', client_auth_method=client-secret, username=service-account-search-sync-service, authSessionParentId=f56cfd63-ec80-4309-b75d-384dcb8a7706, authSessionTabId=iUjYH_b1Y8k
+[0m[32m15:11:27,146 DEBUG [org.keycloak.events] (default task-2) type=CLIENT_LOGIN, realmId=knime, clientId=search-sync-service, userId=5f40c3de-e12e-4574-a3f8-6be300708e58, ipAddress=***HIDDEN***, token_id=ee0b95e6-7b24-4c38-b879-fca4ebb473ce, grant_type=client_credentials, scope='groups profile email', client_auth_method=client-secret, username=service-account-search-sync-service, authSessionParentId=39259635-6981-426e-8106-dd5819891af7, authSessionTabId=MgdBoF1CtTE
+[0m[32m15:16:09,212 DEBUG [org.keycloak.events.jpa.JpaEventStoreProvider] (Timer-2) Cleared 0 expired events in all realms
+[0m[32m15:21:27,142 DEBUG [org.keycloak.events] (default task-2) type=CLIENT_LOGIN, realmId=knime, clientId=search-sync-service, userId=5f40c3de-e12e-4574-a3f8-6be300708e58, ipAddress=***HIDDEN***, token_id=64357196-a6c2-4ea6-86be-546656dcded8, grant_type=client_credentials, scope='groups profile email', client_auth_method=client-secret, username=service-account-search-sync-service, authSessionParentId=63fd4bae-c544-4a74-813b-a160704990b4, authSessionTabId=tAIcmWdexq8
+[0m[32m15:31:09,212 DEBUG [org.keycloak.events.jpa.JpaEventStoreProvider] (Timer-2) Cleared 0 expired events in all realms
+[0m[32m15:31:27,143 DEBUG [org.keycloak.events] (default task-2) type=CLIENT_LOGIN, realmId=knime, clientId=search-sync-service, userId=5f40c3de-e12e-4574-a3f8-6be300708e58, ipAddress=***HIDDEN***, token_id=e6a77ea3-28cc-4a17-9f20-5f43c8ecc6ab, grant_type=client_credentials, scope='groups profile email', client_auth_method=client-secret, username=service-account-search-sync-service, authSessionParentId=4ae66e51-47cc-4123-9ead-eef68c9a7740, authSessionTabId=zA4PO_f2LTA
+[0m[32m15:41:27,136 DEBUG [org.keycloak.events] (default task-2) type=CLIENT_LOGIN, realmId=knime, clientId=search-sync-service, userId=5f40c3de-e12e-4574-a3f8-6be300708e58, ipAddress=***HIDDEN***, token_id=2d197bc7-102c-4b0e-b220-f30818381d38, grant_type=client_credentials, scope='groups profile email', client_auth_method=client-secret, username=service-account-search-sync-service, authSessionParentId=5da76a22-0e82-4a3f-a1a7-a6d978e3d9c2, authSessionTabId=UvuEU1ztQX0
+[0m[32m15:46:09,212 DEBUG [org.keycloak.events.jpa.JpaEventStoreProvider] (Timer-2) Cleared 0 expired events in all realms
+[0m[32m15:48:31,392 DEBUG [org.keycloak.events] (default task-1) type=LOGIN, realmId=knime, clientId=hub-ui, userId=28654070-1163-4de3-88b6-e90b62a62cb8, ipAddress=***HIDDEN***, auth_method=openid-connect, auth_type=code, response_type=code, redirect_uri=http://hub.kbh-troubleshooting.com/site/post-login, consent=no_consent_required, code_id=04b12ed7-059b-4ac9-959b-2d6820533743, username=knimeadmin, response_mode=query, authSessionParentId=04b12ed7-059b-4ac9-959b-2d6820533743, authSessionTabId=9h2dbEFBZRI
+[0m[32m15:48:31,546 DEBUG [org.keycloak.events] (default task-1) type=CODE_TO_TOKEN, realmId=knime, clientId=hub-ui, userId=28654070-1163-4de3-88b6-e90b62a62cb8, ipAddress=***HIDDEN***, token_id=67ef5895-456e-4dc9-8edb-33d7660e83f7, grant_type=authorization_code, refresh_token_type=Refresh, scope='openid groups profile email', refresh_token_id=47640f6c-b88e-49b2-b88a-877932eab1f3, code_id=04b12ed7-059b-4ac9-959b-2d6820533743, client_auth_method=client-secret
+[0m[32m15:51:27,132 DEBUG [org.keycloak.events] (default task-1) type=CLIENT_LOGIN, realmId=knime, clientId=search-sync-service, userId=5f40c3de-e12e-4574-a3f8-6be300708e58, ipAddress=***HIDDEN***, token_id=0072497d-3837-473b-a90e-5f15553d4603, grant_type=client_credentials, scope='groups profile email', client_auth_method=client-secret, username=service-account-search-sync-service, authSessionParentId=b9c5774a-d401-49a8-9174-fdd61c1d8c60, authSessionTabId=0V37VJTS4AE
+[0m[32m15:53:22,343 DEBUG [org.keycloak.events] (default task-1) type=REFRESH_TOKEN, realmId=knime, clientId=hub-ui, userId=28654070-1163-4de3-88b6-e90b62a62cb8, ipAddress=***HIDDEN***, token_id=f115a51c-1ca1-4232-9acd-c5db4b84ec9e, grant_type=refresh_token, refresh_token_type=Refresh, updated_refresh_token_id=b6f6a5fe-ed75-446b-816b-e25e37065942, scope='openid groups profile email', refresh_token_id=47640f6c-b88e-49b2-b88a-877932eab1f3, client_auth_method=client-secret
+[0m[32m16:01:09,211 DEBUG [org.keycloak.events.jpa.JpaEventStoreProvider] (Timer-2) Cleared 0 expired events in all realms
+[0m[32m16:01:17,557 DEBUG [org.keycloak.events] (default task-1) type=REFRESH_TOKEN, realmId=knime, clientId=hub-ui, userId=28654070-1163-4de3-88b6-e90b62a62cb8, ipAddress=***HIDDEN***, token_id=cb65d623-2226-40e4-89ad-d6f58179c743, grant_type=refresh_token, refresh_token_type=Refresh, updated_refresh_token_id=60d00856-bc41-435d-9110-c91081ac2f68, scope='openid groups profile email', refresh_token_id=47640f6c-b88e-49b2-b88a-877932eab1f3, client_auth_method=client-secret
+[0m[32m16:01:27,137 DEBUG [org.keycloak.events] (default task-1) type=CLIENT_LOGIN, realmId=knime, clientId=search-sync-service, userId=5f40c3de-e12e-4574-a3f8-6be300708e58, ipAddress=***HIDDEN***, token_id=8a0e809c-ae0e-4ac2-b6fe-961b330b76a6, grant_type=client_credentials, scope='groups profile email', client_auth_method=client-secret, username=service-account-search-sync-service, authSessionParentId=6d966163-c5fa-4b8d-9985-5313aa132d1a, authSessionTabId=5x1AKvBkbO8
+[0m[32m16:04:45,921 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=6b4861f2-5806-4cb3-b1ee-cfeb67c35d11, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=7e59ae8d-6081-4a49-965d-4753c13a0ee4, client_auth_method=client-secret, username=admin, authSessionParentId=e67d9a08-f1da-47d7-9c7a-c68fea9dc85d, authSessionTabId=ihFB0N77H00
+[0m[32m16:04:45,973 DEBUG [org.keycloak.events] (default task-1) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=84386b42-7b73-4066-81dc-7ab09fedcad4, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=c92490ad-9f9d-4d1b-8e7d-f9164bb22873, client_auth_method=client-secret, username=admin, authSessionParentId=0b01fae3-1da7-46e1-b66d-0f70f958e639, authSessionTabId=lNH_HYSYxfk
+[0m[32m16:04:46,643 DEBUG [org.keycloak.events] (default task-1) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=431a1871-f182-4633-bb97-f97b31cb6835, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=28a2791d-1754-4865-bcd8-7b97e1e458f4, client_auth_method=client-secret, username=admin, authSessionParentId=3827b0fb-4f3d-426f-9138-0d25b96675fb, authSessionTabId=mCpRJRMn3MM
+[0m[32m16:04:46,939 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/03f8a956-1e08-46fb-b492-07d68ac5e692
+[0m[32m16:04:47,019 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=459fb70d-f516-44a3-83d1-920ef21e8023, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=e842fc32-5593-4906-91b4-59cde46d5719, client_auth_method=client-secret, username=admin, authSessionParentId=43eb2403-6b9d-485e-aad6-6f692806f561, authSessionTabId=R5CRJ7ySAZQ
+[0m[32m16:04:47,156 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/a3125597-9998-4cec-a13c-002a6a1ce63e
+[0m[32m16:04:47,230 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=8994cce3-dcca-48cc-9292-a4d3202e6672, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=3ea07b0c-9ae8-4d6e-8cdc-b5f1a1046117, client_auth_method=client-secret, username=admin, authSessionParentId=8c9d4ffb-e685-4669-83f4-5186dee023a8, authSessionTabId=FQX-0me7gQ0
+[0m[32m16:04:48,723 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/0aacd1ff-b4d6-47f1-823c-c812d2d7cd04
+[0m[32m16:04:48,795 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=9bc66b9a-71df-464f-8e43-a3b060143d50, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=013cff0e-36c7-481a-9e39-584caa33ab37, client_auth_method=client-secret, username=admin, authSessionParentId=04f2eb30-829a-457e-8c1b-5359aebb2b94, authSessionTabId=NrYSUVp3GWU
+[0m[32m16:04:48,902 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/a920443e-54f1-4d93-bd53-32ad4e45345f
+[0m[32m16:04:48,974 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=536d3944-f757-4caf-8a04-6448fedf2dee, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=ba075702-b9dd-4ec5-8509-6fcd06a84fd4, client_auth_method=client-secret, username=admin, authSessionParentId=19a01bc3-975e-4379-84e2-ae22baf9ca15, authSessionTabId=zGbrIqjFtPE
+[0m[32m16:04:49,088 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/65d1d5fe-dbb1-432d-9479-5d25df6d4d06
+[0m[32m16:04:49,158 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=0b6d4f65-6939-4367-ac81-4a5c53fe719a, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=b31318b7-a4cf-4875-a4b6-d5c698a541ae, client_auth_method=client-secret, username=admin, authSessionParentId=f42de335-4c9e-4937-87dc-5ef84be05e82, authSessionTabId=4xjK4czmbFU
+[0m[32m16:04:49,266 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/b4d6e23a-a7d1-4f92-bfe0-932d244e6e98
+[0m[32m16:04:49,340 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=2fc4a15e-08db-4db1-8c0e-4abc23ea7704, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=43c4a0d7-a596-439b-902d-9b92b7f8afd8, client_auth_method=client-secret, username=admin, authSessionParentId=bba08620-3062-4bd0-bb4f-4b991aee43a8, authSessionTabId=27x0OZpw3yE
+[0m[32m16:04:49,442 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/72367f70-35c2-41d5-95c0-18153ba2161f
+[0m[32m16:04:49,513 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=28e4e44b-05c6-4899-951e-acb40ad037c4, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=38d92187-fc89-4b43-bff6-c1932dd14c98, client_auth_method=client-secret, username=admin, authSessionParentId=71adf810-93e7-4660-94b8-b34b470666d7, authSessionTabId=T_p5glVTcJA
+[0m[32m16:04:49,606 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/41e7daad-64fc-4a87-aedb-f386f9cc1d49
+[0m[32m16:04:49,678 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=c0fb8fa6-0f2c-4425-b1ce-02fa6baddded, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=cb831fd9-07f9-4242-9546-8ffe0c7f37f9, client_auth_method=client-secret, username=admin, authSessionParentId=e29eb6d5-19aa-4749-b0b5-52f0337c10d2, authSessionTabId=eKnFyxEEtdE
+[0m[32m16:04:49,774 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/c00b78fd-5ecb-4314-aa5b-112fd9a5f883
+[0m[32m16:04:49,845 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=20516f9c-3a2a-4849-aafd-cf3092ba58a8, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=62229103-0c72-421d-84a7-5bd825e8994d, client_auth_method=client-secret, username=admin, authSessionParentId=d555a0a4-9c65-462b-9445-0ca4d08acd53, authSessionTabId=M5JciSqdeTE
+[0m[32m16:04:49,883 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/fb0d2bed-c719-4c0e-a0a3-3d2a7aa30cb8
+[0m[32m16:04:49,955 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=7c0ac106-5ac3-4c4d-8a58-03b41400872e, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=40cb63e8-1faa-4c5b-b36f-9cb17683c8cd, client_auth_method=client-secret, username=admin, authSessionParentId=58fe050d-a50e-4b39-bb90-1ab0c2a0196c, authSessionTabId=EQ7cmtWPUXY
+[0m[32m16:04:50,062 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/6b5a0490-866a-41d5-b3d7-83974a9131ed
+[0m[32m16:04:50,132 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=01074e6b-e038-4c09-a555-a75d8461fe20, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=f9a37d3c-7d45-42c4-94fe-0391623bf98e, client_auth_method=client-secret, username=admin, authSessionParentId=53bd5802-c602-4e18-a989-b32f1e2dad46, authSessionTabId=okLb-wD78kU
+[0m[32m16:04:50,221 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/cf28407a-88d5-4e8e-b0bb-31b5f05074ec
+[0m[32m16:04:50,292 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=e547f063-ad97-4a1d-93b1-37b657be9b16, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=51357288-a537-4110-ae39-828b825a4dd5, client_auth_method=client-secret, username=admin, authSessionParentId=115c4af1-d206-4cce-af77-5f0de5da48b4, authSessionTabId=vmbMIQXGqmI
+[0m[32m16:04:50,381 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/26e01498-83ea-4a68-babf-17432b2a4ecf
+[0m[32m16:04:50,452 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=15690651-0cb8-4b10-bc9e-01a58c01fb66, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=de526217-a807-4c30-94bb-a19570000245, client_auth_method=client-secret, username=admin, authSessionParentId=9a9639ce-a301-4508-97ef-385b59e034f8, authSessionTabId=ls1GQ0HAWPw
+[0m[32m16:04:50,552 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/3c4ad904-17b0-4ae8-82ca-54e2a161491f
+[0m[32m16:04:50,620 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=88aa8bf3-06bf-453f-b58b-ef7572b697b3, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=4ec7ed27-5e91-4460-82a2-08c1681ad78c, client_auth_method=client-secret, username=admin, authSessionParentId=6c12b21a-6504-4224-af1f-9d61273942ba, authSessionTabId=6wTtsLkhmWQ
+[0m[32m16:04:50,713 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/e85d3b49-9e49-41f3-bc7b-e1223ff842a1
+[0m[32m16:04:50,784 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=6ad564d6-73d5-4cc9-9200-05cf80bcac7d, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=37adce27-9ebe-4a49-b6fe-1050df54063d, client_auth_method=client-secret, username=admin, authSessionParentId=4af8177c-fb2d-42e3-9731-bbefc1e164c6, authSessionTabId=MkX3U4rYCpA
+[0m[32m16:04:50,873 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/7d27e512-2ffc-413e-9732-bb12c1f4c960
+[0m[32m16:04:50,943 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=4a7e3215-ebaf-4873-b27d-e39132afedb3, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=29d27e99-9d84-4066-8043-36f214fb9d4e, client_auth_method=client-secret, username=admin, authSessionParentId=6218b091-b822-4aa7-888d-bcc524e42c6a, authSessionTabId=cUmOqblzbMU
+[0m[32m16:04:50,973 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/8aa91314-2807-4987-8430-cdf03a642dbf
+[0m[32m16:04:51,047 DEBUG [org.keycloak.events] (default task-2) type=LOGIN, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=admin-cli, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, auth_method=openid-connect, token_id=1a4b0630-ff31-47de-a785-91fc5fec0ef3, grant_type=password, refresh_token_type=Refresh, scope='profile email', refresh_token_id=e5ebeb1a-587a-415f-8670-baa1df329f2c, client_auth_method=client-secret, username=admin, authSessionParentId=d15762cf-80d4-4669-8548-e67cfa2105a5, authSessionTabId=1Acq7CYjkic
+[0m[32m16:04:51,077 DEBUG [org.keycloak.events] (default task-2) operationType=UPDATE, realmId=3ab1a0f7-1b7a-4d30-9b15-06297054a322, clientId=f18bc6e0-63a9-47aa-a9df-75e61172b758, userId=b76b3d0c-5f2b-4861-9363-24f7ed5e5c03, ipAddress=***HIDDEN***, resourceType=CLIENT, resourcePath=clients/4eeaa7ca-f6e9-4ce9-8bbd-3796c1f86fda
+[0m[32m16:06:08,284 DEBUG [org.keycloak.events] (default task-2) type=REFRESH_TOKEN, realmId=knime, clientId=hub-ui, userId=28654070-1163-4de3-88b6-e90b62a62cb8, ipAddress=***HIDDEN***, token_id=d693dff8-cb0f-46c1-b664-85a3905c7da0, grant_type=refresh_token, refresh_token_type=Refresh, updated_refresh_token_id=5d7ae923-014a-456e-af7a-171c828c7a43, scope='openid groups profile email', refresh_token_id=47640f6c-b88e-49b2-b88a-877932eab1f3, client_auth_method=client-secret
+[0m[32m16:11:27,142 DEBUG [org.keycloak.events] (default task-2) type=CLIENT_LOGIN, realmId=knime, clientId=search-sync-service, userId=5f40c3de-e12e-4574-a3f8-6be300708e58, ipAddress=***HIDDEN***, token_id=e3e5e72d-e9fb-4f83-af00-f970d99e1b7b, grant_type=client_credentials, scope='groups profile email', client_auth_method=client-secret, username=service-account-search-sync-service, authSessionParentId=f39f6e8e-fcd6-4498-ab95-0ddec390f085, authSessionTabId=Szo6_FeW6wQ
+[0m[32m16:12:17,194 DEBUG [org.keycloak.events] (default task-2) type=REFRESH_TOKEN, realmId=knime, clientId=hub-ui, userId=28654070-1163-4de3-88b6-e90b62a62cb8, ipAddress=***HIDDEN***, token_id=f225f473-3483-486b-98ba-a2fe5d631aed, grant_type=refresh_token, refresh_token_type=Refresh, updated_refresh_token_id=43657a3b-604a-4cf9-a08c-34eb3f919647, scope='openid groups profile email', refresh_token_id=47640f6c-b88e-49b2-b88a-877932eab1f3, client_auth_method=client-secret

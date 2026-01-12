@@ -1,0 +1,715 @@
+{
+  "kind": "ServiceList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763976"
+  },
+  "items": [
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "kube-dns",
+        "namespace": "kube-system",
+        "uid": "ab4fd77f-6cfe-4bcc-8db7-035a28096052",
+        "resourceVersion": "224",
+        "creationTimestamp": "2023-11-10T12:57:35Z",
+        "labels": {
+          "k8s-app": "kube-dns",
+          "kubernetes.io/cluster-service": "true",
+          "kubernetes.io/name": "CoreDNS"
+        },
+        "annotations": {
+          "prometheus.io/port": "9153",
+          "prometheus.io/scrape": "true"
+        },
+        "managedFields": [
+          {
+            "manager": "kubeadm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:57:35Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:prometheus.io/port": {},
+                  "f:prometheus.io/scrape": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:k8s-app": {},
+                  "f:kubernetes.io/cluster-service": {},
+                  "f:kubernetes.io/name": {}
+                }
+              },
+              "f:spec": {
+                "f:clusterIP": {},
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":53,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":53,\"protocol\":\"UDP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":9153,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "dns",
+            "protocol": "UDP",
+            "port": 53,
+            "targetPort": 53
+          },
+          {
+            "name": "dns-tcp",
+            "protocol": "TCP",
+            "port": 53,
+            "targetPort": 53
+          },
+          {
+            "name": "metrics",
+            "protocol": "TCP",
+            "port": 9153,
+            "targetPort": 9153
+          }
+        ],
+        "selector": {
+          "k8s-app": "kube-dns"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-coredns",
+        "namespace": "kube-system",
+        "uid": "102e93c1-4eb7-41ff-b982-4a4f709867e4",
+        "resourceVersion": "983",
+        "creationTimestamp": "2023-11-10T12:59:12Z",
+        "labels": {
+          "app": "kube-prometheus-stack-coredns",
+          "app.kubernetes.io/instance": "v0.65.2-46.8.0",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/part-of": "kube-prometheus-stack",
+          "app.kubernetes.io/version": "46.8.0",
+          "chart": "kube-prometheus-stack-46.8.0",
+          "heritage": "Helm",
+          "jobLabel": "coredns",
+          "release": "v0.65.2-46.8.0"
+        },
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"kube-prometheus-stack-coredns\",\"app.kubernetes.io/instance\":\"v0.65.2-46.8.0\",\"app.kubernetes.io/managed-by\":\"Helm\",\"app.kubernetes.io/part-of\":\"kube-prometheus-stack\",\"app.kubernetes.io/version\":\"46.8.0\",\"chart\":\"kube-prometheus-stack-46.8.0\",\"heritage\":\"Helm\",\"jobLabel\":\"coredns\",\"release\":\"v0.65.2-46.8.0\"},\"name\":\"prometheus-coredns\",\"namespace\":\"kube-system\"},\"spec\":{\"clusterIP\":\"None\",\"ports\":[{\"name\":\"http-metrics\",\"port\":9153,\"protocol\":\"TCP\",\"targetPort\":9153}],\"selector\":{\"k8s-app\":\"kube-dns\"}}}\n"
+        },
+        "managedFields": [
+          {
+            "manager": "kubectl-client-side-apply",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:59:12Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:jobLabel": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:clusterIP": {},
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":9153,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "http-metrics",
+            "protocol": "TCP",
+            "port": 9153,
+            "targetPort": 9153
+          }
+        ],
+        "selector": {
+          "k8s-app": "kube-dns"
+        },
+        "clusterIP": "None",
+        "clusterIPs": [
+          "None"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-kube-controller-manager",
+        "namespace": "kube-system",
+        "uid": "14144e11-b400-4d72-a940-16056009aee8",
+        "resourceVersion": "986",
+        "creationTimestamp": "2023-11-10T12:59:12Z",
+        "labels": {
+          "app": "kube-prometheus-stack-kube-controller-manager",
+          "app.kubernetes.io/instance": "v0.65.2-46.8.0",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/part-of": "kube-prometheus-stack",
+          "app.kubernetes.io/version": "46.8.0",
+          "chart": "kube-prometheus-stack-46.8.0",
+          "heritage": "Helm",
+          "jobLabel": "kube-controller-manager",
+          "release": "v0.65.2-46.8.0"
+        },
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"kube-prometheus-stack-kube-controller-manager\",\"app.kubernetes.io/instance\":\"v0.65.2-46.8.0\",\"app.kubernetes.io/managed-by\":\"Helm\",\"app.kubernetes.io/part-of\":\"kube-prometheus-stack\",\"app.kubernetes.io/version\":\"46.8.0\",\"chart\":\"kube-prometheus-stack-46.8.0\",\"heritage\":\"Helm\",\"jobLabel\":\"kube-controller-manager\",\"release\":\"v0.65.2-46.8.0\"},\"name\":\"prometheus-kube-controller-manager\",\"namespace\":\"kube-system\"},\"spec\":{\"clusterIP\":\"None\",\"ports\":[{\"name\":\"http-metrics\",\"port\":10257,\"protocol\":\"TCP\",\"targetPort\":10257}],\"selector\":{\"component\":\"kube-controller-manager\"},\"type\":\"ClusterIP\"}}\n"
+        },
+        "managedFields": [
+          {
+            "manager": "kubectl-client-side-apply",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:59:12Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:jobLabel": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:clusterIP": {},
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":10257,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "http-metrics",
+            "protocol": "TCP",
+            "port": 10257,
+            "targetPort": 10257
+          }
+        ],
+        "selector": {
+          "component": "kube-controller-manager"
+        },
+        "clusterIP": "None",
+        "clusterIPs": [
+          "None"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-kube-etcd",
+        "namespace": "kube-system",
+        "uid": "1b7ce869-8aac-4d79-a2dd-c368cfb399b9",
+        "resourceVersion": "989",
+        "creationTimestamp": "2023-11-10T12:59:12Z",
+        "labels": {
+          "app": "kube-prometheus-stack-kube-etcd",
+          "app.kubernetes.io/instance": "v0.65.2-46.8.0",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/part-of": "kube-prometheus-stack",
+          "app.kubernetes.io/version": "46.8.0",
+          "chart": "kube-prometheus-stack-46.8.0",
+          "heritage": "Helm",
+          "jobLabel": "kube-etcd",
+          "release": "v0.65.2-46.8.0"
+        },
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"kube-prometheus-stack-kube-etcd\",\"app.kubernetes.io/instance\":\"v0.65.2-46.8.0\",\"app.kubernetes.io/managed-by\":\"Helm\",\"app.kubernetes.io/part-of\":\"kube-prometheus-stack\",\"app.kubernetes.io/version\":\"46.8.0\",\"chart\":\"kube-prometheus-stack-46.8.0\",\"heritage\":\"Helm\",\"jobLabel\":\"kube-etcd\",\"release\":\"v0.65.2-46.8.0\"},\"name\":\"prometheus-kube-etcd\",\"namespace\":\"kube-system\"},\"spec\":{\"clusterIP\":\"None\",\"ports\":[{\"name\":\"http-metrics\",\"port\":2381,\"protocol\":\"TCP\",\"targetPort\":2381}],\"selector\":{\"component\":\"etcd\"},\"type\":\"ClusterIP\"}}\n"
+        },
+        "managedFields": [
+          {
+            "manager": "kubectl-client-side-apply",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:59:12Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:jobLabel": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:clusterIP": {},
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":2381,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "http-metrics",
+            "protocol": "TCP",
+            "port": 2381,
+            "targetPort": 2381
+          }
+        ],
+        "selector": {
+          "component": "etcd"
+        },
+        "clusterIP": "None",
+        "clusterIPs": [
+          "None"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-kube-proxy",
+        "namespace": "kube-system",
+        "uid": "dca96588-c392-40da-9119-fee8ecfcab12",
+        "resourceVersion": "993",
+        "creationTimestamp": "2023-11-10T12:59:12Z",
+        "labels": {
+          "app": "kube-prometheus-stack-kube-proxy",
+          "app.kubernetes.io/instance": "v0.65.2-46.8.0",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/part-of": "kube-prometheus-stack",
+          "app.kubernetes.io/version": "46.8.0",
+          "chart": "kube-prometheus-stack-46.8.0",
+          "heritage": "Helm",
+          "jobLabel": "kube-proxy",
+          "release": "v0.65.2-46.8.0"
+        },
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"kube-prometheus-stack-kube-proxy\",\"app.kubernetes.io/instance\":\"v0.65.2-46.8.0\",\"app.kubernetes.io/managed-by\":\"Helm\",\"app.kubernetes.io/part-of\":\"kube-prometheus-stack\",\"app.kubernetes.io/version\":\"46.8.0\",\"chart\":\"kube-prometheus-stack-46.8.0\",\"heritage\":\"Helm\",\"jobLabel\":\"kube-proxy\",\"release\":\"v0.65.2-46.8.0\"},\"name\":\"prometheus-kube-proxy\",\"namespace\":\"kube-system\"},\"spec\":{\"clusterIP\":\"None\",\"ports\":[{\"name\":\"http-metrics\",\"port\":10249,\"protocol\":\"TCP\",\"targetPort\":10249}],\"selector\":{\"k8s-app\":\"kube-proxy\"},\"type\":\"ClusterIP\"}}\n"
+        },
+        "managedFields": [
+          {
+            "manager": "kubectl-client-side-apply",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:59:12Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:jobLabel": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:clusterIP": {},
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":10249,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "http-metrics",
+            "protocol": "TCP",
+            "port": 10249,
+            "targetPort": 10249
+          }
+        ],
+        "selector": {
+          "k8s-app": "kube-proxy"
+        },
+        "clusterIP": "None",
+        "clusterIPs": [
+          "None"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-kube-scheduler",
+        "namespace": "kube-system",
+        "uid": "9ce31b32-3312-4275-89c3-43b43fcab7f0",
+        "resourceVersion": "996",
+        "creationTimestamp": "2023-11-10T12:59:12Z",
+        "labels": {
+          "app": "kube-prometheus-stack-kube-scheduler",
+          "app.kubernetes.io/instance": "v0.65.2-46.8.0",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/part-of": "kube-prometheus-stack",
+          "app.kubernetes.io/version": "46.8.0",
+          "chart": "kube-prometheus-stack-46.8.0",
+          "heritage": "Helm",
+          "jobLabel": "kube-scheduler",
+          "release": "v0.65.2-46.8.0"
+        },
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"kube-prometheus-stack-kube-scheduler\",\"app.kubernetes.io/instance\":\"v0.65.2-46.8.0\",\"app.kubernetes.io/managed-by\":\"Helm\",\"app.kubernetes.io/part-of\":\"kube-prometheus-stack\",\"app.kubernetes.io/version\":\"46.8.0\",\"chart\":\"kube-prometheus-stack-46.8.0\",\"heritage\":\"Helm\",\"jobLabel\":\"kube-scheduler\",\"release\":\"v0.65.2-46.8.0\"},\"name\":\"prometheus-kube-scheduler\",\"namespace\":\"kube-system\"},\"spec\":{\"clusterIP\":\"None\",\"ports\":[{\"name\":\"http-metrics\",\"port\":10251,\"protocol\":\"TCP\",\"targetPort\":10251}],\"selector\":{\"component\":\"kube-scheduler\"},\"type\":\"ClusterIP\"}}\n"
+        },
+        "managedFields": [
+          {
+            "manager": "kubectl-client-side-apply",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:59:12Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:jobLabel": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:clusterIP": {},
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":10251,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "http-metrics",
+            "protocol": "TCP",
+            "port": 10251,
+            "targetPort": 10251
+          }
+        ],
+        "selector": {
+          "component": "kube-scheduler"
+        },
+        "clusterIP": "None",
+        "clusterIPs": [
+          "None"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "prometheus-kubelet",
+        "namespace": "kube-system",
+        "uid": "6c998feb-528d-45c7-bfc3-41209013b9bc",
+        "resourceVersion": "1189",
+        "creationTimestamp": "2023-11-10T12:59:15Z",
+        "labels": {
+          "app.kubernetes.io/managed-by": "prometheus-operator",
+          "app.kubernetes.io/name": "kubelet",
+          "k8s-app": "kubelet"
+        },
+        "managedFields": [
+          {
+            "manager": "PrometheusOperator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:59:15Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:k8s-app": {}
+                }
+              },
+              "f:spec": {
+                "f:clusterIP": {},
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":4194,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":10250,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":10255,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "https-metrics",
+            "protocol": "TCP",
+            "port": 10250,
+            "targetPort": 10250
+          },
+          {
+            "name": "http-metrics",
+            "protocol": "TCP",
+            "port": 10255,
+            "targetPort": 10255
+          },
+          {
+            "name": "cadvisor",
+            "protocol": "TCP",
+            "port": 4194,
+            "targetPort": 4194
+          }
+        ],
+        "clusterIP": "None",
+        "clusterIPs": [
+          "None"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4",
+          "IPv6"
+        ],
+        "ipFamilyPolicy": "RequireDualStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    }
+  ]
+}

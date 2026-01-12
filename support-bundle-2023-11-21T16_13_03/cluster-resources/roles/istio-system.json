@@ -1,0 +1,264 @@
+{
+  "kind": "RoleList",
+  "apiVersion": "rbac.authorization.k8s.io/v1",
+  "metadata": {
+    "resourceVersion": "763994"
+  },
+  "items": [
+    {
+      "kind": "Role",
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "metadata": {
+        "name": "istio-ingressgateway-sds",
+        "namespace": "istio-system",
+        "uid": "69e1b68b-52da-4522-8df0-0cbf21a747bc",
+        "resourceVersion": "3979",
+        "creationTimestamp": "2023-11-10T13:18:10Z",
+        "labels": {
+          "app.kubernetes.io/managed-by": "Helm",
+          "install.operator.istio.io/owning-resource": "unknown",
+          "istio.io/rev": "default",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "operator.istio.io/component": "IngressGateways",
+          "release": "istio"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-istio",
+          "meta.helm.sh/release-namespace": "istio-system"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "rbac.authorization.k8s.io/v1",
+            "time": "2023-11-10T13:18:10Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:install.operator.istio.io/owning-resource": {},
+                  "f:istio.io/rev": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:operator.istio.io/component": {},
+                  "f:release": {}
+                }
+              },
+              "f:rules": {}
+            }
+          }
+        ]
+      },
+      "rules": [
+        {
+          "verbs": [
+            "get",
+            "watch",
+            "list"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "secrets"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Role",
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "metadata": {
+        "name": "istiod",
+        "namespace": "istio-system",
+        "uid": "3c7742c9-c57f-4aca-9ac7-b43e06b89446",
+        "resourceVersion": "3977",
+        "creationTimestamp": "2023-11-10T13:18:10Z",
+        "labels": {
+          "app": "istiod",
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "istio"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-istio",
+          "meta.helm.sh/release-namespace": "istio-system"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "rbac.authorization.k8s.io/v1",
+            "time": "2023-11-10T13:18:10Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:rules": {}
+            }
+          }
+        ]
+      },
+      "rules": [
+        {
+          "verbs": [
+            "create"
+          ],
+          "apiGroups": [
+            "networking.istio.io"
+          ],
+          "resources": [
+            "gateways"
+          ]
+        },
+        {
+          "verbs": [
+            "create",
+            "get",
+            "watch",
+            "list",
+            "update",
+            "delete"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "secrets"
+          ]
+        },
+        {
+          "verbs": [
+            "delete"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "configmaps"
+          ]
+        },
+        {
+          "verbs": [
+            "get",
+            "update",
+            "patch",
+            "create"
+          ],
+          "apiGroups": [
+            "coordination.k8s.io"
+          ],
+          "resources": [
+            "leases"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Role",
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "metadata": {
+        "name": "istiod-istio-system",
+        "namespace": "istio-system",
+        "uid": "eb07603c-4b09-4302-90c7-824a113d8487",
+        "resourceVersion": "3978",
+        "creationTimestamp": "2023-11-10T13:18:10Z",
+        "labels": {
+          "app": "istiod",
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "istio"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-istio",
+          "meta.helm.sh/release-namespace": "istio-system"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "rbac.authorization.k8s.io/v1",
+            "time": "2023-11-10T13:18:10Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:rules": {}
+            }
+          }
+        ]
+      },
+      "rules": [
+        {
+          "verbs": [
+            "create"
+          ],
+          "apiGroups": [
+            "networking.istio.io"
+          ],
+          "resources": [
+            "gateways"
+          ]
+        },
+        {
+          "verbs": [
+            "create",
+            "get",
+            "watch",
+            "list",
+            "update",
+            "delete"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "secrets"
+          ]
+        }
+      ]
+    }
+  ]
+}

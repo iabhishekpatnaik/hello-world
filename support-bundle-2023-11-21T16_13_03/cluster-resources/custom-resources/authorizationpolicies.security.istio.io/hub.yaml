@@ -1,0 +1,57 @@
+- apiVersion: security.istio.io/v1
+  kind: AuthorizationPolicy
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-helm-auth-exchanger
+      meta.helm.sh/release-namespace: hub
+    creationTimestamp: "2023-11-10T14:20:14Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: security.istio.io/v1beta1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:action: {}
+          f:provider:
+            .: {}
+            f:name: {}
+          f:rules: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T14:20:14Z"
+    name: auth-exchanger
+    namespace: hub
+    resourceVersion: "16603"
+    uid: c275f3f3-d327-4aaa-a9f9-3b1b4c9f5170
+  spec:
+    action: CUSTOM
+    provider:
+      name: auth-exchanger
+    rules:
+    - to:
+      - operation:
+          hosts:
+          - api.hub.kbh-troubleshooting.com
+      when:
+      - key: request.headers[authorization]
+        values:
+        - BA*
+        - Ba*
+        - ba*

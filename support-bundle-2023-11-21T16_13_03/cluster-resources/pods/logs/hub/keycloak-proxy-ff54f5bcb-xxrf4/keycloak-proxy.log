@@ -1,0 +1,9 @@
+{"level":"info","version":"3.1.1","hash":"bbed704","time":"2023-11-21T14:31:05Z","message":"keycloak-proxy"}
+{"level":"info","loglevel":"info","time":"2023-11-21T14:31:05Z","message":"keycloak-proxy"}
+{"level":"info","spec":true,"ipCheck":true,"creatorCheck":true,"stateCheck":true,"deploymentCheck":true,"time":"2023-11-21T14:31:05Z","message":"keycloak-proxy"}
+{"level":"info","tokenEndpoint":"http://auth.hub.kbh-troubleshooting.com/auth/realms/knime/protocol/openid-connect/token","time":"2023-11-21T14:31:05Z","message":"keycloak-proxy"}
+{"level":"info","jobsEndpoint":"http://rest-interface:8080/jobs","time":"2023-11-21T14:31:05Z","message":"keycloak-proxy"}
+{"level":"info","repositoryEndpoint":"http://catalog-service:9080/catalog/repository","time":"2023-11-21T14:31:05Z","message":"keycloak-proxy"}
+{"level":"info","clientID":"keycloak-proxy","clientSecret":"xxx","time":"2023-11-21T14:31:05Z","message":"keycloak-proxy"}
+{"level":"info","catalogAPIKey":"xxx","time":"2023-11-21T14:31:05Z","message":"keycloak-proxy"}
+{"level":"info","time":"2023-11-21T14:31:05Z","message":"keycloak-proxy listening on http://localhost:9090"}

@@ -1,0 +1,113 @@
+{
+  "kind": "EventList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763992"
+  },
+  "items": [
+    {
+      "kind": "Event",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "catalog-service.1799a9c33765a3ec",
+        "namespace": "hub",
+        "uid": "b62a0826-9d4a-4b1e-8aa8-e357467be244",
+        "resourceVersion": "763395",
+        "creationTimestamp": "2023-11-21T14:29:50Z",
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:09:50Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "HorizontalPodAutoscaler",
+        "namespace": "hub",
+        "name": "catalog-service",
+        "uid": "1e5c91cc-2b04-41e7-96c6-6dcdbca5f6af",
+        "apiVersion": "autoscaling/v2",
+        "resourceVersion": "17089"
+      },
+      "reason": "FailedGetResourceMetric",
+      "message": "failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server could not find the requested resource (get pods.metrics.k8s.io)",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "firstTimestamp": "2023-11-21T14:29:50Z",
+      "lastTimestamp": "2023-11-21T16:09:50Z",
+      "count": 401,
+      "type": "Warning",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "kind": "Event",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "search-service.1799a9c33784b5fe",
+        "namespace": "hub",
+        "uid": "4195bf77-e08a-4b92-a1cb-3912825ac794",
+        "resourceVersion": "763394",
+        "creationTimestamp": "2023-11-21T14:29:50Z",
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:09:50Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "HorizontalPodAutoscaler",
+        "namespace": "hub",
+        "name": "search-service",
+        "uid": "e8bd4098-540c-428c-b9cd-62d40bee34ef",
+        "apiVersion": "autoscaling/v2",
+        "resourceVersion": "17151"
+      },
+      "reason": "FailedGetResourceMetric",
+      "message": "failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server could not find the requested resource (get pods.metrics.k8s.io)",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "firstTimestamp": "2023-11-21T14:29:50Z",
+      "lastTimestamp": "2023-11-21T16:09:50Z",
+      "count": 401,
+      "type": "Warning",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    }
+  ]
+}

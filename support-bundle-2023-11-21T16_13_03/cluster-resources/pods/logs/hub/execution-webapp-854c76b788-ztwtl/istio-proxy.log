@@ -1,0 +1,104 @@
+{"level":"info","time":"2023-11-21T14:29:30.055075Z","msg":"FLAG: --concurrency=\"0\""}
+{"level":"info","time":"2023-11-21T14:29:30.055095Z","msg":"FLAG: --domain=\"hub.svc.cluster.local\""}
+{"level":"info","time":"2023-11-21T14:29:30.055099Z","msg":"FLAG: --help=\"false\""}
+{"level":"info","time":"2023-11-21T14:29:30.055101Z","msg":"FLAG: --log_as_json=\"true\""}
+{"level":"info","time":"2023-11-21T14:29:30.055103Z","msg":"FLAG: --log_caller=\"\""}
+{"level":"info","time":"2023-11-21T14:29:30.055106Z","msg":"FLAG: --log_output_level=\"default:info\""}
+{"level":"info","time":"2023-11-21T14:29:30.055108Z","msg":"FLAG: --log_rotate=\"\""}
+{"level":"info","time":"2023-11-21T14:29:30.055110Z","msg":"FLAG: --log_rotate_max_age=\"30\""}
+{"level":"info","time":"2023-11-21T14:29:30.055112Z","msg":"FLAG: --log_rotate_max_backups=\"1000\""}
+{"level":"info","time":"2023-11-21T14:29:30.055114Z","msg":"FLAG: --log_rotate_max_size=\"104857600\""}
+{"level":"info","time":"2023-11-21T14:29:30.055116Z","msg":"FLAG: --log_stacktrace_level=\"default:none\""}
+{"level":"info","time":"2023-11-21T14:29:30.055123Z","msg":"FLAG: --log_target=\"[stdout]\""}
+{"level":"info","time":"2023-11-21T14:29:30.055125Z","msg":"FLAG: --meshConfig=\"./etc/istio/config/mesh\""}
+{"level":"info","time":"2023-11-21T14:29:30.055128Z","msg":"FLAG: --outlierLogPath=\"\""}
+{"level":"info","time":"2023-11-21T14:29:30.055130Z","msg":"FLAG: --profiling=\"true\""}
+{"level":"info","time":"2023-11-21T14:29:30.055132Z","msg":"FLAG: --proxyComponentLogLevel=\"misc:error\""}
+{"level":"info","time":"2023-11-21T14:29:30.055135Z","msg":"FLAG: --proxyLogLevel=\"warning\""}
+{"level":"info","time":"2023-11-21T14:29:30.055138Z","msg":"FLAG: --s2a_enable_appengine_dialer=\"false\""}
+{"level":"info","time":"2023-11-21T14:29:30.055140Z","msg":"FLAG: --s2a_timeout=\"3s\""}
+{"level":"info","time":"2023-11-21T14:29:30.055142Z","msg":"FLAG: --serviceCluster=\"istio-proxy\""}
+{"level":"info","time":"2023-11-21T14:29:30.055145Z","msg":"FLAG: --stsPort=\"0\""}
+{"level":"info","time":"2023-11-21T14:29:30.055147Z","msg":"FLAG: --templateFile=\"\""}
+{"level":"info","time":"2023-11-21T14:29:30.055149Z","msg":"FLAG: --tokenManagerPlugin=\"GoogleTokenExchange\""}
+{"level":"info","time":"2023-11-21T14:29:30.055151Z","msg":"FLAG: --vklog=\"0\""}
+{"level":"info","time":"2023-11-21T14:29:30.055154Z","msg":"Version 1.18.1-b39cf40807721c60f7b29e3106e37faa5e5dbac7-Clean"}
+{"level":"info","time":"2023-11-21T14:29:30.056624Z","msg":"Maximum file descriptors (ulimit -n): 1048576"}
+{"level":"info","time":"2023-11-21T14:29:30.056739Z","msg":"Proxy role","ips":["***HIDDEN***"],"type":"sidecar","id":"execution-webapp-854c76b788-ztwtl.hub","domain":"hub.svc.cluster.local"}
+{"level":"info","time":"2023-11-21T14:29:30.056800Z","msg":"Apply proxy config from env {}\n"}
+{"level":"info","time":"2023-11-21T14:29:30.058040Z","msg":"cpu limit detected as 2, setting concurrency"}
+{"level":"info","time":"2023-11-21T14:29:30.058266Z","msg":"Effective config: binaryPath: /usr/local/bin/envoy\nconcurrency: 2\nconfigPath: ./etc/istio/proxy\ncontrolPlaneAuthPolicy: MUTUAL_TLS\ndiscoveryAddress: istiod.istio-system.svc:15012\ndrainDuration: 45s\nproxyAdminPort: 15000\nserviceCluster: istio-proxy\nstatNameLength: 189\nstatusPort: 15020\nterminationDrainDuration: 5s\ntracing:\n  zipkin:\n    address: zipkin.istio-system:9411\n"}
+{"level":"info","time":"2023-11-21T14:29:30.058278Z","msg":"JWT policy is third-party-jwt"}
+{"level":"info","time":"2023-11-21T14:29:30.058281Z","msg":"using credential fetcher of JWT type in cluster.local trust domain"}
+{"level":"info","time":"2023-11-21T14:29:30.059279Z","msg":"Workload SDS socket not found. Starting Istio SDS Server"}
+{"level":"info","time":"2023-11-21T14:29:30.059300Z","msg":"CA Endpoint istiod.istio-system.svc:15012, provider Citadel"}
+{"level":"info","time":"2023-11-21T14:29:30.059328Z","msg":"Using CA istiod.istio-system.svc:15012 cert with certs: var/run/secrets/istio/root-cert.pem"}
+{"level":"info","time":"2023-11-21T14:29:30.059314Z","msg":"Opening status port 15020"}
+{"level":"info","time":"2023-11-21T14:29:30.077380Z","scope":"ads","msg":"All caches have been synced up in 24.600896ms, marking server ready"}
+{"level":"info","time":"2023-11-21T14:29:30.078264Z","scope":"xdsproxy","msg":"Initializing with upstream address \"istiod.istio-system.svc:15012\" and cluster \"Kubernetes\""}
+{"level":"info","time":"2023-11-21T14:29:30.078326Z","scope":"sds","msg":"Starting SDS grpc server"}
+{"level":"info","time":"2023-11-21T14:29:30.078606Z","msg":"starting Http service at ***HIDDEN***:15004"}
+{"level":"info","time":"2023-11-21T14:29:30.080112Z","msg":"Pilot SAN: [istiod.istio-system.svc]"}
+{"level":"info","time":"2023-11-21T14:29:30.081087Z","msg":"Starting proxy agent"}
+{"level":"info","time":"2023-11-21T14:29:30.081120Z","msg":"starting"}
+{"level":"info","time":"2023-11-21T14:29:30.081155Z","msg":"Envoy command: [-c etc/istio/proxy/envoy-rev.json --drain-time-s 45 --drain-strategy immediate --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --allow-unknown-static-fields --log-format {\"level\":\"%l\",\"time\":\"%Y-%m-%dT%T.%fZ\",\"scope\":\"envoy %n\",\"msg\":\"%j\",\"caller\":\"%g:%#\",\"thread\":%t} -l warning --component-log-level misc:error --concurrency 2]"}
+{"level":"warn","time":"2023-11-21T14:29:50.061165Z","scope":"ca","msg":"ca request failed, starting attempt 1 in 103.417833ms"}
+{"level":"warn","time":"2023-11-21T14:29:50.165424Z","scope":"ca","msg":"ca request failed, starting attempt 2 in 204.396293ms"}
+{"level":"warn","time":"2023-11-21T14:29:50.370851Z","scope":"ca","msg":"ca request failed, starting attempt 3 in 364.601525ms"}
+{"level":"warn","time":"2023-11-21T14:29:50.736454Z","scope":"ca","msg":"ca request failed, starting attempt 4 in 846.477295ms"}
+{"level":"warn","time":"2023-11-21T14:29:55.071499Z","scope":"sds","msg":"failed to warm certificate: failed to generate workload certificate: create certificate: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp: lookup istiod.istio-system.svc on ***HIDDEN***:53: read udp ***HIDDEN***:57962->***HIDDEN***:53: i/o timeout\""}
+{"level":"warn","time":"2023-11-21T14:29:55.657040Z","scope":"ca","msg":"ca request failed, starting attempt 1 in 97.034567ms"}
+{"level":"warn","time":"2023-11-21T14:29:55.754263Z","scope":"ca","msg":"ca request failed, starting attempt 2 in 187.58134ms"}
+{"level":"warn","time":"2023-11-21T14:29:55.942710Z","scope":"ca","msg":"ca request failed, starting attempt 3 in 434.136537ms"}
+{"level":"warn","time":"2023-11-21T14:29:56.377027Z","scope":"ca","msg":"ca request failed, starting attempt 4 in 868.593293ms"}
+{"level":"warn","time":"2023-11-21T14:30:10.498791Z","scope":"sds","msg":"failed to warm certificate: failed to generate workload certificate: create certificate: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp: lookup istiod.istio-system.svc on ***HIDDEN***:53: read udp ***HIDDEN***:49780->***HIDDEN***:53: i/o timeout\""}
+{"level":"warn","time":"2023-11-21T14:30:11.068886Z","scope":"ca","msg":"ca request failed, starting attempt 1 in 107.862352ms"}
+{"level":"warn","time":"2023-11-21T14:30:11.177200Z","scope":"ca","msg":"ca request failed, starting attempt 2 in 204.02983ms"}
+{"level":"warn","time":"2023-11-21T14:30:11.381525Z","scope":"ca","msg":"ca request failed, starting attempt 3 in 407.012813ms"}
+{"level":"warn","time":"2023-11-21T14:30:11.789608Z","scope":"ca","msg":"ca request failed, starting attempt 4 in 859.554407ms"}
+{"level":"warn","time":"2023-11-21T14:30:12.649624Z","scope":"sds","msg":"failed to warm certificate: failed to generate workload certificate: create certificate: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp: lookup istiod.istio-system.svc on ***HIDDEN***:53: read udp ***HIDDEN***:49780->***HIDDEN***:53: i/o timeout\""}
+{"level":"warn","time":"2023-11-21T14:30:21.428249Z","scope":"ca","msg":"ca request failed, starting attempt 1 in 92.34002ms"}
+{"level":"warning","time":"2023-11-21T14:30:21.428469Z","scope":"envoy config","msg":"StreamAggregatedResources gRPC config stream to xds-grpc closed since 31s ago: 14, connection error: desc = \"transport: Error while dialing: dial tcp: lookup istiod.istio-system.svc on ***HIDDEN***:53: no such host\"","caller":"external/envoy/source/common/config/grpc_stream.h:191","thread":24}
+{"level":"warn","time":"2023-11-21T14:30:21.521704Z","scope":"ca","msg":"ca request failed, starting attempt 2 in 181.514389ms"}
+{"level":"warn","time":"2023-11-21T14:30:21.703952Z","scope":"ca","msg":"ca request failed, starting attempt 3 in 420.86884ms"}
+{"level":"warn","time":"2023-11-21T14:30:22.125530Z","scope":"ca","msg":"ca request failed, starting attempt 4 in 847.622643ms"}
+{"level":"warn","time":"2023-11-21T14:30:22.973496Z","scope":"sds","msg":"failed to warm certificate: failed to generate workload certificate: create certificate: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp: lookup istiod.istio-system.svc on ***HIDDEN***:53: no such host\""}
+{"level":"warn","time":"2023-11-21T14:30:24.939175Z","scope":"ca","msg":"ca request failed, starting attempt 1 in 105.863761ms"}
+{"level":"warn","time":"2023-11-21T14:30:25.045478Z","scope":"ca","msg":"ca request failed, starting attempt 2 in 185.323281ms"}
+{"level":"warn","time":"2023-11-21T14:30:25.231893Z","scope":"ca","msg":"ca request failed, starting attempt 3 in 419.165811ms"}
+{"level":"info","time":"2023-11-21T14:30:25.369097Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-21T14:30:25.415391Z","scope":"ads","msg":"ADS: new connection for node:execution-webapp-854c76b788-ztwtl.hub-1"}
+{"level":"info","time":"2023-11-21T14:30:25.415444Z","scope":"ads","msg":"ADS: new connection for node:execution-webapp-854c76b788-ztwtl.hub-2"}
+{"level":"warn","time":"2023-11-21T14:30:25.651770Z","scope":"ca","msg":"ca request failed, starting attempt 4 in 847.222069ms"}
+{"level":"warn","time":"2023-11-21T14:30:26.499159Z","scope":"sds","msg":"failed to warm certificate: failed to generate workload certificate: create certificate: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp ***HIDDEN***:15012: connect: connection refused\""}
+{"level":"warn","time":"2023-11-21T14:30:26.499194Z","scope":"cache","msg":"slow generate secret lock: 1.083733534s"}
+{"level":"warn","time":"2023-11-21T14:30:26.631920Z","scope":"ca","msg":"ca request failed, starting attempt 1 in 93.996896ms"}
+{"level":"warn","time":"2023-11-21T14:30:26.726194Z","scope":"ca","msg":"ca request failed, starting attempt 2 in 201.775007ms"}
+{"level":"warn","time":"2023-11-21T14:30:26.928570Z","scope":"ca","msg":"ca request failed, starting attempt 3 in 361.893309ms"}
+{"level":"warn","time":"2023-11-21T14:30:27.290555Z","scope":"ca","msg":"ca request failed, starting attempt 4 in 831.128816ms"}
+{"level":"info","time":"2023-11-21T14:30:28.122533Z","scope":"ads","msg":"ADS: \"@\" execution-webapp-854c76b788-ztwtl.hub-1 terminated"}
+{"level":"warn","time":"2023-11-21T14:30:28.122537Z","scope":"cache","msg":"slow generate secret lock: 2.707032522s"}
+{"level":"warning","time":"2023-11-21T14:30:28.122677Z","scope":"envoy config","msg":"StreamSecrets gRPC config stream to sds-grpc closed: 2, failed to generate secret for ROOTCA: failed to generate workload certificate: create certificate: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp ***HIDDEN***:15012: connect: connection refused\"","caller":"external/envoy/source/common/config/grpc_stream.h:153","thread":24}
+{"level":"warn","time":"2023-11-21T14:30:28.266439Z","scope":"ca","msg":"ca request failed, starting attempt 1 in 104.485519ms"}
+{"level":"warn","time":"2023-11-21T14:30:28.371719Z","scope":"ca","msg":"ca request failed, starting attempt 2 in 203.076047ms"}
+{"level":"info","time":"2023-11-21T14:30:28.476098Z","scope":"ads","msg":"ADS: new connection for node:execution-webapp-854c76b788-ztwtl.hub-3"}
+{"level":"warn","time":"2023-11-21T14:30:28.575765Z","scope":"ca","msg":"ca request failed, starting attempt 3 in 417.863019ms"}
+{"level":"warn","time":"2023-11-21T14:30:28.994533Z","scope":"ca","msg":"ca request failed, starting attempt 4 in 744.54069ms"}
+{"level":"info","time":"2023-11-21T14:30:29.739541Z","scope":"ads","msg":"ADS: \"@\" execution-webapp-854c76b788-ztwtl.hub-2 terminated"}
+{"level":"warn","time":"2023-11-21T14:30:29.739543Z","scope":"cache","msg":"slow generate secret lock: 1.26334415s"}
+{"level":"warning","time":"2023-11-21T14:30:29.739723Z","scope":"envoy config","msg":"StreamSecrets gRPC config stream to sds-grpc closed: 2, failed to generate secret for default: failed to generate workload certificate: create certificate: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp ***HIDDEN***:15012: connect: connection refused\"","caller":"external/envoy/source/common/config/grpc_stream.h:153","thread":24}
+{"level":"warn","time":"2023-11-21T14:30:29.791301Z","scope":"ca","msg":"ca request failed, starting attempt 1 in 97.904584ms"}
+{"level":"warn","time":"2023-11-21T14:30:29.889316Z","scope":"ca","msg":"ca request failed, starting attempt 2 in 181.208548ms"}
+{"level":"warn","time":"2023-11-21T14:30:30.070846Z","scope":"ca","msg":"ca request failed, starting attempt 3 in 396.741877ms"}
+{"level":"info","time":"2023-11-21T14:30:30.124770Z","scope":"ads","msg":"ADS: new connection for node:execution-webapp-854c76b788-ztwtl.hub-4"}
+{"level":"info","time":"2023-11-21T14:30:30.479400Z","scope":"cache","msg":"generated new workload certificate","latency":739818215,"ttl":86399520604269}
+{"level":"info","time":"2023-11-21T14:30:30.479545Z","scope":"cache","msg":"returned workload certificate from cache","ttl":86399520463361}
+{"level":"info","time":"2023-11-21T14:30:30.479625Z","scope":"cache","msg":"returned workload trust anchor from cache","ttl":86399520377776}
+{"level":"info","time":"2023-11-21T14:30:30.479650Z","scope":"cache","msg":"returned workload certificate from cache","ttl":86399520355006}
+{"level":"info","time":"2023-11-21T14:30:30.479742Z","scope":"ads","msg":"SDS: PUSH request for node:execution-webapp-854c76b788-ztwtl.hub resources:1 size:1.1kB resource:ROOTCA"}
+{"level":"info","time":"2023-11-21T14:30:30.479755Z","scope":"ads","msg":"SDS: PUSH request for node:execution-webapp-854c76b788-ztwtl.hub resources:1 size:4.0kB resource:default"}
+{"level":"info","time":"2023-11-21T14:30:31.442941Z","msg":"Readiness succeeded in 1m1.394980121s"}
+{"level":"info","time":"2023-11-21T14:30:31.443323Z","msg":"Envoy proxy is ready"}
+{"level":"info","time":"2023-11-21T15:01:55.684755Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-21T15:32:44.293568Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}
+{"level":"info","time":"2023-11-21T16:01:10.553946Z","scope":"xdsproxy","msg":"connected to upstream XDS server: istiod.istio-system.svc:15012"}

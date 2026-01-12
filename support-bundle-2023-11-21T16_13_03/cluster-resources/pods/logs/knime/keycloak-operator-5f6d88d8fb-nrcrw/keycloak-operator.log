@@ -1,0 +1,826 @@
+{"level":"info","ts":1700576986.4093032,"logger":"cmd","msg":"Go Version: go1.13.8"}
+{"level":"info","ts":1700576986.4093318,"logger":"cmd","msg":"Go OS/Arch: linux/amd64"}
+{"level":"info","ts":1700576986.4093378,"logger":"cmd","msg":"Version of operator-sdk: v0.18.2"}
+{"level":"info","ts":1700576986.4093435,"logger":"cmd","msg":"Operator version: 19.0.3"}
+{"level":"info","ts":1700576986.4093497,"logger":"cmd","msg":"Setting watch namespace to 'knime'"}
+{"level":"info","ts":1700576986.4094658,"logger":"leader","msg":"Trying to become the leader."}
+I1121 14:29:48.210048       1 request.go:655] Throttling request took 1.049067944s, request: GET:https://***HIDDEN***:443/apis/networking.istio.io/v1alpha3?timeout=32s
+{"level":"info","ts":1700576989.2425253,"logger":"leader","msg":"Found existing lock","LockOwner":"keycloak-operator-5f6d88d8fb-vtrf4"}
+{"level":"info","ts":1700576989.249778,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700576990.377958,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700576992.762961,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700576997.3037918,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577006.0114481,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577023.37791,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577041.5836823,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577057.8011637,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577074.3093128,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577090.6263573,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577107.5960574,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577125.2522373,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577143.8627121,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577160.5549304,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577177.7800279,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577194.8062508,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577212.313768,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577229.2250636,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577246.170261,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577264.3500066,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577281.056801,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577297.713091,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577314.8751006,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577332.7078583,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577351.4752293,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577368.4191334,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577385.380672,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577403.7945147,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577420.462479,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577439.237557,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577457.4761705,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577475.158696,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577491.256717,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577507.7696502,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577525.719908,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577544.8465123,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577561.1077652,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577579.0176299,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577595.2143927,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577613.436732,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577630.4085248,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577646.9695358,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577664.7076826,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577682.455077,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577699.3531904,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577716.7131941,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577734.4183178,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577751.238675,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577768.148747,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577786.6783948,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577803.844747,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577822.668754,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577839.6264305,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577858.4944174,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577874.8133426,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577893.9467077,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577910.1921487,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577926.9094613,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577945.096665,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577961.8772244,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577978.8811615,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700577997.871975,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578016.2530644,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578034.82271,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578053.16782,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578069.7596896,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578087.1375914,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578106.0146904,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578124.2065337,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578143.344898,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578162.3028436,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578178.5993638,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578196.1850126,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578215.1605525,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578234.2232351,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578251.3427968,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578269.5602732,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578287.8451307,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578305.656448,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578323.7410173,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578341.5177722,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578359.9422166,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578377.2440896,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578393.6681604,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578412.8328593,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578431.7074099,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578448.7473986,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578467.0608706,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578485.133779,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578501.4131773,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578519.5627341,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578537.5616226,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578554.753441,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578571.5169299,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578589.2371328,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578605.842274,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578622.6136606,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578640.6315541,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578657.043978,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578673.952329,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578691.2723434,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578708.6704035,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578726.6789863,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578744.4462051,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578762.4516654,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578780.791246,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578799.454592,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578815.4626029,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578833.8254085,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578851.1120229,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578868.7121768,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578886.6508756,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578903.9688025,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578920.0698085,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578936.0838113,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578952.0991478,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578971.0363827,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700578988.9303906,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579006.7280412,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579025.3434844,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579044.1598704,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579061.6330268,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579079.5608323,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579095.6509364,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579114.3671327,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579131.1721551,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579149.2328992,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579166.0306594,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579182.5933948,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579200.495261,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579219.1083846,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579237.3355448,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579253.4392018,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579271.170624,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579290.3023262,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579308.7107418,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579325.6611154,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579344.0772498,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579360.567084,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579377.7115912,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579396.381088,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579413.1283827,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579431.1443686,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579448.7453303,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579465.039771,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579481.126371,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579498.3886075,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579516.2808566,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579535.2653754,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579553.1016421,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579570.9915614,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579588.315355,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579606.0910482,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579623.6699307,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579642.7426221,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579661.2993164,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579677.649877,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579696.1621535,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579713.4272304,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579729.8524275,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579746.4675648,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579764.8409505,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579782.9420235,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579799.2633574,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579816.9359162,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579833.2614315,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579849.7545125,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579866.0065958,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579883.0224245,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579899.5396056,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579915.989577,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579933.0277827,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579950.7600098,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579968.5920527,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700579986.2402258,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580004.435596,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580022.5319288,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580040.2163296,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580058.316517,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580076.6151404,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580094.659482,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580110.707191,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580126.8126767,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580143.1323147,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580160.3207052,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580178.9712365,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580196.0915482,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580213.1989908,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580230.0160239,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580246.7150228,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580264.4980783,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580281.7912722,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580299.420328,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580315.9664721,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580333.0370007,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580351.692899,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580369.943403,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580386.1357255,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580405.3406327,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580422.6640432,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580439.0284717,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580457.5324802,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580473.834265,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580490.0115812,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580508.3055453,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580525.1145167,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580543.8369424,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580562.9594464,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580579.646801,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580595.721622,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580614.7556465,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580631.05926,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580649.1327486,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580666.1361825,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580683.578153,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580701.1432593,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580717.4143155,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580735.5697658,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580752.8575554,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580771.7445333,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580790.7912672,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580807.8188612,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580825.4235597,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580842.7108855,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580858.7817483,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580876.8537543,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580894.2327905,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580911.3276296,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580930.174589,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580946.9390633,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580965.3942766,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580981.5147586,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700580999.8528824,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581017.8614857,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581035.5099003,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581051.7505894,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581070.0750103,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581088.8969662,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581108.0328689,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581126.7513664,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581145.420935,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581162.2234097,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581181.1530862,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581197.3993506,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581216.0792794,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581234.099224,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581252.5138679,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581270.5424767,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581286.8601706,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581302.9135952,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581320.7895713,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581337.0178547,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581356.2209735,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581374.304926,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581393.4653609,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581412.14256,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581429.212126,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581447.3349335,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581466.4013512,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581483.401345,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581499.9988966,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581519.0994856,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581537.7727695,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581554.7691033,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581573.35597,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581590.6975489,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581609.0065737,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581626.3144882,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581645.1877792,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581664.2598138,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581680.3270144,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581698.8661997,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581716.2311316,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581732.2853463,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581749.677365,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581768.5794668,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581787.3241248,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581803.4689054,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581821.584459,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581838.7040436,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581856.3220298,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581875.0163715,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581891.0994992,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581907.503654,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581924.3465111,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581943.0245187,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581960.0405715,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581976.071496,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700581994.9577856,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582012.148958,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582028.4774148,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582046.5454214,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582065.0176742,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582083.5551605,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582100.4017313,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582117.5209138,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582134.2167745,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582152.8540332,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582169.9849246,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582187.9088387,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582205.7692473,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582223.0983682,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582239.4893875,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582258.414667,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582274.594406,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582291.3329904,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582308.378068,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582325.5067499,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582342.63469,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582359.6129124,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582378.7215738,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582396.876165,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582413.5482755,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582432.6365223,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582449.610513,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582468.201864,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582484.6382499,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582503.6771905,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582521.7353485,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582540.7943916,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582559.3928258,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582575.9824693,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582595.0062926,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582613.6721582,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582631.2619915,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582650.0055723,"logger":"leader","msg":"Not the leader. Waiting."}
+{"level":"info","ts":1700582668.2837398,"logger":"leader","msg":"Became the leader."}
+{"level":"info","ts":1700582668.9414787,"logger":"controller-runtime.metrics","msg":"metrics server is starting to listen","addr":"***HIDDEN***:8383"}
+{"level":"info","ts":1700582668.9416385,"logger":"cmd","msg":"Registering Components."}
+I1121 16:04:30.741869       1 request.go:655] Throttling request took 1.049201434s, request: GET:https://***HIDDEN***:443/apis/openebs.io/v1alpha1?timeout=32s
+{"level":"info","ts":1700582680.3434358,"logger":"action_runner","msg":"Watch created for 'PrometheusRule' resource in 'keycloak-controller'"}
+{"level":"info","ts":1700582680.3434615,"logger":"action_runner","msg":"Watch created for 'ServiceMonitor' resource in 'keycloak-controller'"}
+{"level":"info","ts":1700582684.2791505,"logger":"metrics","msg":"Metrics Service object updated","Service.Name":"keycloak-operator-metrics","Service.Namespace":"knime"}
+{"level":"info","ts":1700582685.595335,"logger":"cmd","msg":"Could not create ServiceMonitor object","error":"servicemonitors.monitoring.coreos.com \"keycloak-operator-metrics\" already exists"}
+{"level":"info","ts":1700582685.59537,"logger":"cmd","msg":"Starting the Cmd."}
+{"level":"info","ts":1700582685.5955124,"logger":"controller-runtime.manager","msg":"starting metrics server","path":"/metrics"}
+{"level":"info","ts":1700582685.595598,"logger":"controller-runtime.controller","msg":"Starting EventSource","controller":"controller_keycloakrealm","source":"kind source: /, Kind="}
+{"level":"info","ts":1700582685.5955906,"logger":"controller-runtime.controller","msg":"Starting EventSource","controller":"keycloak-controller","source":"kind source: /, Kind="}
+{"level":"info","ts":1700582685.5956097,"logger":"controller-runtime.controller","msg":"Starting EventSource","controller":"keycloakclient-controller","source":"kind source: /, Kind="}
+{"level":"info","ts":1700582685.5956686,"logger":"controller-runtime.controller","msg":"Starting EventSource","controller":"keycloakuser-controller","source":"kind source: /, Kind="}
+{"level":"info","ts":1700582685.5956936,"logger":"controller-runtime.controller","msg":"Starting EventSource","controller":"keycloakbackup-controller","source":"kind source: /, Kind="}
+{"level":"info","ts":1700582685.6958215,"logger":"controller-runtime.controller","msg":"Starting EventSource","controller":"controller_keycloakrealm","source":"kind source: /, Kind="}
+{"level":"info","ts":1700582685.695915,"logger":"controller-runtime.controller","msg":"Starting EventSource","controller":"keycloak-controller","source":"kind source: /, Kind="}
+{"level":"info","ts":1700582685.6959999,"logger":"controller-runtime.controller","msg":"Starting Controller","controller":"keycloakbackup-controller"}
+{"level":"info","ts":1700582685.6960666,"logger":"controller-runtime.controller","msg":"Starting EventSource","controller":"keycloakuser-controller","source":"kind source: /, Kind="}
+{"level":"info","ts":1700582685.6961348,"logger":"controller-runtime.controller","msg":"Starting EventSource","controller":"keycloakclient-controller","source":"kind source: /, Kind="}
+{"level":"info","ts":1700582685.7960901,"logger":"controller-runtime.controller","msg":"Starting Controller","controller":"controller_keycloakrealm"}
+{"level":"info","ts":1700582685.7961102,"logger":"controller-runtime.controller","msg":"Starting EventSource","controller":"keycloak-controller","source":"kind source: /, Kind="}
+{"level":"info","ts":1700582685.7961335,"logger":"controller-runtime.controller","msg":"Starting workers","controller":"controller_keycloakrealm","worker count":1}
+{"level":"info","ts":1700582685.7962186,"logger":"controller-runtime.controller","msg":"Starting workers","controller":"keycloakbackup-controller","worker count":1}
+{"level":"info","ts":1700582685.7963006,"logger":"controller-runtime.controller","msg":"Starting EventSource","controller":"keycloakuser-controller","source":"kind source: /, Kind="}
+{"level":"info","ts":1700582685.7964094,"logger":"controller-runtime.controller","msg":"Starting Controller","controller":"keycloakclient-controller"}
+{"level":"info","ts":1700582685.7965486,"logger":"controller-runtime.controller","msg":"Starting Controller","controller":"keycloakuser-controller"}
+{"level":"info","ts":1700582685.7970605,"logger":"controller_keycloakrealm","msg":"Reconciling KeycloakRealm","Request.Namespace":"knime","Request.Name":"knime-realm"}
+{"level":"info","ts":1700582685.7971315,"logger":"controller_keycloakrealm","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582685.8132432,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582685.8963296,"logger":"controller-runtime.controller","msg":"Starting Controller","controller":"keycloak-controller"}
+{"level":"info","ts":1700582685.8963568,"logger":"controller-runtime.controller","msg":"Starting workers","controller":"keycloak-controller","worker count":1}
+{"level":"info","ts":1700582685.8965356,"logger":"controller-runtime.controller","msg":"Starting workers","controller":"keycloakclient-controller","worker count":1}
+{"level":"info","ts":1700582685.8965745,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"knime-impersonation"}
+{"level":"info","ts":1700582685.8966317,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/knime-impersonation"}
+{"level":"info","ts":1700582685.896661,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582685.8966582,"logger":"controller-runtime.controller","msg":"Starting workers","controller":"keycloakuser-controller","worker count":1}
+{"level":"info","ts":1700582685.89743,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700582685.9103558,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582685.9221494,"logger":"controller_keycloakrealm","msg":"read state for keycloak knime/knime-keycloak, realm knime/knime"}
+{"level":"info","ts":1700582685.9743617,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582685.9744136,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/knime-impersonation"}
+{"level":"info","ts":1700582686.5673645,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582686.573629,"logger":"controller_keycloakrealm","msg":"Reconciling KeycloakRealm","Request.Namespace":"knime","Request.Name":"knime-realm"}
+{"level":"info","ts":1700582686.5736904,"logger":"controller_keycloakrealm","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582686.5848022,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582686.644701,"logger":"controller_keycloakrealm","msg":"read state for keycloak knime/knime-keycloak, realm knime/knime"}
+{"level":"info","ts":1700582686.6513114,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582686.8995264,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582686.903795,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582686.94072,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/knime-impersonation"}
+{"level":"info","ts":1700582686.9434297,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/knime-impersonation"}
+{"level":"info","ts":1700582686.9482713,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"userdata-svc"}
+{"level":"info","ts":1700582686.9483268,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/userdata-svc"}
+{"level":"info","ts":1700582686.9483533,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582686.9597635,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582687.0204928,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582687.0205204,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/userdata-svc"}
+{"level":"info","ts":1700582687.1374965,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582687.1416163,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+I1121 16:04:47.142230       1 request.go:655] Throttling request took 1.048906053s, request: GET:https://***HIDDEN***:443/apis/storage.k8s.io/v1?timeout=32s
+{"level":"info","ts":1700582687.1563458,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/userdata-svc"}
+{"level":"info","ts":1700582687.1584232,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/userdata-svc"}
+{"level":"info","ts":1700582687.1622636,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"catalog-service"}
+{"level":"info","ts":1700582687.1623173,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/catalog-service"}
+{"level":"info","ts":1700582687.1623406,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582687.1730504,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582687.2309077,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582687.2309422,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/catalog-service"}
+{"level":"info","ts":1700582687.2508101,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700582687.2531042,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700582687.2574942,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700582687.2615588,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700582687.2640972,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700582687.2660391,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700582687.2678573,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700582687.2696707,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700582687.285194,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700582687.290869,"logger":"controller_keycloak","msg":"desired cluster state met"}
+{"level":"info","ts":1700582687.290911,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700582688.6990523,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582688.7002113,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700582688.7022834,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700582688.705766,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700582688.7058792,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582688.7085872,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700582688.7104342,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700582688.7122962,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700582688.7141047,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700582688.7159607,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700582688.7225776,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700582688.7233775,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/catalog-service"}
+{"level":"info","ts":1700582688.7250917,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/catalog-service"}
+{"level":"info","ts":1700582688.726695,"logger":"controller_keycloak","msg":"desired cluster state met"}
+{"level":"info","ts":1700582688.7285,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"session-service"}
+{"level":"info","ts":1700582688.728555,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/session-service"}
+{"level":"info","ts":1700582688.7285776,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582688.738251,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582688.7957864,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582688.7958283,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/session-service"}
+{"level":"info","ts":1700582688.8838446,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582688.8879333,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582688.902967,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/session-service"}
+{"level":"info","ts":1700582688.9051397,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/session-service"}
+{"level":"info","ts":1700582688.908996,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"notification-service"}
+{"level":"info","ts":1700582688.9090555,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/notification-service"}
+{"level":"info","ts":1700582688.9090872,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582688.9184103,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582688.975356,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582688.9753888,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/notification-service"}
+{"level":"info","ts":1700582689.0617824,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582689.066368,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582689.0885515,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/notification-service"}
+{"level":"info","ts":1700582689.0908577,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/notification-service"}
+{"level":"info","ts":1700582689.094801,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"trigger-service"}
+{"level":"info","ts":1700582689.094874,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/trigger-service"}
+{"level":"info","ts":1700582689.0948994,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582689.1039917,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582689.1595337,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582689.1595626,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/trigger-service"}
+{"level":"info","ts":1700582689.2473006,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582689.2524433,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582689.2668645,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/trigger-service"}
+{"level":"info","ts":1700582689.2690449,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/trigger-service"}
+{"level":"info","ts":1700582689.2735047,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"keycloak-proxy"}
+{"level":"info","ts":1700582689.2735724,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/keycloak-proxy"}
+{"level":"info","ts":1700582689.273601,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582689.2826111,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582689.3411298,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582689.3411586,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/keycloak-proxy"}
+{"level":"info","ts":1700582689.4226506,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582689.4280133,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582689.4431574,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/keycloak-proxy"}
+{"level":"info","ts":1700582689.4452374,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/keycloak-proxy"}
+{"level":"info","ts":1700582689.4489095,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"kubernetes-event-persistor"}
+{"level":"info","ts":1700582689.44896,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/kubernetes-event-persistor"}
+{"level":"info","ts":1700582689.4489827,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582689.4584458,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582689.5145724,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582689.514604,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/kubernetes-event-persistor"}
+{"level":"info","ts":1700582689.58923,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582689.5933027,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582689.6072075,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/kubernetes-event-persistor"}
+{"level":"info","ts":1700582689.6091957,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/kubernetes-event-persistor"}
+{"level":"info","ts":1700582689.6130702,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"s3-proxy"}
+{"level":"info","ts":1700582689.613132,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/s3-proxy"}
+{"level":"info","ts":1700582689.6131558,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582689.6221554,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582689.6789315,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582689.6789627,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/s3-proxy"}
+{"level":"info","ts":1700582689.7556148,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582689.7602913,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582689.7752366,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/s3-proxy"}
+{"level":"info","ts":1700582689.77744,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/s3-proxy"}
+{"level":"info","ts":1700582689.7814636,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"analytics-platform"}
+{"level":"info","ts":1700582689.7815297,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/analytics-platform"}
+{"level":"info","ts":1700582689.7815547,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582689.7901921,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582689.8463748,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582689.8464057,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/analytics-platform"}
+{"level":"info","ts":1700582689.8612,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582689.8840866,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/analytics-platform"}
+{"level":"info","ts":1700582689.8862114,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/analytics-platform"}
+{"level":"info","ts":1700582689.890103,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"secret-store"}
+{"level":"info","ts":1700582689.8901594,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/secret-store"}
+{"level":"info","ts":1700582689.8901875,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582689.9002507,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582689.956157,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582689.9561908,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/secret-store"}
+{"level":"info","ts":1700582690.0449414,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582690.0483866,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582690.062426,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/secret-store"}
+{"level":"info","ts":1700582690.0652053,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/secret-store"}
+{"level":"info","ts":1700582690.0689185,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"search-sync-service"}
+{"level":"info","ts":1700582690.0689776,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/search-sync-service"}
+{"level":"info","ts":1700582690.069005,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582690.0777543,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582690.1332498,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582690.133284,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/search-sync-service"}
+{"level":"info","ts":1700582690.2052176,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582690.2086585,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582690.2221167,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/search-sync-service"}
+{"level":"info","ts":1700582690.2245727,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/search-sync-service"}
+{"level":"info","ts":1700582690.2282822,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"execution-operator"}
+{"level":"info","ts":1700582690.2283306,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/execution-operator"}
+{"level":"info","ts":1700582690.2283525,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582690.2369516,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582690.2934082,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582690.2934349,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/execution-operator"}
+{"level":"info","ts":1700582690.364653,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582690.368184,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582690.3815455,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/execution-operator"}
+{"level":"info","ts":1700582690.3837729,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/execution-operator"}
+{"level":"info","ts":1700582690.3875422,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"lifecycle-handler"}
+{"level":"info","ts":1700582690.3875988,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/lifecycle-handler"}
+{"level":"info","ts":1700582690.3876219,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582690.3963764,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582690.4535315,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582690.4535651,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/lifecycle-handler"}
+{"level":"info","ts":1700582690.536234,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582690.5396078,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582690.5522983,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/lifecycle-handler"}
+{"level":"info","ts":1700582690.554315,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/lifecycle-handler"}
+{"level":"info","ts":1700582690.5580213,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"execution-context-manager"}
+{"level":"info","ts":1700582690.558074,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/execution-context-manager"}
+{"level":"info","ts":1700582690.5580966,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582690.5664427,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582690.62087,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582690.6209023,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/execution-context-manager"}
+{"level":"info","ts":1700582690.6977818,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582690.7012587,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582690.7135148,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/execution-context-manager"}
+{"level":"info","ts":1700582690.7162526,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/execution-context-manager"}
+{"level":"info","ts":1700582690.7212667,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"rest-interface"}
+{"level":"info","ts":1700582690.7213264,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/rest-interface"}
+{"level":"info","ts":1700582690.7213564,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582690.7300508,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582690.7852995,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582690.785331,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/rest-interface"}
+{"level":"info","ts":1700582690.8553505,"logger":"controller_keycloakclient","msg":"Reconciling service account roles"}
+{"level":"info","ts":1700582690.8586276,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582690.8733377,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/rest-interface"}
+{"level":"info","ts":1700582690.875665,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/rest-interface"}
+{"level":"info","ts":1700582690.8793442,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"auth-rely"}
+{"level":"info","ts":1700582690.8793967,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/auth-rely"}
+{"level":"info","ts":1700582690.879419,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582690.8885834,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582690.9445834,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582690.9446104,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/auth-rely"}
+{"level":"info","ts":1700582690.9590695,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582690.9740632,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/auth-rely"}
+{"level":"info","ts":1700582690.9761891,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/auth-rely"}
+{"level":"info","ts":1700582690.980026,"logger":"controller_keycloakclient","msg":"Reconciling KeycloakClient","Request.Namespace":"knime","Request.Name":"hub-ui"}
+{"level":"info","ts":1700582690.980079,"logger":"controller_keycloakclient","msg":"found 1 matching realm(s) for client knime/hub-ui"}
+{"level":"info","ts":1700582690.9801006,"logger":"controller_keycloakclient","msg":"found 1 matching keycloak(s) for realm knime/knime-realm"}
+{"level":"info","ts":1700582690.9887724,"logger":"action_runner","msg":"found keycloak url: https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582691.047849,"logger":"controller_keycloakclient","msg":"got authenticated client for keycloak at https://keycloak.knime.svc:8443"}
+{"level":"info","ts":1700582691.0478792,"logger":"controller_keycloakclient","msg":"read client state for keycloak knime/knime-keycloak, realm knime/knime-realm, client knime/hub-ui"}
+{"level":"info","ts":1700582691.062371,"logger":"action_runner","msg":"(    0)    SUCCESS check if keycloak is available"}
+{"level":"info","ts":1700582691.0776813,"logger":"action_runner","msg":"(    1)    SUCCESS update client knime/hub-ui"}
+{"level":"info","ts":1700582691.0798244,"logger":"action_runner","msg":"(    2)    SUCCESS update client secret knime/hub-ui"}
+I1121 16:04:57.891707       1 request.go:655] Throttling request took 1.049177032s, request: GET:https://***HIDDEN***:443/apis/networking.istio.io/v1beta1?timeout=32s
+I1121 16:05:08.641311       1 request.go:655] Throttling request took 1.049206512s, request: GET:https://***HIDDEN***:443/apis/networking.istio.io/v1alpha3?timeout=32s
+{"level":"info","ts":1700582717.2910535,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700582717.943003,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700582717.945043,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700582717.9485946,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700582717.9512355,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700582717.9539976,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700582717.9559634,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700582717.9576526,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700582717.9594004,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700582717.9639978,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700582717.968079,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:05:19.391006       1 request.go:655] Throttling request took 1.049067566s, request: GET:https://***HIDDEN***:443/apis/storage.k8s.io/v1beta1?timeout=32s
+I1121 16:05:30.140693       1 request.go:655] Throttling request took 1.049129345s, request: GET:https://***HIDDEN***:443/apis/flowcontrol.apiserver.k8s.io/v1beta2?timeout=32s
+I1121 16:05:40.890363       1 request.go:655] Throttling request took 1.049155915s, request: GET:https://***HIDDEN***:443/apis/security.istio.io/v1beta1?timeout=32s
+{"level":"info","ts":1700582747.9682248,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700582748.6209254,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700582748.6230514,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700582748.626769,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700582748.630544,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700582748.6335387,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700582748.635526,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700582748.6373901,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700582748.6394207,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700582748.6457899,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700582748.650143,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:05:51.639956       1 request.go:655] Throttling request took 1.049243404s, request: GET:https://***HIDDEN***:443/apis/apiregistration.k8s.io/v1?timeout=32s
+I1121 16:06:02.389552       1 request.go:655] Throttling request took 1.04907694s, request: GET:https://***HIDDEN***:443/apis/events.k8s.io/v1?timeout=32s
+I1121 16:06:13.139053       1 request.go:655] Throttling request took 1.049199792s, request: GET:https://***HIDDEN***:443/apis/config.knime.com/v1alpha1?timeout=32s
+{"level":"info","ts":1700582778.650314,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700582779.3021545,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700582779.3040936,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700582779.3074553,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700582779.3099363,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700582779.3126152,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700582779.3144178,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700582779.3160653,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700582779.3177078,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700582779.3221867,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700582779.3261347,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:06:23.888687       1 request.go:655] Throttling request took 1.049231511s, request: GET:https://***HIDDEN***:443/apis/acid.zalan.do/v1?timeout=32s
+I1121 16:06:34.638231       1 request.go:655] Throttling request took 1.049266186s, request: GET:https://***HIDDEN***:443/apis/scheduling.k8s.io/v1?timeout=32s
+I1121 16:06:45.387768       1 request.go:655] Throttling request took 1.049213956s, request: GET:https://***HIDDEN***:443/apis/telemetry.istio.io/v1alpha1?timeout=32s
+{"level":"info","ts":1700582809.326303,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700582809.979685,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700582809.9817617,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700582809.9853394,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700582809.9880164,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700582809.9907076,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700582809.9925783,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700582809.9942956,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700582809.996015,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700582810.000674,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700582810.005081,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:06:56.137374       1 request.go:655] Throttling request took 1.049165476s, request: GET:https://***HIDDEN***:443/apis/autoscaling/v2?timeout=32s
+I1121 16:07:06.887041       1 request.go:655] Throttling request took 1.049217953s, request: GET:https://***HIDDEN***:443/apis/flowcontrol.apiserver.k8s.io/v1beta2?timeout=32s
+I1121 16:07:17.636619       1 request.go:655] Throttling request took 1.04912824s, request: GET:https://***HIDDEN***:443/apis/rbac.authorization.k8s.io/v1?timeout=32s
+{"level":"info","ts":1700582840.005252,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700582840.6582751,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700582840.6600268,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700582840.663311,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700582840.6658323,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700582840.6684613,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700582840.6705852,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700582840.673569,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700582840.675391,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700582840.6799767,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700582840.6839044,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:07:28.386254       1 request.go:655] Throttling request took 1.049215741s, request: GET:https://***HIDDEN***:443/apis/storage.k8s.io/v1beta1?timeout=32s
+I1121 16:07:39.135964       1 request.go:655] Throttling request took 1.049234754s, request: GET:https://***HIDDEN***:443/apis/autoscaling/v1?timeout=32s
+I1121 16:07:49.885663       1 request.go:655] Throttling request took 1.049169243s, request: GET:https://***HIDDEN***:443/apis/flowcontrol.apiserver.k8s.io/v1beta1?timeout=32s
+{"level":"info","ts":1700582870.6840718,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700582871.337702,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700582871.3395371,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700582871.3430426,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700582871.3454778,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700582871.34813,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700582871.3498693,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700582871.3515768,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700582871.35334,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700582871.3577998,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700582871.3617477,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:08:00.635407       1 request.go:655] Throttling request took 1.048847348s, request: GET:https://***HIDDEN***:443/apis/autoscaling/v2beta2?timeout=32s
+I1121 16:08:11.385070       1 request.go:655] Throttling request took 1.049217835s, request: GET:https://***HIDDEN***:443/apis/storage.k8s.io/v1?timeout=32s
+{"level":"info","ts":1700582901.3619142,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700582902.0135067,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700582902.0166605,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700582902.0203023,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700582902.0229442,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700582902.0256941,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700582902.0275564,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700582902.029208,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700582902.030899,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700582902.0355444,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700582902.0396533,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:08:22.134689       1 request.go:655] Throttling request took 1.049160987s, request: GET:https://***HIDDEN***:443/apis/extensions.istio.io/v1alpha1?timeout=32s
+I1121 16:08:32.884475       1 request.go:655] Throttling request took 1.049061197s, request: GET:https://***HIDDEN***:443/apis/authorization.k8s.io/v1?timeout=32s
+I1121 16:08:43.634158       1 request.go:655] Throttling request took 1.048919609s, request: GET:https://***HIDDEN***:443/apis/discovery.k8s.io/v1?timeout=32s
+{"level":"info","ts":1700582932.0398428,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700582932.6916177,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700582932.693387,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700582932.696784,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700582932.6993008,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700582932.703954,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700582932.7059107,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700582932.7076252,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700582932.7093742,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700582932.7140162,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700582932.7180328,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:08:54.383769       1 request.go:655] Throttling request took 1.048984686s, request: GET:https://***HIDDEN***:443/apis/autoscaling/v2?timeout=32s
+I1121 16:09:05.133436       1 request.go:655] Throttling request took 1.049098297s, request: GET:https://***HIDDEN***:443/apis/apps/v1?timeout=32s
+I1121 16:09:15.883192       1 request.go:655] Throttling request took 1.049055428s, request: GET:https://***HIDDEN***:443/apis/networking.istio.io/v1beta1?timeout=32s
+{"level":"info","ts":1700582962.718239,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700582963.370122,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700582963.3722298,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700582963.3757515,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700582963.378265,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700582963.3809557,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700582963.382686,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700582963.3847134,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700582963.3869236,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700582963.3915358,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700582963.3957806,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:09:26.632911       1 request.go:655] Throttling request took 1.049198703s, request: GET:https://***HIDDEN***:443/apis/cluster.kurl.sh/v1beta1?timeout=32s
+I1121 16:09:37.382636       1 request.go:655] Throttling request took 1.04904248s, request: GET:https://***HIDDEN***:443/apis/monitoring.coreos.com/v1alpha1?timeout=32s
+I1121 16:09:48.132355       1 request.go:655] Throttling request took 1.048981868s, request: GET:https://***HIDDEN***:443/apis/admissionregistration.k8s.io/v1?timeout=32s
+{"level":"info","ts":1700582993.3959599,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700582994.0477798,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700582994.0498087,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700582994.053321,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700582994.0558257,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700582994.0585964,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700582994.0604637,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700582994.0622034,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700582994.0639381,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700582994.0684028,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700582994.0722752,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:09:58.881938       1 request.go:655] Throttling request took 1.049019482s, request: GET:https://***HIDDEN***:443/apis/networking.istio.io/v1beta1?timeout=32s
+I1121 16:10:09.631635       1 request.go:655] Throttling request took 1.049177798s, request: GET:https://***HIDDEN***:443/apis/extensions.istio.io/v1alpha1?timeout=32s
+I1121 16:10:20.381365       1 request.go:655] Throttling request took 1.049043142s, request: GET:https://***HIDDEN***:443/apis/velero.io/v1?timeout=32s
+{"level":"info","ts":1700583024.0724459,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700583024.7241695,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700583024.7264009,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700583024.7300532,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700583024.7335973,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700583024.73658,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700583024.7384384,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700583024.740162,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700583024.7419152,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700583024.7466588,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700583024.7507627,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:10:31.131074       1 request.go:655] Throttling request took 1.048927286s, request: GET:https://***HIDDEN***:443/apis/admissionregistration.k8s.io/v1?timeout=32s
+I1121 16:10:41.880770       1 request.go:655] Throttling request took 1.049155611s, request: GET:https://***HIDDEN***:443/apis/authentication.k8s.io/v1?timeout=32s
+I1121 16:10:52.630448       1 request.go:655] Throttling request took 1.048928079s, request: GET:https://***HIDDEN***:443/apis/acid.zalan.do/v1?timeout=32s
+{"level":"info","ts":1700583054.750933,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700583055.4028819,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700583055.4053473,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700583055.4089592,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700583055.4120336,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700583055.4148448,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700583055.4166508,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700583055.418348,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700583055.4200263,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700583055.4263387,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700583055.4305735,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:11:03.380141       1 request.go:655] Throttling request took 1.048995771s, request: GET:https://***HIDDEN***:443/apis/apiextensions.k8s.io/v1?timeout=32s
+I1121 16:11:14.129899       1 request.go:655] Throttling request took 1.048363113s, request: GET:https://***HIDDEN***:443/apis/coordination.k8s.io/v1?timeout=32s
+I1121 16:11:24.879624       1 request.go:655] Throttling request took 1.049049632s, request: GET:https://***HIDDEN***:443/apis/discovery.k8s.io/v1?timeout=32s
+{"level":"info","ts":1700583085.430742,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700583086.0824697,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700583086.0847933,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700583086.0891738,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700583086.0919905,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700583086.0948973,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700583086.0967338,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700583086.098403,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700583086.1001465,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700583086.1049244,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700583086.1088812,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:11:35.629390       1 request.go:655] Throttling request took 1.049220181s, request: GET:https://***HIDDEN***:443/apis/autoscaling/v2?timeout=32s
+I1121 16:11:46.379107       1 request.go:655] Throttling request took 1.04893637s, request: GET:https://***HIDDEN***:443/apis/node.k8s.io/v1?timeout=32s
+{"level":"info","ts":1700583116.109059,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700583116.7607765,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700583116.7628438,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700583116.7664716,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700583116.7691083,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700583116.771877,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700583116.7736542,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700583116.7753878,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700583116.777127,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700583116.782131,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700583116.786293,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:11:57.128818       1 request.go:655] Throttling request took 1.049065243s, request: GET:https://***HIDDEN***:443/apis/networking.k8s.io/v1?timeout=32s
+I1121 16:12:07.878528       1 request.go:655] Throttling request took 1.049196758s, request: GET:https://***HIDDEN***:443/apis/velero.io/v1?timeout=32s
+I1121 16:12:18.628216       1 request.go:655] Throttling request took 1.049189665s, request: GET:https://***HIDDEN***:443/apis/security.istio.io/v1beta1?timeout=32s
+{"level":"info","ts":1700583146.78647,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700583147.4382496,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700583147.4402556,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700583147.4438672,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700583147.446559,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700583147.449263,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700583147.4510744,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700583147.4526758,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700583147.454292,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700583147.45897,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700583147.4629836,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:12:29.377832       1 request.go:655] Throttling request took 1.04925814s, request: GET:https://***HIDDEN***:443/apis/velero.io/v1?timeout=32s
+I1121 16:12:40.127562       1 request.go:655] Throttling request took 1.049224885s, request: GET:https://***HIDDEN***:443/apis/autoscaling/v1?timeout=32s
+I1121 16:12:50.877267       1 request.go:655] Throttling request took 1.049231136s, request: GET:https://***HIDDEN***:443/apis/keycloak.org/v1alpha1?timeout=32s
+{"level":"info","ts":1700583177.4631877,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700583178.1131911,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700583178.1151147,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700583178.1184783,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700583178.121041,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700583178.1237347,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700583178.125493,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700583178.12721,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700583178.1305683,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700583178.13512,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700583178.1390746,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:13:01.626914       1 request.go:655] Throttling request took 1.04926376s, request: GET:https://***HIDDEN***:443/apis/events.k8s.io/v1?timeout=32s
+I1121 16:13:12.376533       1 request.go:655] Throttling request took 1.049190014s, request: GET:https://***HIDDEN***:443/apis/hub.knime.com/v1alpha1?timeout=32s
+I1121 16:13:23.126162       1 request.go:655] Throttling request took 1.048956125s, request: GET:https://***HIDDEN***:443/apis/scheduling.k8s.io/v1?timeout=32s
+{"level":"info","ts":1700583208.1392386,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700583208.7901456,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700583208.79208,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700583208.7954624,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700583208.7980576,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700583208.8020623,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700583208.8039384,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700583208.8056169,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700583208.8073676,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700583208.8118584,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700583208.8157039,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:13:33.875873       1 request.go:655] Throttling request took 1.049204328s, request: GET:https://***HIDDEN***:443/apis/storage.k8s.io/v1beta1?timeout=32s
+I1121 16:13:44.625666       1 request.go:655] Throttling request took 1.049161996s, request: GET:https://***HIDDEN***:443/apis/acid.zalan.do/v1?timeout=32s
+I1121 16:13:55.375308       1 request.go:655] Throttling request took 1.049135295s, request: GET:https://***HIDDEN***:443/apis/config.knime.com/v1alpha1?timeout=32s
+{"level":"info","ts":1700583238.815878,"logger":"controller_keycloak","msg":"Reconciling Keycloak","Request.Namespace":"knime","Request.Name":"knime-keycloak"}
+{"level":"info","ts":1700583239.4679065,"logger":"controller_keycloak","msg":"podDisruptionBudget is enabled in the CR but policy/v1beta1 PodDisruptionBudget API was not found; please create podDisruptionBudget manually"}
+{"level":"info","ts":1700583239.4710264,"logger":"action_runner","msg":"(    0)    SUCCESS Update Keycloak admin secret"}
+{"level":"info","ts":1700583239.4747577,"logger":"action_runner","msg":"(    1)    SUCCESS update keycloak prometheus rule"}
+{"level":"info","ts":1700583239.4772954,"logger":"action_runner","msg":"(    2)    SUCCESS update keycloak service monitor"}
+{"level":"info","ts":1700583239.47996,"logger":"action_runner","msg":"(    3)    SUCCESS Update Postgresql KeycloakService"}
+{"level":"info","ts":1700583239.4818583,"logger":"action_runner","msg":"(    4)    SUCCESS Update keycloak Service"}
+{"level":"info","ts":1700583239.483567,"logger":"action_runner","msg":"(    5)    SUCCESS Update keycloak Discovery Service"}
+{"level":"info","ts":1700583239.48528,"logger":"action_runner","msg":"(    6)    SUCCESS Update keycloak Monitoring Service"}
+{"level":"info","ts":1700583239.4898295,"logger":"action_runner","msg":"(    7)    SUCCESS Update Keycloak Deployment (StatefulSet)"}
+{"level":"info","ts":1700583239.493908,"logger":"controller_keycloak","msg":"desired cluster state met"}
+I1121 16:14:06.125057       1 request.go:655] Throttling request took 1.049262665s, request: GET:https://***HIDDEN***:443/apis/networking.k8s.io/v1?timeout=32s
+I1121 16:14:16.874796       1 request.go:655] Throttling request took 1.04920894s, request: GET:https://***HIDDEN***:443/apis/rbac.authorization.k8s.io/v1?timeout=32s

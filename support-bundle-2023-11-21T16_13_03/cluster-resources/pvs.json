@@ -1,0 +1,1249 @@
+{
+  "kind": "PersistentVolumeList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763992"
+  },
+  "items": [
+    {
+      "kind": "PersistentVolume",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "pvc-01d9ea76-d334-49d5-abaf-fd8b4b24e673",
+        "uid": "e635d82c-aff1-4513-bd52-95e7d036fcd2",
+        "resourceVersion": "4928",
+        "creationTimestamp": "2023-11-10T13:19:25Z",
+        "labels": {
+          "openebs.io/cas-type": "local-hostpath"
+        },
+        "annotations": {
+          "pv.kubernetes.io/provisioned-by": "openebs.io/local"
+        },
+        "finalizers": [
+          "kubernetes.io/pv-protection"
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:25Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:phase": {}
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "provisioner-localpv",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:25Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:pv.kubernetes.io/provisioned-by": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:openebs.io/cas-type": {}
+                }
+              },
+              "f:spec": {
+                "f:accessModes": {},
+                "f:capacity": {
+                  ".": {},
+                  "f:storage": {}
+                },
+                "f:claimRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:local": {
+                  ".": {},
+                  "f:fsType": {},
+                  "f:path": {}
+                },
+                "f:nodeAffinity": {
+                  ".": {},
+                  "f:required": {}
+                },
+                "f:persistentVolumeReclaimPolicy": {},
+                "f:storageClassName": {},
+                "f:volumeMode": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "capacity": {
+          "storage": "5Gi"
+        },
+        "local": {
+          "path": "/var/openebs/local/pvc-01d9ea76-d334-49d5-abaf-fd8b4b24e673",
+          "fsType": ""
+        },
+        "accessModes": [
+          "ReadWriteOnce"
+        ],
+        "claimRef": {
+          "kind": "PersistentVolumeClaim",
+          "namespace": "knime",
+          "name": "data-knime-hub-vault-0",
+          "uid": "01d9ea76-d334-49d5-abaf-fd8b4b24e673",
+          "apiVersion": "v1",
+          "resourceVersion": "4838"
+        },
+        "persistentVolumeReclaimPolicy": "Delete",
+        "storageClassName": "default",
+        "volumeMode": "Filesystem",
+        "nodeAffinity": {
+          "required": {
+            "nodeSelectorTerms": [
+              {
+                "matchExpressions": [
+                  {
+                    "key": "kubernetes.io/hostname",
+                    "operator": "In",
+                    "values": [
+                      "ip-172-31-41-186"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "phase": "Bound"
+      }
+    },
+    {
+      "kind": "PersistentVolume",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "pvc-292b813a-439b-422b-8f34-5622b2250ce2",
+        "uid": "72c82204-73f6-4a0a-8174-8897ab120860",
+        "resourceVersion": "4716",
+        "creationTimestamp": "2023-11-10T13:19:07Z",
+        "labels": {
+          "openebs.io/cas-type": "local-hostpath"
+        },
+        "annotations": {
+          "pv.kubernetes.io/provisioned-by": "openebs.io/local"
+        },
+        "finalizers": [
+          "kubernetes.io/pv-protection"
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:07Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:phase": {}
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "provisioner-localpv",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:07Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:pv.kubernetes.io/provisioned-by": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:openebs.io/cas-type": {}
+                }
+              },
+              "f:spec": {
+                "f:accessModes": {},
+                "f:capacity": {
+                  ".": {},
+                  "f:storage": {}
+                },
+                "f:claimRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:local": {
+                  ".": {},
+                  "f:fsType": {},
+                  "f:path": {}
+                },
+                "f:nodeAffinity": {
+                  ".": {},
+                  "f:required": {}
+                },
+                "f:persistentVolumeReclaimPolicy": {},
+                "f:storageClassName": {},
+                "f:volumeMode": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "capacity": {
+          "storage": "5Gi"
+        },
+        "local": {
+          "path": "/var/openebs/local/pvc-292b813a-439b-422b-8f34-5622b2250ce2",
+          "fsType": ""
+        },
+        "accessModes": [
+          "ReadWriteOnce"
+        ],
+        "claimRef": {
+          "kind": "PersistentVolumeClaim",
+          "namespace": "knime",
+          "name": "elasticsearch-master-elasticsearch-master-0",
+          "uid": "292b813a-439b-422b-8f34-5622b2250ce2",
+          "apiVersion": "v1",
+          "resourceVersion": "4653"
+        },
+        "persistentVolumeReclaimPolicy": "Delete",
+        "storageClassName": "default",
+        "volumeMode": "Filesystem",
+        "nodeAffinity": {
+          "required": {
+            "nodeSelectorTerms": [
+              {
+                "matchExpressions": [
+                  {
+                    "key": "kubernetes.io/hostname",
+                    "operator": "In",
+                    "values": [
+                      "ip-172-31-41-186"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "phase": "Bound"
+      }
+    },
+    {
+      "kind": "PersistentVolume",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "pvc-2ceb5288-1d65-4ab6-8e64-587d0bbb7ca9",
+        "uid": "1c8a2cfe-5920-4661-b059-362a71d767d1",
+        "resourceVersion": "5566",
+        "creationTimestamp": "2023-11-10T13:20:17Z",
+        "labels": {
+          "openebs.io/cas-type": "local-hostpath"
+        },
+        "annotations": {
+          "pv.kubernetes.io/provisioned-by": "openebs.io/local"
+        },
+        "finalizers": [
+          "kubernetes.io/pv-protection"
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:17Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:phase": {}
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "provisioner-localpv",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:17Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:pv.kubernetes.io/provisioned-by": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:openebs.io/cas-type": {}
+                }
+              },
+              "f:spec": {
+                "f:accessModes": {},
+                "f:capacity": {
+                  ".": {},
+                  "f:storage": {}
+                },
+                "f:claimRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:local": {
+                  ".": {},
+                  "f:fsType": {},
+                  "f:path": {}
+                },
+                "f:nodeAffinity": {
+                  ".": {},
+                  "f:required": {}
+                },
+                "f:persistentVolumeReclaimPolicy": {},
+                "f:storageClassName": {},
+                "f:volumeMode": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "capacity": {
+          "storage": "10Gi"
+        },
+        "local": {
+          "path": "/var/openebs/local/pvc-2ceb5288-1d65-4ab6-8e64-587d0bbb7ca9",
+          "fsType": ""
+        },
+        "accessModes": [
+          "ReadWriteOnce"
+        ],
+        "claimRef": {
+          "kind": "PersistentVolumeClaim",
+          "namespace": "knime",
+          "name": "pgdata-cdds-postgres-cluster-0",
+          "uid": "2ceb5288-1d65-4ab6-8e64-587d0bbb7ca9",
+          "apiVersion": "v1",
+          "resourceVersion": "5436"
+        },
+        "persistentVolumeReclaimPolicy": "Delete",
+        "storageClassName": "default",
+        "volumeMode": "Filesystem",
+        "nodeAffinity": {
+          "required": {
+            "nodeSelectorTerms": [
+              {
+                "matchExpressions": [
+                  {
+                    "key": "kubernetes.io/hostname",
+                    "operator": "In",
+                    "values": [
+                      "ip-172-31-41-186"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "phase": "Bound"
+      }
+    },
+    {
+      "kind": "PersistentVolume",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "pvc-61b71d88-6d11-403e-8d44-45f088091372",
+        "uid": "dc195b1a-82a1-42ec-84eb-abf0ce0e7e8b",
+        "resourceVersion": "1477",
+        "creationTimestamp": "2023-11-10T12:59:29Z",
+        "labels": {
+          "openebs.io/cas-type": "local-hostpath"
+        },
+        "annotations": {
+          "pv.kubernetes.io/provisioned-by": "openebs.io/local"
+        },
+        "finalizers": [
+          "kubernetes.io/pv-protection"
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:59:29Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:phase": {}
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "provisioner-localpv",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:59:29Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:pv.kubernetes.io/provisioned-by": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:openebs.io/cas-type": {}
+                }
+              },
+              "f:spec": {
+                "f:accessModes": {},
+                "f:capacity": {
+                  ".": {},
+                  "f:storage": {}
+                },
+                "f:claimRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:local": {
+                  ".": {},
+                  "f:fsType": {},
+                  "f:path": {}
+                },
+                "f:nodeAffinity": {
+                  ".": {},
+                  "f:required": {}
+                },
+                "f:persistentVolumeReclaimPolicy": {},
+                "f:storageClassName": {},
+                "f:volumeMode": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "capacity": {
+          "storage": "1Gi"
+        },
+        "local": {
+          "path": "/var/openebs/local/pvc-61b71d88-6d11-403e-8d44-45f088091372",
+          "fsType": ""
+        },
+        "accessModes": [
+          "ReadWriteOnce"
+        ],
+        "claimRef": {
+          "kind": "PersistentVolumeClaim",
+          "namespace": "default",
+          "name": "kotsadm-rqlite-kotsadm-rqlite-0",
+          "uid": "61b71d88-6d11-403e-8d44-45f088091372",
+          "apiVersion": "v1",
+          "resourceVersion": "1335"
+        },
+        "persistentVolumeReclaimPolicy": "Delete",
+        "storageClassName": "default",
+        "volumeMode": "Filesystem",
+        "nodeAffinity": {
+          "required": {
+            "nodeSelectorTerms": [
+              {
+                "matchExpressions": [
+                  {
+                    "key": "kubernetes.io/hostname",
+                    "operator": "In",
+                    "values": [
+                      "ip-172-31-41-186"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "phase": "Bound"
+      }
+    },
+    {
+      "kind": "PersistentVolume",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "pvc-6fef6a93-ec76-4be7-a6b4-63742b8affeb",
+        "uid": "aadb51f5-f059-4820-af79-f0835bc833b2",
+        "resourceVersion": "4953",
+        "creationTimestamp": "2023-11-10T13:19:26Z",
+        "labels": {
+          "openebs.io/cas-type": "local-hostpath"
+        },
+        "annotations": {
+          "pv.kubernetes.io/provisioned-by": "openebs.io/local"
+        },
+        "finalizers": [
+          "kubernetes.io/pv-protection"
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:26Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:phase": {}
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "provisioner-localpv",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:26Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:pv.kubernetes.io/provisioned-by": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:openebs.io/cas-type": {}
+                }
+              },
+              "f:spec": {
+                "f:accessModes": {},
+                "f:capacity": {
+                  ".": {},
+                  "f:storage": {}
+                },
+                "f:claimRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:local": {
+                  ".": {},
+                  "f:fsType": {},
+                  "f:path": {}
+                },
+                "f:nodeAffinity": {
+                  ".": {},
+                  "f:required": {}
+                },
+                "f:persistentVolumeReclaimPolicy": {},
+                "f:storageClassName": {},
+                "f:volumeMode": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "capacity": {
+          "storage": "100Gi"
+        },
+        "local": {
+          "path": "/var/openebs/local/pvc-6fef6a93-ec76-4be7-a6b4-63742b8affeb",
+          "fsType": ""
+        },
+        "accessModes": [
+          "ReadWriteOnce"
+        ],
+        "claimRef": {
+          "kind": "PersistentVolumeClaim",
+          "namespace": "knime",
+          "name": "minio",
+          "uid": "6fef6a93-ec76-4be7-a6b4-63742b8affeb",
+          "apiVersion": "v1",
+          "resourceVersion": "4883"
+        },
+        "persistentVolumeReclaimPolicy": "Delete",
+        "storageClassName": "default",
+        "volumeMode": "Filesystem",
+        "nodeAffinity": {
+          "required": {
+            "nodeSelectorTerms": [
+              {
+                "matchExpressions": [
+                  {
+                    "key": "kubernetes.io/hostname",
+                    "operator": "In",
+                    "values": [
+                      "ip-172-31-41-186"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "phase": "Bound"
+      }
+    },
+    {
+      "kind": "PersistentVolume",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "pvc-759e042e-7e0d-4b8d-ba86-5efc42527f4c",
+        "uid": "53e412bc-efe2-4372-bbd7-762526f1870c",
+        "resourceVersion": "690",
+        "creationTimestamp": "2023-11-10T12:58:27Z",
+        "labels": {
+          "openebs.io/cas-type": "local-hostpath"
+        },
+        "annotations": {
+          "pv.kubernetes.io/provisioned-by": "openebs.io/local"
+        },
+        "finalizers": [
+          "kubernetes.io/pv-protection"
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:58:27Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:phase": {}
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "provisioner-localpv",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:58:27Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:pv.kubernetes.io/provisioned-by": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:openebs.io/cas-type": {}
+                }
+              },
+              "f:spec": {
+                "f:accessModes": {},
+                "f:capacity": {
+                  ".": {},
+                  "f:storage": {}
+                },
+                "f:claimRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:local": {
+                  ".": {},
+                  "f:fsType": {},
+                  "f:path": {}
+                },
+                "f:nodeAffinity": {
+                  ".": {},
+                  "f:required": {}
+                },
+                "f:persistentVolumeReclaimPolicy": {},
+                "f:storageClassName": {},
+                "f:volumeMode": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "capacity": {
+          "storage": "10Gi"
+        },
+        "local": {
+          "path": "/var/openebs/local/pvc-759e042e-7e0d-4b8d-ba86-5efc42527f4c",
+          "fsType": ""
+        },
+        "accessModes": [
+          "ReadWriteOnce"
+        ],
+        "claimRef": {
+          "kind": "PersistentVolumeClaim",
+          "namespace": "minio",
+          "name": "minio-pv-claim",
+          "uid": "759e042e-7e0d-4b8d-ba86-5efc42527f4c",
+          "apiVersion": "v1",
+          "resourceVersion": "662"
+        },
+        "persistentVolumeReclaimPolicy": "Delete",
+        "storageClassName": "default",
+        "volumeMode": "Filesystem",
+        "nodeAffinity": {
+          "required": {
+            "nodeSelectorTerms": [
+              {
+                "matchExpressions": [
+                  {
+                    "key": "kubernetes.io/hostname",
+                    "operator": "In",
+                    "values": [
+                      "ip-172-31-41-186"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "phase": "Bound"
+      }
+    },
+    {
+      "kind": "PersistentVolume",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "pvc-8382157f-e7df-41f5-a525-7b0b128c20d3",
+        "uid": "b33dceeb-659e-4c94-805a-df8946ae6070",
+        "resourceVersion": "1424",
+        "creationTimestamp": "2023-11-10T12:59:24Z",
+        "labels": {
+          "openebs.io/cas-type": "local-hostpath"
+        },
+        "annotations": {
+          "pv.kubernetes.io/provisioned-by": "openebs.io/local"
+        },
+        "finalizers": [
+          "kubernetes.io/pv-protection"
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:59:24Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:phase": {}
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "provisioner-localpv",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T12:59:24Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:pv.kubernetes.io/provisioned-by": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:openebs.io/cas-type": {}
+                }
+              },
+              "f:spec": {
+                "f:accessModes": {},
+                "f:capacity": {
+                  ".": {},
+                  "f:storage": {}
+                },
+                "f:claimRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:local": {
+                  ".": {},
+                  "f:fsType": {},
+                  "f:path": {}
+                },
+                "f:nodeAffinity": {
+                  ".": {},
+                  "f:required": {}
+                },
+                "f:persistentVolumeReclaimPolicy": {},
+                "f:storageClassName": {},
+                "f:volumeMode": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "capacity": {
+          "storage": "10Gi"
+        },
+        "local": {
+          "path": "/var/openebs/local/pvc-8382157f-e7df-41f5-a525-7b0b128c20d3",
+          "fsType": ""
+        },
+        "accessModes": [
+          "ReadWriteOnce"
+        ],
+        "claimRef": {
+          "kind": "PersistentVolumeClaim",
+          "namespace": "monitoring",
+          "name": "prometheus-k8s-db-prometheus-k8s-0",
+          "uid": "8382157f-e7df-41f5-a525-7b0b128c20d3",
+          "apiVersion": "v1",
+          "resourceVersion": "1245"
+        },
+        "persistentVolumeReclaimPolicy": "Delete",
+        "storageClassName": "default",
+        "volumeMode": "Filesystem",
+        "nodeAffinity": {
+          "required": {
+            "nodeSelectorTerms": [
+              {
+                "matchExpressions": [
+                  {
+                    "key": "kubernetes.io/hostname",
+                    "operator": "In",
+                    "values": [
+                      "ip-172-31-41-186"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "phase": "Bound"
+      }
+    },
+    {
+      "kind": "PersistentVolume",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "pvc-c600ae7b-66bf-427f-a19b-a5ac0ebd7d06",
+        "uid": "8299c1dc-0902-4dd7-8576-d273a1baafe0",
+        "resourceVersion": "5581",
+        "creationTimestamp": "2023-11-10T13:20:18Z",
+        "labels": {
+          "openebs.io/cas-type": "local-hostpath"
+        },
+        "annotations": {
+          "pv.kubernetes.io/provisioned-by": "openebs.io/local"
+        },
+        "finalizers": [
+          "kubernetes.io/pv-protection"
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:18Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:phase": {}
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "provisioner-localpv",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:18Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:pv.kubernetes.io/provisioned-by": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:openebs.io/cas-type": {}
+                }
+              },
+              "f:spec": {
+                "f:accessModes": {},
+                "f:capacity": {
+                  ".": {},
+                  "f:storage": {}
+                },
+                "f:claimRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:local": {
+                  ".": {},
+                  "f:fsType": {},
+                  "f:path": {}
+                },
+                "f:nodeAffinity": {
+                  ".": {},
+                  "f:required": {}
+                },
+                "f:persistentVolumeReclaimPolicy": {},
+                "f:storageClassName": {},
+                "f:volumeMode": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "capacity": {
+          "storage": "10Gi"
+        },
+        "local": {
+          "path": "/var/openebs/local/pvc-c600ae7b-66bf-427f-a19b-a5ac0ebd7d06",
+          "fsType": ""
+        },
+        "accessModes": [
+          "ReadWriteOnce"
+        ],
+        "claimRef": {
+          "kind": "PersistentVolumeClaim",
+          "namespace": "knime",
+          "name": "pgdata-knime-postgres-cluster-0",
+          "uid": "c600ae7b-66bf-427f-a19b-a5ac0ebd7d06",
+          "apiVersion": "v1",
+          "resourceVersion": "5530"
+        },
+        "persistentVolumeReclaimPolicy": "Delete",
+        "storageClassName": "default",
+        "volumeMode": "Filesystem",
+        "nodeAffinity": {
+          "required": {
+            "nodeSelectorTerms": [
+              {
+                "matchExpressions": [
+                  {
+                    "key": "kubernetes.io/hostname",
+                    "operator": "In",
+                    "values": [
+                      "ip-172-31-41-186"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "phase": "Bound"
+      }
+    },
+    {
+      "kind": "PersistentVolume",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "pvc-d89b3e84-1120-4ff2-8397-c052504c0ec0",
+        "uid": "c691b8ad-f90e-469f-b94a-ecde7955bc14",
+        "resourceVersion": "5304",
+        "creationTimestamp": "2023-11-10T13:20:11Z",
+        "labels": {
+          "openebs.io/cas-type": "local-hostpath"
+        },
+        "annotations": {
+          "pv.kubernetes.io/provisioned-by": "openebs.io/local"
+        },
+        "finalizers": [
+          "kubernetes.io/pv-protection"
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:11Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:phase": {}
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "provisioner-localpv",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:20:11Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:pv.kubernetes.io/provisioned-by": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:openebs.io/cas-type": {}
+                }
+              },
+              "f:spec": {
+                "f:accessModes": {},
+                "f:capacity": {
+                  ".": {},
+                  "f:storage": {}
+                },
+                "f:claimRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:local": {
+                  ".": {},
+                  "f:fsType": {},
+                  "f:path": {}
+                },
+                "f:nodeAffinity": {
+                  ".": {},
+                  "f:required": {}
+                },
+                "f:persistentVolumeReclaimPolicy": {},
+                "f:storageClassName": {},
+                "f:volumeMode": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "capacity": {
+          "storage": "8Gi"
+        },
+        "local": {
+          "path": "/var/openebs/local/pvc-d89b3e84-1120-4ff2-8397-c052504c0ec0",
+          "fsType": ""
+        },
+        "accessModes": [
+          "ReadWriteOnce"
+        ],
+        "claimRef": {
+          "kind": "PersistentVolumeClaim",
+          "namespace": "knime",
+          "name": "redis-data-hub-webapp-redis-master-0",
+          "uid": "d89b3e84-1120-4ff2-8397-c052504c0ec0",
+          "apiVersion": "v1",
+          "resourceVersion": "5202"
+        },
+        "persistentVolumeReclaimPolicy": "Delete",
+        "storageClassName": "default",
+        "volumeMode": "Filesystem",
+        "nodeAffinity": {
+          "required": {
+            "nodeSelectorTerms": [
+              {
+                "matchExpressions": [
+                  {
+                    "key": "kubernetes.io/hostname",
+                    "operator": "In",
+                    "values": [
+                      "ip-172-31-41-186"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "phase": "Bound"
+      }
+    },
+    {
+      "kind": "PersistentVolume",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "pvc-da45b7f8-543e-4eca-b32f-16f24fa6823a",
+        "uid": "5319b5ed-d2e8-4e59-a2bc-1471a4b0e273",
+        "resourceVersion": "4695",
+        "creationTimestamp": "2023-11-10T13:19:06Z",
+        "labels": {
+          "openebs.io/cas-type": "local-hostpath"
+        },
+        "annotations": {
+          "pv.kubernetes.io/provisioned-by": "openebs.io/local"
+        },
+        "finalizers": [
+          "kubernetes.io/pv-protection"
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:06Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:phase": {}
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "provisioner-localpv",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:19:06Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:pv.kubernetes.io/provisioned-by": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:openebs.io/cas-type": {}
+                }
+              },
+              "f:spec": {
+                "f:accessModes": {},
+                "f:capacity": {
+                  ".": {},
+                  "f:storage": {}
+                },
+                "f:claimRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:local": {
+                  ".": {},
+                  "f:fsType": {},
+                  "f:path": {}
+                },
+                "f:nodeAffinity": {
+                  ".": {},
+                  "f:required": {}
+                },
+                "f:persistentVolumeReclaimPolicy": {},
+                "f:storageClassName": {},
+                "f:volumeMode": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "capacity": {
+          "storage": "2Gi"
+        },
+        "local": {
+          "path": "/var/openebs/local/pvc-da45b7f8-543e-4eca-b32f-16f24fa6823a",
+          "fsType": ""
+        },
+        "accessModes": [
+          "ReadWriteOnce"
+        ],
+        "claimRef": {
+          "kind": "PersistentVolumeClaim",
+          "namespace": "knime",
+          "name": "activemq-artemis-instance-activemq-artemis-0",
+          "uid": "da45b7f8-543e-4eca-b32f-16f24fa6823a",
+          "apiVersion": "v1",
+          "resourceVersion": "4605"
+        },
+        "persistentVolumeReclaimPolicy": "Delete",
+        "storageClassName": "default",
+        "volumeMode": "Filesystem",
+        "nodeAffinity": {
+          "required": {
+            "nodeSelectorTerms": [
+              {
+                "matchExpressions": [
+                  {
+                    "key": "kubernetes.io/hostname",
+                    "operator": "In",
+                    "values": [
+                      "ip-172-31-41-186"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "phase": "Bound"
+      }
+    }
+  ]
+}

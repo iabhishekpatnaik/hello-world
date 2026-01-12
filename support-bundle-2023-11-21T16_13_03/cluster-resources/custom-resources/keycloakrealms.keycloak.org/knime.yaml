@@ -1,0 +1,143 @@
+- apiVersion: keycloak.org/v1alpha1
+  kind: KeycloakRealm
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    finalizers:
+    - realm.cleanup
+    generation: 2
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:instanceSelector:
+            .: {}
+            f:matchLabels:
+              .: {}
+              f:app: {}
+          f:realm:
+            .: {}
+            f:displayName: {}
+            f:enabled: {}
+            f:eventsListeners: {}
+            f:id: {}
+            f:realm: {}
+            f:registrationAllowed: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"realm.cleanup": {}
+        f:spec:
+          f:realm:
+            f:users: {}
+        f:status:
+          .: {}
+          f:loginURL: {}
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+      manager: keycloak-operator
+      operation: Update
+      time: "2023-11-13T13:26:47Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:secondaryResources:
+            .: {}
+            f:Secret: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:26:47Z"
+    name: knime-realm
+    namespace: knime
+    resourceVersion: "63183"
+    uid: 3c36d261-5ccc-4e92-9b3c-933ea6046a67
+  spec:
+    instanceSelector:
+      matchLabels:
+        app: sso
+    realm:
+      displayName: KNIME Business Hub
+      enabled: true
+      eventsListeners:
+      - metrics-listener
+      id: knime
+      realm: knime
+      registrationAllowed: true
+      users:
+      - clientRoles:
+          account:
+          - manage-account
+          - view-profile
+          realm-management:
+          - manage-users
+          - view-users
+          - query-users
+          - create-client
+        credentials:
+        - temporary: true
+          type: password
+          value: zngGB2gZqFpmkhNTwYxv
+        email: knime_admin@updatethisemail.com
+        enabled: true
+        firstName: KNIME
+        lastName: Admin
+        realmRoles:
+        - admin
+        - offline_access
+        - uma_authorization
+        username: knimeadmin
+      - clientRoles:
+          account:
+          - manage-account
+          - view-profile
+          realm-management:
+          - view-users
+          - query-users
+        credentials:
+        - type: password
+          value: someSecurePassword
+        enabled: true
+        realmRoles:
+        - offline_access
+        - uma_authorization
+        username: hub-userdata-svc
+  status:
+    loginURL: ""
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      Secret:
+      - credential-knime-knimeadmin-knime
+      - credential-knime-hub-userdata-svc-knime

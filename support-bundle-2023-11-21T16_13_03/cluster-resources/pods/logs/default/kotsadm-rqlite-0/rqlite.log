@@ -1,0 +1,39 @@
+
+            _ _ _
+           | (_) |
+  _ __ __ _| |_| |_ ___
+ | '__/ _  | | | __/ _ \   The lightweight, distributed
+ | | | (_| | | | ||  __/   relational database.
+ |_|  \__, |_|_|\__\___|
+         | |               www.rqlite.io
+         |_|
+
+[rqlited] 2023/11/21 14:30:05 rqlited starting, version v7.21.4, SQLite 3.42.0, commit 971921f1352bdc73e4e66a1ec43be8c1028ff18b, branch master, compiler gc
+[rqlited] 2023/11/21 14:30:05 go1.20, target architecture is amd64, operating system target is linux
+[rqlited] 2023/11/21 14:30:05 launch command: /bin/rqlited -node-id kotsadm-rqlite-0 -http-addr ***HIDDEN***:4001 -http-adv-addr kotsadm-rqlite-0.kotsadm-rqlite-headless.default.svc.cluster.local:4001 -raft-addr ***HIDDEN***:4002 -raft-adv-addr kotsadm-rqlite-0.kotsadm-rqlite-headless.default.svc.cluster.local:4002 -disco-mode=dns -disco-config={"name":"kotsadm-rqlite-headless"} -bootstrap-expect=1 -auth=/auth/config.json -join-as=kotsadm /rqlite/file/data
+[rqlited] 2023/11/21 14:30:05 Raft TCP mux Listener registered with byte header 1
+[rqlited] 2023/11/21 14:30:05 preexisting node state detected in /rqlite/file/data
+[cluster] 2023/11/21 14:30:05 service listening on kotsadm-rqlite-0.kotsadm-rqlite-headless.default.svc.cluster.local:4002
+[rqlited] 2023/11/21 14:30:05 cluster TCP mux Listener registered with byte header 2
+[http] 2023/11/21 14:30:05 execute queue processing started with capacity 1024, batch size 128, timeout 50ms
+[http] 2023/11/21 14:30:05 service listening on [::]:4001
+[rqlited] 2023/11/21 14:30:05 HTTP server started
+[store] 2023/11/21 14:30:05 opening store with node ID kotsadm-rqlite-0
+[store] 2023/11/21 14:30:05 configured for an in-memory database
+[store] 2023/11/21 14:30:05 ensuring directory for Raft exists at /rqlite/file/data
+[mux] 2023/11/21 14:30:05 mux serving on [::]:4002, advertising kotsadm-rqlite-0.kotsadm-rqlite-headless.default.svc.cluster.local:4002
+[store] 2023/11/21 14:30:05 0 preexisting snapshots present
+[store] 2023/11/21 14:30:05 first log index: 1, last log index: 4296, last applied index: 4296, last command log index: 4296:
+[store] 2023/11/21 14:30:05 created in-memory database at open
+2023-11-21T14:30:05.735Z [INFO]  raft: initial configuration: index=1 servers="[{Suffrage:Voter ID:kotsadm-rqlite-0 Address:kotsadm-rqlite-0.kotsadm-rqlite-headless.default.svc.cluster.local:4002}]"
+[rqlited] 2023/11/21 14:30:05 discovery mode: dns
+2023-11-21T14:30:05.735Z [INFO]  raft: entering follower state: follower="Node at kotsadm-rqlite-0.kotsadm-rqlite-headless.default.svc.cluster.local:4002 [Follower]" leader-address= leader-id=
+2023-11-21T14:30:06.864Z [WARN]  raft: heartbeat timeout reached, starting election: last-leader-addr= last-leader-id=
+2023-11-21T14:30:06.864Z [INFO]  raft: entering candidate state: node="Node at kotsadm-rqlite-0.kotsadm-rqlite-headless.default.svc.cluster.local:4002 [Candidate]" term=6
+2023-11-21T14:30:06.868Z [INFO]  raft: election won: term=6 tally=1
+2023-11-21T14:30:06.868Z [INFO]  raft: entering leader state: leader="Node at kotsadm-rqlite-0.kotsadm-rqlite-headless.default.svc.cluster.local:4002 [Leader]"
+[store] 2023/11/21 14:30:11 4291 confirmed committed log entries applied in 4.684088377s, took 6.387582514s since open
+[cluster-bootstrap] 2023/11/21 14:30:15 provider lookup failed lookup kotsadm-rqlite-headless on ***HIDDEN***:53: read udp ***HIDDEN***:44797->***HIDDEN***:53: read: connection refused
+[cluster-bootstrap] 2023/11/21 14:30:15 boot operation marked done
+[rqlited] 2023/11/21 14:30:15 node HTTP API available at http://kotsadm-rqlite-0.kotsadm-rqlite-headless.default.svc.cluster.local:4001
+[rqlited] 2023/11/21 14:30:15 connect using the command-line tool via 'rqlite -H kotsadm-rqlite-0.kotsadm-rqlite-headless.default.svc.cluster.local -p 4001'

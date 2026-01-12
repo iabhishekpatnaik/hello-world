@@ -1,0 +1,230 @@
+- apiVersion: hub.knime.com/v1alpha1
+  kind: ExecutionContext
+  metadata:
+    annotations:
+      scope: hub:global
+    creationTimestamp: "2023-11-21T16:05:32Z"
+    generation: 1
+    managedFields:
+    - apiVersion: hub.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:scope: {}
+        f:spec:
+          f:autoStart:
+            f:enabled: {}
+          f:autoStop:
+            f:enabled: {}
+            f:idleTime: {}
+          f:eventBroker:
+            f:URL: {}
+          f:executor:
+            f:applicationArguments: {}
+            f:env: {}
+            f:envFrom: {}
+            f:image: {}
+            f:imagePullSecrets: {}
+            f:imageTag: {}
+            f:replicaCount: {}
+            f:resources:
+              f:cores: {}
+              f:memoryLimit: {}
+            f:updateStrategy: {}
+            f:vmArguments: {}
+      manager: event-listener
+      operation: Apply
+      time: "2023-11-21T16:05:32Z"
+    - apiVersion: hub.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:drainingReplicas: {}
+          f:executors:
+            .: {}
+            f:executor-31904678-6c80-48b0-a21d-73778e52546a-cdde6a7b-8e5b-42f3-a605-417e5092b948:
+              .: {}
+              f:draining: {}
+              f:status: {}
+          f:generalStatus: {}
+          f:readyReplicas: {}
+          f:startingReplicas: {}
+          f:terminatingReplicas: {}
+      manager: execution-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-21T16:05:32Z"
+    name: 31904678-6c80-48b0-a21d-73778e52546a
+    namespace: hub-execution
+    resourceVersion: "762648"
+    uid: e677c4bf-e726-4443-be84-c0c956bf3c85
+  spec:
+    autoStart:
+      enabled: false
+    autoStop:
+      enabled: false
+      idleTime: PT10M
+    enablementStatus: Running
+    eventBroker:
+      URL: tcp://31904678-6c80-48b0-a21d-73778e52546a-user:6fba679f1bbc0bd388b05df05f41b4f4b33653eadfa69455aa888f4e07ad4fad@activemq-artemis.knime.svc.cluster.local:61616?reconnectAttempts=-1
+      connectionRetries: -1
+    executor:
+      applicationArguments: []
+      env:
+      - name: KNIME_EXECUTOR_MAX_LOADED_JOBS
+        value: "2147483647"
+      - name: KNIME_EXECUTOR_PER_JOB_LOGGING
+        value: "true"
+      - name: KNIME_CORE_MAX_THREADS
+        value: "2"
+      - name: KNIME_EXECUTOR_MAX_JOB_OUTPUT_SIZE
+        value: "10"
+      - name: KNIME_EXECUTOR_CPU_USAGE_PERCENT_LIMIT
+        value: "90"
+      - name: KNIME_EXECUTOR_HEAP_USAGE_PERCENT_LIMIT
+        value: "90"
+      envFrom:
+      - configMapRef:
+          name: execution-env-variables
+      healthCheckPath: /health
+      healthCheckPort: 3000
+      image: registry.hub.knime.com/knime/knime-full
+      imagePullPolicy: IfNotPresent
+      imagePullSecrets:
+      - name: regcred
+      - name: registry-creds
+      imageTag: r-5.1.2-433
+      replicaCount: 1
+      resources:
+        cores: 1
+        memoryLimit: 32768
+      updateStrategy: Recreate
+      vmArguments: []
+  status:
+    drainingReplicas: 0
+    executors:
+      executor-31904678-6c80-48b0-a21d-73778e52546a-cdde6a7b-8e5b-42f3-a605-417e5092b948:
+        draining: false
+        status: Starting up
+    generalStatus: Starting up
+    readyReplicas: 0
+    startingReplicas: 1
+    terminatingReplicas: 0
+- apiVersion: hub.knime.com/v1alpha1
+  kind: ExecutionContext
+  metadata:
+    annotations:
+      scope: hub:global
+    creationTimestamp: "2023-11-16T11:16:51Z"
+    generation: 1
+    managedFields:
+    - apiVersion: hub.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:scope: {}
+        f:spec:
+          f:autoStart:
+            f:enabled: {}
+          f:autoStop:
+            f:enabled: {}
+            f:idleTime: {}
+          f:eventBroker:
+            f:URL: {}
+          f:executor:
+            f:applicationArguments: {}
+            f:env: {}
+            f:envFrom: {}
+            f:image: {}
+            f:imagePullSecrets: {}
+            f:imageTag: {}
+            f:replicaCount: {}
+            f:resources:
+              f:cores: {}
+              f:memoryLimit: {}
+            f:updateStrategy: {}
+            f:vmArguments: {}
+      manager: event-listener
+      operation: Apply
+      time: "2023-11-16T11:16:51Z"
+    - apiVersion: hub.knime.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:drainingReplicas: {}
+          f:executors:
+            .: {}
+            f:executor-9043c21d-150c-4de1-bee5-7e992ebd922d-5beb76ab-80b6-467d-a7ed-30f2287cea23:
+              .: {}
+              f:draining: {}
+              f:status: {}
+          f:generalStatus: {}
+          f:readyReplicas: {}
+          f:runningSince: {}
+          f:startingReplicas: {}
+          f:terminatingReplicas: {}
+      manager: execution-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-21T14:31:33Z"
+    name: 9043c21d-150c-4de1-bee5-7e992ebd922d
+    namespace: hub-execution
+    resourceVersion: "746067"
+    uid: 9b2b5809-06f8-47b1-8bce-61d131352268
+  spec:
+    autoStart:
+      enabled: false
+    autoStop:
+      enabled: false
+      idleTime: PT10M
+    enablementStatus: Running
+    eventBroker:
+      URL: tcp://9043c21d-150c-4de1-bee5-7e992ebd922d-user:68e68e81132a130358627594585e5710c26bdfd5c7943c023fa7a96754111cb4@activemq-artemis.knime.svc.cluster.local:61616?reconnectAttempts=-1
+      connectionRetries: -1
+    executor:
+      applicationArguments: []
+      env:
+      - name: KNIME_EXECUTOR_MAX_LOADED_JOBS
+        value: "2147483647"
+      - name: KNIME_EXECUTOR_PER_JOB_LOGGING
+        value: "true"
+      - name: KNIME_CORE_MAX_THREADS
+        value: "2"
+      - name: KNIME_EXECUTOR_MAX_JOB_OUTPUT_SIZE
+        value: "10"
+      - name: KNIME_EXECUTOR_CPU_USAGE_PERCENT_LIMIT
+        value: "90"
+      - name: KNIME_EXECUTOR_HEAP_USAGE_PERCENT_LIMIT
+        value: "90"
+      envFrom:
+      - configMapRef:
+          name: execution-env-variables
+      healthCheckPath: /health
+      healthCheckPort: 3000
+      image: registry.hub.knime.com/knime/knime-full
+      imagePullPolicy: IfNotPresent
+      imagePullSecrets:
+      - name: regcred
+      - name: registry-creds
+      imageTag: r-5.1.2-433
+      replicaCount: 1
+      resources:
+        cores: 1
+        memoryLimit: 6144
+      updateStrategy: Recreate
+      vmArguments: []
+  status:
+    drainingReplicas: 0
+    executors:
+      executor-9043c21d-150c-4de1-bee5-7e992ebd922d-5beb76ab-80b6-467d-a7ed-30f2287cea23:
+        draining: false
+        status: Running
+    generalStatus: Running
+    readyReplicas: 1
+    runningSince: "2023-11-16T11:19:28Z"
+    startingReplicas: 0
+    terminatingReplicas: 0

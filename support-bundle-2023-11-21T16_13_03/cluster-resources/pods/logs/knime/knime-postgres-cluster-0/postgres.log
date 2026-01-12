@@ -1,0 +1,1860 @@
+2023-11-21 14:29:27,099 - bootstrapping - INFO - Figuring out my environment (Google? AWS? Openstack? Local?)
+2023-11-21 14:29:27,107 - bootstrapping - INFO - No meta-data available for this provider
+2023-11-21 14:29:27,107 - bootstrapping - INFO - Looks like you are running unsupported
+2023-11-21 14:29:27,128 - bootstrapping - INFO - Configuring standby-cluster
+2023-11-21 14:29:27,128 - bootstrapping - INFO - Configuring log
+2023-11-21 14:29:27,128 - bootstrapping - INFO - Configuring wal-e
+2023-11-21 14:29:27,129 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/WALE_S3_PREFIX
+2023-11-21 14:29:27,129 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/WALG_S3_PREFIX
+2023-11-21 14:29:27,129 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/AWS_ACCESS_KEY_ID
+2023-11-21 14:29:27,130 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/AWS_SECRET_ACCESS_KEY
+2023-11-21 14:29:27,130 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/WALE_S3_ENDPOINT
+2023-11-21 14:29:27,130 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/AWS_ENDPOINT
+2023-11-21 14:29:27,130 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/AWS_REGION
+2023-11-21 14:29:27,130 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/WALE_DISABLE_S3_SSE
+2023-11-21 14:29:27,131 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/WALG_DISABLE_S3_SSE
+2023-11-21 14:29:27,131 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/AWS_S3_FORCE_PATH_STYLE
+2023-11-21 14:29:27,131 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/WALG_DOWNLOAD_CONCURRENCY
+2023-11-21 14:29:27,131 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/WALG_UPLOAD_CONCURRENCY
+2023-11-21 14:29:27,131 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/USE_WALG_BACKUP
+2023-11-21 14:29:27,131 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/USE_WALG_RESTORE
+2023-11-21 14:29:27,131 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/WALE_LOG_DESTINATION
+2023-11-21 14:29:27,131 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/PGPORT
+2023-11-21 14:29:27,131 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/BACKUP_NUM_TO_RETAIN
+2023-11-21 14:29:27,132 - bootstrapping - INFO - Writing to file /run/etc/wal-e.d/env/TMPDIR
+2023-11-21 14:29:27,132 - bootstrapping - INFO - Configuring certificate
+2023-11-21 14:29:27,132 - bootstrapping - INFO - Generating ssl self-signed certificate
+2023-11-21 14:29:27,380 - bootstrapping - INFO - Configuring bootstrap
+2023-11-21 14:29:27,380 - bootstrapping - INFO - Configuring pgqd
+2023-11-21 14:29:27,380 - bootstrapping - INFO - Configuring crontab
+2023-11-21 14:29:27,380 - bootstrapping - INFO - Skipping creation of renice cron job due to lack of SYS_NICE capability
+2023-11-21 14:29:27,386 - bootstrapping - INFO - Configuring patroni
+2023-11-21 14:29:27,393 - bootstrapping - INFO - Writing to file /run/postgres.yml
+2023-11-21 14:29:27,394 - bootstrapping - INFO - Configuring pam-oauth2
+2023-11-21 14:29:27,394 - bootstrapping - INFO - Writing to file /etc/pam.d/postgresql
+2023-11-21 14:29:27,394 - bootstrapping - INFO - Configuring pgbouncer
+2023-11-21 14:29:27,394 - bootstrapping - INFO - No PGBOUNCER_CONFIGURATION was specified, skipping
+2023-11-21 14:29:28,591 WARNING: Kubernetes RBAC doesn't allow GET access to the 'kubernetes' endpoint in the 'default' namespace. Disabling 'bypass_api_service'.
+2023-11-21 14:29:28,609 INFO: No PostgreSQL configuration items changed, nothing to reload.
+2023-11-21 14:29:28,613 WARNING: Postgresql is not running.
+2023-11-21 14:29:28,614 INFO: Lock owner: knime-postgres-cluster-0; I am knime-postgres-cluster-0
+2023-11-21 14:29:28,670 INFO: pg_controldata:
+  pg_control version number: 1100
+  Catalog version number: 201809051
+  Database system identifier: 7299822848179302475
+  Database cluster state: shut down
+  pg_control last modified: Mon Nov 20 17:04:14 2023
+  Latest checkpoint location: 3/15000028
+  Latest checkpoint's REDO location: 3/15000028
+  Latest checkpoint's REDO WAL file: 000000050000000300000015
+  Latest checkpoint's TimeLineID: 5
+  Latest checkpoint's PrevTimeLineID: 5
+  Latest checkpoint's full_page_writes: on
+  Latest checkpoint's NextXID: 0:39871
+  Latest checkpoint's NextOID: 22903
+  Latest checkpoint's NextMultiXactId: 1
+  Latest checkpoint's NextMultiOffset: 0
+  Latest checkpoint's oldestXID: 562
+  Latest checkpoint's oldestXID's DB: 1
+  Latest checkpoint's oldestActiveXID: 0
+  Latest checkpoint's oldestMultiXid: 1
+  Latest checkpoint's oldestMulti's DB: 1
+  Latest checkpoint's oldestCommitTsXid: 0
+  Latest checkpoint's newestCommitTsXid: 0
+  Time of latest checkpoint: Mon Nov 20 17:04:14 2023
+  Fake LSN counter for unlogged rels: 0/1
+  Minimum recovery ending location: 0/0
+  Min recovery ending loc's timeline: 0
+  Backup start location: 0/0
+  Backup end location: 0/0
+  End-of-backup record required: no
+  wal_level setting: replica
+  wal_log_hints setting: on
+  max_connections setting: 200
+  max_worker_processes setting: 8
+  max_prepared_xacts setting: 0
+  max_locks_per_xact setting: 64
+  track_commit_timestamp setting: off
+  Maximum data alignment: 8
+  Database block size: 8192
+  Blocks per segment of large relation: 131072
+  WAL block size: 8192
+  Bytes per WAL segment: 16777216
+  Maximum length of identifiers: 64
+  Maximum columns in an index: 32
+  Maximum size of a TOAST chunk: 1996
+  Size of a large-object chunk: 2048
+  Date/time type storage: 64-bit integers
+  Float4 argument passing: by value
+  Float8 argument passing: by value
+  Data page checksum version: 1
+  Mock authentication nonce: 583f31dddfd8de717396c0852c4246221dfc03a8539294905a2f29dbf8c7ca54
+
+2023-11-21 14:29:28,670 INFO: Lock owner: knime-postgres-cluster-0; I am knime-postgres-cluster-0
+2023-11-21 14:29:28,776 INFO: starting as readonly because i had the session lock
+2023-11-21 14:29:28,905 INFO: postmaster pid=60
+/var/run/postgresql:5432 - no response
+2023-11-21 14:29:28 UTC [60]: [1-1] 655cbec8.3c 0     LOG:  Auto detecting pg_stat_kcache.linux_hz parameter...
+2023-11-21 14:29:28 UTC [60]: [2-1] 655cbec8.3c 0     LOG:  pg_stat_kcache.linux_hz is set to 1000000
+2023-11-21 14:29:28 UTC [60]: [3-1] 655cbec8.3c 0     LOG:  listening on IPv4 address "***HIDDEN***", port 5432
+2023-11-21 14:29:28 UTC [60]: [4-1] 655cbec8.3c 0     LOG:  listening on IPv6 address "::", port 5432
+2023-11-21 14:29:28 UTC [60]: [5-1] 655cbec8.3c 0     LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-11-21 14:29:28 UTC [60]: [6-1] 655cbec8.3c 0     LOG:  redirecting log output to logging collector process
+2023-11-21 14:29:28 UTC [60]: [7-1] 655cbec8.3c 0     HINT:  Future log output will appear in directory "../pg_log".
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+2023-11-21 14:29:39,113 INFO: Lock owner: knime-postgres-cluster-0; I am knime-postgres-cluster-0
+2023-11-21 14:29:39,215 INFO: updated leader lock during restarting after failure
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+2023-11-21 14:29:49,113 INFO: Lock owner: knime-postgres-cluster-0; I am knime-postgres-cluster-0
+2023-11-21 14:29:49,158 INFO: updated leader lock during restarting after failure
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+2023-11-21 14:29:59,113 INFO: Lock owner: knime-postgres-cluster-0; I am knime-postgres-cluster-0
+2023-11-21 14:29:59,161 INFO: updated leader lock during restarting after failure
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+2023-11-21 14:30:09,113 INFO: Lock owner: knime-postgres-cluster-0; I am knime-postgres-cluster-0
+2023-11-21 14:30:09,164 INFO: updated leader lock during restarting after failure
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+2023-11-21 14:30:19,113 INFO: Lock owner: knime-postgres-cluster-0; I am knime-postgres-cluster-0
+2023-11-21 14:30:19,160 INFO: updated leader lock during restarting after failure
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+2023-11-21 14:30:27.439 - /scripts/postgres_backup.sh - I was called as: /scripts/postgres_backup.sh /home/postgres/pgdata/pgroot/data
+psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  the database system is starting up
+2023-11-21 14:30:27.531 - /scripts/postgres_backup.sh - ERROR: Recovery state unknown: 
+/var/run/postgresql:5432 - rejecting connections
+2023-11-21 14:30:28.436 UTC [35] LOG Starting pgqd 3.5
+2023-11-21 14:30:28.437 UTC [35] LOG auto-detecting dbs ...
+2023-11-21 14:30:28.438 UTC [35] ERROR connection error: PQconnectPoll
+2023-11-21 14:30:28.438 UTC [35] ERROR libpq: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  the database system is starting up
+2023-11-21 14:30:29,113 INFO: Lock owner: knime-postgres-cluster-0; I am knime-postgres-cluster-0
+2023-11-21 14:30:29,162 INFO: updated leader lock during restarting after failure
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - accepting connections
+2023-11-21 14:30:31,322 INFO: Lock owner: knime-postgres-cluster-0; I am knime-postgres-cluster-0
+2023-11-21 14:30:31,322 INFO: establishing a new patroni connection to the postgres cluster
+2023-11-21 14:30:31,416 WARNING: Could not activate Linux watchdog device: "Can't open watchdog device: [Errno 2] No such file or directory: '/dev/watchdog'"
+2023-11-21 14:30:31,473 INFO: promoted self to leader because I had the session lock
+server promoting
+2023-11-21 14:30:31,477 INFO: cleared rewind state after becoming the leader
+2023-11-21 14:30:32,636 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+DO
+NOTICE:  role "admin" is already a member of role "cron_admin"
+GRANT ROLE
+DO
+DO
+NOTICE:  extension "pg_auth_mon" already exists, skipping
+CREATE EXTENSION
+NOTICE:  version "1.1" of extension "pg_auth_mon" is already installed
+ALTER EXTENSION
+GRANT
+NOTICE:  extension "pg_cron" already exists, skipping
+CREATE EXTENSION
+DO
+NOTICE:  version "1.4-1" of extension "pg_cron" is already installed
+ALTER EXTENSION
+ALTER POLICY
+REVOKE
+GRANT
+REVOKE
+GRANT
+ALTER POLICY
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+GRANT
+REVOKE
+GRANT
+NOTICE:  extension "file_fdw" already exists, skipping
+CREATE EXTENSION
+DO
+NOTICE:  relation "postgres_log" already exists, skipping
+CREATE TABLE
+GRANT
+NOTICE:  relation "postgres_log_0" already exists, skipping
+CREATE FOREIGN TABLE
+GRANT
+CREATE VIEW
+ALTER VIEW
+GRANT
+NOTICE:  relation "postgres_log_1" already exists, skipping
+CREATE FOREIGN TABLE
+GRANT
+CREATE VIEW
+ALTER VIEW
+GRANT
+NOTICE:  relation "postgres_log_2" already exists, skipping
+CREATE FOREIGN TABLE
+GRANT
+CREATE VIEW
+ALTER VIEW
+GRANT
+NOTICE:  relation "postgres_log_3" already exists, skipping
+CREATE FOREIGN TABLE
+GRANT
+CREATE VIEW
+ALTER VIEW
+GRANT
+NOTICE:  relation "postgres_log_4" already exists, skipping
+CREATE FOREIGN TABLE
+GRANT
+CREATE VIEW
+ALTER VIEW
+GRANT
+NOTICE:  relation "postgres_log_5" already exists, skipping
+CREATE FOREIGN TABLE
+GRANT
+CREATE VIEW
+ALTER VIEW
+GRANT
+NOTICE:  relation "postgres_log_6" already exists, skipping
+CREATE FOREIGN TABLE
+GRANT
+CREATE VIEW
+ALTER VIEW
+GRANT
+NOTICE:  relation "postgres_log_7" already exists, skipping
+CREATE FOREIGN TABLE
+GRANT
+CREATE VIEW
+ALTER VIEW
+GRANT
+RESET
+SET
+NOTICE:  drop cascades to 5 other objects
+DETAIL:  drop cascades to type zmon_utils.system_information
+drop cascades to function zmon_utils.get_database_cluster_information()
+drop cascades to function zmon_utils.get_database_cluster_system_information()
+drop cascades to function zmon_utils.get_last_status_active_cronjobs()
+drop cascades to view zmon_utils.last_status_active_cronjobs
+DROP SCHEMA
+NOTICE:  extension "plpython3u" already exists, skipping
+DO
+NOTICE:  language "plpythonu" does not exist, skipping
+DROP LANGUAGE
+NOTICE:  function plpython_call_handler() does not exist, skipping
+DROP FUNCTION
+NOTICE:  function plpython_inline_handler(internal) does not exist, skipping
+DROP FUNCTION
+NOTICE:  function plpython_validator(oid) does not exist, skipping
+DROP FUNCTION
+CREATE SCHEMA
+GRANT
+SET
+CREATE TYPE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+CREATE VIEW
+REVOKE
+GRANT
+GRANT
+You are now connected to database "postgres" as user "postgres".
+NOTICE:  schema "user_management" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+GRANT
+RESET
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "pg_stat_kcache" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "set_user" already exists, skipping
+CREATE EXTENSION
+NOTICE:  version "3.0" of extension "set_user" is already installed
+ALTER EXTENSION
+GRANT
+GRANT
+GRANT
+NOTICE:  schema "metric_helpers" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+REVOKE
+GRANT
+REVOKE
+GRANT
+RESET
+You are now connected to database "execution" as user "postgres".
+NOTICE:  schema "user_management" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+GRANT
+RESET
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "pg_stat_kcache" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "set_user" already exists, skipping
+CREATE EXTENSION
+NOTICE:  version "3.0" of extension "set_user" is already installed
+ALTER EXTENSION
+GRANT
+GRANT
+GRANT
+NOTICE:  schema "metric_helpers" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+REVOKE
+GRANT
+REVOKE
+GRANT
+RESET
+You are now connected to database "template1" as user "postgres".
+NOTICE:  schema "user_management" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+GRANT
+RESET
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "pg_stat_kcache" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "set_user" already exists, skipping
+CREATE EXTENSION
+NOTICE:  version "3.0" of extension "set_user" is already installed
+ALTER EXTENSION
+GRANT
+GRANT
+GRANT
+NOTICE:  schema "metric_helpers" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+REVOKE
+GRANT
+REVOKE
+GRANT
+RESET
+You are now connected to database "session" as user "postgres".
+NOTICE:  schema "user_management" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+GRANT
+RESET
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "pg_stat_kcache" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "set_user" already exists, skipping
+CREATE EXTENSION
+NOTICE:  version "3.0" of extension "set_user" is already installed
+ALTER EXTENSION
+GRANT
+GRANT
+GRANT
+NOTICE:  schema "metric_helpers" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+REVOKE
+GRANT
+REVOKE
+GRANT
+RESET
+You are now connected to database "accounts" as user "postgres".
+NOTICE:  schema "user_management" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+GRANT
+RESET
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "pg_stat_kcache" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "set_user" already exists, skipping
+CREATE EXTENSION
+NOTICE:  version "3.0" of extension "set_user" is already installed
+ALTER EXTENSION
+GRANT
+GRANT
+GRANT
+NOTICE:  schema "metric_helpers" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+REVOKE
+GRANT
+REVOKE
+GRANT
+RESET
+You are now connected to database "knime" as user "postgres".
+NOTICE:  schema "user_management" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+GRANT
+RESET
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "pg_stat_kcache" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "set_user" already exists, skipping
+CREATE EXTENSION
+NOTICE:  version "3.0" of extension "set_user" is already installed
+ALTER EXTENSION
+GRANT
+GRANT
+GRANT
+NOTICE:  schema "metric_helpers" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+REVOKE
+GRANT
+REVOKE
+GRANT
+RESET
+You are now connected to database "secret_store" as user "postgres".
+NOTICE:  schema "user_management" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+GRANT
+RESET
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "pg_stat_kcache" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "set_user" already exists, skipping
+CREATE EXTENSION
+NOTICE:  version "3.0" of extension "set_user" is already installed
+ALTER EXTENSION
+GRANT
+GRANT
+GRANT
+NOTICE:  schema "metric_helpers" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+REVOKE
+GRANT
+REVOKE
+GRANT
+RESET
+You are now connected to database "edge" as user "postgres".
+NOTICE:  schema "user_management" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+GRANT
+RESET
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "pg_stat_kcache" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "set_user" already exists, skipping
+CREATE EXTENSION
+NOTICE:  version "3.0" of extension "set_user" is already installed
+ALTER EXTENSION
+GRANT
+GRANT
+GRANT
+NOTICE:  schema "metric_helpers" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+REVOKE
+GRANT
+REVOKE
+GRANT
+RESET
+You are now connected to database "notification" as user "postgres".
+NOTICE:  schema "user_management" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+GRANT
+RESET
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "pg_stat_kcache" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "set_user" already exists, skipping
+CREATE EXTENSION
+NOTICE:  version "3.0" of extension "set_user" is already installed
+ALTER EXTENSION
+GRANT
+GRANT
+GRANT
+NOTICE:  schema "metric_helpers" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+REVOKE
+GRANT
+REVOKE
+GRANT
+RESET
+You are now connected to database "trigger" as user "postgres".
+NOTICE:  schema "user_management" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+GRANT
+RESET
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "pg_stat_kcache" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "set_user" already exists, skipping
+CREATE EXTENSION
+NOTICE:  version "3.0" of extension "set_user" is already installed
+ALTER EXTENSION
+GRANT
+GRANT
+GRANT
+NOTICE:  schema "metric_helpers" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+REVOKE
+GRANT
+REVOKE
+GRANT
+RESET
+You are now connected to database "keycloak" as user "postgres".
+NOTICE:  schema "user_management" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMENT
+GRANT
+RESET
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "pg_stat_kcache" already exists, skipping
+CREATE EXTENSION
+NOTICE:  extension "set_user" already exists, skipping
+CREATE EXTENSION
+NOTICE:  version "3.0" of extension "set_user" is already installed
+ALTER EXTENSION
+GRANT
+GRANT
+GRANT
+NOTICE:  schema "metric_helpers" already exists, skipping
+CREATE SCHEMA
+GRANT
+SET
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+CREATE FUNCTION
+CREATE VIEW
+REVOKE
+GRANT
+REVOKE
+GRANT
+RESET
+2023-11-21 14:30:43,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:30:53,090 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:30:58.466 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:31:03,086 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:31:13,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:31:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:31:28.470 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:31:33,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:31:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:31:53,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:31:58.503 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:32:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:32:13,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:32:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:32:28.507 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:32:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:32:43,086 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:32:53,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:32:58.534 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:33:03,086 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:33:13,086 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:33:23,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:33:28.539 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:33:33,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:33:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:33:53,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:33:58.566 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:34:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:34:13,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:34:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:34:28.571 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:34:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:34:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:34:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:34:58.601 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:35:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:35:13,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:35:23,082 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:35:28.603 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:35:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:35:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:35:53,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:35:58.623 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:36:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:36:13,086 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:36:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:36:28.627 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:36:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:36:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:36:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:36:58.655 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:37:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:37:13,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:37:23,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:37:28.659 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:37:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:37:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:37:53,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:37:58.688 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:38:03,092 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:38:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:38:23,030 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:38:28.691 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:38:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:38:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:38:53,092 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:38:58.720 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:39:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:39:13,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:39:23,034 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:39:28.723 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:39:33,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:39:43,093 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:39:53,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:39:58.751 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:40:03,082 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:40:13,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:40:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:40:28.755 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:40:33,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:40:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:40:53,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:40:58.783 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:41:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:41:13,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:41:23,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:41:28.786 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:41:33,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:41:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:41:53,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:41:58.806 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:42:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:42:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:42:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:42:28.811 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:42:33,093 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:42:43,093 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:42:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:42:58.841 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:43:03,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:43:13,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:43:23,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:43:28.843 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:43:33,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:43:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:43:53,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:43:58.870 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:44:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:44:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:44:23,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:44:28.875 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:44:33,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:44:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:44:53,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:44:58.902 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:45:03,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:45:13,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:45:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:45:28.907 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:45:33,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:45:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:45:53,033 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:45:58.935 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:46:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:46:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:46:23,031 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:46:28.939 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:46:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:46:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:46:53,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:46:58.966 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:47:03,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:47:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:47:23,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:47:28.971 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:47:33,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:47:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:47:53,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:47:58.983 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:48:03,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:48:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:48:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:48:28.987 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:48:33,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:48:43,096 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:48:53,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:48:59.016 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:49:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:49:13,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:49:23,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:49:29.019 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:49:33,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:49:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:49:53,033 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:49:59.049 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:50:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:50:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:50:23,090 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:50:29.051 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:50:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:50:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:50:53,032 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:50:59.079 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:51:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:51:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:51:23,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:51:29.083 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:51:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:51:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:51:53,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:51:59.087 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:52:03,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:52:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:52:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:52:29.091 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:52:33,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:52:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:52:53,033 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:52:59.120 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:53:03,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:53:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:53:23,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:53:29.124 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:53:33,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:53:43,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:53:53,030 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:53:59.152 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:54:03,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:54:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:54:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:54:29.155 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:54:33,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:54:43,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:54:53,030 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:54:59.183 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:55:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:55:13,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:55:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:55:29.187 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:55:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:55:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:55:53,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:55:59.215 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:56:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:56:13,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:56:23,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:56:29.219 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:56:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:56:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:56:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:56:59.247 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:57:03,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:57:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:57:23,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:57:29.251 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:57:33,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:57:43,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:57:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:57:59.278 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:58:03,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:58:13,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:58:23,030 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:58:29.283 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:58:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:58:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:58:53,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:58:59.310 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:59:03,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:59:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:59:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:59:29.315 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 14:59:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:59:43,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:59:53,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 14:59:59.344 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:00:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:00:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:00:23,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:00:29.347 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:00:33,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:00:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:00:53,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:00:59.376 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:01:03,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:01:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:01:23,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:01:29.378 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:01:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:01:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:01:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:01:59.408 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:02:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:02:13,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:02:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:02:29.410 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:02:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:02:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:02:53,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:02:59.432 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:03:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:03:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:03:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:03:29.435 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:03:33,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:03:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:03:53,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:03:59.458 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:04:03,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:04:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:04:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:04:29.463 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:04:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:04:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:04:53,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:04:59.493 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:05:03,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:05:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:05:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:05:29.495 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:05:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:05:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:05:53,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:05:59.522 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:06:03,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:06:13,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:06:23,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:06:29.527 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:06:33,092 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:06:43,082 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:06:53,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:06:59.555 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:07:03,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:07:13,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:07:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:07:29.559 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:07:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:07:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:07:53,034 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:07:59.586 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:08:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:08:13,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:08:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:08:29.591 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:08:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:08:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:08:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:08:59.616 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:09:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:09:13,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:09:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:09:29.619 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:09:33,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:09:43,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:09:53,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:09:59.649 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:10:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:10:13,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:10:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:10:29.651 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:10:33,090 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:10:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:10:53,032 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:10:59.679 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:11:03,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:11:13,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:11:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:11:29.683 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:11:33,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:11:43,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:11:53,036 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:11:59.713 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:12:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:12:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:12:23,034 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:12:29.715 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:12:33,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:12:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:12:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:12:59.744 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:13:03,086 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:13:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:13:23,032 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:13:29.747 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:13:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:13:43,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:13:53,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:13:59.777 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:14:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:14:13,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:14:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:14:29.779 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:14:33,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:14:43,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:14:53,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:14:59.807 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:15:03,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:15:13,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:15:23,036 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:15:29.807 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:15:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:15:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:15:53,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:15:59.835 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:16:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:16:13,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:16:23,031 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:16:29.839 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:16:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:16:43,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:16:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:16:59.867 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:17:03,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:17:13,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:17:23,036 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:17:29.871 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:17:33,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:17:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:17:53,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:17:59.898 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:18:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:18:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:18:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:18:29.903 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:18:33,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:18:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:18:53,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:18:59.930 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:19:03,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:19:13,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:19:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:19:29.935 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:19:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:19:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:19:53,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:19:59.963 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:20:03,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:20:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:20:23,036 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:20:29.967 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:20:33,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:20:43,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:20:53,036 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:20:59.995 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:21:03,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:21:13,082 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:21:23,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:21:29.999 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:21:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:21:43,090 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:21:53,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:22:00.026 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:22:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:22:13,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:22:23,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:22:30.031 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:22:33,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:22:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:22:53,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:23:00.058 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:23:03,094 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:23:13,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:23:23,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:23:30.063 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:23:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:23:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:23:53,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:24:00.090 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:24:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:24:13,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:24:23,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:24:30.095 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:24:33,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:24:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:24:53,036 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:25:00.122 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:25:03,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:25:13,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:25:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:25:30.127 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:25:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:25:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:25:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:26:00.156 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:26:03,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:26:13,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:26:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:26:30.159 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:26:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:26:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:26:53,032 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:27:00.186 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:27:03,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:27:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:27:23,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:27:30.191 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:27:33,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:27:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:27:53,030 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:28:00.218 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:28:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:28:13,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:28:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:28:30.223 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:28:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:28:43,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:28:53,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:29:00.253 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:29:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:29:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:29:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:29:30.255 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:29:33,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:29:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:29:53,086 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:30:00.282 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:30:03,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:30:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:30:23,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:30:30.286 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:30:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:30:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:30:53,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:31:00.315 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:31:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:31:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:31:23,033 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:31:30.318 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:31:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:31:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:31:53,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:32:00.339 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:32:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:32:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:32:23,032 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:32:30.343 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:32:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:32:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:32:53,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:33:00.370 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:33:03,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:33:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:33:23,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:33:30.375 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:33:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:33:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:33:53,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:34:00.403 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:34:03,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:34:13,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:34:23,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:34:30.407 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:34:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:34:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:34:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:35:00.432 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:35:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:35:13,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:35:23,033 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:35:30.435 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:35:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:35:43,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:35:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:36:00.462 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:36:03,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:36:13,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:36:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:36:30.467 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:36:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:36:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:36:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:37:00.497 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:37:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:37:13,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:37:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:37:30.499 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:37:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:37:43,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:37:53,030 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:38:00.529 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:38:03,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:38:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:38:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:38:30.531 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:38:33,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:38:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:38:53,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:39:00.560 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:39:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:39:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:39:23,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:39:30.559 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:39:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:39:43,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:39:53,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:40:00.589 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:40:03,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:40:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:40:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:40:30.591 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:40:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:40:43,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:40:53,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:41:00.621 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:41:03,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:41:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:41:23,092 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:41:30.622 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:41:33,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:41:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:41:53,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:42:00.650 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:42:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:42:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:42:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:42:30.655 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:42:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:42:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:42:53,032 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:43:00.683 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:43:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:43:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:43:23,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:43:30.687 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:43:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:43:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:43:53,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:44:00.715 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:44:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:44:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:44:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:44:30.719 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:44:33,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:44:43,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:44:53,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:45:00.745 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:45:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:45:13,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:45:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:45:30.747 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:45:33,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:45:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:45:53,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:46:00.766 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:46:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:46:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:46:23,036 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:46:30.767 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:46:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:46:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:46:53,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:47:00.796 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:47:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:47:13,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:47:23,032 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:47:30.799 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:47:33,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:47:43,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:47:53,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:48:00.815 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:48:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:48:13,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:48:23,031 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:48:30.819 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:48:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:48:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:48:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:49:00.847 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:49:03,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:49:13,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:49:23,031 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:49:30.851 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:49:33,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:49:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:49:53,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:50:00.878 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:50:03,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:50:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:50:23,030 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:50:30.883 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:50:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:50:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:50:53,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:51:00.912 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:51:03,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:51:13,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:51:23,034 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:51:30.915 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:51:33,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:51:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:51:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:52:00.942 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:52:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:52:13,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:52:23,032 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:52:30.947 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:52:33,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:52:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:52:53,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:53:00.974 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:53:03,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:53:13,086 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:53:23,035 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:53:30.979 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:53:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:53:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:53:53,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:54:01.006 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:54:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:54:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:54:23,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:54:31.011 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:54:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:54:43,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:54:53,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:55:01.039 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:55:03,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:55:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:55:23,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:55:31.043 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:55:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:55:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:55:53,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:56:01.071 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:56:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:56:13,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:56:23,032 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:56:31.075 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:56:33,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:56:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:56:53,082 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:57:01.102 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:57:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:57:13,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:57:23,091 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:57:31.107 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:57:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:57:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:57:53,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:58:01.134 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:58:03,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:58:13,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:58:23,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:58:31.138 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:58:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:58:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:58:53,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:59:01.166 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:59:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:59:13,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:59:23,090 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:59:31.171 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 15:59:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:59:43,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 15:59:53,032 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:00:01.199 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:00:03,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:00:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:00:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:00:31.202 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:00:33,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:00:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:00:53,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:01:01.231 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:01:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:01:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:01:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:01:31.235 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:01:33,090 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:01:43,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:01:53,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:02:01.262 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:02:03,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:02:13,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:02:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:02:31.266 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:02:33,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:02:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:02:53,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:03:01.296 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:03:03,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:03:13,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:03:23,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:03:31.295 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:03:33,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:03:43,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:03:53,033 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:04:01.322 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:04:03,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:04:13,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:04:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:04:31.327 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:04:33,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:04:43,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:04:53,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:05:01.354 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:05:03,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:05:13,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:05:23,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:05:31.359 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:05:33,086 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:05:43,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:05:53,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:06:01.389 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:06:03,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:06:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:06:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:06:31.391 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:06:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:06:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:06:53,033 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:07:01.415 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:07:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:07:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:07:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:07:31.419 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:07:33,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:07:43,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:07:53,092 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:08:01.447 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:08:03,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:08:13,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:08:23,029 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:08:31.451 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:08:33,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:08:43,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:08:53,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:09:01.481 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:09:03,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:09:13,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:09:23,032 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:09:31.483 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:09:33,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:09:43,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:09:53,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:10:01.513 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:10:03,086 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:10:13,092 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:10:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:10:31.515 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:10:33,089 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:10:43,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:10:53,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:11:01.542 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:11:03,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:11:13,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:11:23,030 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:11:31.547 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:11:33,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:11:43,080 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:11:53,030 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:12:01.574 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:12:03,079 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:12:13,086 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:12:23,084 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:12:31.579 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:12:33,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:12:43,092 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:12:53,081 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:13:01.598 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:13:03,090 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:13:13,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:13:23,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:13:31.603 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:13:33,085 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:13:43,088 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:13:53,087 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:14:01.632 UTC [35] LOG {ticks: 0, maint: 0, retry: 0}
+2023-11-21 16:14:03,082 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock
+2023-11-21 16:14:13,083 INFO: no action. I am (knime-postgres-cluster-0), the leader with the lock

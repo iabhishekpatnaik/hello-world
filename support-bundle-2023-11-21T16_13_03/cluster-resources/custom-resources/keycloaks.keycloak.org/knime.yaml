@@ -1,0 +1,155 @@
+- apiVersion: keycloak.org/v1alpha1
+  kind: Keycloak
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-keycloak
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:20:11Z"
+    generation: 1
+    labels:
+      app: sso
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:externalAccess:
+            .: {}
+            f:enabled: {}
+          f:externalDatabase:
+            .: {}
+            f:enabled: {}
+          f:instances: {}
+          f:keycloakDeploymentSpec:
+            .: {}
+            f:experimental:
+              .: {}
+              f:affinity:
+                .: {}
+                f:nodeAffinity:
+                  .: {}
+                  f:preferredDuringSchedulingIgnoredDuringExecution: {}
+              f:args: {}
+              f:serviceAccountName: {}
+              f:volumes:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+            f:imagePullPolicy: {}
+          f:podDisruptionBudget:
+            .: {}
+            f:enabled: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:20:11Z"
+    - apiVersion: keycloak.org/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:credentialSecret: {}
+          f:externalURL: {}
+          f:internalURL: {}
+          f:message: {}
+          f:phase: {}
+          f:ready: {}
+          f:secondaryResources:
+            .: {}
+            f:ConfigMap: {}
+            f:Ingress: {}
+            f:PrometheusRule: {}
+            f:Secret: {}
+            f:Service: {}
+            f:ServiceMonitor: {}
+            f:StatefulSet: {}
+          f:version: {}
+      manager: keycloak-operator
+      operation: Update
+      subresource: status
+      time: "2023-11-13T13:27:12Z"
+    name: knime-keycloak
+    namespace: knime
+    resourceVersion: "63434"
+    uid: 1c638751-0600-4702-827c-6a507f1dc9e5
+  spec:
+    externalAccess:
+      enabled: false
+    externalDatabase:
+      enabled: true
+    instances: 1
+    keycloakDeploymentSpec:
+      experimental:
+        affinity:
+          nodeAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - preference:
+                matchExpressions:
+                - key: hub.knime.com/role
+                  operator: In
+                  values:
+                  - core
+              weight: 1
+        args:
+        - -Dkeycloak.profile.feature.scripts=enabled
+        - -Dkeycloak.profile.feature.upload_scripts=enabled
+        - -Dkeycloak.profile.feature.token_exchange=enabled
+        - -Dkeycloak.profile.feature.admin_fine_grained_authz=enabled
+        - -Dkeycloak.profile.feature.declarative_user_profile=enabled
+        serviceAccountName: knime-hub-keycloak
+        volumes:
+          defaultMode: 493
+          items:
+          - configMaps:
+            - keycloak-logging-config
+            items:
+            - key: EVENT_LOGGING_CONFIG_SCRIPT
+              path: ./logging-config.cli
+            mountPath: /opt/jboss/startup-scripts
+            name: logging-config
+      imagePullPolicy: Always
+    podDisruptionBudget:
+      enabled: true
+  status:
+    credentialSecret: credential-knime-keycloak
+    externalURL: https://auth.hub.kbh-troubleshooting.com
+    internalURL: https://keycloak.knime.svc:8443
+    message: ""
+    phase: reconciling
+    ready: true
+    secondaryResources:
+      ConfigMap:
+      - keycloak-probes
+      Ingress:
+      - keycloak
+      PrometheusRule:
+      - keycloak
+      Secret:
+      - credential-knime-keycloak
+      - keycloak-db-secret
+      Service:
+      - keycloak-postgresql
+      - keycloak
+      - keycloak-discovery
+      - keycloak-monitoring
+      ServiceMonitor:
+      - keycloak-service-monitor
+      StatefulSet:
+      - keycloak
+    version: 19.0.3

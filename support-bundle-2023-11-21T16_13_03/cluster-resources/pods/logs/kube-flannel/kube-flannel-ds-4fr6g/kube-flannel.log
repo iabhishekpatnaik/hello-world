@@ -1,0 +1,26 @@
+I1121 14:29:19.051264       1 main.go:212] CLI flags config: {etcdEndpoints:http://***HIDDEN***:4001,http://***HIDDEN***:2379 etcdPrefix:/coreos.com/network etcdKeyfile: etcdCertfile: etcdCAFile: etcdUsername: etcdPassword: version:false kubeSubnetMgr:true kubeApiUrl: kubeAnnotationPrefix:flannel.alpha.coreos.com kubeConfigFile: iface:[] ifaceRegex:[] ipMasq:true ifaceCanReach: subnetFile:/run/flannel/subnet.env publicIP: publicIPv6: subnetLeaseRenewMargin:60 healthzIP:***HIDDEN*** healthzPort:0 iptablesResyncSeconds:5 iptablesForwardRules:true netConfPath:/etc/kube-flannel/net-conf.json setNodeNetworkUnavailable:true useMultiClusterCidr:false}
+W1121 14:29:19.052108       1 client_config.go:617] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+I1121 14:29:19.088497       1 kube.go:145] Waiting 10m0s for node controller to sync
+I1121 14:29:19.088529       1 kube.go:486] Starting kube subnet manager
+I1121 14:29:19.093256       1 kube.go:507] Creating the node lease for IPv4. This is the n.Spec.PodCIDRs: [***HIDDEN***/24]
+I1121 14:29:20.088629       1 kube.go:152] Node controller sync successful
+I1121 14:29:20.088649       1 main.go:232] Created subnet manager: Kubernetes Subnet Manager - ip-172-31-41-186
+I1121 14:29:20.088654       1 main.go:235] Installing signal handlers
+I1121 14:29:20.088733       1 main.go:543] Found network config - Backend type: vxlan
+I1121 14:29:20.089553       1 match.go:206] Determining IP address of default interface
+I1121 14:29:20.089874       1 match.go:259] Using interface with name ens5 and address ***HIDDEN***
+I1121 14:29:20.089889       1 match.go:281] Defaulting external address to interface address (***HIDDEN***)
+I1121 14:29:20.089974       1 vxlan.go:141] VXLAN config: VNI=1 Port=0 GBP=false Learning=false DirectRouting=false
+W1121 14:29:20.110533       1 main.go:596] no subnet found for key: FLANNEL_SUBNET in file: /run/flannel/subnet.env
+I1121 14:29:20.110545       1 main.go:482] Current network or subnet (***HIDDEN***/20, ***HIDDEN***/24) is not equal to previous one (***HIDDEN***/0, ***HIDDEN***/0), trying to recycle old iptables rules
+I1121 14:29:20.110920       1 kube.go:507] Creating the node lease for IPv4. This is the n.Spec.PodCIDRs: [***HIDDEN***/24]
+I1121 14:29:20.132933       1 main.go:357] Setting up masking rules
+I1121 14:29:20.135825       1 main.go:408] Changing default FORWARD chain policy to ACCEPT
+I1121 14:29:20.136575       1 iptables.go:290] generated 7 rules
+I1121 14:29:20.137277       1 main.go:436] Wrote subnet file to /run/flannel/subnet.env
+I1121 14:29:20.137291       1 main.go:440] Running backend.
+I1121 14:29:20.137309       1 iptables.go:290] generated 3 rules
+I1121 14:29:20.137378       1 vxlan_network.go:65] watching for new subnet leases
+I1121 14:29:20.145811       1 iptables.go:283] bootstrap done
+I1121 14:29:20.146659       1 main.go:461] Waiting for all goroutines to exit
+I1121 14:29:20.153457       1 iptables.go:283] bootstrap done

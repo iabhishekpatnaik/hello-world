@@ -1,0 +1,1271 @@
+{
+  "kind": "PodList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763974"
+  },
+  "items": [
+    {
+      "kind": "Pod",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "node-agent-5t6c6",
+        "generateName": "node-agent-",
+        "namespace": "velero",
+        "uid": "32fdc1f6-335b-4144-819d-a1e14e8010bd",
+        "resourceVersion": "745346",
+        "creationTimestamp": "2023-11-21T14:29:35Z",
+        "labels": {
+          "component": "velero",
+          "controller-revision-hash": "65f98647c5",
+          "name": "node-agent",
+          "pod-template-generation": "1"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "DaemonSet",
+            "name": "node-agent",
+            "uid": "182dd195-550d-4b67-ba00-03e68aa775b7",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:29:35Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:generateName": {},
+                "f:labels": {
+                  ".": {},
+                  "f:component": {},
+                  "f:controller-revision-hash": {},
+                  "f:name": {},
+                  "f:pod-template-generation": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"182dd195-550d-4b67-ba00-03e68aa775b7\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:affinity": {
+                  ".": {},
+                  "f:nodeAffinity": {
+                    ".": {},
+                    "f:requiredDuringSchedulingIgnoredDuringExecution": {}
+                  }
+                },
+                "f:containers": {
+                  "k:{\"name\":\"node-agent\"}": {
+                    ".": {},
+                    "f:args": {},
+                    "f:command": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"ALIBABA_CLOUD_CREDENTIALS_FILE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"AWS_SHARED_CREDENTIALS_FILE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"AZURE_CREDENTIALS_FILE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"GOOGLE_APPLICATION_CREDENTIALS\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"NODE_NAME\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:fieldRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"VELERO_NAMESPACE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:fieldRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"VELERO_SCRATCH_DIR\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {
+                      ".": {},
+                      "f:limits": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      },
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/credentials\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/host_pods\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:mountPropagation": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/scratch\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:dnsPolicy": {},
+                "f:enableServiceLinks": {},
+                "f:restartPolicy": {},
+                "f:schedulerName": {},
+                "f:securityContext": {
+                  ".": {},
+                  "f:runAsUser": {}
+                },
+                "f:serviceAccount": {},
+                "f:serviceAccountName": {},
+                "f:terminationGracePeriodSeconds": {},
+                "f:tolerations": {},
+                "f:volumes": {
+                  ".": {},
+                  "k:{\"name\":\"cloud-credentials\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:secret": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:secretName": {}
+                    }
+                  },
+                  "k:{\"name\":\"host-pods\"}": {
+                    ".": {},
+                    "f:hostPath": {
+                      ".": {},
+                      "f:path": {},
+                      "f:type": {}
+                    },
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"scratch\"}": {
+                    ".": {},
+                    "f:emptyDir": {},
+                    "f:name": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:33Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  "k:{\"type\":\"ContainersReady\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Initialized\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Ready\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:containerStatuses": {},
+                "f:hostIP": {},
+                "f:phase": {},
+                "f:podIP": {},
+                "f:podIPs": {
+                  ".": {},
+                  "k:{\"ip\":\"***HIDDEN***\"}": {
+                    ".": {},
+                    "f:ip": {}
+                  }
+                },
+                "f:startTime": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "host-pods",
+            "hostPath": {
+              "path": "/var/lib/kubelet/pods",
+              "type": ""
+            }
+          },
+          {
+            "name": "scratch",
+            "emptyDir": {}
+          },
+          {
+            "name": "cloud-credentials",
+            "secret": {
+              "secretName": "cloud-credentials",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "kube-api-access-4z57t",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "kube-root-ca.crt",
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "path": "namespace",
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "node-agent",
+            "image": "velero/velero:v1.11.0",
+            "command": [
+              "/velero"
+            ],
+            "args": [
+              "node-agent",
+              "server",
+              "--features="
+            ],
+            "env": [
+              {
+                "name": "NODE_NAME",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "spec.nodeName"
+                  }
+                }
+              },
+              {
+                "name": "VELERO_NAMESPACE",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.namespace"
+                  }
+                }
+              },
+              {
+                "name": "VELERO_SCRATCH_DIR",
+                "value": "/scratch"
+              },
+              {
+                "name": "GOOGLE_APPLICATION_CREDENTIALS",
+                "value": "/credentials/cloud"
+              },
+              {
+                "name": "AWS_SHARED_CREDENTIALS_FILE",
+                "value": "/credentials/cloud"
+              },
+              {
+                "name": "AZURE_CREDENTIALS_FILE",
+                "value": "/credentials/cloud"
+              },
+              {
+                "name": "ALIBABA_CLOUD_CREDENTIALS_FILE",
+                "value": "/credentials/cloud"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "1",
+                "memory": "1Gi"
+              },
+              "requests": {
+                "cpu": "500m",
+                "memory": "512Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "host-pods",
+                "mountPath": "/host_pods",
+                "mountPropagation": "HostToContainer"
+              },
+              {
+                "name": "scratch",
+                "mountPath": "/scratch"
+              },
+              {
+                "name": "cloud-credentials",
+                "mountPath": "/credentials"
+              },
+              {
+                "name": "kube-api-access-4z57t",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          }
+        ],
+        "restartPolicy": "Always",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "serviceAccountName": "velero",
+        "serviceAccount": "velero",
+        "nodeName": "ip-172-31-41-186",
+        "securityContext": {
+          "runAsUser": 0
+        },
+        "affinity": {
+          "nodeAffinity": {
+            "requiredDuringSchedulingIgnoredDuringExecution": {
+              "nodeSelectorTerms": [
+                {
+                  "matchFields": [
+                    {
+                      "key": "metadata.name",
+                      "operator": "In",
+                      "values": [
+                        "ip-172-31-41-186"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "schedulerName": "default-scheduler",
+        "tolerations": [
+          {
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "effect": "NoExecute"
+          },
+          {
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "effect": "NoExecute"
+          },
+          {
+            "key": "node.kubernetes.io/disk-pressure",
+            "operator": "Exists",
+            "effect": "NoSchedule"
+          },
+          {
+            "key": "node.kubernetes.io/memory-pressure",
+            "operator": "Exists",
+            "effect": "NoSchedule"
+          },
+          {
+            "key": "node.kubernetes.io/pid-pressure",
+            "operator": "Exists",
+            "effect": "NoSchedule"
+          },
+          {
+            "key": "node.kubernetes.io/unschedulable",
+            "operator": "Exists",
+            "effect": "NoSchedule"
+          }
+        ],
+        "priority": 0,
+        "enableServiceLinks": true,
+        "preemptionPolicy": "PreemptLowerPriority"
+      },
+      "status": {
+        "phase": "Running",
+        "conditions": [
+          {
+            "type": "Initialized",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:35Z"
+          },
+          {
+            "type": "Ready",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:56Z"
+          },
+          {
+            "type": "ContainersReady",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:56Z"
+          },
+          {
+            "type": "PodScheduled",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:35Z"
+          }
+        ],
+        "hostIP": "***HIDDEN***",
+        "podIP": "***HIDDEN***",
+        "podIPs": [
+          {
+            "ip": "***HIDDEN***"
+          }
+        ],
+        "startTime": "2023-11-21T14:29:35Z",
+        "containerStatuses": [
+          {
+            "name": "node-agent",
+            "state": {
+              "running": {
+                "startedAt": "2023-11-21T14:29:55Z"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/velero/velero:v1.11.0",
+            "imageID": "sha256:1b927de48064e1dde167ccadf0398d7bb43cadf6040ef8603dc80e891eb8060f",
+            "containerID": "containerd://460e0d7a1ab3a7400d5fe865e843d80875313fe7136b3439d3ce700c37784dde",
+            "started": true
+          }
+        ],
+        "qosClass": "Burstable"
+      }
+    },
+    {
+      "kind": "Pod",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "velero-6b976647c9-wzr5b",
+        "generateName": "velero-6b976647c9-",
+        "namespace": "velero",
+        "uid": "9efdf782-cfa2-4173-b769-f5e2427b5c81",
+        "resourceVersion": "745186",
+        "creationTimestamp": "2023-11-20T17:04:31Z",
+        "labels": {
+          "component": "velero",
+          "deploy": "velero",
+          "pod-template-hash": "6b976647c9"
+        },
+        "annotations": {
+          "prometheus.io/path": "/metrics",
+          "prometheus.io/port": "8085",
+          "prometheus.io/scrape": "true"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "ReplicaSet",
+            "name": "velero-6b976647c9",
+            "uid": "b7b8e202-7307-4e05-9c4d-3c9b8dafecc4",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-20T17:04:31Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:prometheus.io/path": {},
+                  "f:prometheus.io/port": {},
+                  "f:prometheus.io/scrape": {}
+                },
+                "f:generateName": {},
+                "f:labels": {
+                  ".": {},
+                  "f:component": {},
+                  "f:deploy": {},
+                  "f:pod-template-hash": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"b7b8e202-7307-4e05-9c4d-3c9b8dafecc4\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:containers": {
+                  "k:{\"name\":\"velero\"}": {
+                    ".": {},
+                    "f:args": {},
+                    "f:command": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"ALIBABA_CLOUD_CREDENTIALS_FILE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"AWS_SHARED_CREDENTIALS_FILE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"AZURE_CREDENTIALS_FILE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"GOOGLE_APPLICATION_CREDENTIALS\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"LD_LIBRARY_PATH\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"VELERO_NAMESPACE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:fieldRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"VELERO_SCRATCH_DIR\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:ports": {
+                      ".": {},
+                      "k:{\"containerPort\":8085,\"protocol\":\"TCP\"}": {
+                        ".": {},
+                        "f:containerPort": {},
+                        "f:name": {},
+                        "f:protocol": {}
+                      }
+                    },
+                    "f:resources": {
+                      ".": {},
+                      "f:limits": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      },
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/credentials\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/plugins\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/scratch\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:dnsPolicy": {},
+                "f:enableServiceLinks": {},
+                "f:initContainers": {
+                  ".": {},
+                  "k:{\"name\":\"replicated-kurl-util\"}": {
+                    ".": {},
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {},
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/target\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  },
+                  "k:{\"name\":\"replicated-local-volume-provider\"}": {
+                    ".": {},
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {},
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/target\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  },
+                  "k:{\"name\":\"velero-velero-plugin-for-aws\"}": {
+                    ".": {},
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {},
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/target\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  },
+                  "k:{\"name\":\"velero-velero-plugin-for-gcp\"}": {
+                    ".": {},
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {},
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/target\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  },
+                  "k:{\"name\":\"velero-velero-plugin-for-microsoft-azure\"}": {
+                    ".": {},
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {},
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/target\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:restartPolicy": {},
+                "f:schedulerName": {},
+                "f:securityContext": {},
+                "f:serviceAccount": {},
+                "f:serviceAccountName": {},
+                "f:terminationGracePeriodSeconds": {},
+                "f:volumes": {
+                  ".": {},
+                  "k:{\"name\":\"cloud-credentials\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:secret": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:secretName": {}
+                    }
+                  },
+                  "k:{\"name\":\"plugins\"}": {
+                    ".": {},
+                    "f:emptyDir": {},
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"scratch\"}": {
+                    ".": {},
+                    "f:emptyDir": {},
+                    "f:name": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-scheduler",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-20T17:04:31Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"PodScheduled\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                }
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:30:24Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  "k:{\"type\":\"ContainersReady\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Initialized\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Ready\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:containerStatuses": {},
+                "f:hostIP": {},
+                "f:initContainerStatuses": {},
+                "f:phase": {},
+                "f:podIP": {},
+                "f:podIPs": {
+                  ".": {},
+                  "k:{\"ip\":\"***HIDDEN***\"}": {
+                    ".": {},
+                    "f:ip": {}
+                  }
+                },
+                "f:startTime": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "plugins",
+            "emptyDir": {}
+          },
+          {
+            "name": "scratch",
+            "emptyDir": {}
+          },
+          {
+            "name": "cloud-credentials",
+            "secret": {
+              "secretName": "cloud-credentials",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "kube-api-access-cw985",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "kube-root-ca.crt",
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "path": "namespace",
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          }
+        ],
+        "initContainers": [
+          {
+            "name": "velero-velero-plugin-for-aws",
+            "image": "velero/velero-plugin-for-aws:v1.7.0",
+            "resources": {},
+            "volumeMounts": [
+              {
+                "name": "plugins",
+                "mountPath": "/target"
+              },
+              {
+                "name": "kube-api-access-cw985",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          },
+          {
+            "name": "velero-velero-plugin-for-gcp",
+            "image": "velero/velero-plugin-for-gcp:v1.7.0",
+            "resources": {},
+            "volumeMounts": [
+              {
+                "name": "plugins",
+                "mountPath": "/target"
+              },
+              {
+                "name": "kube-api-access-cw985",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          },
+          {
+            "name": "velero-velero-plugin-for-microsoft-azure",
+            "image": "velero/velero-plugin-for-microsoft-azure:v1.7.0",
+            "resources": {},
+            "volumeMounts": [
+              {
+                "name": "plugins",
+                "mountPath": "/target"
+              },
+              {
+                "name": "kube-api-access-cw985",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          },
+          {
+            "name": "replicated-local-volume-provider",
+            "image": "replicated/local-volume-provider:v0.5.4",
+            "resources": {},
+            "volumeMounts": [
+              {
+                "name": "plugins",
+                "mountPath": "/target"
+              },
+              {
+                "name": "kube-api-access-cw985",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          },
+          {
+            "name": "replicated-kurl-util",
+            "image": "replicated/kurl-util:v2023.11.02-0",
+            "resources": {},
+            "volumeMounts": [
+              {
+                "name": "plugins",
+                "mountPath": "/target"
+              },
+              {
+                "name": "kube-api-access-cw985",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          }
+        ],
+        "containers": [
+          {
+            "name": "velero",
+            "image": "velero/velero:v1.11.0",
+            "command": [
+              "/velero"
+            ],
+            "args": [
+              "server",
+              "--features=",
+              "--uploader-type=restic"
+            ],
+            "ports": [
+              {
+                "name": "metrics",
+                "containerPort": 8085,
+                "protocol": "TCP"
+              }
+            ],
+            "env": [
+              {
+                "name": "VELERO_SCRATCH_DIR",
+                "value": "/scratch"
+              },
+              {
+                "name": "VELERO_NAMESPACE",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.namespace"
+                  }
+                }
+              },
+              {
+                "name": "LD_LIBRARY_PATH",
+                "value": "/plugins"
+              },
+              {
+                "name": "GOOGLE_APPLICATION_CREDENTIALS",
+                "value": "/credentials/cloud"
+              },
+              {
+                "name": "AWS_SHARED_CREDENTIALS_FILE",
+                "value": "/credentials/cloud"
+              },
+              {
+                "name": "AZURE_CREDENTIALS_FILE",
+                "value": "/credentials/cloud"
+              },
+              {
+                "name": "ALIBABA_CLOUD_CREDENTIALS_FILE",
+                "value": "/credentials/cloud"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "1",
+                "memory": "512Mi"
+              },
+              "requests": {
+                "cpu": "500m",
+                "memory": "128Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "plugins",
+                "mountPath": "/plugins"
+              },
+              {
+                "name": "scratch",
+                "mountPath": "/scratch"
+              },
+              {
+                "name": "cloud-credentials",
+                "mountPath": "/credentials"
+              },
+              {
+                "name": "kube-api-access-cw985",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent"
+          }
+        ],
+        "restartPolicy": "Always",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "serviceAccountName": "velero",
+        "serviceAccount": "velero",
+        "nodeName": "ip-172-31-41-186",
+        "securityContext": {},
+        "schedulerName": "default-scheduler",
+        "tolerations": [
+          {
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          }
+        ],
+        "priority": 0,
+        "enableServiceLinks": true,
+        "preemptionPolicy": "PreemptLowerPriority"
+      },
+      "status": {
+        "phase": "Running",
+        "conditions": [
+          {
+            "type": "Initialized",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:51Z"
+          },
+          {
+            "type": "Ready",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:52Z"
+          },
+          {
+            "type": "ContainersReady",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:52Z"
+          },
+          {
+            "type": "PodScheduled",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:29:35Z"
+          }
+        ],
+        "hostIP": "***HIDDEN***",
+        "podIP": "***HIDDEN***",
+        "podIPs": [
+          {
+            "ip": "***HIDDEN***"
+          }
+        ],
+        "startTime": "2023-11-21T14:29:35Z",
+        "initContainerStatuses": [
+          {
+            "name": "velero-velero-plugin-for-aws",
+            "state": {
+              "terminated": {
+                "exitCode": 0,
+                "reason": "Completed",
+                "startedAt": "2023-11-21T14:29:47Z",
+                "finishedAt": "2023-11-21T14:29:47Z",
+                "containerID": "containerd://9044b4025076940ada76dc69560d8b3e59e4b22d393a99858adaf83e9ec21323"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/velero/velero-plugin-for-aws:v1.7.0",
+            "imageID": "sha256:ac6244965d0132f72449cbfcc96fdabc0c7a935af02d9af8770a5bc0fc4324f2",
+            "containerID": "containerd://9044b4025076940ada76dc69560d8b3e59e4b22d393a99858adaf83e9ec21323"
+          },
+          {
+            "name": "velero-velero-plugin-for-gcp",
+            "state": {
+              "terminated": {
+                "exitCode": 0,
+                "reason": "Completed",
+                "startedAt": "2023-11-21T14:29:48Z",
+                "finishedAt": "2023-11-21T14:29:48Z",
+                "containerID": "containerd://b217b5c635ccda5c712eb892ba73927dbfe7f82cb4bacee16312a58b3c3b97d2"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/velero/velero-plugin-for-gcp:v1.7.0",
+            "imageID": "sha256:2521dbc58e3ca81ffa83e3fd6984038311fba03fe430311779a432cc51024479",
+            "containerID": "containerd://b217b5c635ccda5c712eb892ba73927dbfe7f82cb4bacee16312a58b3c3b97d2"
+          },
+          {
+            "name": "velero-velero-plugin-for-microsoft-azure",
+            "state": {
+              "terminated": {
+                "exitCode": 0,
+                "reason": "Completed",
+                "startedAt": "2023-11-21T14:29:49Z",
+                "finishedAt": "2023-11-21T14:29:49Z",
+                "containerID": "containerd://933941181f7440d36c1e3cc16b83f28531a6c1631ee67b4bf5f2671e5f5d0dfa"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/velero/velero-plugin-for-microsoft-azure:v1.7.0",
+            "imageID": "sha256:bd3e54b27864d9a324f744a968b8e4b107900c35f5596d008823f5515a836e13",
+            "containerID": "containerd://933941181f7440d36c1e3cc16b83f28531a6c1631ee67b4bf5f2671e5f5d0dfa"
+          },
+          {
+            "name": "replicated-local-volume-provider",
+            "state": {
+              "terminated": {
+                "exitCode": 0,
+                "reason": "Completed",
+                "startedAt": "2023-11-21T14:29:50Z",
+                "finishedAt": "2023-11-21T14:29:50Z",
+                "containerID": "containerd://9b1b0eca329a6e7b810d1c38a2c50c0f7bfa8af26755e7e7a6448424e8ef4598"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/replicated/local-volume-provider:v0.5.4",
+            "imageID": "sha256:9832677fd34eac088c217dc5434a3238ab82fdec6874c4235a3b9e63af162982",
+            "containerID": "containerd://9b1b0eca329a6e7b810d1c38a2c50c0f7bfa8af26755e7e7a6448424e8ef4598"
+          },
+          {
+            "name": "replicated-kurl-util",
+            "state": {
+              "terminated": {
+                "exitCode": 0,
+                "reason": "Completed",
+                "startedAt": "2023-11-21T14:29:51Z",
+                "finishedAt": "2023-11-21T14:29:51Z",
+                "containerID": "containerd://99d2d6cd5017a2906b0dc49279a1d2f1d68b9e5032149200ddbca2bba87a7042"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/replicated/kurl-util:v2023.11.02-0",
+            "imageID": "sha256:a3decd8b5f7e36874329777a620dc3e2c721efad0112424b94bb8c83678585a8",
+            "containerID": "containerd://99d2d6cd5017a2906b0dc49279a1d2f1d68b9e5032149200ddbca2bba87a7042"
+          }
+        ],
+        "containerStatuses": [
+          {
+            "name": "velero",
+            "state": {
+              "running": {
+                "startedAt": "2023-11-21T14:29:52Z"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/velero/velero:v1.11.0",
+            "imageID": "sha256:1b927de48064e1dde167ccadf0398d7bb43cadf6040ef8603dc80e891eb8060f",
+            "containerID": "containerd://a321ac971d80fad9103e72aa84230c76f12b16e4221a0e5ef2fb9b1edfb630ce",
+            "started": true
+          }
+        ],
+        "qosClass": "Burstable"
+      }
+    }
+  ]
+}

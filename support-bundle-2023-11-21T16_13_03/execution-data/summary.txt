@@ -1,0 +1,14 @@
+============ Collectors summary =============
+Succeeded (S), eXcluded (X), Failed (F)
+=============================================
+No collectors executed
+
+============ Redactors summary =============
+No redactors executed
+
+============= Analyzers summary =============
+Succeeded (S), eXcluded (X), Failed (F)
+=============================================
+No analyzers executed
+
+Duration: 0ms

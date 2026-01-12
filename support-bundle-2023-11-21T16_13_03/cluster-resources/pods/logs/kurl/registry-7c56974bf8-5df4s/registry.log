@@ -1,0 +1,14 @@
+time="2023-11-21T14:29:33Z" level=warning msg="Ignoring unrecognized environment variable REGISTRY_PORT" 
+time="2023-11-21T14:29:33Z" level=warning msg="Ignoring unrecognized environment variable REGISTRY_PORT_443_TCP" 
+time="2023-11-21T14:29:33Z" level=warning msg="Ignoring unrecognized environment variable REGISTRY_PORT_443_TCP_ADDR" 
+time="2023-11-21T14:29:33Z" level=warning msg="Ignoring unrecognized environment variable REGISTRY_PORT_443_TCP_PORT" 
+time="2023-11-21T14:29:33Z" level=warning msg="Ignoring unrecognized environment variable REGISTRY_PORT_443_TCP_PROTO" 
+time="2023-11-21T14:29:33Z" level=warning msg="Ignoring unrecognized environment variable REGISTRY_SERVICE_HOST" 
+time="2023-11-21T14:29:33Z" level=warning msg="Ignoring unrecognized environment variable REGISTRY_SERVICE_PORT" 
+time="2023-11-21T14:29:33Z" level=warning msg="Ignoring unrecognized environment variable REGISTRY_SERVICE_PORT_REGISTRY" 
+time="2023-11-21T14:29:33.110190014Z" level=info msg="redis not configured" go.version=go1.19.9 instance.id=5c8bd4e0-2367-42a5-a964-cc718ca30e7e service=registry version=2.8.2 
+time="2023-11-21T14:29:33.110911935Z" level=info msg="backend redirection disabled" go.version=go1.19.9 instance.id=5c8bd4e0-2367-42a5-a964-cc718ca30e7e service=registry version=2.8.2 
+time="2023-11-21T14:29:33.110939408Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.19.9 instance.id=5c8bd4e0-2367-42a5-a964-cc718ca30e7e service=registry version=2.8.2 
+time="2023-11-21T14:29:33.11110637Z" level=info msg="restricting TLS version to tls1.2 or higher" go.version=go1.19.9 instance.id=5c8bd4e0-2367-42a5-a964-cc718ca30e7e service=registry version=2.8.2 
+time="2023-11-21T14:29:33.111137716Z" level=info msg="restricting TLS cipher suites to: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_AES_128_GCM_SHA256,TLS_CHACHA20_POLY1305_SHA256,TLS_AES_256_GCM_SHA384" go.version=go1.19.9 instance.id=5c8bd4e0-2367-42a5-a964-cc718ca30e7e service=registry version=2.8.2 
+time="2023-11-21T14:29:33.111865169Z" level=info msg="listening on [::]:443, tls" go.version=go1.19.9 instance.id=5c8bd4e0-2367-42a5-a964-cc718ca30e7e service=registry version=2.8.2 

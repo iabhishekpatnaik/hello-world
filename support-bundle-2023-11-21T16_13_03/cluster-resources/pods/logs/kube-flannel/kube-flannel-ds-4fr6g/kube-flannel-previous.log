@@ -1,0 +1,35 @@
+I1120 12:54:48.185834       1 main.go:212] CLI flags config: {etcdEndpoints:http://***HIDDEN***:4001,http://***HIDDEN***:2379 etcdPrefix:/coreos.com/network etcdKeyfile: etcdCertfile: etcdCAFile: etcdUsername: etcdPassword: version:false kubeSubnetMgr:true kubeApiUrl: kubeAnnotationPrefix:flannel.alpha.coreos.com kubeConfigFile: iface:[] ifaceRegex:[] ipMasq:true ifaceCanReach: subnetFile:/run/flannel/subnet.env publicIP: publicIPv6: subnetLeaseRenewMargin:60 healthzIP:***HIDDEN*** healthzPort:0 iptablesResyncSeconds:5 iptablesForwardRules:true netConfPath:/etc/kube-flannel/net-conf.json setNodeNetworkUnavailable:true useMultiClusterCidr:false}
+W1120 12:54:48.186747       1 client_config.go:617] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+I1120 12:54:56.686343       1 kube.go:145] Waiting 10m0s for node controller to sync
+I1120 12:54:56.686378       1 kube.go:486] Starting kube subnet manager
+I1120 12:54:56.692126       1 kube.go:507] Creating the node lease for IPv4. This is the n.Spec.PodCIDRs: [***HIDDEN***/24]
+I1120 12:54:57.687196       1 kube.go:152] Node controller sync successful
+I1120 12:54:57.687214       1 main.go:232] Created subnet manager: Kubernetes Subnet Manager - ip-172-31-41-186
+I1120 12:54:57.687225       1 main.go:235] Installing signal handlers
+I1120 12:54:57.687344       1 main.go:543] Found network config - Backend type: vxlan
+I1120 12:54:57.688098       1 match.go:206] Determining IP address of default interface
+I1120 12:54:57.688472       1 match.go:259] Using interface with name ens5 and address ***HIDDEN***
+I1120 12:54:57.688492       1 match.go:281] Defaulting external address to interface address (***HIDDEN***)
+I1120 12:54:57.688531       1 vxlan.go:141] VXLAN config: VNI=1 Port=0 GBP=false Learning=false DirectRouting=false
+W1120 12:54:57.710976       1 main.go:596] no subnet found for key: FLANNEL_SUBNET in file: /run/flannel/subnet.env
+I1120 12:54:57.710989       1 main.go:482] Current network or subnet (***HIDDEN***/20, ***HIDDEN***/24) is not equal to previous one (***HIDDEN***/0, ***HIDDEN***/0), trying to recycle old iptables rules
+I1120 12:54:57.711349       1 kube.go:507] Creating the node lease for IPv4. This is the n.Spec.PodCIDRs: [***HIDDEN***/24]
+I1120 12:54:57.733989       1 main.go:357] Setting up masking rules
+I1120 12:54:57.736842       1 main.go:408] Changing default FORWARD chain policy to ACCEPT
+I1120 12:54:57.737693       1 iptables.go:290] generated 7 rules
+I1120 12:54:57.738363       1 main.go:436] Wrote subnet file to /run/flannel/subnet.env
+I1120 12:54:57.738378       1 main.go:440] Running backend.
+I1120 12:54:57.738406       1 iptables.go:290] generated 3 rules
+I1120 12:54:57.738461       1 vxlan_network.go:65] watching for new subnet leases
+I1120 12:54:57.746865       1 iptables.go:283] bootstrap done
+I1120 12:54:57.747540       1 main.go:461] Waiting for all goroutines to exit
+I1120 12:54:57.755301       1 iptables.go:283] bootstrap done
+I1120 17:04:33.840549       1 main.go:527] shutdownHandler sent cancel signal...
+E1120 17:04:33.840595       1 subnet.go:144] could not watch leases: context canceled
+W1120 17:04:33.840663       1 reflector.go:347] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:487: watch of *v1.Node ended with: an error on the server ("unable to decode an event from the watch stream: context canceled") has prevented the request from succeeding
+W1120 17:04:34.704746       1 reflector.go:424] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:487: failed to list *v1.Node: client rate limiter Wait returned an error: context canceled
+E1120 17:04:34.704787       1 reflector.go:140] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:487: Failed to watch *v1.Node: failed to list *v1.Node: client rate limiter Wait returned an error: context canceled
+W1120 17:04:37.258529       1 reflector.go:424] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:487: failed to list *v1.Node: client rate limiter Wait returned an error: context canceled
+E1120 17:04:37.258549       1 reflector.go:140] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:487: Failed to watch *v1.Node: failed to list *v1.Node: client rate limiter Wait returned an error: context canceled
+W1120 17:04:40.649026       1 reflector.go:424] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:487: failed to list *v1.Node: client rate limiter Wait returned an error: context canceled
+E1120 17:04:40.649046       1 reflector.go:140] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:487: Failed to watch *v1.Node: failed to list *v1.Node: client rate limiter Wait returned an error: context canceled

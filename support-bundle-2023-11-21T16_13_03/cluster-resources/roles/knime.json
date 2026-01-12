@@ -1,0 +1,514 @@
+{
+  "kind": "RoleList",
+  "apiVersion": "rbac.authorization.k8s.io/v1",
+  "metadata": {
+    "resourceVersion": "763994"
+  },
+  "items": [
+    {
+      "kind": "Role",
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "metadata": {
+        "name": "ingress-nginx",
+        "namespace": "knime",
+        "uid": "af3684f1-244f-4ff8-bdf3-130b53822837",
+        "resourceVersion": "4146",
+        "creationTimestamp": "2023-11-10T13:18:22Z",
+        "labels": {
+          "app.kubernetes.io/component": "controller",
+          "app.kubernetes.io/instance": "ingress-nginx",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "ingress-nginx",
+          "app.kubernetes.io/part-of": "ingress-nginx",
+          "app.kubernetes.io/version": "1.3.1",
+          "helm.sh/chart": "ingress-nginx-4.2.5-73033d1",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "ingress-nginx",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "rbac.authorization.k8s.io/v1",
+            "time": "2023-11-10T13:18:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:helm.sh/chart": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:rules": {}
+            }
+          }
+        ]
+      },
+      "rules": [
+        {
+          "verbs": [
+            "get"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "namespaces"
+          ]
+        },
+        {
+          "verbs": [
+            "get",
+            "list",
+            "watch"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "configmaps",
+            "pods",
+            "secrets",
+            "endpoints"
+          ]
+        },
+        {
+          "verbs": [
+            "get",
+            "list",
+            "watch"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "services"
+          ]
+        },
+        {
+          "verbs": [
+            "get",
+            "list",
+            "watch"
+          ],
+          "apiGroups": [
+            "networking.k8s.io"
+          ],
+          "resources": [
+            "ingresses"
+          ]
+        },
+        {
+          "verbs": [
+            "update"
+          ],
+          "apiGroups": [
+            "networking.k8s.io"
+          ],
+          "resources": [
+            "ingresses/status"
+          ]
+        },
+        {
+          "verbs": [
+            "get",
+            "list",
+            "watch"
+          ],
+          "apiGroups": [
+            "networking.k8s.io"
+          ],
+          "resources": [
+            "ingressclasses"
+          ]
+        },
+        {
+          "verbs": [
+            "get",
+            "update"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "configmaps"
+          ],
+          "resourceNames": [
+            "ingress-controller-leader"
+          ]
+        },
+        {
+          "verbs": [
+            "create"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "configmaps"
+          ]
+        },
+        {
+          "verbs": [
+            "get",
+            "update"
+          ],
+          "apiGroups": [
+            "coordination.k8s.io"
+          ],
+          "resources": [
+            "leases"
+          ],
+          "resourceNames": [
+            "ingress-controller-leader"
+          ]
+        },
+        {
+          "verbs": [
+            "create"
+          ],
+          "apiGroups": [
+            "coordination.k8s.io"
+          ],
+          "resources": [
+            "leases"
+          ]
+        },
+        {
+          "verbs": [
+            "create",
+            "patch"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "events"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Role",
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "metadata": {
+        "name": "keycloak-operator",
+        "namespace": "knime",
+        "uid": "6c9efc90-666a-42c9-8127-032497a35d37",
+        "resourceVersion": "4281",
+        "creationTimestamp": "2023-11-10T13:18:28Z",
+        "labels": {
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-keycloak-operator",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "rbac.authorization.k8s.io/v1",
+            "time": "2023-11-10T13:18:28Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:rules": {}
+            }
+          }
+        ]
+      },
+      "rules": [
+        {
+          "verbs": [
+            "list",
+            "get",
+            "create",
+            "patch",
+            "update",
+            "watch",
+            "delete"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "pods",
+            "services",
+            "services/finalizers",
+            "endpoints",
+            "persistentvolumeclaims",
+            "events",
+            "configmaps",
+            "secrets"
+          ]
+        },
+        {
+          "verbs": [
+            "list",
+            "get",
+            "create",
+            "update",
+            "watch",
+            "delete"
+          ],
+          "apiGroups": [
+            "apps"
+          ],
+          "resources": [
+            "deployments",
+            "daemonsets",
+            "replicasets",
+            "statefulsets"
+          ]
+        },
+        {
+          "verbs": [
+            "list",
+            "get",
+            "create",
+            "update",
+            "watch"
+          ],
+          "apiGroups": [
+            "batch"
+          ],
+          "resources": [
+            "cronjobs",
+            "jobs"
+          ]
+        },
+        {
+          "verbs": [
+            "create"
+          ],
+          "apiGroups": [
+            "route.openshift.io"
+          ],
+          "resources": [
+            "routes/custom-host"
+          ]
+        },
+        {
+          "verbs": [
+            "list",
+            "get",
+            "create",
+            "update",
+            "watch"
+          ],
+          "apiGroups": [
+            "route.openshift.io"
+          ],
+          "resources": [
+            "routes"
+          ]
+        },
+        {
+          "verbs": [
+            "list",
+            "get",
+            "create",
+            "update",
+            "watch"
+          ],
+          "apiGroups": [
+            "networking.k8s.io"
+          ],
+          "resources": [
+            "ingresses"
+          ]
+        },
+        {
+          "verbs": [
+            "list",
+            "get",
+            "create",
+            "update",
+            "watch"
+          ],
+          "apiGroups": [
+            "monitoring.coreos.com"
+          ],
+          "resources": [
+            "servicemonitors",
+            "prometheusrules"
+          ]
+        },
+        {
+          "verbs": [
+            "get",
+            "list",
+            "create",
+            "update",
+            "watch"
+          ],
+          "apiGroups": [
+            "integreatly.org"
+          ],
+          "resources": [
+            "grafanadashboards"
+          ]
+        },
+        {
+          "verbs": [
+            "update"
+          ],
+          "apiGroups": [
+            "apps"
+          ],
+          "resources": [
+            "deployments/finalizers"
+          ],
+          "resourceNames": [
+            "keycloak-operator"
+          ]
+        },
+        {
+          "verbs": [
+            "get",
+            "list",
+            "create",
+            "update",
+            "watch"
+          ],
+          "apiGroups": [
+            "policy"
+          ],
+          "resources": [
+            "poddisruptionbudgets"
+          ]
+        },
+        {
+          "verbs": [
+            "get",
+            "list",
+            "update",
+            "watch"
+          ],
+          "apiGroups": [
+            "keycloak.org"
+          ],
+          "resources": [
+            "keycloaks",
+            "keycloaks/status",
+            "keycloaks/finalizers",
+            "keycloakrealms",
+            "keycloakrealms/status",
+            "keycloakrealms/finalizers",
+            "keycloakclients",
+            "keycloakclients/status",
+            "keycloakclients/finalizers",
+            "keycloakbackups",
+            "keycloakbackups/status",
+            "keycloakbackups/finalizers",
+            "keycloakusers",
+            "keycloakusers/status",
+            "keycloakusers/finalizers"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Role",
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "metadata": {
+        "name": "knime-keycloak-init-role",
+        "namespace": "knime",
+        "uid": "d64a7131-0ebe-4db8-949a-bf5a5ba15afd",
+        "resourceVersion": "5323",
+        "creationTimestamp": "2023-11-10T13:20:11Z",
+        "labels": {
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-keycloak",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "rbac.authorization.k8s.io/v1",
+            "time": "2023-11-10T13:20:11Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:rules": {}
+            }
+          }
+        ]
+      },
+      "rules": [
+        {
+          "verbs": [
+            "create",
+            "delete",
+            "get",
+            "list",
+            "patch",
+            "update",
+            "watch"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "configmaps"
+          ]
+        }
+      ]
+    }
+  ]
+}

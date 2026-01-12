@@ -1,0 +1,9 @@
+{"level":"info","version":"1.2.2","hash":"092b574","time":"2023-11-21T14:31:07Z"}
+{"level":"info","config":{"logLevel":"info","timeout":3600000000000,"proxy":{"executionRestInterfaceCaller":{"jobsEndpoint":"http://rest-interface:8080/jobs","callTimeout":5000000000,"serviceAccount":{"clientIDPath":"/secrets/client/id","clientSecretPath":"/secrets/client/secret","tokenEndpoint":"http://auth.hub.kbh-troubleshooting.com/auth/realms/knime/protocol/openid-connect/token"}},"objectStore":{"keyPath":"/secrets/object-store/key","secretPath":"/secrets/object-store/secret","bucket":"knime-execution-jobs","region":"us-east-1","url":"http://storage.hub.kbh-troubleshooting.com","pathPrefix":""},"securityChecksDisabled":false}},"time":"2023-11-21T14:31:07Z","message":"config loaded"}
+{"level":"info","time":"2023-11-21T14:31:07Z","message":"initialized /healthz/metrics"}
+{"level":"info","time":"2023-11-21T14:31:07Z","message":"initialized /healthz/live"}
+{"level":"info","time":"2023-11-21T14:31:07Z","message":"initialized /healthz/ready"}
+{"level":"info","time":"2023-11-21T14:31:07Z","message":"initialized /api-doc/openapi"}
+{"level":"info","time":"2023-11-21T14:31:07Z","message":"initialized /versionz"}
+{"level":"info","time":"2023-11-21T14:31:07Z","message":"initialized /jobs"}
+{"level":"info","time":"2023-11-21T14:31:07Z","message":"listening on http://localhost:8080"}

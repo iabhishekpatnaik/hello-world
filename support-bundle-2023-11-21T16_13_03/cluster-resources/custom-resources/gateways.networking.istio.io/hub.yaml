@@ -1,0 +1,61 @@
+- apiVersion: networking.istio.io/v1beta1
+  kind: Gateway
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-infrastructure
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:18:59Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: networking.istio.io/v1alpha3
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:selector:
+            .: {}
+            f:istio: {}
+          f:servers: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:18:59Z"
+    name: hub-api-gateway
+    namespace: hub
+    resourceVersion: "4499"
+    uid: 51a26b64-c047-46fe-8a93-30bc64bba622
+  spec:
+    selector:
+      istio: ingressgateway
+    servers:
+    - hosts:
+      - api.hub.kbh-troubleshooting.com
+      - hub.kbh-troubleshooting.com
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+    - hosts:
+      - api.hub.kbh-troubleshooting.com
+      - hub.kbh-troubleshooting.com
+      port:
+        name: https
+        number: 443
+        protocol: HTTP

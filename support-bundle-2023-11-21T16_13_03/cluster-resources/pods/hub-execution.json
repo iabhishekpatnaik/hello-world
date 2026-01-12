@@ -1,0 +1,1884 @@
+{
+  "kind": "PodList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763974"
+  },
+  "items": [
+    {
+      "kind": "Pod",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "executor-31904678-6c80-48b0-a21d-73778e52546a-cdde6a7b-8e5b-42f3-a605-417e5092b948",
+        "namespace": "hub-execution",
+        "uid": "c0e4c6a3-8054-4219-8d8a-da6a4b12171b",
+        "resourceVersion": "762649",
+        "creationTimestamp": "2023-11-21T16:05:32Z",
+        "labels": {
+          "app.kubernetes.io/component": "execution-context-pod",
+          "app.kubernetes.io/created-by": "knime-hub-execution-operator",
+          "app.kubernetes.io/instance": "31904678-6c80-48b0-a21d-73778e52546a",
+          "app.kubernetes.io/managed-by": "knime-hub-execution-operator",
+          "app.kubernetes.io/name": "knime-hub-execution",
+          "app.kubernetes.io/part-of": "knime-hub",
+          "security.istio.io/tlsMode": "istio",
+          "service.istio.io/canonical-name": "knime-hub-execution",
+          "service.istio.io/canonical-revision": "latest"
+        },
+        "annotations": {
+          "configmap/checksum": "02f706c92ec0f62f48f8fe983846e2d72825a490b66c08fa2afa285084e9123e",
+          "istio.io/rev": "default",
+          "kubectl.kubernetes.io/default-container": "executor",
+          "kubectl.kubernetes.io/default-logs-container": "executor",
+          "prometheus.io/path": "/stats/prometheus",
+          "prometheus.io/port": "15020",
+          "prometheus.io/scrape": "true",
+          "scope": "hub:global",
+          "sidecar.istio.io/status": "{\"initContainers\":[\"istio-init\"],\"containers\":[\"istio-proxy\"],\"volumes\":[\"workload-socket\",\"credential-socket\",\"workload-certs\",\"istio-envoy\",\"istio-data\",\"istio-podinfo\",\"istio-token\",\"istiod-ca-cert\"],\"imagePullSecrets\":null,\"revision\":\"default\"}",
+          "traffic.sidecar.istio.io/excludeOutboundPorts": "5432"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "hub.knime.com/v1alpha1",
+            "kind": "ExecutionContext",
+            "name": "31904678-6c80-48b0-a21d-73778e52546a",
+            "uid": "e677c4bf-e726-4443-be84-c0c956bf3c85",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "execution-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:05:32Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:configmap/checksum": {},
+                  "f:scope": {},
+                  "f:traffic.sidecar.istio.io/excludeOutboundPorts": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/created-by": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"e677c4bf-e726-4443-be84-c0c956bf3c85\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:affinity": {
+                  ".": {},
+                  "f:nodeAffinity": {
+                    ".": {},
+                    "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                  }
+                },
+                "f:containers": {
+                  "k:{\"name\":\"executor\"}": {
+                    ".": {},
+                    "f:command": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"KNIME_CORE_MAX_THREADS\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTION_CONTEXT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_CONNECTION_RETRIES\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_CPU_USAGE_PERCENT_LIMIT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_HEALTH_CHECK_PATH\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_HEALTH_CHECK_PORT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_HEAP_USAGE_PERCENT_LIMIT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_ID\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_MAX_JOB_OUTPUT_SIZE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_MAX_LOADED_JOBS\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_MSGQ\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_PER_JOB_LOGGING\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_SHUTDOWN_ON_DRAIN\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      }
+                    },
+                    "f:envFrom": {},
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:livenessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:name": {},
+                    "f:readinessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:resources": {
+                      ".": {},
+                      "f:limits": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      },
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:securityContext": {
+                      ".": {},
+                      "f:allowPrivilegeEscalation": {},
+                      "f:capabilities": {
+                        ".": {},
+                        "f:drop": {}
+                      },
+                      "f:readOnlyRootFilesystem": {},
+                      "f:runAsGroup": {},
+                      "f:runAsNonRoot": {},
+                      "f:runAsUser": {}
+                    },
+                    "f:startupProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/home/knime/knime/custom-ini-args\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:dnsPolicy": {},
+                "f:enableServiceLinks": {},
+                "f:imagePullSecrets": {
+                  ".": {},
+                  "k:{\"name\":\"regcred\"}": {},
+                  "k:{\"name\":\"registry-creds\"}": {}
+                },
+                "f:restartPolicy": {},
+                "f:schedulerName": {},
+                "f:securityContext": {},
+                "f:terminationGracePeriodSeconds": {},
+                "f:volumes": {
+                  ".": {},
+                  "k:{\"name\":\"31904678-6c80-48b0-a21d-73778e52546a-knime-ini\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-scheduler",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T16:05:32Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"PodScheduled\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                }
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "workload-socket",
+            "emptyDir": {}
+          },
+          {
+            "name": "credential-socket",
+            "emptyDir": {}
+          },
+          {
+            "name": "workload-certs",
+            "emptyDir": {}
+          },
+          {
+            "name": "istio-envoy",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "istio-data",
+            "emptyDir": {}
+          },
+          {
+            "name": "istio-podinfo",
+            "downwardAPI": {
+              "items": [
+                {
+                  "path": "labels",
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.labels"
+                  }
+                },
+                {
+                  "path": "annotations",
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.annotations"
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "istio-token",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "audience": "istio-ca",
+                    "expirationSeconds": 43200,
+                    "path": "istio-token"
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "istiod-ca-cert",
+            "configMap": {
+              "name": "istio-ca-root-cert",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "31904678-6c80-48b0-a21d-73778e52546a-knime-ini",
+            "configMap": {
+              "name": "31904678-6c80-48b0-a21d-73778e52546a-knime-ini",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "kube-api-access-v4v8p",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "kube-root-ca.crt",
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "path": "namespace",
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          }
+        ],
+        "initContainers": [
+          {
+            "name": "istio-init",
+            "image": "docker.io/istio/proxyv2:1.18.1",
+            "args": [
+              "istio-iptables",
+              "-p",
+              "15001",
+              "-z",
+              "15006",
+              "-u",
+              "1337",
+              "-m",
+              "REDIRECT",
+              "-i",
+              "*",
+              "-x",
+              "",
+              "-b",
+              "*",
+              "-d",
+              "15090,15021,15020",
+              "-o",
+              "5432",
+              "--log_output_level=default:info",
+              "--log_as_json"
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "2",
+                "memory": "1Gi"
+              },
+              "requests": {
+                "cpu": "50m",
+                "memory": "128Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "kube-api-access-v4v8p",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent",
+            "securityContext": {
+              "capabilities": {
+                "add": [
+                  "NET_ADMIN",
+                  "NET_RAW"
+                ],
+                "drop": [
+                  "ALL"
+                ]
+              },
+              "privileged": false,
+              "runAsUser": 0,
+              "runAsGroup": 0,
+              "runAsNonRoot": false,
+              "readOnlyRootFilesystem": false,
+              "allowPrivilegeEscalation": false
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "executor",
+            "image": "registry.hub.knime.com/knime/knime-full:r-5.1.2-433",
+            "command": [
+              "/bin/bash",
+              "-c",
+              "sed -i -e '/-vmargs/{H;r /home/knime/knime/custom-ini-args/applicationArguments' -e 'g;N}' /home/knime/knime/knime.ini \u0026\u0026 cat /home/knime/knime/custom-ini-args/vmArguments \u003e\u003e /home/knime/knime/knime.ini \u0026\u0026 /home/knime/knime/start-executor.sh"
+            ],
+            "envFrom": [
+              {
+                "configMapRef": {
+                  "name": "execution-env-variables"
+                }
+              }
+            ],
+            "env": [
+              {
+                "name": "KNIME_EXECUTOR_MSGQ",
+                "value": "tcp://31904678-6c80-48b0-a21d-73778e52546a-user:6fba679f1bbc0bd388b05df05f41b4f4b33653eadfa69455aa888f4e07ad4fad@activemq-artemis.knime.svc.cluster.local:61616?reconnectAttempts=-1"
+              },
+              {
+                "name": "KNIME_EXECUTION_CONTEXT",
+                "value": "31904678-6c80-48b0-a21d-73778e52546a"
+              },
+              {
+                "name": "KNIME_EXECUTOR_HEALTH_CHECK_PORT",
+                "value": "3000"
+              },
+              {
+                "name": "KNIME_EXECUTOR_HEALTH_CHECK_PATH",
+                "value": "/health"
+              },
+              {
+                "name": "KNIME_EXECUTOR_CONNECTION_RETRIES",
+                "value": "-1"
+              },
+              {
+                "name": "KNIME_EXECUTOR_ID",
+                "value": "cdde6a7b-8e5b-42f3-a605-417e5092b948"
+              },
+              {
+                "name": "KNIME_EXECUTOR_SHUTDOWN_ON_DRAIN",
+                "value": "true"
+              },
+              {
+                "name": "KNIME_EXECUTOR_MAX_LOADED_JOBS",
+                "value": "2147483647"
+              },
+              {
+                "name": "KNIME_EXECUTOR_PER_JOB_LOGGING",
+                "value": "true"
+              },
+              {
+                "name": "KNIME_CORE_MAX_THREADS",
+                "value": "2"
+              },
+              {
+                "name": "KNIME_EXECUTOR_MAX_JOB_OUTPUT_SIZE",
+                "value": "10"
+              },
+              {
+                "name": "KNIME_EXECUTOR_CPU_USAGE_PERCENT_LIMIT",
+                "value": "90"
+              },
+              {
+                "name": "KNIME_EXECUTOR_HEAP_USAGE_PERCENT_LIMIT",
+                "value": "90"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "1",
+                "memory": "32Gi"
+              },
+              "requests": {
+                "cpu": "1",
+                "memory": "32Gi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "31904678-6c80-48b0-a21d-73778e52546a-knime-ini",
+                "mountPath": "/home/knime/knime/custom-ini-args"
+              },
+              {
+                "name": "kube-api-access-v4v8p",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "livenessProbe": {
+              "httpGet": {
+                "path": "/app-health/executor/livez",
+                "port": 15020,
+                "scheme": "HTTP"
+              },
+              "timeoutSeconds": 1,
+              "periodSeconds": 10,
+              "successThreshold": 1,
+              "failureThreshold": 6
+            },
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/app-health/executor/readyz",
+                "port": 15020,
+                "scheme": "HTTP"
+              },
+              "timeoutSeconds": 1,
+              "periodSeconds": 5,
+              "successThreshold": 1,
+              "failureThreshold": 1
+            },
+            "startupProbe": {
+              "httpGet": {
+                "path": "/app-health/executor/startupz",
+                "port": 15020,
+                "scheme": "HTTP"
+              },
+              "timeoutSeconds": 1,
+              "periodSeconds": 3,
+              "successThreshold": 1,
+              "failureThreshold": 20
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent",
+            "securityContext": {
+              "capabilities": {
+                "drop": [
+                  "ALL"
+                ]
+              },
+              "runAsUser": 1000,
+              "runAsGroup": 1000,
+              "runAsNonRoot": true,
+              "readOnlyRootFilesystem": false,
+              "allowPrivilegeEscalation": false
+            }
+          },
+          {
+            "name": "istio-proxy",
+            "image": "docker.io/istio/proxyv2:1.18.1",
+            "args": [
+              "proxy",
+              "sidecar",
+              "--domain",
+              "$(POD_NAMESPACE).svc.cluster.local",
+              "--proxyLogLevel=warning",
+              "--proxyComponentLogLevel=misc:error",
+              "--log_output_level=default:info",
+              "--log_as_json"
+            ],
+            "ports": [
+              {
+                "name": "http-envoy-prom",
+                "containerPort": 15090,
+                "protocol": "TCP"
+              }
+            ],
+            "env": [
+              {
+                "name": "JWT_POLICY",
+                "value": "third-party-jwt"
+              },
+              {
+                "name": "PILOT_CERT_PROVIDER",
+                "value": "istiod"
+              },
+              {
+                "name": "CA_ADDR",
+                "value": "istiod.istio-system.svc:15012"
+              },
+              {
+                "name": "POD_NAME",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.name"
+                  }
+                }
+              },
+              {
+                "name": "POD_NAMESPACE",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.namespace"
+                  }
+                }
+              },
+              {
+                "name": "INSTANCE_IP",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "status.podIP"
+                  }
+                }
+              },
+              {
+                "name": "SERVICE_ACCOUNT",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "spec.serviceAccountName"
+                  }
+                }
+              },
+              {
+                "name": "HOST_IP",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "status.hostIP"
+                  }
+                }
+              },
+              {
+                "name": "ISTIO_CPU_LIMIT",
+                "valueFrom": {
+                  "resourceFieldRef": {
+                    "resource": "limits.cpu",
+                    "divisor": "0"
+                  }
+                }
+              },
+              {
+                "name": "PROXY_CONFIG",
+                "value": "{}\n"
+              },
+              {
+                "name": "ISTIO_META_POD_PORTS",
+                "value": "[\n]"
+              },
+              {
+                "name": "ISTIO_META_APP_CONTAINERS",
+                "value": "executor"
+              },
+              {
+                "name": "ISTIO_META_CLUSTER_ID",
+                "value": "Kubernetes"
+              },
+              {
+                "name": "ISTIO_META_NODE_NAME",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "spec.nodeName"
+                  }
+                }
+              },
+              {
+                "name": "ISTIO_META_INTERCEPTION_MODE",
+                "value": "REDIRECT"
+              },
+              {
+                "name": "ISTIO_META_WORKLOAD_NAME",
+                "value": "executor-31904678-6c80-48b0-a21d-73778e52546a-cdde6a7b-8e5b-42f3-a605-417e5092b948"
+              },
+              {
+                "name": "ISTIO_META_OWNER",
+                "value": "kubernetes://apis/v1/namespaces/hub-execution/pods/executor-31904678-6c80-48b0-a21d-73778e52546a-cdde6a7b-8e5b-42f3-a605-417e5092b948"
+              },
+              {
+                "name": "ISTIO_META_MESH_ID",
+                "value": "cluster.local"
+              },
+              {
+                "name": "TRUST_DOMAIN",
+                "value": "cluster.local"
+              },
+              {
+                "name": "ISTIO_KUBE_APP_PROBERS",
+                "value": "{\"/app-health/executor/livez\":{\"httpGet\":{\"path\":\"/health/live\",\"port\":3000,\"scheme\":\"HTTP\"},\"timeoutSeconds\":1},\"/app-health/executor/readyz\":{\"httpGet\":{\"path\":\"/health/ready\",\"port\":3000,\"scheme\":\"HTTP\"},\"timeoutSeconds\":1},\"/app-health/executor/startupz\":{\"httpGet\":{\"path\":\"/health/live\",\"port\":3000,\"scheme\":\"HTTP\"},\"timeoutSeconds\":1}}"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "2",
+                "memory": "1Gi"
+              },
+              "requests": {
+                "cpu": "50m",
+                "memory": "128Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "workload-socket",
+                "mountPath": "/var/run/secrets/workload-spiffe-uds"
+              },
+              {
+                "name": "credential-socket",
+                "mountPath": "/var/run/secrets/credential-uds"
+              },
+              {
+                "name": "workload-certs",
+                "mountPath": "/var/run/secrets/workload-spiffe-credentials"
+              },
+              {
+                "name": "istiod-ca-cert",
+                "mountPath": "/var/run/secrets/istio"
+              },
+              {
+                "name": "istio-data",
+                "mountPath": "/var/lib/istio/data"
+              },
+              {
+                "name": "istio-envoy",
+                "mountPath": "/etc/istio/proxy"
+              },
+              {
+                "name": "istio-token",
+                "mountPath": "/var/run/secrets/tokens"
+              },
+              {
+                "name": "istio-podinfo",
+                "mountPath": "/etc/istio/pod"
+              },
+              {
+                "name": "kube-api-access-v4v8p",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/healthz/ready",
+                "port": 15021,
+                "scheme": "HTTP"
+              },
+              "initialDelaySeconds": 1,
+              "timeoutSeconds": 3,
+              "periodSeconds": 2,
+              "successThreshold": 1,
+              "failureThreshold": 30
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent",
+            "securityContext": {
+              "capabilities": {
+                "drop": [
+                  "ALL"
+                ]
+              },
+              "privileged": false,
+              "runAsUser": 1337,
+              "runAsGroup": 1337,
+              "runAsNonRoot": true,
+              "readOnlyRootFilesystem": true,
+              "allowPrivilegeEscalation": false
+            }
+          }
+        ],
+        "restartPolicy": "Never",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "serviceAccountName": "default",
+        "serviceAccount": "default",
+        "securityContext": {},
+        "imagePullSecrets": [
+          {
+            "name": "regcred"
+          },
+          {
+            "name": "registry-creds"
+          }
+        ],
+        "affinity": {
+          "nodeAffinity": {
+            "preferredDuringSchedulingIgnoredDuringExecution": [
+              {
+                "weight": 1,
+                "preference": {
+                  "matchExpressions": [
+                    {
+                      "key": "hub.knime.com/role",
+                      "operator": "In",
+                      "values": [
+                        "execution"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "schedulerName": "default-scheduler",
+        "tolerations": [
+          {
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          }
+        ],
+        "priority": 0,
+        "enableServiceLinks": true,
+        "preemptionPolicy": "PreemptLowerPriority"
+      },
+      "status": {
+        "phase": "Pending",
+        "conditions": [
+          {
+            "type": "PodScheduled",
+            "status": "False",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T16:05:32Z",
+            "reason": "Unschedulable",
+            "message": "0/1 nodes are available: 1 Insufficient memory. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod."
+          }
+        ],
+        "qosClass": "Burstable"
+      }
+    },
+    {
+      "kind": "Pod",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "executor-9043c21d-150c-4de1-bee5-7e992ebd922d-5beb76ab-80b6-467d-a7ed-30f2287cea23",
+        "namespace": "hub-execution",
+        "uid": "3f828a96-c6d8-42f7-b5bb-d8250ae96dbf",
+        "resourceVersion": "746066",
+        "creationTimestamp": "2023-11-21T14:31:08Z",
+        "labels": {
+          "app.kubernetes.io/component": "execution-context-pod",
+          "app.kubernetes.io/created-by": "knime-hub-execution-operator",
+          "app.kubernetes.io/instance": "9043c21d-150c-4de1-bee5-7e992ebd922d",
+          "app.kubernetes.io/managed-by": "knime-hub-execution-operator",
+          "app.kubernetes.io/name": "knime-hub-execution",
+          "app.kubernetes.io/part-of": "knime-hub",
+          "security.istio.io/tlsMode": "istio",
+          "service.istio.io/canonical-name": "knime-hub-execution",
+          "service.istio.io/canonical-revision": "latest"
+        },
+        "annotations": {
+          "configmap/checksum": "02f706c92ec0f62f48f8fe983846e2d72825a490b66c08fa2afa285084e9123e",
+          "istio.io/rev": "default",
+          "kubectl.kubernetes.io/default-container": "executor",
+          "kubectl.kubernetes.io/default-logs-container": "executor",
+          "prometheus.io/path": "/stats/prometheus",
+          "prometheus.io/port": "15020",
+          "prometheus.io/scrape": "true",
+          "scope": "hub:global",
+          "sidecar.istio.io/status": "{\"initContainers\":[\"istio-init\"],\"containers\":[\"istio-proxy\"],\"volumes\":[\"workload-socket\",\"credential-socket\",\"workload-certs\",\"istio-envoy\",\"istio-data\",\"istio-podinfo\",\"istio-token\",\"istiod-ca-cert\"],\"imagePullSecrets\":null,\"revision\":\"default\"}",
+          "traffic.sidecar.istio.io/excludeOutboundPorts": "5432"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "hub.knime.com/v1alpha1",
+            "kind": "ExecutionContext",
+            "name": "9043c21d-150c-4de1-bee5-7e992ebd922d",
+            "uid": "9b2b5809-06f8-47b1-8bce-61d131352268",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "execution-operator",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:31:08Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:configmap/checksum": {},
+                  "f:scope": {},
+                  "f:traffic.sidecar.istio.io/excludeOutboundPorts": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/created-by": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"9b2b5809-06f8-47b1-8bce-61d131352268\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:affinity": {
+                  ".": {},
+                  "f:nodeAffinity": {
+                    ".": {},
+                    "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                  }
+                },
+                "f:containers": {
+                  "k:{\"name\":\"executor\"}": {
+                    ".": {},
+                    "f:command": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"KNIME_CORE_MAX_THREADS\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTION_CONTEXT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_CONNECTION_RETRIES\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_CPU_USAGE_PERCENT_LIMIT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_HEALTH_CHECK_PATH\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_HEALTH_CHECK_PORT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_HEAP_USAGE_PERCENT_LIMIT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_ID\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_MAX_JOB_OUTPUT_SIZE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_MAX_LOADED_JOBS\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_MSGQ\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_PER_JOB_LOGGING\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"KNIME_EXECUTOR_SHUTDOWN_ON_DRAIN\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      }
+                    },
+                    "f:envFrom": {},
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:livenessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:name": {},
+                    "f:readinessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:resources": {
+                      ".": {},
+                      "f:limits": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      },
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:securityContext": {
+                      ".": {},
+                      "f:allowPrivilegeEscalation": {},
+                      "f:capabilities": {
+                        ".": {},
+                        "f:drop": {}
+                      },
+                      "f:readOnlyRootFilesystem": {},
+                      "f:runAsGroup": {},
+                      "f:runAsNonRoot": {},
+                      "f:runAsUser": {}
+                    },
+                    "f:startupProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/home/knime/knime/custom-ini-args\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:dnsPolicy": {},
+                "f:enableServiceLinks": {},
+                "f:imagePullSecrets": {
+                  ".": {},
+                  "k:{\"name\":\"regcred\"}": {},
+                  "k:{\"name\":\"registry-creds\"}": {}
+                },
+                "f:restartPolicy": {},
+                "f:schedulerName": {},
+                "f:securityContext": {},
+                "f:terminationGracePeriodSeconds": {},
+                "f:volumes": {
+                  ".": {},
+                  "k:{\"name\":\"9043c21d-150c-4de1-bee5-7e992ebd922d-knime-ini\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-21T14:31:33Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  "k:{\"type\":\"ContainersReady\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Initialized\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Ready\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:containerStatuses": {},
+                "f:hostIP": {},
+                "f:initContainerStatuses": {},
+                "f:phase": {},
+                "f:podIP": {},
+                "f:podIPs": {
+                  ".": {},
+                  "k:{\"ip\":\"***HIDDEN***\"}": {
+                    ".": {},
+                    "f:ip": {}
+                  }
+                },
+                "f:startTime": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "workload-socket",
+            "emptyDir": {}
+          },
+          {
+            "name": "credential-socket",
+            "emptyDir": {}
+          },
+          {
+            "name": "workload-certs",
+            "emptyDir": {}
+          },
+          {
+            "name": "istio-envoy",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "istio-data",
+            "emptyDir": {}
+          },
+          {
+            "name": "istio-podinfo",
+            "downwardAPI": {
+              "items": [
+                {
+                  "path": "labels",
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.labels"
+                  }
+                },
+                {
+                  "path": "annotations",
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.annotations"
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "istio-token",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "audience": "istio-ca",
+                    "expirationSeconds": 43200,
+                    "path": "istio-token"
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "istiod-ca-cert",
+            "configMap": {
+              "name": "istio-ca-root-cert",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "9043c21d-150c-4de1-bee5-7e992ebd922d-knime-ini",
+            "configMap": {
+              "name": "9043c21d-150c-4de1-bee5-7e992ebd922d-knime-ini",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "kube-api-access-5w55r",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "kube-root-ca.crt",
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "path": "namespace",
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          }
+        ],
+        "initContainers": [
+          {
+            "name": "istio-init",
+            "image": "docker.io/istio/proxyv2:1.18.1",
+            "args": [
+              "istio-iptables",
+              "-p",
+              "15001",
+              "-z",
+              "15006",
+              "-u",
+              "1337",
+              "-m",
+              "REDIRECT",
+              "-i",
+              "*",
+              "-x",
+              "",
+              "-b",
+              "*",
+              "-d",
+              "15090,15021,15020",
+              "-o",
+              "5432",
+              "--log_output_level=default:info",
+              "--log_as_json"
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "2",
+                "memory": "1Gi"
+              },
+              "requests": {
+                "cpu": "50m",
+                "memory": "128Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "kube-api-access-5w55r",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent",
+            "securityContext": {
+              "capabilities": {
+                "add": [
+                  "NET_ADMIN",
+                  "NET_RAW"
+                ],
+                "drop": [
+                  "ALL"
+                ]
+              },
+              "privileged": false,
+              "runAsUser": 0,
+              "runAsGroup": 0,
+              "runAsNonRoot": false,
+              "readOnlyRootFilesystem": false,
+              "allowPrivilegeEscalation": false
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "executor",
+            "image": "registry.hub.knime.com/knime/knime-full:r-5.1.2-433",
+            "command": [
+              "/bin/bash",
+              "-c",
+              "sed -i -e '/-vmargs/{H;r /home/knime/knime/custom-ini-args/applicationArguments' -e 'g;N}' /home/knime/knime/knime.ini \u0026\u0026 cat /home/knime/knime/custom-ini-args/vmArguments \u003e\u003e /home/knime/knime/knime.ini \u0026\u0026 /home/knime/knime/start-executor.sh"
+            ],
+            "envFrom": [
+              {
+                "configMapRef": {
+                  "name": "execution-env-variables"
+                }
+              }
+            ],
+            "env": [
+              {
+                "name": "KNIME_EXECUTOR_MSGQ",
+                "value": "tcp://9043c21d-150c-4de1-bee5-7e992ebd922d-user:68e68e81132a130358627594585e5710c26bdfd5c7943c023fa7a96754111cb4@activemq-artemis.knime.svc.cluster.local:61616?reconnectAttempts=-1"
+              },
+              {
+                "name": "KNIME_EXECUTION_CONTEXT",
+                "value": "9043c21d-150c-4de1-bee5-7e992ebd922d"
+              },
+              {
+                "name": "KNIME_EXECUTOR_HEALTH_CHECK_PORT",
+                "value": "3000"
+              },
+              {
+                "name": "KNIME_EXECUTOR_HEALTH_CHECK_PATH",
+                "value": "/health"
+              },
+              {
+                "name": "KNIME_EXECUTOR_CONNECTION_RETRIES",
+                "value": "-1"
+              },
+              {
+                "name": "KNIME_EXECUTOR_ID",
+                "value": "5beb76ab-80b6-467d-a7ed-30f2287cea23"
+              },
+              {
+                "name": "KNIME_EXECUTOR_SHUTDOWN_ON_DRAIN",
+                "value": "true"
+              },
+              {
+                "name": "KNIME_EXECUTOR_MAX_LOADED_JOBS",
+                "value": "2147483647"
+              },
+              {
+                "name": "KNIME_EXECUTOR_PER_JOB_LOGGING",
+                "value": "true"
+              },
+              {
+                "name": "KNIME_CORE_MAX_THREADS",
+                "value": "2"
+              },
+              {
+                "name": "KNIME_EXECUTOR_MAX_JOB_OUTPUT_SIZE",
+                "value": "10"
+              },
+              {
+                "name": "KNIME_EXECUTOR_CPU_USAGE_PERCENT_LIMIT",
+                "value": "90"
+              },
+              {
+                "name": "KNIME_EXECUTOR_HEAP_USAGE_PERCENT_LIMIT",
+                "value": "90"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "1",
+                "memory": "6Gi"
+              },
+              "requests": {
+                "cpu": "1",
+                "memory": "6Gi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "9043c21d-150c-4de1-bee5-7e992ebd922d-knime-ini",
+                "mountPath": "/home/knime/knime/custom-ini-args"
+              },
+              {
+                "name": "kube-api-access-5w55r",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "livenessProbe": {
+              "httpGet": {
+                "path": "/app-health/executor/livez",
+                "port": 15020,
+                "scheme": "HTTP"
+              },
+              "timeoutSeconds": 1,
+              "periodSeconds": 10,
+              "successThreshold": 1,
+              "failureThreshold": 6
+            },
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/app-health/executor/readyz",
+                "port": 15020,
+                "scheme": "HTTP"
+              },
+              "timeoutSeconds": 1,
+              "periodSeconds": 5,
+              "successThreshold": 1,
+              "failureThreshold": 1
+            },
+            "startupProbe": {
+              "httpGet": {
+                "path": "/app-health/executor/startupz",
+                "port": 15020,
+                "scheme": "HTTP"
+              },
+              "timeoutSeconds": 1,
+              "periodSeconds": 3,
+              "successThreshold": 1,
+              "failureThreshold": 20
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent",
+            "securityContext": {
+              "capabilities": {
+                "drop": [
+                  "ALL"
+                ]
+              },
+              "runAsUser": 1000,
+              "runAsGroup": 1000,
+              "runAsNonRoot": true,
+              "readOnlyRootFilesystem": false,
+              "allowPrivilegeEscalation": false
+            }
+          },
+          {
+            "name": "istio-proxy",
+            "image": "docker.io/istio/proxyv2:1.18.1",
+            "args": [
+              "proxy",
+              "sidecar",
+              "--domain",
+              "$(POD_NAMESPACE).svc.cluster.local",
+              "--proxyLogLevel=warning",
+              "--proxyComponentLogLevel=misc:error",
+              "--log_output_level=default:info",
+              "--log_as_json"
+            ],
+            "ports": [
+              {
+                "name": "http-envoy-prom",
+                "containerPort": 15090,
+                "protocol": "TCP"
+              }
+            ],
+            "env": [
+              {
+                "name": "JWT_POLICY",
+                "value": "third-party-jwt"
+              },
+              {
+                "name": "PILOT_CERT_PROVIDER",
+                "value": "istiod"
+              },
+              {
+                "name": "CA_ADDR",
+                "value": "istiod.istio-system.svc:15012"
+              },
+              {
+                "name": "POD_NAME",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.name"
+                  }
+                }
+              },
+              {
+                "name": "POD_NAMESPACE",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.namespace"
+                  }
+                }
+              },
+              {
+                "name": "INSTANCE_IP",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "status.podIP"
+                  }
+                }
+              },
+              {
+                "name": "SERVICE_ACCOUNT",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "spec.serviceAccountName"
+                  }
+                }
+              },
+              {
+                "name": "HOST_IP",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "status.hostIP"
+                  }
+                }
+              },
+              {
+                "name": "ISTIO_CPU_LIMIT",
+                "valueFrom": {
+                  "resourceFieldRef": {
+                    "resource": "limits.cpu",
+                    "divisor": "0"
+                  }
+                }
+              },
+              {
+                "name": "PROXY_CONFIG",
+                "value": "{}\n"
+              },
+              {
+                "name": "ISTIO_META_POD_PORTS",
+                "value": "[\n]"
+              },
+              {
+                "name": "ISTIO_META_APP_CONTAINERS",
+                "value": "executor"
+              },
+              {
+                "name": "ISTIO_META_CLUSTER_ID",
+                "value": "Kubernetes"
+              },
+              {
+                "name": "ISTIO_META_NODE_NAME",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "spec.nodeName"
+                  }
+                }
+              },
+              {
+                "name": "ISTIO_META_INTERCEPTION_MODE",
+                "value": "REDIRECT"
+              },
+              {
+                "name": "ISTIO_META_WORKLOAD_NAME",
+                "value": "executor-9043c21d-150c-4de1-bee5-7e992ebd922d-5beb76ab-80b6-467d-a7ed-30f2287cea23"
+              },
+              {
+                "name": "ISTIO_META_OWNER",
+                "value": "kubernetes://apis/v1/namespaces/hub-execution/pods/executor-9043c21d-150c-4de1-bee5-7e992ebd922d-5beb76ab-80b6-467d-a7ed-30f2287cea23"
+              },
+              {
+                "name": "ISTIO_META_MESH_ID",
+                "value": "cluster.local"
+              },
+              {
+                "name": "TRUST_DOMAIN",
+                "value": "cluster.local"
+              },
+              {
+                "name": "ISTIO_KUBE_APP_PROBERS",
+                "value": "{\"/app-health/executor/livez\":{\"httpGet\":{\"path\":\"/health/live\",\"port\":3000,\"scheme\":\"HTTP\"},\"timeoutSeconds\":1},\"/app-health/executor/readyz\":{\"httpGet\":{\"path\":\"/health/ready\",\"port\":3000,\"scheme\":\"HTTP\"},\"timeoutSeconds\":1},\"/app-health/executor/startupz\":{\"httpGet\":{\"path\":\"/health/live\",\"port\":3000,\"scheme\":\"HTTP\"},\"timeoutSeconds\":1}}"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "2",
+                "memory": "1Gi"
+              },
+              "requests": {
+                "cpu": "50m",
+                "memory": "128Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "workload-socket",
+                "mountPath": "/var/run/secrets/workload-spiffe-uds"
+              },
+              {
+                "name": "credential-socket",
+                "mountPath": "/var/run/secrets/credential-uds"
+              },
+              {
+                "name": "workload-certs",
+                "mountPath": "/var/run/secrets/workload-spiffe-credentials"
+              },
+              {
+                "name": "istiod-ca-cert",
+                "mountPath": "/var/run/secrets/istio"
+              },
+              {
+                "name": "istio-data",
+                "mountPath": "/var/lib/istio/data"
+              },
+              {
+                "name": "istio-envoy",
+                "mountPath": "/etc/istio/proxy"
+              },
+              {
+                "name": "istio-token",
+                "mountPath": "/var/run/secrets/tokens"
+              },
+              {
+                "name": "istio-podinfo",
+                "mountPath": "/etc/istio/pod"
+              },
+              {
+                "name": "kube-api-access-5w55r",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/healthz/ready",
+                "port": 15021,
+                "scheme": "HTTP"
+              },
+              "initialDelaySeconds": 1,
+              "timeoutSeconds": 3,
+              "periodSeconds": 2,
+              "successThreshold": 1,
+              "failureThreshold": 30
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent",
+            "securityContext": {
+              "capabilities": {
+                "drop": [
+                  "ALL"
+                ]
+              },
+              "privileged": false,
+              "runAsUser": 1337,
+              "runAsGroup": 1337,
+              "runAsNonRoot": true,
+              "readOnlyRootFilesystem": true,
+              "allowPrivilegeEscalation": false
+            }
+          }
+        ],
+        "restartPolicy": "Never",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "serviceAccountName": "default",
+        "serviceAccount": "default",
+        "nodeName": "ip-172-31-41-186",
+        "securityContext": {},
+        "imagePullSecrets": [
+          {
+            "name": "regcred"
+          },
+          {
+            "name": "registry-creds"
+          }
+        ],
+        "affinity": {
+          "nodeAffinity": {
+            "preferredDuringSchedulingIgnoredDuringExecution": [
+              {
+                "weight": 1,
+                "preference": {
+                  "matchExpressions": [
+                    {
+                      "key": "hub.knime.com/role",
+                      "operator": "In",
+                      "values": [
+                        "execution"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "schedulerName": "default-scheduler",
+        "tolerations": [
+          {
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          }
+        ],
+        "priority": 0,
+        "enableServiceLinks": true,
+        "preemptionPolicy": "PreemptLowerPriority"
+      },
+      "status": {
+        "phase": "Running",
+        "conditions": [
+          {
+            "type": "Initialized",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:31:12Z"
+          },
+          {
+            "type": "Ready",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:31:33Z"
+          },
+          {
+            "type": "ContainersReady",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:31:33Z"
+          },
+          {
+            "type": "PodScheduled",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2023-11-21T14:31:08Z"
+          }
+        ],
+        "hostIP": "***HIDDEN***",
+        "podIP": "***HIDDEN***",
+        "podIPs": [
+          {
+            "ip": "***HIDDEN***"
+          }
+        ],
+        "startTime": "2023-11-21T14:31:08Z",
+        "initContainerStatuses": [
+          {
+            "name": "istio-init",
+            "state": {
+              "terminated": {
+                "exitCode": 0,
+                "reason": "Completed",
+                "startedAt": "2023-11-21T14:31:12Z",
+                "finishedAt": "2023-11-21T14:31:12Z",
+                "containerID": "containerd://e8c187c066edebd2097d4ef60682c54e5db0bf528eef5fa186bc18b50e75bdce"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/istio/proxyv2:1.18.1",
+            "imageID": "docker.io/istio/proxyv2@sha256:7d1f3b4876e1652b344be6681ab9a62e454828503eecae59a94a406ea86be1fd",
+            "containerID": "containerd://e8c187c066edebd2097d4ef60682c54e5db0bf528eef5fa186bc18b50e75bdce"
+          }
+        ],
+        "containerStatuses": [
+          {
+            "name": "executor",
+            "state": {
+              "running": {
+                "startedAt": "2023-11-21T14:31:12Z"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "registry.hub.knime.com/knime/knime-full:r-5.1.2-433",
+            "imageID": "registry.hub.knime.com/knime/knime-full@sha256:6f68eca626f3df0b6c87cd7882bd55fce5c028a5c28ddc1fdc9ec43091b0b4d0",
+            "containerID": "containerd://ae8e893b46726ac7bc2216a3254d206d4343ce4a6f3238fef3145e13aa0fe759",
+            "started": true
+          },
+          {
+            "name": "istio-proxy",
+            "state": {
+              "running": {
+                "startedAt": "2023-11-21T14:31:12Z"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "docker.io/istio/proxyv2:1.18.1",
+            "imageID": "docker.io/istio/proxyv2@sha256:7d1f3b4876e1652b344be6681ab9a62e454828503eecae59a94a406ea86be1fd",
+            "containerID": "containerd://da040a2d5f61010ddb11ae445a53083380431c679ba1027791ba466e8da5b412",
+            "started": true
+          }
+        ],
+        "qosClass": "Burstable"
+      }
+    }
+  ]
+}

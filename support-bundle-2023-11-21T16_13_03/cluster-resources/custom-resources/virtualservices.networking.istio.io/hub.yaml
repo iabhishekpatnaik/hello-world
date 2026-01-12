@@ -1,0 +1,2650 @@
+- apiVersion: networking.istio.io/v1beta1
+  kind: VirtualService
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-helm-accounts-service
+      meta.helm.sh/release-namespace: hub
+    creationTimestamp: "2023-11-10T14:20:13Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: networking.istio.io/v1alpha3
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:gateways: {}
+          f:hosts: {}
+          f:http: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T14:20:13Z"
+    name: accounts-service
+    namespace: hub
+    resourceVersion: "16572"
+    uid: d8c1958a-f265-43de-af45-fb5658b7ee7d
+  spec:
+    gateways:
+    - hub-api-gateway
+    hosts:
+    - api.hub.kbh-troubleshooting.com
+    http:
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /users
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /accounts/limits
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /limits
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /accounts/permissions
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /permissions
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /accounts/application-passwords
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /application-passwords
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /accounts/api-doc/accounts/openapi
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /api-doc/accounts/openapi
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /accounts
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /knime/rest/v4/accounts
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /accounts
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+- apiVersion: networking.istio.io/v1beta1
+  kind: VirtualService
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-helm-catalog-service
+      meta.helm.sh/release-namespace: hub
+    creationTimestamp: "2023-11-10T14:20:16Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: networking.istio.io/v1alpha3
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:gateways: {}
+          f:hosts: {}
+          f:http: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T14:20:16Z"
+    name: catalog-service
+    namespace: hub
+    resourceVersion: "16649"
+    uid: 977183b3-8938-4f8d-9056-cfd9d7412fb2
+  spec:
+    gateways:
+    - hub-api-gateway
+    hosts:
+    - api.hub.kbh-troubleshooting.com
+    http:
+    - match:
+      - uri:
+          exact: /knime/rest
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/repository
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/repository
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/counts
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/counts
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/list
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/list
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/kudos
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/kudos
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/spaces
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/spaces
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/nodes
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/nodes
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/extensions
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/extensions
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/permissions
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/permissions
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/mappings
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/mappings
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/onboarding
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/onboarding
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/trash
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/trash
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/recommendations
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/recommendations
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /repository
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/repository
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /counts
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/counts
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /list
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/list
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /kudos
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/kudos
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /spaces
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/spaces
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /nodes
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/nodes
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /extensions
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/extensions
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /permissions
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/permissions
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /mappings
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/mappings
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /onboarding
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/onboarding
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /trash
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/trash
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /recommendations
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/recommendations
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /management/accounts
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/management/accounts
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /collections
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/collections
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /catalog/api-doc/catalog/openapi
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /api-doc/catalog/openapi
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+- apiVersion: networking.istio.io/v1beta1
+  kind: VirtualService
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-execution-context-manager
+      meta.helm.sh/release-namespace: hub
+    creationTimestamp: "2023-11-10T14:20:24Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: networking.istio.io/v1alpha3
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:gateways: {}
+          f:hosts: {}
+          f:http: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T14:20:24Z"
+    name: execution-context-manager
+    namespace: hub
+    resourceVersion: "16867"
+    uid: c4596c70-2440-45e7-87d6-91fbaaf7acbf
+  spec:
+    gateways:
+    - hub-api-gateway
+    hosts:
+    - api.hub.kbh-troubleshooting.com
+    http:
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /execution-status/
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /
+      route:
+      - destination:
+          host: execution-context-manager
+          port:
+            number: 80
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+- apiVersion: networking.istio.io/v1beta1
+  kind: VirtualService
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-helm-hub-webapp
+      meta.helm.sh/release-namespace: hub
+    creationTimestamp: "2023-11-10T14:20:17Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: networking.istio.io/v1alpha3
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:gateways: {}
+          f:hosts: {}
+          f:http: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T14:20:17Z"
+    name: hub-webapp
+    namespace: hub
+    resourceVersion: "16679"
+    uid: 79e5c577-c8b5-4ad2-ae37-9b3572df3874
+  spec:
+    gateways:
+    - hub-api-gateway
+    hosts:
+    - hub.kbh-troubleshooting.com
+    http:
+    - match:
+      - uri:
+          prefix: /_/auth/
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /auth/
+      route:
+      - destination:
+          host: auth-rely
+          port:
+            number: 80
+    - match:
+      - uri:
+          prefix: /
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /
+      route:
+      - destination:
+          host: hub-webapp
+          port:
+            number: 3000
+        headers:
+          request:
+            set:
+              x-forwarded-port: "443"
+              x-forwarded-proto: https
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+              X-Frame-Options: SAMEORIGIN
+- apiVersion: networking.istio.io/v1beta1
+  kind: VirtualService
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-infrastructure
+      meta.helm.sh/release-namespace: knime
+    creationTimestamp: "2023-11-10T13:18:59Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: networking.istio.io/v1alpha3
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:gateways: {}
+          f:hosts: {}
+          f:http: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T13:18:59Z"
+    name: mesh-routing-service
+    namespace: hub
+    resourceVersion: "4506"
+    uid: d3cc924b-27bf-4961-8af6-3ac556adc5e2
+  spec:
+    gateways:
+    - mesh
+    hosts:
+    - api.hub.kbh-troubleshooting.com
+    http:
+    - match:
+      - uri:
+          exact: /knime/rest
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/repository
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/repository
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/counts
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/counts
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/list
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/list
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/kudos
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/kudos
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/spaces
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/spaces
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/nodes
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/nodes
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/extensions
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/extensions
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/onboarding
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/onboarding
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/trash
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/trash
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/recommendations
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/recommendations
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /repository
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/repository
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /counts
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/counts
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /list
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/list
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /kudos
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/kudos
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /spaces
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/spaces
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /nodes
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/nodes
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /extensions
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/extensions
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /onboarding
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/onboarding
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /trash
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/trash
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /recommendations
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/recommendations
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /collections
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /catalog/collections
+      route:
+      - destination:
+          host: catalog-service
+          port:
+            number: 9080
+    - match:
+      - uri:
+          prefix: /search
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: search-service
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /instant-search
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: search-service
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/accounts
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /accounts
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /users
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /accounts/limits
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /limits
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /accounts/permissions
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /permissions
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /accounts/application-passwords
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /application-passwords
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /accounts
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: accounts-service
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /notifications
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: notification-service
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /subscriptions
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: stripe-subscription-service
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/jobs
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /jobs
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/scheduled-jobs
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /scheduled-jobs
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/execution
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /execution
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/execution-contexts
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /execution-contexts
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/executors
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /executors
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/deployments
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /deployments
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /jobs
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /scheduled-jobs
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /execution/limits
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /limits
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /execution/permissions
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /permissions
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /execution/ostore
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /ostore
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /execution/customization-profiles
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /customization-profiles
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /execution/tags
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /tags
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          exact: /execution
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /execution-contexts
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /executors
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /deployments
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /impersonate
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: keycloak-proxy
+          port:
+            number: 9090
+    - match:
+      - uri:
+          prefix: /workflow
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: keycloak-proxy
+          port:
+            number: 9090
+    - match:
+      - uri:
+          prefix: /edge/
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /
+      route:
+      - destination:
+          host: edge-service
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /secret-store/
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /
+      route:
+      - destination:
+          host: secret-store
+          port:
+            number: 8080
+    - match:
+      - uri:
+          prefix: /execution-status/
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /
+      route:
+      - destination:
+          host: execution-context-manager
+          port:
+            number: 80
+    - match:
+      - uri:
+          prefix: /execution-events/
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /
+      route:
+      - destination:
+          host: subscription-execution-event-aggregator
+          port:
+            number: 80
+- apiVersion: networking.istio.io/v1beta1
+  kind: VirtualService
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-execution-rest-interface
+      meta.helm.sh/release-namespace: hub
+    creationTimestamp: "2023-11-10T14:20:32Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: networking.istio.io/v1alpha3
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:gateways: {}
+          f:hosts: {}
+          f:http: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T14:20:32Z"
+    name: rest-interface
+    namespace: hub
+    resourceVersion: "17138"
+    uid: 4e82f827-10ef-417d-bb85-96578b33ee05
+  spec:
+    gateways:
+    - hub-api-gateway
+    hosts:
+    - api.hub.kbh-troubleshooting.com
+    http:
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/jobs
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /jobs
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/scheduled-jobs
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /scheduled-jobs
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/execution
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /execution
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/execution-contexts
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /execution-contexts
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/executors
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /executors
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /knime/rest/v4/deployments
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /deployments
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        - prefer
+        - x-knime-client-type
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /jobs
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        - prefer
+        - x-knime-client-type
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /scheduled-jobs
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        - prefer
+        - x-knime-client-type
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /execution/limits
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /limits
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        - prefer
+        - x-knime-client-type
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /execution/permissions
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /permissions
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        - prefer
+        - x-knime-client-type
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /execution/ostore
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /ostore
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        - prefer
+        - x-knime-client-type
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /execution/customization-profiles
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /customization-profiles
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        - prefer
+        - x-knime-client-type
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /execution/tags
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /tags
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - match:
+      - uri:
+          prefix: /execution/api-doc/execution/openapi
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /api-doc/execution/openapi
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        - prefer
+        - x-knime-client-type
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          exact: /execution
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        - prefer
+        - x-knime-client-type
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /execution-contexts
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        - prefer
+        - x-knime-client-type
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /executors
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        - prefer
+        - x-knime-client-type
+        allowMethods:
+        - POST
+        - PUT
+        - GET
+        - OPTIONS
+        - HEAD
+        - DELETE
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://localhost,localhost:3000,localhost:4000,***HIDDEN***,***HIDDEN***:3000,***HIDDEN***:4000
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /deployments
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: rest-interface
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+- apiVersion: networking.istio.io/v1beta1
+  kind: VirtualService
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-helm-search-service
+      meta.helm.sh/release-namespace: hub
+    creationTimestamp: "2023-11-10T14:20:18Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: networking.istio.io/v1alpha3
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:gateways: {}
+          f:hosts: {}
+          f:http: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T14:20:18Z"
+    name: search-service
+    namespace: hub
+    resourceVersion: "16713"
+    uid: 81aae720-1c65-497a-98f4-430bf9c5d7cb
+  spec:
+    gateways:
+    - hub-api-gateway
+    hosts:
+    - api.hub.kbh-troubleshooting.com
+    http:
+    - match:
+      - uri:
+          prefix: /search/api-doc/search/openapi
+      retries:
+        attempts: 3
+      rewrite:
+        uri: /api-doc/search/openapi
+      route:
+      - destination:
+          host: search-service
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - GET
+        - OPTIONS
+        - HEAD
+        - PUT
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://apps.hub.kbh-troubleshooting.com
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /search
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: search-service
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+    - corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+        - content-type
+        - authorization
+        allowMethods:
+        - POST
+        - GET
+        - OPTIONS
+        - HEAD
+        - PUT
+        allowOrigin:
+        - http://hub.kbh-troubleshooting.com
+        - http://***HIDDEN***:3000
+        - http://localhost:3000
+        - http://***HIDDEN***:4000
+        - http://localhost:4000
+      match:
+      - uri:
+          prefix: /instant-search
+      retries:
+        attempts: 3
+      route:
+      - destination:
+          host: search-service
+          port:
+            number: 8080
+        headers:
+          response:
+            set:
+              Strict-Transport-Security: max-age=31536000; includeSubDomainsTechnical
+- apiVersion: networking.istio.io/v1beta1
+  kind: VirtualService
+  metadata:
+    annotations:
+      kots.io/app-slug: knime-hub
+      meta.helm.sh/release-name: knime-hub-swagger
+      meta.helm.sh/release-namespace: hub
+    creationTimestamp: "2023-11-10T14:20:22Z"
+    generation: 1
+    labels:
+      app: swagger
+      app.kubernetes.io/managed-by: Helm
+      kots.io/app-slug: knime-hub
+      kots.io/backup: velero
+    managedFields:
+    - apiVersion: networking.istio.io/v1alpha3
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kots.io/app-slug: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:kots.io/app-slug: {}
+            f:kots.io/backup: {}
+        f:spec:
+          .: {}
+          f:gateways: {}
+          f:hosts: {}
+          f:http: {}
+      manager: helm
+      operation: Update
+      time: "2023-11-10T14:20:22Z"
+    name: swagger
+    namespace: hub
+    resourceVersion: "16822"
+    uid: 89aaf18c-d551-4d1a-bd7a-edd60490827b
+  spec:
+    gateways:
+    - hub-api-gateway
+    hosts:
+    - api.hub.kbh-troubleshooting.com
+    http:
+    - match:
+      - uri:
+          exact: /api-doc
+      redirect:
+        uri: /api-doc/
+    - match:
+      - uri:
+          exact: /api-doc/execution
+      redirect:
+        uri: /api-doc/?service=execution
+    - match:
+      - uri:
+          exact: /api-doc/accounts
+      redirect:
+        uri: /api-doc/?service=accounts-service
+    - match:
+      - uri:
+          exact: /api-doc/search
+      redirect:
+        uri: /api-doc/?service=search-service
+    - match:
+      - uri:
+          exact: /api-doc/catalog
+      redirect:
+        uri: /api-doc/?service=catalog-service
+    - match:
+      - uri:
+          prefix: /api-doc/
+      rewrite:
+        uri: /
+      route:
+      - destination:
+          host: swagger

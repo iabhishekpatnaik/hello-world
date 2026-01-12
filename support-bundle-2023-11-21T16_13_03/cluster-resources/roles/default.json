@@ -1,0 +1,68 @@
+{
+  "kind": "RoleList",
+  "apiVersion": "rbac.authorization.k8s.io/v1",
+  "metadata": {
+    "resourceVersion": "763994"
+  },
+  "items": [
+    {
+      "kind": "Role",
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "metadata": {
+        "name": "secret-manager",
+        "namespace": "default",
+        "uid": "d97e2ec0-cccc-4165-893d-233acb70e4d1",
+        "resourceVersion": "1353",
+        "creationTimestamp": "2023-11-10T12:59:19Z",
+        "labels": {
+          "kots.io/backup": "velero",
+          "kots.io/kotsadm": "true"
+        },
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"rbac.authorization.k8s.io/v1\",\"kind\":\"Role\",\"metadata\":{\"annotations\":{},\"labels\":{\"kots.io/backup\":\"velero\",\"kots.io/kotsadm\":\"true\"},\"name\":\"secret-manager\",\"namespace\":\"default\"},\"rules\":[{\"apiGroups\":[\"\"],\"resources\":[\"secrets\"],\"verbs\":[\"get\",\"watch\",\"list\",\"create\",\"patch\",\"update\"]}]}\n"
+        },
+        "managedFields": [
+          {
+            "manager": "kubectl-client-side-apply",
+            "operation": "Update",
+            "apiVersion": "rbac.authorization.k8s.io/v1",
+            "time": "2023-11-10T12:59:19Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:kots.io/backup": {},
+                  "f:kots.io/kotsadm": {}
+                }
+              },
+              "f:rules": {}
+            }
+          }
+        ]
+      },
+      "rules": [
+        {
+          "verbs": [
+            "get",
+            "watch",
+            "list",
+            "create",
+            "patch",
+            "update"
+          ],
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "secrets"
+          ]
+        }
+      ]
+    }
+  ]
+}

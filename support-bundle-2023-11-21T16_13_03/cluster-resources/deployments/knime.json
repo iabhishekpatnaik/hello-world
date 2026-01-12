@@ -1,0 +1,2430 @@
+{
+  "kind": "DeploymentList",
+  "apiVersion": "apps/v1",
+  "metadata": {
+    "resourceVersion": "763976"
+  },
+  "items": [
+    {
+      "kind": "Deployment",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "ingress-nginx-controller",
+        "namespace": "knime",
+        "uid": "e09c1330-19d9-4e7a-9c09-a3fb818ea124",
+        "resourceVersion": "745223",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:18:22Z",
+        "labels": {
+          "app.kubernetes.io/component": "controller",
+          "app.kubernetes.io/instance": "ingress-nginx",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "ingress-nginx",
+          "app.kubernetes.io/part-of": "ingress-nginx",
+          "app.kubernetes.io/version": "1.3.1",
+          "helm.sh/chart": "ingress-nginx-4.2.5-73033d1",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "1",
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "ingress-nginx",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T13:18:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:helm.sh/chart": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:kots.io/app-slug": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app.kubernetes.io/component": {},
+                      "f:app.kubernetes.io/instance": {},
+                      "f:app.kubernetes.io/name": {},
+                      "f:kots.io/app-slug": {},
+                      "f:kots.io/backup": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:nodeAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"controller\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"LD_PRELOAD\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"POD_NAME\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"POD_NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:lifecycle": {
+                          ".": {},
+                          "f:preStop": {
+                            ".": {},
+                            "f:exec": {
+                              ".": {},
+                              "f:command": {}
+                            }
+                          }
+                        },
+                        "f:livenessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":80,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":443,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":8443,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:securityContext": {
+                          ".": {},
+                          "f:allowPrivilegeEscalation": {},
+                          "f:capabilities": {
+                            ".": {},
+                            "f:add": {},
+                            "f:drop": {}
+                          },
+                          "f:privileged": {},
+                          "f:readOnlyRootFilesystem": {},
+                          "f:runAsGroup": {},
+                          "f:runAsNonRoot": {},
+                          "f:runAsUser": {},
+                          "f:seccompProfile": {
+                            ".": {},
+                            "f:type": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/usr/local/certificates/\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {},
+                            "f:readOnly": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"knime-hub-ingress-nginx-registry\"}": {}
+                    },
+                    "f:nodeSelector": {},
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"webhook-cert\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:secret": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:secretName": {}
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:30:26Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app.kubernetes.io/component": "controller",
+            "app.kubernetes.io/instance": "ingress-nginx",
+            "app.kubernetes.io/name": "ingress-nginx"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app.kubernetes.io/component": "controller",
+              "app.kubernetes.io/instance": "ingress-nginx",
+              "app.kubernetes.io/name": "ingress-nginx",
+              "kots.io/app-slug": "knime-hub",
+              "kots.io/backup": "velero"
+            },
+            "annotations": {
+              "kots.io/app-slug": "knime-hub"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "webhook-cert",
+                "secret": {
+                  "secretName": "ingress-nginx-admission",
+                  "defaultMode": 420
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "controller",
+                "image": "registry.k8s.io/ingress-nginx/controller:v1.3.1",
+                "args": [
+                  "/nginx-ingress-controller",
+                  "--publish-service=$(POD_NAMESPACE)/ingress-nginx-controller",
+                  "--election-id=ingress-controller-leader",
+                  "--controller-class=k8s.io/ingress-nginx",
+                  "--ingress-class=knimehub",
+                  "--configmap=$(POD_NAMESPACE)/ingress-nginx-controller",
+                  "--validating-webhook=:8443",
+                  "--validating-webhook-certificate=/usr/local/certificates/cert",
+                  "--validating-webhook-key=/usr/local/certificates/key"
+                ],
+                "ports": [
+                  {
+                    "name": "http",
+                    "containerPort": 80,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "name": "https",
+                    "containerPort": 443,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "name": "webhook",
+                    "containerPort": 8443,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "POD_NAME",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.name"
+                      }
+                    }
+                  },
+                  {
+                    "name": "POD_NAMESPACE",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      }
+                    }
+                  },
+                  {
+                    "name": "LD_PRELOAD",
+                    "value": "/usr/local/lib/libmimalloc.so"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "90Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "webhook-cert",
+                    "readOnly": true,
+                    "mountPath": "/usr/local/certificates/"
+                  }
+                ],
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/healthz",
+                    "port": 10254,
+                    "scheme": "HTTP"
+                  },
+                  "initialDelaySeconds": 10,
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 10,
+                  "successThreshold": 1,
+                  "failureThreshold": 5
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/healthz",
+                    "port": 10254,
+                    "scheme": "HTTP"
+                  },
+                  "initialDelaySeconds": 10,
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 10,
+                  "successThreshold": 1,
+                  "failureThreshold": 3
+                },
+                "lifecycle": {
+                  "preStop": {
+                    "exec": {
+                      "command": [
+                        "/wait-shutdown"
+                      ]
+                    }
+                  }
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent",
+                "securityContext": {
+                  "capabilities": {
+                    "add": [
+                      "NET_BIND_SERVICE"
+                    ],
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "privileged": false,
+                  "runAsUser": 101,
+                  "runAsGroup": 101,
+                  "runAsNonRoot": true,
+                  "readOnlyRootFilesystem": false,
+                  "allowPrivilegeEscalation": false,
+                  "seccompProfile": {
+                    "type": "RuntimeDefault"
+                  }
+                }
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 300,
+            "dnsPolicy": "ClusterFirst",
+            "nodeSelector": {
+              "kubernetes.io/os": "linux"
+            },
+            "serviceAccountName": "ingress-nginx",
+            "serviceAccount": "ingress-nginx",
+            "securityContext": {},
+            "imagePullSecrets": [
+              {
+                "name": "knime-hub-ingress-nginx-registry"
+              }
+            ],
+            "affinity": {
+              "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "preference": {
+                      "matchExpressions": [
+                        {
+                          "key": "hub.knime.com/role",
+                          "operator": "In",
+                          "values": [
+                            "core"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": "25%",
+            "maxSurge": "25%"
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 1,
+        "updatedReplicas": 1,
+        "readyReplicas": 1,
+        "availableReplicas": 1,
+        "conditions": [
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2023-11-10T13:18:42Z",
+            "lastTransitionTime": "2023-11-10T13:18:22Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"ingress-nginx-controller-b485b478d\" has successfully progressed."
+          },
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2023-11-21T14:30:26Z",
+            "lastTransitionTime": "2023-11-21T14:30:26Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Deployment",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "keycloak-operator",
+        "namespace": "knime",
+        "uid": "5cccb0c1-ac94-4939-80b5-371a09c480e3",
+        "resourceVersion": "744922",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:18:28Z",
+        "labels": {
+          "app.kubernetes.io/instance": "knime-keycloak-operator",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "knime-keycloak-operator",
+          "app.kubernetes.io/version": "19.0.3-legacy",
+          "helm.sh/chart": "knime-keycloak-operator-0.2.1-57daee5",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "1",
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-keycloak-operator",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T13:18:28Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:helm.sh/chart": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:kots.io/app-slug": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app.kubernetes.io/instance": {},
+                      "f:app.kubernetes.io/name": {},
+                      "f:kots.io/app-slug": {},
+                      "f:kots.io/backup": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:nodeAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"keycloak-operator\"}": {
+                        ".": {},
+                        "f:command": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"OPERATOR_NAME\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"POD_NAME\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"RELATED_IMAGE_KEYCLOAK\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"RELATED_IMAGE_KEYCLOAK_INIT_CONTAINER\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"WATCH_NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:resources": {},
+                        "f:securityContext": {
+                          ".": {},
+                          "f:allowPrivilegeEscalation": {},
+                          "f:capabilities": {
+                            ".": {},
+                            "f:drop": {}
+                          },
+                          "f:privileged": {},
+                          "f:readOnlyRootFilesystem": {},
+                          "f:runAsGroup": {},
+                          "f:runAsNonRoot": {},
+                          "f:runAsUser": {},
+                          "f:seccompProfile": {
+                            ".": {},
+                            "f:type": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"knime-hub-knime-keycloak-operator-registry\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {
+                      ".": {},
+                      "f:fsGroup": {}
+                    },
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:30:08Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app.kubernetes.io/instance": "knime-keycloak-operator",
+            "app.kubernetes.io/name": "knime-keycloak-operator"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app.kubernetes.io/instance": "knime-keycloak-operator",
+              "app.kubernetes.io/name": "knime-keycloak-operator",
+              "kots.io/app-slug": "knime-hub",
+              "kots.io/backup": "velero"
+            },
+            "annotations": {
+              "kots.io/app-slug": "knime-hub"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "keycloak-operator",
+                "image": "quay.io/keycloak/keycloak-operator:19.0.3-legacy",
+                "command": [
+                  "keycloak-operator"
+                ],
+                "env": [
+                  {
+                    "name": "WATCH_NAMESPACE",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      }
+                    }
+                  },
+                  {
+                    "name": "POD_NAME",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.name"
+                      }
+                    }
+                  },
+                  {
+                    "name": "OPERATOR_NAME",
+                    "value": "keycloak-operator"
+                  },
+                  {
+                    "name": "RELATED_IMAGE_KEYCLOAK",
+                    "value": "quay.io/keycloak/keycloak:19.0.3-legacy"
+                  },
+                  {
+                    "name": "RELATED_IMAGE_KEYCLOAK_INIT_CONTAINER",
+                    "value": "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-keycloak-extensions-init:19.0.3-legacy-00851e8"
+                  }
+                ],
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent",
+                "securityContext": {
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "privileged": false,
+                  "runAsUser": 1001,
+                  "runAsGroup": 1001,
+                  "runAsNonRoot": true,
+                  "readOnlyRootFilesystem": false,
+                  "allowPrivilegeEscalation": false,
+                  "seccompProfile": {
+                    "type": "RuntimeDefault"
+                  }
+                }
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "knime-keycloak",
+            "serviceAccount": "knime-keycloak",
+            "securityContext": {
+              "fsGroup": 1001
+            },
+            "imagePullSecrets": [
+              {
+                "name": "knime-hub-knime-keycloak-operator-registry"
+              }
+            ],
+            "affinity": {
+              "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "preference": {
+                      "matchExpressions": [
+                        {
+                          "key": "hub.knime.com/role",
+                          "operator": "In",
+                          "values": [
+                            "core"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": "25%",
+            "maxSurge": "25%"
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 1,
+        "updatedReplicas": 1,
+        "readyReplicas": 1,
+        "availableReplicas": 1,
+        "conditions": [
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2023-11-10T13:18:33Z",
+            "lastTransitionTime": "2023-11-10T13:18:28Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"keycloak-operator-5f6d88d8fb\" has successfully progressed."
+          },
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2023-11-21T14:30:08Z",
+            "lastTransitionTime": "2023-11-21T14:30:08Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Deployment",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "knime-hub-endpoint-status-tracker",
+        "namespace": "knime",
+        "uid": "9bb834ae-6ac6-46d9-8ec6-a598f8e30ddc",
+        "resourceVersion": "745032",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:19:00Z",
+        "labels": {
+          "app.kubernetes.io/managed-by": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "1",
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-endpoint-status-tracker",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T13:19:00Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:checksum/endpoint-config": {},
+                      "f:kots.io/app-slug": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:kots.io/app-slug": {},
+                      "f:kots.io/backup": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:nodeAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"knime-hub-endpoint-status-tracker\"}": {
+                        ".": {},
+                        "f:command": {},
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:resources": {
+                          ".": {},
+                          "f:limits": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          },
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:securityContext": {
+                          ".": {},
+                          "f:allowPrivilegeEscalation": {},
+                          "f:capabilities": {
+                            ".": {},
+                            "f:drop": {}
+                          },
+                          "f:privileged": {},
+                          "f:readOnlyRootFilesystem": {},
+                          "f:runAsGroup": {},
+                          "f:runAsNonRoot": {},
+                          "f:runAsUser": {},
+                          "f:seccompProfile": {
+                            ".": {},
+                            "f:type": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/data/\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"knime-hub-knime-hub-endpoint-status-tracker-registry\"}": {},
+                      "k:{\"name\":\"regcred\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"config\"}": {
+                        ".": {},
+                        "f:configMap": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:name": {}
+                        },
+                        "f:name": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:30:16Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app": "knime-hub-endpoint-status-tracker"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app": "knime-hub-endpoint-status-tracker",
+              "kots.io/app-slug": "knime-hub",
+              "kots.io/backup": "velero"
+            },
+            "annotations": {
+              "checksum/endpoint-config": "86acc625b7f3c544cb4f8cba6c9a696e97f6af72d7e91f8255fa6764a9610d4c",
+              "kots.io/app-slug": "knime-hub"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "config",
+                "configMap": {
+                  "name": "knime-hub-endpoint-status-tracker",
+                  "defaultMode": 420
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "knime-hub-endpoint-status-tracker",
+                "image": "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-endpoint-status-tracker:0.2.0-beta-20230908-135743-000013-399ba19",
+                "command": [
+                  "/app/manager",
+                  "--config",
+                  "/data/config.yaml"
+                ],
+                "resources": {
+                  "limits": {
+                    "cpu": "200m",
+                    "memory": "256Mi"
+                  },
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "config",
+                    "mountPath": "/data/"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent",
+                "securityContext": {
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "privileged": false,
+                  "runAsUser": 1001,
+                  "runAsGroup": 1001,
+                  "runAsNonRoot": true,
+                  "readOnlyRootFilesystem": false,
+                  "allowPrivilegeEscalation": false,
+                  "seccompProfile": {
+                    "type": "RuntimeDefault"
+                  }
+                }
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "securityContext": {},
+            "imagePullSecrets": [
+              {
+                "name": "knime-hub-knime-hub-endpoint-status-tracker-registry"
+              },
+              {
+                "name": "regcred"
+              }
+            ],
+            "affinity": {
+              "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "preference": {
+                      "matchExpressions": [
+                        {
+                          "key": "hub.knime.com/role",
+                          "operator": "In",
+                          "values": [
+                            "core"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": "25%",
+            "maxSurge": "25%"
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 1,
+        "updatedReplicas": 1,
+        "readyReplicas": 1,
+        "availableReplicas": 1,
+        "conditions": [
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2023-11-10T13:19:07Z",
+            "lastTransitionTime": "2023-11-10T13:19:00Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"knime-hub-endpoint-status-tracker-7d55d8b5d6\" has successfully progressed."
+          },
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2023-11-21T14:30:16Z",
+            "lastTransitionTime": "2023-11-21T14:30:16Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Deployment",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "knime-secret-operator",
+        "namespace": "knime",
+        "uid": "7c59ad39-a52f-43a1-8449-d0a35c9fb808",
+        "resourceVersion": "745308",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:18:32Z",
+        "labels": {
+          "app.kubernetes.io/instance": "knime-secret-operator",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "knime-secret-operator",
+          "app.kubernetes.io/version": "0.2.0-beta-20230928-201727-000010-6a269a9",
+          "helm.sh/chart": "knime-secret-operator-0.2.0-beta-20230928-201727-000010-6a269a9",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "1",
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-secret-operator",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T13:18:32Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:helm.sh/chart": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:kots.io/app-slug": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app.kubernetes.io/instance": {},
+                      "f:app.kubernetes.io/managed-by": {},
+                      "f:app.kubernetes.io/name": {},
+                      "f:app.kubernetes.io/version": {},
+                      "f:helm.sh/chart": {},
+                      "f:kots.io/app-slug": {},
+                      "f:kots.io/backup": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:nodeAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"knime-secret-operator\"}": {
+                        ".": {},
+                        "f:command": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"CONTROLLER_SERVICE_ACCOUNT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:livenessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:name": {},
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {},
+                        "f:securityContext": {
+                          ".": {},
+                          "f:allowPrivilegeEscalation": {},
+                          "f:capabilities": {
+                            ".": {},
+                            "f:drop": {}
+                          },
+                          "f:privileged": {},
+                          "f:readOnlyRootFilesystem": {},
+                          "f:runAsGroup": {},
+                          "f:runAsNonRoot": {},
+                          "f:runAsUser": {},
+                          "f:seccompProfile": {
+                            ".": {},
+                            "f:type": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"knime-hub-knime-secret-operator-registry\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:30:30Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app.kubernetes.io/instance": "knime-secret-operator",
+            "app.kubernetes.io/name": "knime-secret-operator"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app.kubernetes.io/instance": "knime-secret-operator",
+              "app.kubernetes.io/managed-by": "Helm",
+              "app.kubernetes.io/name": "knime-secret-operator",
+              "app.kubernetes.io/version": "0.2.0-beta-20230928-201727-000010-6a269a9",
+              "helm.sh/chart": "knime-secret-operator-0.2.0-beta-20230928-201727-000010-6a269a9",
+              "kots.io/app-slug": "knime-hub",
+              "kots.io/backup": "velero"
+            },
+            "annotations": {
+              "kots.io/app-slug": "knime-hub"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "knime-secret-operator",
+                "image": "proxy.replicated.com/proxy/knime-hub/registry.hubdev.knime.com/knime-hub/knime-hub-secret-operator:0.2.0-beta-20230928-201727-000010-6a269a9",
+                "command": [
+                  "/manager"
+                ],
+                "env": [
+                  {
+                    "name": "CONTROLLER_SERVICE_ACCOUNT",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "spec.serviceAccountName"
+                      }
+                    }
+                  }
+                ],
+                "resources": {},
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/healthz",
+                    "port": 8081,
+                    "scheme": "HTTP"
+                  },
+                  "initialDelaySeconds": 15,
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 20,
+                  "successThreshold": 1,
+                  "failureThreshold": 3
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/readyz",
+                    "port": 8081,
+                    "scheme": "HTTP"
+                  },
+                  "initialDelaySeconds": 5,
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 10,
+                  "successThreshold": 1,
+                  "failureThreshold": 3
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent",
+                "securityContext": {
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "privileged": false,
+                  "runAsUser": 10001,
+                  "runAsGroup": 10001,
+                  "runAsNonRoot": true,
+                  "readOnlyRootFilesystem": false,
+                  "allowPrivilegeEscalation": false,
+                  "seccompProfile": {
+                    "type": "RuntimeDefault"
+                  }
+                }
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "knime-secret-operator-knime-hub",
+            "serviceAccount": "knime-secret-operator-knime-hub",
+            "securityContext": {},
+            "imagePullSecrets": [
+              {
+                "name": "knime-hub-knime-secret-operator-registry"
+              }
+            ],
+            "affinity": {
+              "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "preference": {
+                      "matchExpressions": [
+                        {
+                          "key": "hub.knime.com/role",
+                          "operator": "In",
+                          "values": [
+                            "core"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": "25%",
+            "maxSurge": "25%"
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 1,
+        "updatedReplicas": 1,
+        "readyReplicas": 1,
+        "availableReplicas": 1,
+        "conditions": [
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2023-11-10T13:18:52Z",
+            "lastTransitionTime": "2023-11-10T13:18:32Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"knime-secret-operator-5cc765755d\" has successfully progressed."
+          },
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2023-11-21T14:30:30Z",
+            "lastTransitionTime": "2023-11-21T14:30:30Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Deployment",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "minio",
+        "namespace": "knime",
+        "uid": "34cee6cd-c40c-4f8d-8b8b-b922dd3ae6ae",
+        "resourceVersion": "745263",
+        "generation": 2,
+        "creationTimestamp": "2023-11-10T13:19:22Z",
+        "labels": {
+          "app": "minio",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "minio-3.6.3-597315a",
+          "heritage": "Helm",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "release": "minio"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "2",
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "minio",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-13T11:59:19Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:heritage": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:backup.velero.io/backup-volumes": {},
+                      "f:checksum/config": {},
+                      "f:checksum/secrets": {},
+                      "f:kots.io/app-slug": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:kots.io/app-slug": {},
+                      "f:kots.io/backup": {},
+                      "f:release": {}
+                    },
+                    "f:name": {}
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:nodeAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"minio\"}": {
+                        ".": {},
+                        "f:command": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"MINIO_PROMETHEUS_AUTH_TYPE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"MINIO_ROOT_PASSWORD\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"MINIO_ROOT_USER\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":9000,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":9001,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:limits": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          },
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/export\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/tmp/credentials\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {},
+                            "f:readOnly": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"knime-hub-minio-registry\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {
+                      ".": {},
+                      "f:fsGroup": {},
+                      "f:fsGroupChangePolicy": {},
+                      "f:runAsGroup": {},
+                      "f:runAsUser": {}
+                    },
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"export\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:persistentVolumeClaim": {
+                          ".": {},
+                          "f:claimName": {}
+                        }
+                      },
+                      "k:{\"name\":\"minio-user\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:secret": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:secretName": {}
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:30:28Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app": "minio",
+            "release": "minio"
+          }
+        },
+        "template": {
+          "metadata": {
+            "name": "minio",
+            "creationTimestamp": null,
+            "labels": {
+              "app": "minio",
+              "kots.io/app-slug": "knime-hub",
+              "kots.io/backup": "velero",
+              "release": "minio"
+            },
+            "annotations": {
+              "backup.velero.io/backup-volumes": "export",
+              "checksum/config": "45891b5e3c51f57e16aedaad29dd6fa6c78a6fa1766faffcb91a8f04b99b4071",
+              "checksum/secrets": "ee818475c397dca1e6a83f46a0fc73d522d8861b4b574077790e2417f600ce2a",
+              "kots.io/app-slug": "knime-hub"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "export",
+                "persistentVolumeClaim": {
+                  "claimName": "minio"
+                }
+              },
+              {
+                "name": "minio-user",
+                "secret": {
+                  "secretName": "minio",
+                  "defaultMode": 420
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "minio",
+                "image": "quay.io/minio/minio:RELEASE.2022-03-17T06-34-49Z",
+                "command": [
+                  "/bin/sh",
+                  "-ce",
+                  "/usr/bin/docker-entrypoint.sh minio server /export -S /etc/minio/certs/ --address :9000 --console-address :9001"
+                ],
+                "ports": [
+                  {
+                    "name": "http",
+                    "containerPort": 9000,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "name": "http-console",
+                    "containerPort": 9001,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "MINIO_ROOT_USER",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "minio",
+                        "key": "rootUser"
+                      }
+                    }
+                  },
+                  {
+                    "name": "MINIO_ROOT_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "minio",
+                        "key": "rootPassword"
+                      }
+                    }
+                  },
+                  {
+                    "name": "MINIO_PROMETHEUS_AUTH_TYPE",
+                    "value": "public"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "cpu": "500m",
+                    "memory": "1Gi"
+                  },
+                  "requests": {
+                    "cpu": "125m",
+                    "memory": "256Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "minio-user",
+                    "readOnly": true,
+                    "mountPath": "/tmp/credentials"
+                  },
+                  {
+                    "name": "export",
+                    "mountPath": "/export"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "minio-sa",
+            "serviceAccount": "minio-sa",
+            "securityContext": {
+              "runAsUser": 1000,
+              "runAsGroup": 1000,
+              "fsGroup": 1000,
+              "fsGroupChangePolicy": "OnRootMismatch"
+            },
+            "imagePullSecrets": [
+              {
+                "name": "knime-hub-minio-registry"
+              }
+            ],
+            "affinity": {
+              "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "preference": {
+                      "matchExpressions": [
+                        {
+                          "key": "hub.knime.com/role",
+                          "operator": "In",
+                          "values": [
+                            "core"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": 0,
+            "maxSurge": "100%"
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 2,
+        "replicas": 1,
+        "updatedReplicas": 1,
+        "readyReplicas": 1,
+        "availableReplicas": 1,
+        "conditions": [
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2023-11-13T11:59:20Z",
+            "lastTransitionTime": "2023-11-10T13:19:22Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"minio-7d6fc7d974\" has successfully progressed."
+          },
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2023-11-21T14:30:28Z",
+            "lastTransitionTime": "2023-11-21T14:30:28Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Deployment",
+      "apiVersion": "apps/v1",
+      "metadata": {
+        "name": "postgres-operator",
+        "namespace": "knime",
+        "uid": "f79411e3-66b8-4add-af01-39e7c040ccf4",
+        "resourceVersion": "745275",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T13:19:02Z",
+        "labels": {
+          "app.kubernetes.io/instance": "postgres-operator",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "postgres-operator",
+          "helm.sh/chart": "postgres-operator-1.10.0-34c4225",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "1",
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "postgres-operator",
+          "meta.helm.sh/release-namespace": "knime"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-10T13:19:02Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:helm.sh/chart": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:checksum/config": {},
+                      "f:kots.io/app-slug": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app.kubernetes.io/instance": {},
+                      "f:app.kubernetes.io/name": {},
+                      "f:kots.io/app-slug": {},
+                      "f:kots.io/backup": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:nodeAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"postgres-operator\"}": {
+                        ".": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"CONFIG_MAP_NAME\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:initialDelaySeconds": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:limits": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          },
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:securityContext": {
+                          ".": {},
+                          "f:allowPrivilegeEscalation": {},
+                          "f:capabilities": {
+                            ".": {},
+                            "f:drop": {}
+                          },
+                          "f:privileged": {},
+                          "f:readOnlyRootFilesystem": {},
+                          "f:runAsGroup": {},
+                          "f:runAsNonRoot": {},
+                          "f:runAsUser": {},
+                          "f:seccompProfile": {
+                            ".": {},
+                            "f:type": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"knime-hub-postgres-operator-registry\"}": {},
+                      "k:{\"name\":\"knime-hub-registry\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {
+                      ".": {},
+                      "f:fsGroup": {}
+                    },
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2023-11-21T14:30:28Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app.kubernetes.io/instance": "postgres-operator",
+            "app.kubernetes.io/name": "postgres-operator"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app.kubernetes.io/instance": "postgres-operator",
+              "app.kubernetes.io/name": "postgres-operator",
+              "kots.io/app-slug": "knime-hub",
+              "kots.io/backup": "velero"
+            },
+            "annotations": {
+              "checksum/config": "c9737d995676c857265af34c5c90bf2df26a8ee3bea36c506df950073e61314b",
+              "kots.io/app-slug": "knime-hub"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "postgres-operator",
+                "image": "registry.opensource.zalan.do/acid/postgres-operator:v1.10.0",
+                "env": [
+                  {
+                    "name": "CONFIG_MAP_NAME",
+                    "value": "postgres-operator"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "cpu": "500m",
+                    "memory": "500Mi"
+                  },
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "250Mi"
+                  }
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/readyz",
+                    "port": 8080,
+                    "scheme": "HTTP"
+                  },
+                  "initialDelaySeconds": 5,
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 10,
+                  "successThreshold": 1,
+                  "failureThreshold": 3
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent",
+                "securityContext": {
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "privileged": false,
+                  "runAsUser": 1000,
+                  "runAsGroup": 1000,
+                  "runAsNonRoot": true,
+                  "readOnlyRootFilesystem": true,
+                  "allowPrivilegeEscalation": false,
+                  "seccompProfile": {
+                    "type": "RuntimeDefault"
+                  }
+                }
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "knime-postgres-operator",
+            "serviceAccount": "knime-postgres-operator",
+            "securityContext": {
+              "fsGroup": 1000
+            },
+            "imagePullSecrets": [
+              {
+                "name": "knime-hub-postgres-operator-registry"
+              },
+              {
+                "name": "knime-hub-registry"
+              }
+            ],
+            "affinity": {
+              "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 1,
+                    "preference": {
+                      "matchExpressions": [
+                        {
+                          "key": "hub.knime.com/role",
+                          "operator": "In",
+                          "values": [
+                            "core"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": "25%",
+            "maxSurge": "25%"
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 1,
+        "updatedReplicas": 1,
+        "readyReplicas": 1,
+        "availableReplicas": 1,
+        "conditions": [
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2023-11-10T13:19:22Z",
+            "lastTransitionTime": "2023-11-10T13:19:02Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"postgres-operator-687f6c85db\" has successfully progressed."
+          },
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2023-11-21T14:30:28Z",
+            "lastTransitionTime": "2023-11-21T14:30:28Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          }
+        ]
+      }
+    }
+  ]
+}

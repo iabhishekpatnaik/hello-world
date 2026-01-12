@@ -1,0 +1,20 @@
+* processing: http://knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080/status?endpoint=elasticsearch-master
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ***HIDDEN***:8080...
+* Connected to knime-hub-endpoint-status-tracker.knime.svc.cluster.local (***HIDDEN***) port 8080
+> GET /status?endpoint=elasticsearch-master HTTP/1.1
+> Host: knime-hub-endpoint-status-tracker.knime.svc.cluster.local:8080
+> User-Agent: curl/8.2.1
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Content-Type: text/plain
+< Date: Tue, 21 Nov 2023 14:31:04 GMT
+< Content-Length: 2
+< 
+{ [2 bytes data]
+100     2  100     2    0     0    560      0 --:--:-- --:--:-- --:--:--   666
+* Connection #0 to host knime-hub-endpoint-status-tracker.knime.svc.cluster.local left intact
+
+now available.

@@ -1,0 +1,284 @@
+{
+  "kind": "ServiceList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "763976"
+  },
+  "items": [
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "istio-ingressgateway",
+        "namespace": "istio-system",
+        "uid": "d70433fb-94d4-4161-8228-7a789140e2e4",
+        "resourceVersion": "3989",
+        "creationTimestamp": "2023-11-10T13:18:10Z",
+        "labels": {
+          "app": "istio-ingressgateway",
+          "app.kubernetes.io/managed-by": "Helm",
+          "install.operator.istio.io/owning-resource": "unknown",
+          "istio": "ingressgateway",
+          "istio.io/rev": "default",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "operator.istio.io/component": "IngressGateways",
+          "release": "istio"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-istio",
+          "meta.helm.sh/release-namespace": "istio-system",
+          "service.beta.kubernetes.io/aws-load-balancer-backend-protocol": "http",
+          "service.beta.kubernetes.io/aws-load-balancer-internal": "false",
+          "service.beta.kubernetes.io/aws-load-balancer-ssl-ports": "443,15020,15029,15030,15031,15032,31400,15443"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:18:10Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {},
+                  "f:service.beta.kubernetes.io/aws-load-balancer-backend-protocol": {},
+                  "f:service.beta.kubernetes.io/aws-load-balancer-internal": {},
+                  "f:service.beta.kubernetes.io/aws-load-balancer-ssl-ports": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:install.operator.istio.io/owning-resource": {},
+                  "f:istio": {},
+                  "f:istio.io/rev": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:operator.istio.io/component": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":443,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":15021,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "status-port",
+            "protocol": "TCP",
+            "port": 15021,
+            "targetPort": 15021
+          },
+          {
+            "name": "http2",
+            "protocol": "TCP",
+            "port": 80,
+            "targetPort": 8080
+          },
+          {
+            "name": "https",
+            "protocol": "TCP",
+            "port": 443,
+            "targetPort": 8443
+          }
+        ],
+        "selector": {
+          "app": "istio-ingressgateway",
+          "istio": "ingressgateway"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "istiod",
+        "namespace": "istio-system",
+        "uid": "aa2fe9e0-dadf-4d09-a2b3-dfe940dbf75d",
+        "resourceVersion": "3985",
+        "creationTimestamp": "2023-11-10T13:18:10Z",
+        "labels": {
+          "app": "istiod",
+          "app.kubernetes.io/managed-by": "Helm",
+          "install.operator.istio.io/owning-resource": "unknown",
+          "istio": "pilot",
+          "istio.io/rev": "default",
+          "kots.io/app-slug": "knime-hub",
+          "kots.io/backup": "velero",
+          "operator.istio.io/component": "Pilot",
+          "release": "istio"
+        },
+        "annotations": {
+          "kots.io/app-slug": "knime-hub",
+          "meta.helm.sh/release-name": "knime-hub-istio",
+          "meta.helm.sh/release-namespace": "istio-system"
+        },
+        "managedFields": [
+          {
+            "manager": "helm",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2023-11-10T13:18:10Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:kots.io/app-slug": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:install.operator.istio.io/owning-resource": {},
+                  "f:istio": {},
+                  "f:istio.io/rev": {},
+                  "f:kots.io/app-slug": {},
+                  "f:kots.io/backup": {},
+                  "f:operator.istio.io/component": {},
+                  "f:release": {}
+                }
+              },
+              "f:spec": {
+                "f:internalTrafficPolicy": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"port\":443,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":15010,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":15012,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  },
+                  "k:{\"port\":15014,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:port": {},
+                    "f:protocol": {},
+                    "f:targetPort": {}
+                  }
+                },
+                "f:selector": {},
+                "f:sessionAffinity": {},
+                "f:type": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "grpc-xds",
+            "protocol": "TCP",
+            "port": 15010,
+            "targetPort": 15010
+          },
+          {
+            "name": "https-dns",
+            "protocol": "TCP",
+            "port": 15012,
+            "targetPort": 15012
+          },
+          {
+            "name": "https-webhook",
+            "protocol": "TCP",
+            "port": 443,
+            "targetPort": 15017
+          },
+          {
+            "name": "http-monitoring",
+            "protocol": "TCP",
+            "port": 15014,
+            "targetPort": 15014
+          }
+        ],
+        "selector": {
+          "app": "istiod",
+          "istio": "pilot"
+        },
+        "clusterIP": "***HIDDEN***",
+        "clusterIPs": [
+          "***HIDDEN***"
+        ],
+        "type": "ClusterIP",
+        "sessionAffinity": "None",
+        "ipFamilies": [
+          "IPv4"
+        ],
+        "ipFamilyPolicy": "SingleStack",
+        "internalTrafficPolicy": "Cluster"
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    }
+  ]
+}

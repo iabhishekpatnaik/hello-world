@@ -1,0 +1,35 @@
+{"level":"info","version":"1.2.2","hash":"75436a0","time":"2023-11-20T12:55:24Z","message":"version"}
+{"level":"info","loglevel":"info","time":"2023-11-20T12:55:24Z","message":"config"}
+{"level":"info","apiDocs":false,"time":"2023-11-20T12:55:24Z","message":"config"}
+{"level":"info","tokenEndpoint":"http://auth.hub.kbh-troubleshooting.com/auth/realms/knime/protocol/openid-connect/token","time":"2023-11-20T12:55:24Z","message":"config"}
+{"level":"info","applicationPasswordEndpoint":"http://accounts-service:8080/application-passwords/identity","time":"2023-11-20T12:55:24Z","message":"config"}
+{"level":"info","pubKeyEndpoint":"http://accounts-service:8080/application-passwords/keys/public-key","time":"2023-11-20T12:55:24Z","message":"config"}
+{"level":"info","clientID":"knime-impersonation","clientSecret":"xxx","time":"2023-11-20T12:55:24Z","message":"config"}
+{"level":"info","cacheMaxTTL":300,"time":"2023-11-20T12:55:24Z","message":"config"}
+{"level":"info","time":"2023-11-20T12:55:24Z","message":"listening on http://localhost:9090"}
+{"level":"error","method":"GET","path":"/readyz","ms":5.196389,"status":503,"ip":"***HIDDEN***","xRequestID":"7e52791c-320b-473d-b6e5-f637cfff3a7e","size":255,"time":"2023-11-20T12:55:29Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":97.897923,"status":503,"ip":"***HIDDEN***","xRequestID":"68a618dd-51fb-453a-a58a-466c7a7f1440","size":255,"time":"2023-11-20T12:55:30Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":1.66643,"status":503,"ip":"***HIDDEN***","xRequestID":"35e2612f-75f8-4e6d-8e31-e45051fb04a1","size":255,"time":"2023-11-20T12:55:33Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":1.281453,"status":503,"ip":"***HIDDEN***","xRequestID":"e53e7785-d78a-4b5a-bbda-ae4e08fbfe0f","size":255,"time":"2023-11-20T12:55:38Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":2.272117,"status":503,"ip":"***HIDDEN***","xRequestID":"5683ed48-a2d1-40af-9a6d-08fc58c113e9","size":255,"time":"2023-11-20T12:55:43Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":1.416749,"status":503,"ip":"***HIDDEN***","xRequestID":"cfd725b2-13da-4725-8fc2-e6bf84a3a6ac","size":255,"time":"2023-11-20T12:55:48Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":16.424056,"status":503,"ip":"***HIDDEN***","xRequestID":"15c8407b-f9cc-4647-a73a-3647817b29bd","size":255,"time":"2023-11-20T12:55:53Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":1.37551,"status":503,"ip":"***HIDDEN***","xRequestID":"f69ea54c-63f1-445a-83f8-51a0ed28b9f5","size":255,"time":"2023-11-20T12:55:58Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":11.989393,"status":503,"ip":"***HIDDEN***","xRequestID":"0936874e-45a6-450e-8f92-ca8e208d03af","size":255,"time":"2023-11-20T12:56:03Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":4.089743,"status":503,"ip":"***HIDDEN***","xRequestID":"f0462c96-15b1-4be6-a7dd-054f4e3f8381","size":129,"time":"2023-11-20T12:56:08Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":4.060918,"status":503,"ip":"***HIDDEN***","xRequestID":"a5799707-2177-41e6-8c04-e51851f62cd8","size":129,"time":"2023-11-20T12:56:13Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":4.10315,"status":503,"ip":"***HIDDEN***","xRequestID":"fa89c717-993e-4040-acb0-e008c83f056c","size":129,"time":"2023-11-20T12:56:18Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":4.193173,"status":503,"ip":"***HIDDEN***","xRequestID":"2bbc4a76-fda4-49fe-b0ac-28389f433036","size":129,"time":"2023-11-20T12:56:23Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":3.985121,"status":503,"ip":"***HIDDEN***","xRequestID":"64be2787-a4f8-454a-8f82-e041f7450571","size":129,"time":"2023-11-20T12:56:28Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":4.0437,"status":503,"ip":"***HIDDEN***","xRequestID":"cb91c87d-6fe7-452e-b9f4-75b18c0d9861","size":129,"time":"2023-11-20T12:56:33Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":4.516752,"status":503,"ip":"***HIDDEN***","xRequestID":"36a2deb8-e7ca-47a8-9529-68165276dda5","size":129,"time":"2023-11-20T12:56:38Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":4.081268,"status":503,"ip":"***HIDDEN***","xRequestID":"39b08c40-f782-4f24-93cc-7ef1a6e773b3","size":129,"time":"2023-11-20T12:56:43Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":39.761001,"status":503,"ip":"***HIDDEN***","xRequestID":"cf53f869-b82c-424e-aeca-dbaab3b8a1e1","size":129,"time":"2023-11-20T12:56:43Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":4.072801,"status":503,"ip":"***HIDDEN***","xRequestID":"690bc94a-73dd-42fb-9334-36c62e00d188","size":129,"time":"2023-11-20T12:56:48Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":4.036963,"status":503,"ip":"***HIDDEN***","xRequestID":"1e022f2c-db8f-4371-8a8b-14f9b45754b9","size":129,"time":"2023-11-20T12:56:53Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":4.000627,"status":503,"ip":"***HIDDEN***","xRequestID":"aedd7aa4-54fc-4f21-8daf-c9ded37bfef1","size":129,"time":"2023-11-20T12:56:58Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":4.401987,"status":503,"ip":"***HIDDEN***","xRequestID":"68548486-5d4d-46d1-955c-6ed6f6f38c2d","size":129,"time":"2023-11-20T12:57:03Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":3.867058,"status":503,"ip":"***HIDDEN***","xRequestID":"c08460a5-3d54-4881-ab82-f55718406417","size":129,"time":"2023-11-20T12:57:08Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":3.948196,"status":503,"ip":"***HIDDEN***","xRequestID":"d5104f3c-af2e-452b-a93e-de64654d4903","size":129,"time":"2023-11-20T12:57:13Z","message":"request"}
+{"level":"error","method":"GET","path":"/readyz","ms":3.970663,"status":503,"ip":"***HIDDEN***","xRequestID":"ede3c0ac-6f2c-46e2-8231-056ce689c0bd","size":129,"time":"2023-11-20T12:57:18Z","message":"request"}
+{"level":"info","time":"2023-11-20T17:04:13Z","message":"gracefully shutting down"}

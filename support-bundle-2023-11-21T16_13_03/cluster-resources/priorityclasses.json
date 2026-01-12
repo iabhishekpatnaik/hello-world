@@ -1,0 +1,65 @@
+{
+  "kind": "PriorityClassList",
+  "apiVersion": "scheduling.k8s.io/v1",
+  "metadata": {
+    "resourceVersion": "763984"
+  },
+  "items": [
+    {
+      "kind": "PriorityClass",
+      "apiVersion": "scheduling.k8s.io/v1",
+      "metadata": {
+        "name": "system-cluster-critical",
+        "uid": "29c4e968-3286-44be-96a6-3697ae26ce63",
+        "resourceVersion": "73",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T12:57:33Z",
+        "managedFields": [
+          {
+            "manager": "kube-apiserver",
+            "operation": "Update",
+            "apiVersion": "scheduling.k8s.io/v1",
+            "time": "2023-11-10T12:57:33Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:description": {},
+              "f:preemptionPolicy": {},
+              "f:value": {}
+            }
+          }
+        ]
+      },
+      "value": 2000000000,
+      "description": "Used for system critical pods that must run in the cluster, but can be moved to another node if necessary.",
+      "preemptionPolicy": "PreemptLowerPriority"
+    },
+    {
+      "kind": "PriorityClass",
+      "apiVersion": "scheduling.k8s.io/v1",
+      "metadata": {
+        "name": "system-node-critical",
+        "uid": "7d02b5b5-2c1f-48b5-90fb-13ec195b3b13",
+        "resourceVersion": "72",
+        "generation": 1,
+        "creationTimestamp": "2023-11-10T12:57:33Z",
+        "managedFields": [
+          {
+            "manager": "kube-apiserver",
+            "operation": "Update",
+            "apiVersion": "scheduling.k8s.io/v1",
+            "time": "2023-11-10T12:57:33Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:description": {},
+              "f:preemptionPolicy": {},
+              "f:value": {}
+            }
+          }
+        ]
+      },
+      "value": 2000001000,
+      "description": "Used for system critical pods that must not be moved from their current node.",
+      "preemptionPolicy": "PreemptLowerPriority"
+    }
+  ]
+}

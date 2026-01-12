@@ -1,0 +1,168 @@
+sed: can't read /web/dist/index.html: No such file or directory
+sed: can't read /web/dist/index.html: No such file or directory
+2023/11/21 14:30:45 kotsadm version v1.101.2
+{"level":"info","ts":"2023-11-21T14:30:45Z","msg":"Found kubectl binary versions [v1.27 v1.26 v1.25 v1.24 v1.23 v1.22 v1.21 v1.20 v1.19 ]"}
+{"level":"info","ts":"2023-11-21T14:30:45Z","msg":"Found kustomize binary versions [5 ]"}
+2023/11/21 14:30:45 Starting monitor loop
+Starting Admin Console API on port 3000...
+2023/11/21 14:30:46 received an inform event: types.AppInformersArgs{AppID:"2XzB3rKi0QljeDzN32bEXzbyksY", Sequence:1, Informers:[]types.StatusInformerString{"hub/deployment/accounts-service", "hub/deployment/catalog-service", "hub/deployment/hub-webapp", "hub/deployment/search-service", "hub/deployment/search-sync-service", "knime/deployment/ingress-nginx-controller", "knime/statefulset/keycloak"}}
+2023/11/21 14:30:46 Starting app monitor loop
+2023/11/21 14:30:46 App monitor got new informers
+2023/11/21 14:30:46 Running informers: []types.StatusInformer{types.StatusInformer{Kind:"deployment", Name:"accounts-service", Namespace:"hub"}, types.StatusInformer{Kind:"deployment", Name:"catalog-service", Namespace:"hub"}, types.StatusInformer{Kind:"deployment", Name:"hub-webapp", Namespace:"hub"}, types.StatusInformer{Kind:"deployment", Name:"search-service", Namespace:"hub"}, types.StatusInformer{Kind:"deployment", Name:"search-sync-service", Namespace:"hub"}, types.StatusInformer{Kind:"deployment", Name:"ingress-nginx-controller", Namespace:"knime"}, types.StatusInformer{Kind:"statefulset", Name:"keycloak", Namespace:"knime"}}
+2023/11/21 14:30:47 Updating app status {"appId":"2XzB3rKi0QljeDzN32bEXzbyksY","resourceStates":[{"kind":"deployment","name":"accounts-service","namespace":"hub","state":"unavailable"},{"kind":"deployment","name":"catalog-service","namespace":"hub","state":"unavailable"},{"kind":"deployment","name":"hub-webapp","namespace":"hub","state":"ready"},{"kind":"deployment","name":"search-service","namespace":"hub","state":"unavailable"},{"kind":"deployment","name":"search-sync-service","namespace":"hub","state":"unavailable"},{"kind":"deployment","name":"ingress-nginx-controller","namespace":"knime","state":"ready"},{"kind":"statefulset","name":"keycloak","namespace":"knime","state":"unavailable"}],"updatedAt":"2023-11-21T14:30:46.413031641Z","state":"","sequence":1}
+{"level":"info","ts":"2023-11-21T14:30:47Z","msg":"Found 1 nodes"}
+2023/11/21 14:31:15 Updating app status {"appId":"2XzB3rKi0QljeDzN32bEXzbyksY","resourceStates":[{"kind":"deployment","name":"accounts-service","namespace":"hub","state":"unavailable"},{"kind":"deployment","name":"catalog-service","namespace":"hub","state":"ready"},{"kind":"deployment","name":"hub-webapp","namespace":"hub","state":"ready"},{"kind":"deployment","name":"ingress-nginx-controller","namespace":"knime","state":"ready"},{"kind":"statefulset","name":"keycloak","namespace":"knime","state":"unavailable"},{"kind":"deployment","name":"search-service","namespace":"hub","state":"unavailable"},{"kind":"deployment","name":"search-sync-service","namespace":"hub","state":"unavailable"}],"updatedAt":"2023-11-21T14:31:14.532648277Z","state":"","sequence":1}
+2023/11/21 14:31:18 Updating app status {"appId":"2XzB3rKi0QljeDzN32bEXzbyksY","resourceStates":[{"kind":"deployment","name":"accounts-service","namespace":"hub","state":"unavailable"},{"kind":"deployment","name":"catalog-service","namespace":"hub","state":"ready"},{"kind":"deployment","name":"hub-webapp","namespace":"hub","state":"ready"},{"kind":"deployment","name":"search-service","namespace":"hub","state":"unavailable"},{"kind":"deployment","name":"search-sync-service","namespace":"hub","state":"unavailable"},{"kind":"deployment","name":"ingress-nginx-controller","namespace":"knime","state":"ready"},{"kind":"statefulset","name":"keycloak","namespace":"knime","state":"ready"}],"updatedAt":"2023-11-21T14:31:17.327847922Z","state":"","sequence":1}
+2023/11/21 14:31:21 Updating app status {"appId":"2XzB3rKi0QljeDzN32bEXzbyksY","resourceStates":[{"kind":"deployment","name":"accounts-service","namespace":"hub","state":"ready"},{"kind":"deployment","name":"catalog-service","namespace":"hub","state":"ready"},{"kind":"deployment","name":"hub-webapp","namespace":"hub","state":"ready"},{"kind":"deployment","name":"ingress-nginx-controller","namespace":"knime","state":"ready"},{"kind":"statefulset","name":"keycloak","namespace":"knime","state":"ready"},{"kind":"deployment","name":"search-service","namespace":"hub","state":"unavailable"},{"kind":"deployment","name":"search-sync-service","namespace":"hub","state":"unavailable"}],"updatedAt":"2023-11-21T14:31:20.533717722Z","state":"","sequence":1}
+2023/11/21 14:31:24 Updating app status {"appId":"2XzB3rKi0QljeDzN32bEXzbyksY","resourceStates":[{"kind":"deployment","name":"accounts-service","namespace":"hub","state":"ready"},{"kind":"deployment","name":"catalog-service","namespace":"hub","state":"ready"},{"kind":"deployment","name":"hub-webapp","namespace":"hub","state":"ready"},{"kind":"deployment","name":"search-service","namespace":"hub","state":"unavailable"},{"kind":"deployment","name":"search-sync-service","namespace":"hub","state":"ready"},{"kind":"deployment","name":"ingress-nginx-controller","namespace":"knime","state":"ready"},{"kind":"statefulset","name":"keycloak","namespace":"knime","state":"ready"}],"updatedAt":"2023-11-21T14:31:23.93188217Z","state":"","sequence":1}
+2023/11/21 14:31:31 Updating app status {"appId":"2XzB3rKi0QljeDzN32bEXzbyksY","resourceStates":[{"kind":"deployment","name":"accounts-service","namespace":"hub","state":"ready"},{"kind":"deployment","name":"catalog-service","namespace":"hub","state":"ready"},{"kind":"deployment","name":"hub-webapp","namespace":"hub","state":"ready"},{"kind":"deployment","name":"ingress-nginx-controller","namespace":"knime","state":"ready"},{"kind":"statefulset","name":"keycloak","namespace":"knime","state":"ready"},{"kind":"deployment","name":"search-service","namespace":"hub","state":"ready"},{"kind":"deployment","name":"search-sync-service","namespace":"hub","state":"ready"}],"updatedAt":"2023-11-21T14:31:30.284963175Z","state":"","sequence":1}
+{"level":"info","ts":"2023-11-21T14:31:31Z","msg":"Found 1 nodes"}
+{"level":"error","ts":"2023-11-21T16:12:38Z","msg":"request \"/api/v1/apps\": missing authorization token"}
+{"level":"info","ts":"2023-11-21T16:12:38Z","msg":"method=GET status=401 duration=75.737µs request=/api/v1/apps"}
+{"level":"error","ts":"2023-11-21T16:12:39Z","msg":"request \"/api/v1/apps\": missing authorization token"}
+{"level":"info","ts":"2023-11-21T16:12:39Z","msg":"method=GET status=401 duration=59.682µs request=/api/v1/apps"}
+{"level":"error","ts":"2023-11-21T16:12:39Z","msg":"request \"/api/v1/is-helm-managed\": missing authorization token"}
+{"level":"info","ts":"2023-11-21T16:12:39Z","msg":"method=GET status=401 duration=31.968µs request=/api/v1/is-helm-managed"}
+{"level":"error","ts":"2023-11-21T16:12:39Z","msg":"failed to read font file ./custom.css: open /tmp/kotsadm-branding1304340022/custom.css: no such file or directory"}
+{"level":"error","ts":"2023-11-21T16:12:40Z","msg":"request \"/api/v1/apps\": missing authorization token"}
+{"level":"info","ts":"2023-11-21T16:12:40Z","msg":"method=GET status=401 duration=59.766µs request=/api/v1/apps"}
+{"level":"error","ts":"2023-11-21T16:12:40Z","msg":"failed to read font file ./custom.css: open /tmp/kotsadm-branding2068795522/custom.css: no such file or directory"}
+{"level":"error","ts":"2023-11-21T16:12:49Z","msg":"request \"/api/v1/apps\": missing authorization token"}
+{"level":"info","ts":"2023-11-21T16:12:49Z","msg":"method=GET status=401 duration=67.302µs request=/api/v1/apps"}
+{"level":"info","ts":"2023-11-21T16:12:53Z","msg":"method=GET status=404 duration=2.578665ms request=/api/v1/pendingapp"}
+[controller-runtime] log.SetLogger(...) was never called, logs will not be displayed:
+goroutine 5381 [running]:
+runtime/debug.Stack()
+	/opt/hostedtoolcache/go/1.20.6/x64/src/runtime/debug/stack.go:24 +0x65
+sigs.k8s.io/controller-runtime/pkg/log.eventuallyFulfillRoot()
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.15.0/pkg/log/log.go:59 +0xbd
+sigs.k8s.io/controller-runtime/pkg/log.(*delegatingLogSink).WithName(0xc00048e740, {0x3e7ab83, 0x14})
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.15.0/pkg/log/deleg.go:147 +0x4c
+github.com/go-logr/logr.Logger.WithName({{0x68de438, 0xc00048e740}, 0x0}, {0x3e7ab83?, 0x3e5488a?})
+	/home/runner/go/pkg/mod/github.com/go-logr/logr@v1.2.4/logr.go:336 +0x46
+sigs.k8s.io/controller-runtime/pkg/client.newClient(0xc00191f440, {0x0, 0xc00105c540, {0x0, 0x0}, 0x0, {0x0, 0x0}, 0x0})
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.15.0/pkg/client/client.go:115 +0xb4
+sigs.k8s.io/controller-runtime/pkg/client.New(0x68ab5c0?, {0x0, 0xc00105c540, {0x0, 0x0}, 0x0, {0x0, 0x0}, 0x0})
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.15.0/pkg/client/client.go:101 +0x85
+github.com/replicatedhq/kots/pkg/snapshot.getVersion({0x68d5e30, 0xc00138e2a0}, {0xc0016844e6, 0x6})
+	/home/runner/work/kots/kots/pkg/snapshot/velero.go:371 +0xf2
+github.com/replicatedhq/kots/pkg/snapshot.DetectVelero({0x68d5e30, 0xc00138e2a0}, {0xc000082026, 0x7})
+	/home/runner/work/kots/kots/pkg/snapshot/velero.go:313 +0x298
+github.com/replicatedhq/kots/pkg/handlers.(*Handler).GetVeleroStatus(0x1?, {0x68c2a90, 0xc001fc4030}, 0x0?)
+	/home/runner/work/kots/kots/pkg/handlers/snapshots.go:537 +0x5d
+github.com/replicatedhq/kots/pkg/policy.(*Middleware).EnforceAccess.func1({0x68c2a90, 0xc001fc4030}, 0xc000304300)
+	/home/runner/work/kots/kots/pkg/policy/middleware.go:74 +0x193
+net/http.HandlerFunc.ServeHTTP(0xc00036e100?, {0x68c2a90?, 0xc001fc4030?}, 0xc001fc4030?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:2122 +0x2f
+github.com/replicatedhq/kots/pkg/handlers.RequireValidSessionMiddleware.func1.1({0x68c2a90, 0xc001fc4030}, 0xc00036e100)
+	/home/runner/work/kots/kots/pkg/handlers/middleware.go:92 +0x132
+net/http.HandlerFunc.ServeHTTP(0x10?, {0x68c2a90?, 0xc001fc4030?}, 0xc00200f900?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:2122 +0x2f
+github.com/replicatedhq/kots/pkg/handlers.LoggingMiddleware.func1({0x68d2d20?, 0xc0001faee0}, 0xc00036e100)
+	/home/runner/work/kots/kots/pkg/handlers/middleware.go:64 +0xd5
+net/http.HandlerFunc.ServeHTTP(0x68d2d20?, {0x68d2d20?, 0xc0001faee0?}, 0x3db2180?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:2122 +0x2f
+github.com/replicatedhq/kots/pkg/handlers.CorsMiddleware.func1({0x68d2d20, 0xc0001faee0}, 0xc0016ac9f0?)
+	/home/runner/work/kots/kots/pkg/handlers/middleware.go:34 +0x67
+net/http.HandlerFunc.ServeHTTP(0xc00036e000?, {0x68d2d20?, 0xc0001faee0?}, 0x800?)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:2122 +0x2f
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc000b5cfc0, {0x68d2d20, 0xc0001faee0}, 0xc000c38000)
+	/home/runner/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210 +0x1cf
+net/http.serverHandler.ServeHTTP({0xc002332ed0?}, {0x68d2d20, 0xc0001faee0}, 0xc000c38000)
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc00113a3f0, {0x68d5e30, 0xc0016adb00})
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	/opt/hostedtoolcache/go/1.20.6/x64/src/net/http/server.go:3089 +0x5ed
+{"level":"error","ts":"2023-11-21T16:12:54Z","msg":"failed to read font file ./custom.css: open /tmp/kotsadm-branding3971513946/custom.css: no such file or directory"}
+{"level":"info","ts":"2023-11-21T16:12:58Z","msg":"Found 1 nodes"}
+{"level":"info","ts":"2023-11-21T16:13:03Z","msg":"Found 1 nodes"}
+{"level":"info","ts":"2023-11-21T16:13:03Z","msg":"Executing Update go routine for support bundle ID: 2yubcml8eiapis3zalkyesjv36q"}
+{"level":"info","ts":"2023-11-21T16:13:03Z","msg":"Executing Collection go routine for support bundle ID: 2yubcml8eiapis3zalkyesjv36q"}
+E1121 16:14:17.548704       9 longhorn.go:72] list nodes.longhorn.io not found
+E1121 16:14:17.669124       9 v2.go:150] io: read/write on closed pipe
+E1121 16:14:17.693219       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:17.710077       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:17.775121       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:17.781764       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:17.788358       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:17.802739       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:17.809376       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:17.970587       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:17.978020       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:17.989805       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.008835       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.015595       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.020895       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.030753       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.037024       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.045846       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.084109       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.090214       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.096881       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.101797       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.107497       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.114286       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.120997       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.128691       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.135061       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.141310       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.146684       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.152868       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.174921       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.270211       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.277040       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.290605       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.385422       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.392483       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.407261       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.521117       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.528260       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.533285       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.538687       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.545547       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.556896       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.645795       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.652439       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.662280       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.718159       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.723657       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.729838       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.767366       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.972302       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.978718       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.987134       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:18.993160       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.001118       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.035298       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.041308       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.049533       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.055625       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.062390       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.070377       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.103520       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.115925       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.123685       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.190566       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.195536       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.202586       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.207138       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.211674       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.253788       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.275510       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.280062       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.297513       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.301952       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.381479       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.386069       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.402182       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.406650       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.421480       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.424098       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.426400       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.430737       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.439770       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.445415       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.454382       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.466241       9 logs.go:228] Failed to parse time duration 30d
+E1121 16:14:19.527709       9 logs.go:228] Failed to parse time duration 30d

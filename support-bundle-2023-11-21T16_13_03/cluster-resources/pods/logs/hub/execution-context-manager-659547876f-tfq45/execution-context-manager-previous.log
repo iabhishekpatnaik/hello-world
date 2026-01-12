@@ -1,0 +1,15 @@
+{"level":"info","version":"1.0.0","hash":"35a324f","time":"2023-11-21T14:31:04Z","message":"execution-context-manager"}
+{"level":"info","loglevel":"info","time":"2023-11-21T14:31:04Z","message":"execution-context-manager"}
+{"level":"info","apiDocs":true,"apiDocsPath":"/api-doc/openapi","time":"2023-11-21T14:31:04Z","message":"config"}
+{"level":"info","artemisJolokiaEndpoint":"http://activemq-artemis.knime.svc.cluster.local:8161/console/jolokia","time":"2023-11-21T14:31:04Z","message":"execution-context-manager"}
+{"level":"info","artemisBrokerName":"***HIDDEN***","time":"2023-11-21T14:31:04Z","message":"execution-context-manager"}
+{"level":"info","artemisUser":"knime","artemisPassword":"xxx","time":"2023-11-21T14:31:04Z","message":"execution-context-manager"}
+{"level":"info","executionURL":"http://api.hub.kbh-troubleshooting.com","time":"2023-11-21T14:31:04Z","message":"execution-context-manager"}
+{"level":"info","keycloakClientID":"execution-context-manager","keycloakClientSecret":"xxx","time":"2023-11-21T14:31:04Z","message":"execution-context-manager"}
+{"level":"info","keycloakTokenEndpoint":"http://auth.hub.kbh-troubleshooting.com/auth/realms/knime/protocol/openid-connect/token","time":"2023-11-21T14:31:04Z","message":"execution-context-manager"}
+{"level":"info","autoStartPollingIntervalSeconds":"5","time":"2023-11-21T14:31:04Z","message":"execution-context-manager"}
+{"level":"info","autoStopPollingIntervalSeconds":"5","time":"2023-11-21T14:31:04Z","message":"execution-context-manager"}
+{"level":"info","executionNamespace":"hub-execution","time":"2023-11-21T14:31:04Z","message":"execution-context-manager"}
+{"level":"info","jwtIssuer":"http://auth.hub.kbh-troubleshooting.com/auth/realms/knime","jwtAudiences":"account","jwtCookieName":"knime_hub_auth","jwtGroups":"hubuser","time":"2023-11-21T14:31:04Z","message":"execution-context-manager"}
+W1121 14:31:04.155483       1 client_config.go:618] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+{"level":"fatal","error":"Get \"https://***HIDDEN***:443/apis/hub.knime.com/v1alpha1/namespaces/hub-execution/executioncontexts?watch=true\": dial tcp ***HIDDEN***:443: connect: connection refused","time":"2023-11-21T14:31:04Z","message":"failed to initialize ExecutionContextCRWatcherInterface abstraction"}
